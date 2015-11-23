@@ -25,19 +25,30 @@
         var graphics = new PIXI.Graphics();
 
         graphics.onMouseMove = function (e) {
-            console.log(this, e);
+            graphics.clear();
             graphics.beginFill(0xff0000);
+            graphics.lineStyle(5, 0x0ff0000);
+            graphics.drawRect(x, y, size, size);
             graphics.endFill();
         };
 
         graphics.onMouseOut = function (e) {
+            graphics.clear();
             graphics.beginFill(0xff0000);
+            graphics.lineStyle(5, 0x0ff0000);
+            graphics.drawRect(x, y, size, size);
             graphics.endFill();
+            console.log("here");
         };
 
         graphics.click = function (e) {
-            console.log('clicked me');
+            graphics.clear();
+            graphics.beginFill(0xff0000);
+            graphics.lineStyle(5, 0x0ff00000);
+            graphics.drawRect(x, y, size, size);
+            graphics.endFill();
         };
+
         graphics.beginFill(0x00ff00);
         graphics.lineStyle(5, 0x00ff00);
         graphics.hitArea = new PIXI.Rectangle(x, y, size, size);
@@ -48,14 +59,6 @@
 
     }
 
-function init(){
-    generateGrid({});
-    setInterval(update, 500);
-}
-
-function update(){
-    console.log("Hi");
-}
 
 // Generates a grid of rectangles
 //gridSpecs - an object with attributes
@@ -74,9 +77,17 @@ function generateGrid(gridSpecs) {
             stage.addChild(createTile(i, j, gridItemSize, gridItemSpace));
         }
     }
+}
 
+function init(){
+    generateGrid({});
+    setInterval(update, 10);
+}
+
+function update(){
     renderer.render(stage);
 }
+
 
 init();
 
