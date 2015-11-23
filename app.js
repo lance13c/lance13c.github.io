@@ -23,6 +23,9 @@
         //  size - size of grid item in pixels, includes both width and height. Ex: 32
         createTile : function (x, y, size) {
             var graphics = new PIXI.Graphics();
+            graphics.x = x;
+            graphics.y = y;
+            graphics.size = size;
 
             graphics.mouseover = function (e) {
                 graphics.clear();
@@ -54,30 +57,50 @@
 //gridSpecs - an object with attributes
 //  itemSize - size of grid item in pixels, includes both width and height. Ex: 32
 //  space - size gap between items in pixels. Ex: 10
+// Returns - 1D array of graphic objects
 function generateGrid(gridSpecs) {
 
 
     //In Pixels
-    var gridItemSize = gridSpecs.itemSize | 32;
-    var gridItemSpace = gridSpecs.space | 10;
+    var gridItemSize = gridSpecs.itemSize || 32;
+    var gridItemSpace = gridSpecs.space || 10;
+    var grid = []; // Array of graphics
 
     //Generate grid
     for(var i = 0; i < HEIGHT; i += (gridItemSize + gridItemSpace)){
         for (var j = 0; j < WIDTH; j += (gridItemSize + gridItemSpace)){
-            stage.addChild(Tile.createTile(i, j, gridItemSize, gridItemSpace));
+            var graphic = Tile.createTile(j, i, gridItemSize);
+            grid.push(graphic);
+            stage.addChild(graphic);
         }
     }
+    return grid;
 }
 
 function init(){
-    generateGrid({});
-    setInterval(update, 10);
+    var grid = generateGrid({itemSize: 20, space: 5});
+
+    window.onload = function(){
+        grid.map(function(graphic){
+            console.log('For each graphic');
+        });
+    };
+
+    window.onclick = function(){
+        var graphics = grid[5];
+        graphics.clear();
+        graphics.beginFill(0x0000ff);
+        graphics.lineStyle(5, 0x0000ff);
+        graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
+        graphics.endFill();
+    };
+    setInterval(update, 20);
 }
 
 function update(){
+
     renderer.render(stage);
 }
-
 
 init();
 
