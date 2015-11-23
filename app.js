@@ -33,6 +33,7 @@
                 graphics.lineStyle(5, 0x0ff0000);
                 graphics.drawRect(x, y, size, size);
                 graphics.endFill();
+
             };
 
             graphics.click = function (e) {
@@ -79,6 +80,7 @@ function generateGrid(gridSpecs) {
 
 function init(){
     var grid = generateGrid({itemSize: 20, space: 1});
+    var changeNumber = 4; // Number of tiles that will change per event
 
     window.onload = function(){
         grid.map(function(graphic){
@@ -87,44 +89,52 @@ function init(){
     };
 
     window.onclick = function(){
-        var graphics = grid[Math.round((Math.random() * grid.length))];
-        graphics.clear();
-        graphics.beginFill(0x0000ff);
-        graphics.lineStyle(5, 0x0000ff);
-        graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
-        graphics.endFill();
-        console.log("Clicking everything I can");
+        for (var i = 0; i < changeNumber; i++) {
+            var graphics = grid[Math.round((Math.random() * grid.length))];
+            graphics.clear();
+            graphics.beginFill(0x0000ff);
+            graphics.lineStyle(5, 0x0000ff);
+            graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
+            graphics.endFill();
+            console.log("Clicking everything I can");
+        }
     };
 
     window.onkeydown = function(){
-        var graphics = grid[Math.round((Math.random() * grid.length))];
-        graphics.clear();
-        graphics.beginFill(0xff00ff);
-        graphics.lineStyle(5, 0xff00ff);
-        graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
-        graphics.endFill();
-        console.log("Key is going down");
+        for (var i = 0; i < changeNumber; i++){
+            var graphics = grid[Math.round((Math.random() * grid.length))];
+            graphics.clear();
+            graphics.beginFill(0xff00ff);
+            graphics.lineStyle(5, 0xff00ff);
+            graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
+            graphics.endFill();
+            console.log("Key is going down");
+        }
     };
 
     //Mouse out will give the ability to see mouse movement through divs
     window.onmouseout = function(){
-        var graphics = grid[Math.round((Math.random() * grid.length))];
-        graphics.clear();
-        graphics.beginFill(0xffff00);
-        graphics.lineStyle(5, 0xffff00);
-        graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
-        graphics.endFill();
-        console.log("I'm moving through the divs");
+        for (var i = 0; i < changeNumber; i++) {
+            var graphics = grid[Math.round((Math.random() * grid.length))];
+            graphics.clear();
+            graphics.beginFill(0xffff00);
+            graphics.lineStyle(5, 0xffff00);
+            graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
+            graphics.endFill();
+            console.log("I'm moving through the divs");
+        }
     };
 
     window.onscroll = function(){
-        var graphics = grid[Math.round((Math.random() * grid.length))];
-        graphics.clear();
-        graphics.beginFill(0xffff00);
-        graphics.lineStyle(5, 0xffff00);
-        graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
-        graphics.endFill();
-        console.log("Just keep scrolling just keep scrolling...");
+        for (var i = 0; i < changeNumber; i++) {
+            var graphics = grid[Math.round((Math.random() * grid.length))];
+            graphics.clear();
+            graphics.beginFill(0xffff00);
+            graphics.lineStyle(5, 0xffff00);
+            graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
+            graphics.endFill();
+            console.log("Just keep scrolling just keep scrolling...");
+        }
     };
 
     setInterval(update, 20);
