@@ -64,7 +64,7 @@ function generateGrid(gridSpecs) {
     //Generate grid
     for(var i = 0; i < HEIGHT; i += (gridItemSize + gridItemSpace)){
         for (var j = 0; j < WIDTH; j += (gridItemSize + gridItemSpace)){
-            stage.addChild(Title.createTile(i, j, gridItemSize, gridItemSpace));
+            stage.addChild(Tile.createTile(i, j, gridItemSize, gridItemSpace));
         }
     }
 }
