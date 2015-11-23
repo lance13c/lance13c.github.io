@@ -117,6 +117,15 @@ function init(){
         console.log("I'm moving through the divs");
     };
 
+    window.onscroll = function(){
+        var graphics = grid[Math.round((Math.random() * grid.length))];
+        graphics.clear();
+        graphics.beginFill(0xffff00);
+        graphics.lineStyle(5, 0xffff00);
+        graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
+        graphics.endFill();
+        console.log("Just keep scrolling just keep scrolling...");
+    };
 
     setInterval(update, 20);
 }
