@@ -15,50 +15,40 @@
     // add the renderer view element to the DOM
     document.body.appendChild(renderer.view);
 
+    var Tile = {
+        // Creates a graphic which represents a tile on the grid
+        // Generates grid calls this function
+        //  x - width position in pixels
+        //  y - height position in pixels
+        //  size - size of grid item in pixels, includes both width and height. Ex: 32
+        createTile : function (x, y, size) {
+            var graphics = new PIXI.Graphics();
 
-    // Creates a graphic which represents a tile on the grid
-    // Generates grid calls this function
-    //  x - width position in pixels
-    //  y - height position in pixels
-    //  size - size of grid item in pixels, includes both width and height. Ex: 32
-    function createTile(x, y, size){
-        var graphics = new PIXI.Graphics();
+            graphics.mouseover = function (e) {
+                graphics.clear();
+                graphics.beginFill(0xff0000);
+                graphics.lineStyle(5, 0x0ff0000);
+                graphics.drawRect(x, y, size, size);
+                graphics.endFill();
+            };
 
-        graphics.onMouseMove = function (e) {
-            graphics.clear();
-            graphics.beginFill(0xff0000);
-            graphics.lineStyle(5, 0x0ff0000);
+            graphics.click = function (e) {
+                graphics.clear();
+                graphics.beginFill(0xff0000);
+                graphics.lineStyle(5, 0x0ff00000);
+                graphics.drawRect(x, y, size, size);
+                graphics.endFill();
+            };
+
+            graphics.beginFill(0x00ff00);
+            graphics.lineStyle(5, 0x00ff00);
+            graphics.hitArea = new PIXI.Rectangle(x, y, size, size);
             graphics.drawRect(x, y, size, size);
+            graphics.interactive = true;
             graphics.endFill();
-        };
-
-        graphics.onMouseOut = function (e) {
-            graphics.clear();
-            graphics.beginFill(0xff0000);
-            graphics.lineStyle(5, 0x0ff0000);
-            graphics.drawRect(x, y, size, size);
-            graphics.endFill();
-            console.log("here");
-        };
-
-        graphics.click = function (e) {
-            graphics.clear();
-            graphics.beginFill(0xff0000);
-            graphics.lineStyle(5, 0x0ff00000);
-            graphics.drawRect(x, y, size, size);
-            graphics.endFill();
-        };
-
-        graphics.beginFill(0x00ff00);
-        graphics.lineStyle(5, 0x00ff00);
-        graphics.hitArea = new PIXI.Rectangle(x, y, size, size);
-        graphics.drawRect(x, y, size, size);
-        graphics.interactive = true;
-        graphics.endFill();
-        return graphics;
-
-    }
-
+            return graphics;
+        }
+    };
 
 // Generates a grid of rectangles
 //gridSpecs - an object with attributes
@@ -74,7 +64,7 @@ function generateGrid(gridSpecs) {
     //Generate grid
     for(var i = 0; i < HEIGHT; i += (gridItemSize + gridItemSpace)){
         for (var j = 0; j < WIDTH; j += (gridItemSize + gridItemSpace)){
-            stage.addChild(createTile(i, j, gridItemSize, gridItemSpace));
+            stage.addChild(Title.createTile(i, j, gridItemSize, gridItemSpace));
         }
     }
 }
