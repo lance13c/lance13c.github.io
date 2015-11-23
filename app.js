@@ -78,7 +78,7 @@ function generateGrid(gridSpecs) {
 }
 
 function init(){
-    var grid = generateGrid({itemSize: 20, space: 5});
+    var grid = generateGrid({itemSize: 20, space: 1});
 
     window.onload = function(){
         grid.map(function(graphic){
@@ -93,6 +93,7 @@ function init(){
         graphics.lineStyle(5, 0x0000ff);
         graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
         graphics.endFill();
+        console.log("Clicking everything I can");
     };
 
     window.onkeydown = function(){
@@ -102,8 +103,21 @@ function init(){
         graphics.lineStyle(5, 0xff00ff);
         graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
         graphics.endFill();
-        console.log("done");
+        console.log("Key is going down");
     };
+
+    //Mouse out will give the ability to see mouse movement through divs
+    window.onmouseout = function(){
+        var graphics = grid[Math.round((Math.random() * grid.length))];
+        graphics.clear();
+        graphics.beginFill(0xffff00);
+        graphics.lineStyle(5, 0xffff00);
+        graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
+        graphics.endFill();
+        console.log("I'm moving through the divs");
+    };
+
+
     setInterval(update, 20);
 }
 
