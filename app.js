@@ -80,7 +80,7 @@ function generateGrid(gridSpecs) {
 
 function init(){
     var grid = generateGrid({itemSize: 20, space: 1});
-    var changeNumber = 4; // Number of tiles that will change per event
+    var changeNumber = 5; // Number of tiles that will change per event
 
     window.onload = function(){
         grid.map(function(graphic){
