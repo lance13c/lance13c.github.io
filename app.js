@@ -87,7 +87,7 @@ function init(){
     };
 
     window.onclick = function(){
-        var graphics = grid[5];
+        var graphics = grid[Math.round((Math.random() * grid.length))];
         graphics.clear();
         graphics.beginFill(0x0000ff);
         graphics.lineStyle(5, 0x0000ff);
