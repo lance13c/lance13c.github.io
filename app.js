@@ -3,50 +3,58 @@
  */
 
 // Creates stage and sets background color
-var stage = new PIXI.Stage(0xFFFFFF);
 
-const WIDTH = document.body.clientWidth;
-const HEIGHT =  document.body.clientHeight;
+    var stage = new PIXI.Stage(0xFFFFFF);
 
-// create a renderer instance.
-var renderer = PIXI.autoDetectRenderer(WIDTH, HEIGHT);
+    const WIDTH = document.body.clientWidth;
+    const HEIGHT =  document.body.clientHeight;
 
-// add the renderer view element to the DOM
-document.body.appendChild(renderer.view);
+    // create a renderer instance.
+    var renderer = PIXI.autoDetectRenderer(WIDTH, HEIGHT);
+
+    // add the renderer view element to the DOM
+    document.body.appendChild(renderer.view);
 
 
+    // Creates a graphic which represents a tile on the grid
+    // Generates grid calls this function
+    //  x - width position in pixels
+    //  y - height position in pixels
+    //  size - size of grid item in pixels, includes both width and height. Ex: 32
+    function createTile(x, y, size){
+        var graphics = new PIXI.Graphics();
 
+        graphics.onMouseMove = function (e) {
+            console.log(this, e);
+            graphics.beginFill(0xff0000);
+            graphics.endFill();
+        };
 
-// Creates a graphic which represents a tile on the grid
-// Generates grid calls this function
-//  x - width position in pixels
-//  y - height position in pixels
-//  size - size of grid item in pixels, includes both width and height. Ex: 32
-function createTile(x, y, size){
-    var graphics = new PIXI.Graphics();
+        graphics.onMouseOut = function (e) {
+            graphics.beginFill(0xff0000);
+            graphics.endFill();
+        };
 
-    graphics.onMouseMove = function (e) {
-        console.log(this, e);
-        graphics.beginFill(0xff0000);
+        graphics.click = function (e) {
+            console.log('clicked me');
+        };
+        graphics.beginFill(0x00ff00);
+        graphics.lineStyle(5, 0x00ff00);
+        graphics.hitArea = new PIXI.Rectangle(x, y, size, size);
+        graphics.drawRect(x, y, size, size);
+        graphics.interactive = true;
         graphics.endFill();
-    };
+        return graphics;
 
-    graphics.onMouseOut = function (e) {
-        graphics.beginFill(0xff0000);
-        graphics.endFill();
-    };
+    }
 
-    graphics.click = function (e) {
-        console.log('clicked me');
-    };
-    graphics.beginFill(0x00ff00);
-    graphics.lineStyle(5, 0x00ff00);
-    graphics.hitArea = new PIXI.Rectangle(x, y, size, size);
-    graphics.drawRect(x, y, size, size);
-    graphics.interactive = true;
-    graphics.endFill();
-    return graphics;
+function init(){
+    generateGrid({});
+    setInterval(update, 500);
+}
 
+function update(){
+    console.log("Hi");
 }
 
 // Generates a grid of rectangles
@@ -70,5 +78,5 @@ function generateGrid(gridSpecs) {
     renderer.render(stage);
 }
 
+init();
 
-generateGrid({});
