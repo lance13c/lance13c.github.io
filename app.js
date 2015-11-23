@@ -24,7 +24,7 @@ document.body.appendChild(renderer.view);
 //  size - size of grid item in pixels, includes both width and height. Ex: 32
 function createTile(x, y, size){
     var graphics = new PIXI.Graphics();
-    /*
+
     graphics.onMouseMove = function (e) {
         console.log(this, e);
         graphics.beginFill(0xff0000);
@@ -35,10 +35,15 @@ function createTile(x, y, size){
         graphics.beginFill(0xff0000);
         graphics.endFill();
     };
-    */
+
+    graphics.click = function (e) {
+        console.log('clicked me');
+    };
     graphics.beginFill(0x00ff00);
     graphics.lineStyle(5, 0x00ff00);
+    graphics.hitArea = new PIXI.Rectangle(x, y, size, size);
     graphics.drawRect(x, y, size, size);
+    graphics.interactive = true;
     graphics.endFill();
     return graphics;
 
