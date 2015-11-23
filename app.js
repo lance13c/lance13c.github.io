@@ -94,6 +94,16 @@ function init(){
         graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
         graphics.endFill();
     };
+
+    window.onkeydown = function(){
+        var graphics = grid[Math.round((Math.random() * grid.length))];
+        graphics.clear();
+        graphics.beginFill(0xff00ff);
+        graphics.lineStyle(5, 0xff00ff);
+        graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
+        graphics.endFill();
+        console.log("done");
+    };
     setInterval(update, 20);
 }
 
