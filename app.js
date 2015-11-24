@@ -27,15 +27,6 @@
             graphics.y = y;
             graphics.size = size;
 
-            graphics.mouseover = function (e) {
-                graphics.clear();
-                graphics.beginFill(0xff0000);
-                graphics.lineStyle(5, 0x0ff0000);
-                graphics.drawRect(x, y, size, size);
-                graphics.endFill();
-
-            };
-
             graphics.click = function (e) {
                 graphics.clear();
                 graphics.beginFill(0xff0000);
