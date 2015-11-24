@@ -81,6 +81,7 @@
             });
         };
 
+        //TODO Refactor into function that will take an event, color, and phrase
         window.onclick = function () {
             var phrase = "Clicking everything I can";
             for (var i = 0; i < changeNumber; i++) {
@@ -92,6 +93,7 @@
                 graphics.endFill();
                 console.log(phrase);
             }
+            Materialize.toast(phrase, 500, 'rounded');
         };
 
         window.onkeydown = function () {
@@ -105,6 +107,7 @@
                 graphics.endFill();
                 console.log(phrase);
             }
+            Materialize.toast(phrase, 500, 'rounded');
         };
 
         //Mouse out will give the ability to see mouse movement through divs
@@ -119,6 +122,7 @@
                 graphics.endFill();
                 console.log(phrase);
             }
+            Materialize.toast(phrase, 500, 'rounded');
         };
 
         window.onscroll = function () {
@@ -132,6 +136,7 @@
                 graphics.endFill();
                 console.log(phrase);
             }
+            Materialize.toast(phrase, 500, 'rounded');
         };
 
         setInterval(update, 20);
