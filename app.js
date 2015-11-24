@@ -93,7 +93,7 @@
                 graphics.endFill();
                 console.log(phrase);
             }
-            Materialize.toast(phrase, 500, 'rounded');
+            //Materialize.toast(phrase, 500, 'rounded');
         };
 
         window.onkeydown = function () {
@@ -107,7 +107,7 @@
                 graphics.endFill();
                 console.log(phrase);
             }
-            Materialize.toast(phrase, 500, 'rounded');
+            //Materialize.toast(phrase, 500, 'rounded');
         };
 
         //Mouse out will give the ability to see mouse movement through divs
@@ -122,7 +122,7 @@
                 graphics.endFill();
                 console.log(phrase);
             }
-            Materialize.toast(phrase, 500, 'rounded');
+            //Materialize.toast(phrase, 500, 'rounded');
         };
 
         window.onscroll = function () {
@@ -136,7 +136,7 @@
                 graphics.endFill();
                 console.log(phrase);
             }
-            Materialize.toast(phrase, 500, 'rounded');
+            //Materialize.toast(phrase, 500, 'rounded');
         };
 
         setInterval(update, 20);

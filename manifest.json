@@ -16,7 +16,8 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["pixi.min.js", "app.js"]
+      "css": ["style.css", "node_modules/materialize-css/bin/materialize.css"],
+      "js": ["https://code.jquery.com/jquery-2.1.1.min.js", "node_modules/materialize-css/bin/materialize.js", "pixi.min.js", "app.js"]
     }
   ]
 }
