@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lance13c/browser-event-display#readme",
   "dependencies": {
+    "jquery": "^2.1.4",
     "materialize-css": "^0.97.3"
   }
 }

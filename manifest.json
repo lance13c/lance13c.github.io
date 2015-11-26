@@ -13,11 +13,9 @@
     "activeTab",
     "https://ajax.googleapis.com/"
   ],
-  "content_scripts": [
-    {
+  "content_scripts": [{
       "matches": ["<all_urls>"],
       "css": ["style.css", "node_modules/materialize-css/bin/materialize.css"],
-      "js": ["https://code.jquery.com/jquery-2.1.1.min.js", "node_modules/materialize-css/bin/materialize.js", "pixi.min.js", "app.js"]
-    }
-  ]
+      "js": ["node_modules/jquery/dist/jquery.min.js", "node_modules/materialize-css/bin/materialize.js", "pixi.min.js", "app.js"]
+    }]
 }
