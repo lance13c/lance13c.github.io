@@ -6,8 +6,8 @@
   "version": "1.0",
 
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "index.html"
+    "default_icon": "app/assets/image/icon.png",
+    "default_popup": "app/view/index.html"
   },
   "permissions": [
     "activeTab",
@@ -16,8 +16,8 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "css": ["style.css", "node_modules/materialize-css/bin/materialize.css"],
-      "js": ["https://code.jquery.com/jquery-2.1.1.min.js", "node_modules/materialize-css/bin/materialize.js", "pixi.min.js", "app.js"]
+      "css": ["app/style/style.css", "node_modules/materialize-css/bin/materialize.css"],
+      "js": ["https://code.jquery.com/jquery-2.1.1.min.js", "node_modules/materialize-css/bin/materialize.js", "app/assets/js/pixi.min.js", "app/js/app.js"]
     }
   ]
 }
