@@ -70,6 +70,30 @@
         return grid;
     }
 
+    /**
+     *
+     * @param event - window event
+     * @param color - hex color
+     * @param phrase - string to display on the screen
+     * @param grid - A single array of tiles that represent a 2d array
+     * @param changeNumber - Number of blocks that have changed
+     */
+    function responseEvent(event, color, phrase, grid, changeNumber) {
+        var cn = changeNumber || 3;
+        window[event] = function () {
+            for (var i = 0; i < cn; i++) {
+                var graphics = grid[Math.round((Math.random() * grid.length))];
+                graphics.clear();
+                graphics.beginFill(color);
+                graphics.lineStyle(5, color); // Value 5 = the line size
+                graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
+                graphics.endFill();
+                console.log(phrase);
+            }
+            Materialize.toast(phrase, 500, 'rounded');
+        };
+    }
+
     function init() {
         var grid = generateGrid({itemSize: 20, space: 1});
         var changeNumber = 5; // Number of tiles that will change per event
@@ -81,69 +105,21 @@
             });
         };
 
-        //TODO Refactor into function that will take an event, color, and phrase
-        window.onclick = function () {
-            var phrase = "Clicking everything I can";
-            for (var i = 0; i < changeNumber; i++) {
-                var graphics = grid[Math.round((Math.random() * grid.length))];
-                graphics.clear();
-                graphics.beginFill(0x0000ff);
-                graphics.lineStyle(5, 0x0000ff);
-                graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
-                graphics.endFill();
-                console.log(phrase);
-            }
-            //Materialize.toast(phrase, 500, 'rounded');
-        };
+        //Mouse Events
+        responseEvent('onclick', 0x0000ff, "Clicking everything I can", grid, changeNumber);
+        responseEvent('onkeydown', 0xff00ff, "Key is going down", grid, changeNumber);
+        responseEvent('onmouseout', 0xffff00, "I'm moving through the divs", grid, changeNumber);
+        responseEvent('onscroll', 0xffff00, "Just keep scrolling just keep scrolling...", grid, changeNumber);
+        //Touch Events
+        responseEvent('touchmove', 0xf0ffff, "Swiping the screen all day", grid, changeNumber);
+        responseEvent('touchstart', 0x0f0fff, "Touch", grid, changeNumber);
 
-        window.onkeydown = function () {
-            var phrase = "Key is going down";
-            for (var i = 0; i < changeNumber; i++) {
-                var graphics = grid[Math.round((Math.random() * grid.length))];
-                graphics.clear();
-                graphics.beginFill(0xff00ff);
-                graphics.lineStyle(5, 0xff00ff);
-                graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
-                graphics.endFill();
-                console.log(phrase);
-            }
-            //Materialize.toast(phrase, 500, 'rounded');
-        };
-
-        //Mouse out will give the ability to see mouse movement through divs
-        window.onmouseout = function () {
-            var phrase = "I'm moving through the divs";
-            for (var i = 0; i < changeNumber; i++) {
-                var graphics = grid[Math.round((Math.random() * grid.length))];
-                graphics.clear();
-                graphics.beginFill(0xffff00);
-                graphics.lineStyle(5, 0xffff00);
-                graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
-                graphics.endFill();
-                console.log(phrase);
-            }
-            //Materialize.toast(phrase, 500, 'rounded');
-        };
-
-        window.onscroll = function () {
-            var phrase = "Just keep scrolling just keep scrolling...";
-            for (var i = 0; i < changeNumber; i++) {
-                var graphics = grid[Math.round((Math.random() * grid.length))];
-                graphics.clear();
-                graphics.beginFill(0xffff00);
-                graphics.lineStyle(5, 0xffff00);
-                graphics.drawRect(graphics.x, graphics.y, graphics.size, graphics.size);
-                graphics.endFill();
-                console.log(phrase);
-            }
-            //Materialize.toast(phrase, 500, 'rounded');
-        };
 
         setInterval(update, 20);
     }
 
+    //Re-renders the screen
     function update() {
-
         renderer.render(stage);
     }
 
