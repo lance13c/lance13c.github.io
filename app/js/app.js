@@ -114,7 +114,7 @@
         responseEvent('touchmove', 0xf0ffff, "Swiping the screen all day", grid, changeNumber);
         responseEvent('touchstart', 0x0f0fff, "Touch", grid, changeNumber);
 
-
+            Materialize.toast(phrase, 500, 'rounded');
         setInterval(update, 20);
     }
 
