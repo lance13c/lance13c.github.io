@@ -1,0 +1,136 @@
+{
+  "projects": [
+    {
+      "name": "Trebuchet",
+      "short_des": "This is my trebuchet short description",
+      "description": "This is my trebuchet long description, This is my trebuchet long description, This is my trebuchet long description",
+      "github_url": "",
+      "cs_url": "main.home",
+      "blog": "",
+      "images": ["/assets/images/projects/trebuchet/trebuchet21.jpg"],
+      "videos": ""
+    },
+    {
+      "name": "Trebuchet",
+      "short_des": "This is my trebuchet short description",
+      "description": "This is my trebuchet long description, This is my trebuchet long description, This is my trebuchet long description",
+      "github_url": "",
+      "cs_url": "main.home",
+      "blog": "",
+      "images": ["/assets/images/projects/trebuchet/trebuchet21.jpg"],
+      "videos": ""
+    },
+    {
+      "name": "Trebuchet",
+      "short_des": "This is my trebuchet short description",
+      "description": "This is my trebuchet long description, This is my trebuchet long description, This is my trebuchet long description",
+      "github_url": "",
+      "cs_url": "main.home",
+      "blog": "",
+      "images": ["/assets/images/projects/trebuchet/trebuchet21.jpg"],
+      "videos": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "main.home",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+        },
+        {
+          "name" : "Browser Pal",
+          "url": "main.projects",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet27.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Java",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "main.skills",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Piano",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Swing Dancing",
+      "experience": "4/5",
+      "description": "",
+      "projects" : []
+    },
+    {
+      "name": "Python",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+        }
+      ]
+    },
+    {
+      "name": "NodeJS",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "main.skills",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+        }
+      ]
+    },
+    {
+      "name": "AngularJS",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "Trebuchet",
+          "url": "main.projects",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+        }
+      ]
+    },
+    {
+      "name": "CSS",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+        }
+      ]
+    }
+  ],
+  "life" : {
+    "blog" : "Music and Dancing ",
+    "images": [],
+    "videos": []
+  }
+}
