@@ -19,6 +19,7 @@
   "dependencies": {
     "aframe": "^0.3.1",
     "jquery": "^2.1.4",
-    "materialize-css": "^0.97.3"
+    "materialize-css": "^0.97.3",
+    "spinkit": "^1.2.5"
   }
 }
