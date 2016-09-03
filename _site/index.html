@@ -1,8 +1,151 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>CicilioStudio</title>
-    </head>
-    <body></body>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../node_modules/materialize-css/dist/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+</head>
+<body>
+<div class="cs-nav">
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a ui-sref="main.home" class="brand-logo cs-siteicon">CicilioStudio</a>
+                <a href="#" data-activates="mobile-nav" class="right button-collapse cs-mobile-menu"><i class="material-icons">menu</i></a>
+                <a class="left button-collapse cs-mobile-back"><i class="material-icons">arrow_backwords</i></a>
+
+                <!--Main Nav-->
+                <ul class="hide-on-med-and-down cs-main-nav">
+                    <li ui-sref="main.home" class="tooltipped"
+                        data-position="bottom" data-delay="10" data-tooltip="Home">
+                        <a><i class="material-icons left">home</i></a></li>
+                    <li>
+                        <a ui-sref="main.projects" class='dropdown-button cs-dropdown-projects-btn' data-beloworigin="true" data-activates='dropdown-projects'>
+                            Projects<i class="material-icons right">arrow_drop_down</i>
+                        </a>
+                    </li>
+                    <li><a ui-sref="main.skills">Skills</a></li>
+                    <li><a ui-sref="main.experience">Experience</a></li>
+                    <li><a ui-sref="main.life">Life</a></li>
+                    <li><a ui-sref="main.contact">Contact</a></li>
+
+                    <a class="right cs-fa-linkedin-square tooltipped" href="https://www.linkedin.com/in/dominic-cicilio-96461786"
+                       data-position="bottom" data-delay="10" data-tooltip="Linkedin">
+                        <i class="fa fa-linkedin-square fa-2x"></i>
+                    </a>
+                    <a class="right cs-fa-github-square tooltipped" href="https://github.com/lance13c"
+                       data-position="bottom" data-delay="10" data-tooltip="Github">
+                        <i class="fa fa-github-square fa-2x"></i>
+                    </a>
+                </ul>
+
+
+                <!--Mobile Side Navigation-->
+                <ul class="side-nav cs-side-nav" id="mobile-nav">
+                    <li ui-sref="main.home"><a>Home</a></li>
+                    <li class="divider"></li>
+                    <li><a ui-sref="main.projects">Projects</a></li>
+                    <li class="divider"></li>
+                    <li><a ui-sref="main.skills">Skills</a></li>
+                    <li class="divider"></li>
+                    <li><a ui-sref="main.experience">Experience</a></li>
+                    <li class="divider"></li>
+                    <li><a ui-sref="main.life">Life</a></li>
+                    <li class="divider"></li>
+                    <li><a ui-sref="main.contact">Contact</a></li>
+                    <li class="divider"></li>
+                </ul>
+
+                <!--Projects Dropdown Button-->
+                <ul id='dropdown-projects' class='dropdown-content cs-dropdown-projects'>
+                    <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Trebuchet</a></li>
+                    <li class="divider"></li>
+                    <li ><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Space Fighter</a></li>
+                    <li class="divider"></li>
+                    <li ><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Hero 2.0</a></li>
+                </ul>
+
+
+            </div>
+        </nav>
+    </div>
+</div>
+
+<section>
+    <a-scene class="cs-home" stats="true">
+        <!--<a-entity id="background-music" position="0 0 0" autoplay="true"-->
+        <!--sound="src: ../assets/music/floret.mp3"></a-entity>-->
+
+        <template is="a-template" element="a-star">
+            <a-cube color="white" depth=".1" height=".1" width=".1" position="0 0 0"></a-cube>
+        </template>
+
+
+        <a-assets>
+            <img id="t0" src="../assets/images/projects/trebuchet/trebuchet1.jpg">
+            <img id="t1" src="../assets/images/projects/trebuchet/trebuchet2.jpg">
+            <img id="t2" src="../assets/images/projects/trebuchet/trebuchet3.jpg">
+            <img id="t3" src="../assets/images/projects/trebuchet/trebuchet4.jpg">
+            <img id="t4" src="../assets/images/projects/trebuchet/trebuchet5.jpg">
+            <img id="t5" src="../assets/images/projects/trebuchet/trebuchet6.jpg">
+            <img id="t6" src="../assets/images/projects/trebuchet/trebuchet7.jpg">
+            <img id="t7" src="../assets/images/projects/trebuchet/trebuchet8.jpg">
+            <img id="t8" src="../assets/images/projects/trebuchet/trebuchet9.jpg">
+        </a-assets>
+
+        <!--<a-entity id="background-music" position="0 0 0"-->
+        <!--sound="src: ../assets/music/floret.mp3; autoplay: true"></a-entity>-->
+
+        <!--Left Photos-->
+        <a-image src="../assets/images/projects/trebuchet/trebuchet1.jpg" rotation="155 0 180" position="0 1.5 3" width="4" height="3"></a-image>
+        <a-image src="../assets/images/projects/trebuchet/trebuchet2.jpg" rotation="155 0 180" position="-5 1.5 3" width="4" height="3"></a-image>
+        <a-image src="../assets/images/projects/trebuchet/trebuchet3.jpg" rotation="155 0 180" position="-10 1.5 3" width="4" height="3"></a-image>
+        <a-image src="../assets/images/projects/trebuchet/trebuchet4.jpg" rotation="155 0 180" position="-15 1.5 3" width="4" height="3"></a-image>
+
+        <!--Right Photos-->
+        <a-image src="../assets/images/projects/trebuchet/trebuchet5.jpg" rotation="25 0 0" position="0 1.5 -3" width="4" height="3"></a-image>
+        <a-image src="../assets/images/projects/trebuchet/trebuchet6.jpg" rotation="25 0 0" position="-5 1.5 -3" width="4" height="3"></a-image>
+        <a-image src="../assets/images/projects/trebuchet/trebuchet7.jpg" rotation="25 0 0" position="-10 1.5 -3" width="4" height="3"></a-image>
+        <a-image src="../assets/images/projects/trebuchet/trebuchet8.jpg" rotation="25 0 0" position="-15 1.5 -3" width="4" height="3"></a-image>
+
+
+
+        <a-sky color="#0F1523"></a-sky>
+        <!--<a-entity camera="userHeight: 1.8" look-controls></a-entity>-->
+        <!--<a-entity position="0 -1 -10">-->
+            <!--<a-camera></a-camera>-->
+        <!--</a-entity>-->
+        <!--<a-entity camera="userHeight: 1.8" look-controls></a-entity>-->
+        <a-camera></a-camera>
+
+
+
+    </a-scene>
+    <!--<div class="cs-home">-->
+    <!--<div class="container">-->
+    <!--<div class="row">-->
+    <!--<div class="col s5">-->
+    <!--<ul class="cs-home-btn-wrapper">-->
+    <!--<li ui-sref="main.projects" class="cs-home-btn cs-home-projects">Projects</li>-->
+    <!--<li ui-sref="main.skills" class="cs-home-btn cs-home-skills">Skills</li>-->
+    <!--<li ui-sref="main.experience" class="cs-home-btn cs-home-experience">Experience</li>-->
+    <!--<li ui-sref="main.life" class="cs-home-btn cs-home-life">Life</li>-->
+    <!--<li ui-sref="main.contact" class="cs-home-btn cs-home-contacts">Contact</li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+</section>
+
+testa
+</body>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../node_modules/materialize-css/dist/js/materialize.min.js"></script>
+<script src="../node_modules/aframe/dist/aframe.js"></script>
+
 </html>
