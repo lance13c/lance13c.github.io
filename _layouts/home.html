@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{title}}</title>
+    {% include home/link.html %}
 </head>
 <body>
-
+{% include nav.html %}
+{% include vr_world.html %}
+{{content}}
 </body>
+
+{% include home/scripts.html %}
+
 </html>
