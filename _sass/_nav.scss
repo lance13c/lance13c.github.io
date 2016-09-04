@@ -1,3 +1,79 @@
-.cs-nav-container {
+.cs-nav {
 
+  $fade-color-time : 100ms;
+  $logo-offset: 200px;
+
+  nav {
+    border-bottom: solid 1px $nav-background-color;
+    box-shadow: none;
+
+    .cs-nav-btn-active{
+      background: $theme-4;
+    }
+
+    .nav-wrapper {
+      background: $nav-background-color;
+
+      .brand-logo {
+        cursor: pointer;
+      }
+
+      li{
+        font-size: 18px;
+        font-weight: 400;
+        background: $nav-background-color;
+        cursor: pointer;
+        @include cs-fade-in-background($fade-color-time);
+
+        i {
+          font-size: 2rem;
+          margin-left: 8px;
+          margin-right: 8px;
+        }
+      }
+
+      li:hover {
+        background: $theme-4;
+        @include cs-fade-in-background($fade-color-time);
+      }
+
+      .cs-main-nav {
+        margin-left: $logo-offset;
+
+      }
+
+      .cs-side-nav {
+        background: $theme-3;
+
+        li {
+          background: inherit;
+          a {
+            color: $nav-background-color;
+          }
+        }
+
+        .divider {
+          background: $nav-background-color;
+        }
+      }
+
+      .cs-siteicon {
+        margin-left: $buffer;
+
+        &:hover {
+          color: $theme-4;
+          @include cs-fade-in-color($fade-color-time);
+        }
+      }
+      .cs-mobile-menu {
+        margin-right: $buffer;
+        cursor: pointer;
+      }
+      .cs-mobile-back {
+        margin-left: ($buffer - 5px); //Back button offset because centered icon
+        width: 40px; //Need set otherwise takes up half of the navbar
+        cursor: pointer;
+      }
+    }
+  }
 }
