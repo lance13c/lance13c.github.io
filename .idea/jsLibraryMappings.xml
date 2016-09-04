@@ -2,5 +2,6 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$" libraries="{lance13c.github.io/node_modules}" />
+    <file url="file://$PROJECT_DIR$/_site" libraries="{lance13c.github.io/_site/node_modules}" />
   </component>
 </project>

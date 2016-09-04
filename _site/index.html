@@ -2,77 +2,81 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>CicilioStudio</title>
     <link rel="stylesheet" type="text/css" href="../node_modules/materialize-css/dist/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="../node_modules/spinkit/css/spinkit.css">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-<div class="cs-nav">
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper">
-                <a ui-sref="main.home" class="brand-logo cs-siteicon">CicilioStudio</a>
-                <a href="#" data-activates="mobile-nav" class="right button-collapse cs-mobile-menu"><i class="material-icons">menu</i></a>
-                <a class="left button-collapse cs-mobile-back"><i class="material-icons">arrow_backwords</i></a>
 
-                <!--Main Nav-->
-                <ul class="hide-on-med-and-down cs-main-nav">
-                    <li ui-sref="main.home" class="tooltipped"
-                        data-position="bottom" data-delay="10" data-tooltip="Home">
-                        <a><i class="material-icons left">home</i></a></li>
-                    <li>
-                        <a ui-sref="main.projects" class='dropdown-button cs-dropdown-projects-btn' data-beloworigin="true" data-activates='dropdown-projects'>
-                            Projects<i class="material-icons right">arrow_drop_down</i>
+<section>
+    <div class="cs-nav">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo cs-siteicon">CicilioStudio</a>
+                    <a href="#" data-activates="mobile-nav" class="right button-collapse cs-mobile-menu"><i class="material-icons">menu</i></a>
+                    <a class="left button-collapse cs-mobile-back"><i class="material-icons">arrow_backwords</i></a>
+
+                    <!--Main Nav-->
+                    <ul class="hide-on-med-and-down cs-main-nav">
+                        <li href="/" class="tooltipped"
+                            data-position="bottom" data-delay="10" data-tooltip="Home">
+                            <a href="/"><i class="material-icons left">home</i></a></li>
+                        <li>
+                            <a href="/projects" class='dropdown-button cs-dropdown-projects-btn' data-beloworigin="true" data-activates='dropdown-projects'>
+                                Projects<i class="material-icons right">arrow_drop_down</i>
+                            </a>
+                        </li>
+                        <li><a href="/skills">Skills</a></li>
+                        <li><a href="/experience">Experience</a></li>
+                        <li><a href="/life">Life</a></li>
+                        <li><a href="/contact">Contact</a></li>
+
+                        <a class="right cs-fa-linkedin-square tooltipped" href="https://www.linkedin.com/in/dominic-cicilio-96461786"
+                           data-position="bottom" data-delay="10" data-tooltip="Linkedin">
+                            <i class="fa fa-linkedin-square fa-2x"></i>
                         </a>
-                    </li>
-                    <li><a ui-sref="main.skills">Skills</a></li>
-                    <li><a ui-sref="main.experience">Experience</a></li>
-                    <li><a ui-sref="main.life">Life</a></li>
-                    <li><a ui-sref="main.contact">Contact</a></li>
-
-                    <a class="right cs-fa-linkedin-square tooltipped" href="https://www.linkedin.com/in/dominic-cicilio-96461786"
-                       data-position="bottom" data-delay="10" data-tooltip="Linkedin">
-                        <i class="fa fa-linkedin-square fa-2x"></i>
-                    </a>
-                    <a class="right cs-fa-github-square tooltipped" href="https://github.com/lance13c"
-                       data-position="bottom" data-delay="10" data-tooltip="Github">
-                        <i class="fa fa-github-square fa-2x"></i>
-                    </a>
-                </ul>
+                        <a class="right cs-fa-github-square tooltipped" href="https://github.com/lance13c"
+                           data-position="bottom" data-delay="10" data-tooltip="Github">
+                            <i class="fa fa-github-square fa-2x"></i>
+                        </a>
+                    </ul>
 
 
-                <!--Mobile Side Navigation-->
-                <ul class="side-nav cs-side-nav" id="mobile-nav">
-                    <li ui-sref="main.home"><a>Home</a></li>
-                    <li class="divider"></li>
-                    <li><a ui-sref="main.projects">Projects</a></li>
-                    <li class="divider"></li>
-                    <li><a ui-sref="main.skills">Skills</a></li>
-                    <li class="divider"></li>
-                    <li><a ui-sref="main.experience">Experience</a></li>
-                    <li class="divider"></li>
-                    <li><a ui-sref="main.life">Life</a></li>
-                    <li class="divider"></li>
-                    <li><a ui-sref="main.contact">Contact</a></li>
-                    <li class="divider"></li>
-                </ul>
+                    <!--Mobile Side Navigation-->
+                    <ul class="side-nav cs-side-nav" id="mobile-nav">
+                        <li href="/"><a>Home</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/skills">Skills</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/experience">Experience</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/ife">Life</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li class="divider"></li>
+                    </ul>
 
-                <!--Projects Dropdown Button-->
-                <ul id='dropdown-projects' class='dropdown-content cs-dropdown-projects'>
-                    <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Trebuchet</a></li>
-                    <li class="divider"></li>
-                    <li ><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Space Fighter</a></li>
-                    <li class="divider"></li>
-                    <li ><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Hero 2.0</a></li>
-                </ul>
+                    <!--Projects Dropdown Button-->
+                    <ul id='dropdown-projects' class='dropdown-content cs-dropdown-projects'>
+                        <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Trebuchet</a></li>
+                        <li class="divider"></li>
+                        <li ><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Space Fighter</a></li>
+                        <li class="divider"></li>
+                        <li ><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Hero 2.0</a></li>
+                    </ul>
 
 
-            </div>
-        </nav>
+                </div>
+            </nav>
+        </div>
     </div>
-</div>
+</section>
 
 <section>
     <a-scene class="cs-home" stats="true">
@@ -141,7 +145,25 @@
     <!--</div>-->
 </section>
 
-testa
+<section class="cs-loading-container">
+    <div>
+        <h3 class="cs-center-text">VR</h3>
+        <div class="sk-circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+        </div>
+    </div>
+</section>
 </body>
 
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>

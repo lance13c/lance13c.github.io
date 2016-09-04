@@ -7,7 +7,7 @@
       "github_url": "",
       "cs_url": "main.home",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet21.jpg"],
+      "images": ["/assets/images/projects/trebuchet/trebuchet1.jpg"],
       "videos": ""
     },
     {
@@ -17,7 +17,7 @@
       "github_url": "",
       "cs_url": "main.home",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet22.jpg"],
+      "images": ["/assets/images/projects/trebuchet/trebuchet2.jpg"],
       "videos": ""
     },
     {
@@ -27,7 +27,7 @@
       "github_url": "",
       "cs_url": "main.home",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet23.jpg"],
+      "images": ["/assets/images/projects/trebuchet/trebuchet3.jpg"],
       "videos": ""
     },
     {
@@ -37,7 +37,7 @@
       "github_url": "",
       "cs_url": "main.home",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet24.jpg"],
+      "images": ["/assets/images/projects/trebuchet/trebuchet4.jpg"],
       "videos": ""
     },
     {
@@ -47,7 +47,7 @@
       "github_url": "",
       "cs_url": "main.home",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet25.jpg"],
+      "images": ["/assets/images/projects/trebuchet/trebuchet5.jpg"],
       "videos": ""
     },
     {
@@ -57,7 +57,7 @@
       "github_url": "",
       "cs_url": "main.home",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet26.jpg"],
+      "images": ["/assets/images/projects/trebuchet/trebuchet6.jpg"],
       "videos": ""
     }
   ],
@@ -70,12 +70,12 @@
         {
           "name" : "CicilioStudio",
           "url": "main.home",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
         },
         {
           "name" : "Browser Pal",
           "url": "main.projects",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet27.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet7.jpg"
         }
       ]
     },
@@ -87,7 +87,7 @@
         {
           "name" : "CicilioStudio",
           "url": "main.skills",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
         }
       ]
     },
@@ -99,7 +99,7 @@
         {
           "name" : "CicilioStudio",
           "url": "",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
         }
       ]
     },
@@ -117,7 +117,7 @@
         {
           "name" : "CicilioStudio",
           "url": "",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
         }
       ]
     },
@@ -129,7 +129,7 @@
         {
           "name" : "CicilioStudio",
           "url": "main.skills",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
         }
       ]
     },
@@ -141,7 +141,7 @@
         {
           "name" : "Trebuchet",
           "url": "main.projects",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
         }
       ]
     },
@@ -153,7 +153,7 @@
         {
           "name" : "CicilioStudio",
           "url": "",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet21.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
         }
       ]
     }

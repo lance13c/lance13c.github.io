@@ -23,6 +23,8 @@ Here are some examples:
 These quotes do 2 things.
 
 .1 : Act as a complement to your friend that they can remember forever.
-.1 : They can use these quotes to prove to others their loyalty, personality, reliability, etc..." 
+.1 : They can use these quotes to prove to others their loyalty, personality, reliability, etc..."
+
+Give them a try. I'm sure your friends will appreciate them.
 
 
