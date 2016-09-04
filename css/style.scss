@@ -1,6 +1,9 @@
-@import "partials/colors";
-@import "partials/mixins";
-@import "partials/images";
+---
+---
+
+@import "../_sass/_colors";
+@import "../_sass/_mixins";
+@import "../_sass/_images";
 
 $font-stack: Roboto;
 $nav-height: 63px;
