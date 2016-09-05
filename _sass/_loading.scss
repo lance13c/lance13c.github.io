@@ -1,0 +1,31 @@
+.cs-loading-container {
+  height: 10em;
+  position: relative;
+
+  div {
+    z-index: -1;
+
+    .sk-circle {
+      width: 15em;
+      height: 15em;
+    }
+
+    .cs-center-text {
+      text-shadow: $theme-6 1px 1px;
+      font-weight: 500;
+      transform: translate(140%, 140%);
+      position: absolute;
+    }
+
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
+    h3 {
+      font-weight: 500;
+    }
+  }
+}
