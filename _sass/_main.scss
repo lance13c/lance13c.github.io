@@ -1,0 +1,180 @@
+body {
+  font: 100% $font-stack;
+  background: $theme-2;
+  overflow-y: hidden;
+
+  .cs-main-header {
+    font-weight: 700;
+    color: $theme-3;
+  }
+}
+
+
+.cs-breadcrumb {
+  background: $theme-2;
+
+
+  .navbar-fixed {
+    color: $theme-2;
+    height: 25px;
+    z-index: -1; // So dropdown projects can appear in front
+    @include cs-box-shadow(0px, 3px, 3px, 0px, $theme-2);
+
+    .cs-breadcrumb {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: $theme-3;
+      font-size: 14px;
+    }
+  }
+}
+
+.cs-dropdown-projects {
+  font-size: 1rem;
+  background: $theme-1;
+
+  .cs-dropdown-item {
+    font-size: 1rem;
+    color: $theme-3;
+  }
+}
+
+.cs-left-margin {
+  margin-left: 10px;
+}
+
+.cs-right-margin {
+  margin-right: 10px;
+}
+
+
+//Skills
+.cs-skills {
+  .cs-skills-info{
+    font-weight: 300;
+    font-size: 2rem;
+    color: $theme-3;
+  }
+
+  .cs-dropdown-skills-filter-btn {
+    background: $nav-background-color;
+    color: $theme-3;
+  }
+
+  .cs-skills-card-chip-holder {
+
+    padding: .5rem;
+    height: 60px;
+
+    .cs-skills-card-text {
+      color: $theme-3;
+      font-size: .75rem;
+      font-weight: 300;
+      padding-bottom: 5px;
+    }
+
+    .cs-skills-card-projects {
+      margin: 0;
+
+      .col {
+        padding-left: .5rem;
+        padding-right: .5rem;
+        width: 40px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+//Projects
+.cs-projects {
+  .cs-projects-card-wrapper {
+    .cs-projects-card-title {
+      top: 0;
+      font-weight: 500;
+      color: $theme-5;
+      //-webkit-text-fill-color: $theme-3;
+      //-webkit-text-stroke-width: .5px;
+      //-webkit-text-stroke-color: $theme-5;
+    }
+  }
+}
+
+//Custom Image Chip
+.cs-chip{
+  cursor: pointer;
+  background: rgba(0,0,0,0);
+  padding-left: .5rem;
+  //padding-right: 10px;
+
+  img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+  }
+
+  :hover {
+    @include cs-box-shadow(0px ,1px ,2px ,1px , $theme-3);
+  }
+}
+
+//Home
+.cs-home {
+  padding-top: 10%;
+
+  .cs-home-btn-wrapper {
+    @include cs-fade-in-background(200ms);
+
+    .cs-home-projects:hover{
+      @include cs-fade-in-background(200ms);
+    }
+
+    .cs-home-btn {
+      font-size: 60px;
+      font-weight: 200;
+      color: $theme-3;
+    }
+
+    .cs-home-btn:hover {
+      color: $theme-4;
+      cursor: pointer;
+    }
+  }
+}
+
+
+//Material Tooltipped Additions/Modifications
+.backdrop{
+  background: $theme-1;
+}
+
+//Helper Classes
+.cs-full-width {
+  width: 100%;
+}
+
+.cs-inherit-width {
+  width: inherit;
+}
+
+//Font Awesome Color Additions
+.cs-fa-linkedin-square {
+  color: #007BB6;
+  background: $nav-background-color;
+  height: $nav-height;
+}
+
+.cs-fa-linkedin-square:hover {
+  background: $theme-4;
+}
+
+.cs-fa-github-square {
+  color: $theme-6;
+  background: $nav-background-color;
+  height: $nav-height;
+}
+
+.cs-fa-github-square:hover {
+  background: $theme-4;
+}
