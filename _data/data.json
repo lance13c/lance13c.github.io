@@ -162,5 +162,8 @@
     "blog" : "Music and Dancing ",
     "images": [],
     "videos": []
+  },
+  "resume": {
+    "url": "/resume/resume.pdf"
   }
 }
