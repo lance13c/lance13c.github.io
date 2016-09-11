@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CicilioStudio</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/libraries_combined.css"/>
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+
+<section>
+    <div class="cs-nav">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo cs-siteicon">CicilioStudio</a>
+                    <a href="#" data-activates="mobile-nav" class="right button-collapse cs-mobile-menu"><i class="material-icons">menu</i></a>
+                    <a class="left button-collapse cs-mobile-back"><i class="material-icons">arrow_backwords</i></a>
+
+                    <!--Main Nav-->
+                    <ul class="hide-on-med-and-down cs-main-nav">
+                        <li href="/" class="tooltipped"
+                            data-position="bottom" data-delay="10" data-tooltip="Home">
+                            <a href="/"><i class="material-icons left">home</i></a></li>
+                        <li>
+                            <a href="/projects" class='dropdown-button cs-dropdown-projects-btn' data-beloworigin="true" data-activates='dropdown-projects'>
+                                Projects<i class="material-icons right">arrow_drop_down</i>
+                            </a>
+                        </li>
+                        <li><a href="/life">Life</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/resume">Resume</a></li>
+
+                        <a class="right cs-fa-linkedin-square tooltipped" href="https://www.linkedin.com/in/dominic-cicilio-96461786"
+                           data-position="bottom" data-delay="10" data-tooltip="Linkedin">
+                            <i class="fa fa-linkedin-square fa-2x"></i>
+                        </a>
+                        <a class="right cs-fa-github-square tooltipped" href="https://github.com/lance13c"
+                           data-position="bottom" data-delay="10" data-tooltip="Github">
+                            <i class="fa fa-github-square fa-2x"></i>
+                        </a>
+                    </ul>
+
+
+                    <!--Mobile Side Navigation-->
+                    <ul class="side-nav cs-side-nav" id="mobile-nav">
+                        <li href="/"><a>Home</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/projects">Projects</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/life">Life</a></li>
+                        <li class="divider"></li>
+                        <li><a href="/resume">Resume</a></li>
+                        <li class="divider"></li>
+                    </ul>
+
+                    <!--Projects Dropdown Button-->
+                    <ul id='dropdown-projects' class='dropdown-content cs-dropdown-projects'>
+                        <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Trebuchet</a></li>
+                        <li class="divider"></li>
+                        <li ><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Space Fighter</a></li>
+                        <li class="divider"></li>
+                        <li ><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Hero 2.0</a></li>
+                    </ul>
+
+
+                </div>
+            </nav>
+        </div>
+    </div>
+</section>
+    <section class="cs-content">
+        <div class="cs-skills">
+
+    <div class="container">
+        <div class="row">
+            <h1 class="cs-main-header center-align">Skills</h1>
+        </div>
+        <div class="row">
+            <div class="col 1 right">
+                <!--Filter Button-->
+                <div class='dropdown-button cs-dropdown-skills-filter-btn btn disabled' data-beloworigin="true" data-activates='dropdown-skills-filter'>
+                    Filter<i class="material-icons right">arrow_drop_down</i>
+                </div>
+
+                <!--Projects Dropdown Button-->
+                <ul id='dropdown-skills-filter' class='dropdown-content cs-dropdown-skills-filter'>
+                    <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">A-Z</a></li>
+                    <li class="divider"></li>
+                    <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Z-A</a></li>
+                    <li class="divider"></li>
+                    <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Most Familiar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row cs-skills-card-wrapper">
+            
+                <div class="col s6 m4 l4">
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title truncate">JavaScript</span>
+        </div>
+        <div class="container cs-full-width">
+            <div class="card-action cs-skills-card-chip-holder">
+                <div class="cs-skills-card-text">Related Projects</div>
+                <div class="row cs-skills-card-projects">
+                    <div ng-repeat="project in skill.projects">
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet">
+    <img src="/assets/images/projects/trebuchet/trebuchet1.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet2">
+    <img src="/assets/images/projects/trebuchet/trebuchet2.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet3">
+    <img src="/assets/images/projects/trebuchet/trebuchet3.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet4">
+    <img src="/assets/images/projects/trebuchet/trebuchet4.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet5">
+    <img src="/assets/images/projects/trebuchet/trebuchet5.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet6">
+    <img src="/assets/images/projects/trebuchet/trebuchet6.jpg"/>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+                <div class="col s6 m4 l4">
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title truncate">Java</span>
+        </div>
+        <div class="container cs-full-width">
+            <div class="card-action cs-skills-card-chip-holder">
+                <div class="cs-skills-card-text">Related Projects</div>
+                <div class="row cs-skills-card-projects">
+                    <div ng-repeat="project in skill.projects">
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet">
+    <img src="/assets/images/projects/trebuchet/trebuchet1.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet2">
+    <img src="/assets/images/projects/trebuchet/trebuchet2.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet3">
+    <img src="/assets/images/projects/trebuchet/trebuchet3.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet4">
+    <img src="/assets/images/projects/trebuchet/trebuchet4.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet5">
+    <img src="/assets/images/projects/trebuchet/trebuchet5.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet6">
+    <img src="/assets/images/projects/trebuchet/trebuchet6.jpg"/>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+                <div class="col s6 m4 l4">
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title truncate">Piano</span>
+        </div>
+        <div class="container cs-full-width">
+            <div class="card-action cs-skills-card-chip-holder">
+                <div class="cs-skills-card-text">Related Projects</div>
+                <div class="row cs-skills-card-projects">
+                    <div ng-repeat="project in skill.projects">
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet">
+    <img src="/assets/images/projects/trebuchet/trebuchet1.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet2">
+    <img src="/assets/images/projects/trebuchet/trebuchet2.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet3">
+    <img src="/assets/images/projects/trebuchet/trebuchet3.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet4">
+    <img src="/assets/images/projects/trebuchet/trebuchet4.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet5">
+    <img src="/assets/images/projects/trebuchet/trebuchet5.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet6">
+    <img src="/assets/images/projects/trebuchet/trebuchet6.jpg"/>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+                <div class="col s6 m4 l4">
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title truncate">Swing Dancing</span>
+        </div>
+        <div class="container cs-full-width">
+            <div class="card-action cs-skills-card-chip-holder">
+                <div class="cs-skills-card-text">Related Projects</div>
+                <div class="row cs-skills-card-projects">
+                    <div ng-repeat="project in skill.projects">
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet">
+    <img src="/assets/images/projects/trebuchet/trebuchet1.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet2">
+    <img src="/assets/images/projects/trebuchet/trebuchet2.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet3">
+    <img src="/assets/images/projects/trebuchet/trebuchet3.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet4">
+    <img src="/assets/images/projects/trebuchet/trebuchet4.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet5">
+    <img src="/assets/images/projects/trebuchet/trebuchet5.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet6">
+    <img src="/assets/images/projects/trebuchet/trebuchet6.jpg"/>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+                <div class="col s6 m4 l4">
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title truncate">Python</span>
+        </div>
+        <div class="container cs-full-width">
+            <div class="card-action cs-skills-card-chip-holder">
+                <div class="cs-skills-card-text">Related Projects</div>
+                <div class="row cs-skills-card-projects">
+                    <div ng-repeat="project in skill.projects">
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet">
+    <img src="/assets/images/projects/trebuchet/trebuchet1.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet2">
+    <img src="/assets/images/projects/trebuchet/trebuchet2.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet3">
+    <img src="/assets/images/projects/trebuchet/trebuchet3.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet4">
+    <img src="/assets/images/projects/trebuchet/trebuchet4.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet5">
+    <img src="/assets/images/projects/trebuchet/trebuchet5.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet6">
+    <img src="/assets/images/projects/trebuchet/trebuchet6.jpg"/>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+                <div class="col s6 m4 l4">
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title truncate">NodeJS</span>
+        </div>
+        <div class="container cs-full-width">
+            <div class="card-action cs-skills-card-chip-holder">
+                <div class="cs-skills-card-text">Related Projects</div>
+                <div class="row cs-skills-card-projects">
+                    <div ng-repeat="project in skill.projects">
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet">
+    <img src="/assets/images/projects/trebuchet/trebuchet1.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet2">
+    <img src="/assets/images/projects/trebuchet/trebuchet2.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet3">
+    <img src="/assets/images/projects/trebuchet/trebuchet3.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet4">
+    <img src="/assets/images/projects/trebuchet/trebuchet4.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet5">
+    <img src="/assets/images/projects/trebuchet/trebuchet5.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet6">
+    <img src="/assets/images/projects/trebuchet/trebuchet6.jpg"/>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+                <div class="col s6 m4 l4">
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title truncate">AngularJS</span>
+        </div>
+        <div class="container cs-full-width">
+            <div class="card-action cs-skills-card-chip-holder">
+                <div class="cs-skills-card-text">Related Projects</div>
+                <div class="row cs-skills-card-projects">
+                    <div ng-repeat="project in skill.projects">
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet">
+    <img src="/assets/images/projects/trebuchet/trebuchet1.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet2">
+    <img src="/assets/images/projects/trebuchet/trebuchet2.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet3">
+    <img src="/assets/images/projects/trebuchet/trebuchet3.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet4">
+    <img src="/assets/images/projects/trebuchet/trebuchet4.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet5">
+    <img src="/assets/images/projects/trebuchet/trebuchet5.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet6">
+    <img src="/assets/images/projects/trebuchet/trebuchet6.jpg"/>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+                <div class="col s6 m4 l4">
+    <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+            <span class="card-title truncate">CSS</span>
+        </div>
+        <div class="container cs-full-width">
+            <div class="card-action cs-skills-card-chip-holder">
+                <div class="cs-skills-card-text">Related Projects</div>
+                <div class="row cs-skills-card-projects">
+                    <div ng-repeat="project in skill.projects">
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet">
+    <img src="/assets/images/projects/trebuchet/trebuchet1.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet2">
+    <img src="/assets/images/projects/trebuchet/trebuchet2.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet3">
+    <img src="/assets/images/projects/trebuchet/trebuchet3.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet4">
+    <img src="/assets/images/projects/trebuchet/trebuchet4.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet5">
+    <img src="/assets/images/projects/trebuchet/trebuchet5.jpg"/>
+</div>
+                        
+                            <div href="" class="tooltipped col s3 m2 l2 cs-chip"
+     data-position="bottom" data-delay="10" data-tooltip="Trebuchet6">
+    <img src="/assets/images/projects/trebuchet/trebuchet6.jpg"/>
+</div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
+        </div>
+    </div>
+
+</div>
+    </section>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="/js/scripts_combined.js"></script>
+
+</html>
