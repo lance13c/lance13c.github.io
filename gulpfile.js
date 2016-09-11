@@ -34,17 +34,17 @@ gulp.task('copy-base', ['usemin'], () => {
 
 gulp.task('copy-css', ['usemin'], () => {
 	return gulp.src(paths.css)
-		.pipe(gulp.dest('./_site/css'));
+		.pipe(gulp.dest('./css'));
 });
 
 gulp.task('copy-js', ['usemin'], () => {
 	return gulp.src(paths.js)
-		.pipe(gulp.dest('./_site/js'));
+		.pipe(gulp.dest('./js'));
 });
 
 gulp.task('copy-fonts', () => {
 	return gulp.src(paths.fonts)
-		.pipe(gulp.dest('./_site/font'));
+		.pipe(gulp.dest('./font'));
 });
 
 
