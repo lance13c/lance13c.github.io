@@ -1,0 +1,15 @@
+---
+layout: base
+---
+
+<section>
+    <% for project in site.data.data.projects %>
+    <div class="cs-sp-title-container">
+
+        <img class="materialboxed">
+        <h1 class="cs-sp-title">title: {{site.data.data.projects[0]}}</h1>
+        <h3 class="cs-sp-short-description"></h3>
+    </div>
+
+    <% endfor %>
+</section>
