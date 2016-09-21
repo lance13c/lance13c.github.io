@@ -5,19 +5,24 @@
       "short_des": "This is my trebuchet short description",
       "description": "This is my trebuchet long description, This is my trebuchet long description, This is my trebuchet long description",
       "github_url": "",
+      "download_url": "",
       "cs_url": "main.home",
       "blog": "",
       "images": ["/assets/images/projects/trebuchet/trebuchet1.jpg"],
       "videos": ""
     },
     {
-      "name": "Trebuchet2",
-      "short_des": "This is my trebuchet short description",
-      "description": "This is my trebuchet long description, This is my trebuchet long description, This is my trebuchet long description",
+      "name": "Hero2.0",
+      "short_des": "2D Platform Shooter. Inspiration from Thing Thing Arena 2",
+      "description": "2D Platform Shooter. Inspiration from Thing Thing Arena 2. Developed during junior year in high school",
+      "date": "2012/11/07",
       "github_url": "",
       "cs_url": "main.home",
+      "download_url": "https://www.dropbox.com/s/6winwjc686q0nm1/Hero2.0.exe?dl=0",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet2.jpg"],
+      "images": ["/assets/images/projects/hero/hero0.png", "/assets/images/projects/hero/hero1.png", "/assets/images/projects/hero/hero2.png", "/assets/images/projects/hero/hero3.png", "/assets/images/projects/hero/hero4.png", "/assets/images/projects/hero/hero5.png",
+        "/assets/images/projects/hero/hero7.png", "/assets/images/projects/hero/hero7.png", "/assets/images/projects/hero/hero8.png", "/assets/images/projects/hero/hero9.png", "/assets/images/projects/hero/hero10.png", "/assets/images/projects/hero/hero11.png",
+        "/assets/images/projects/hero/hero12.png", "/assets/images/projects/hero/hero13.png"],
       "videos": ""
     },
     {
