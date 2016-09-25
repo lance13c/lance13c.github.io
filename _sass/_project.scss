@@ -1,3 +1,33 @@
+.cs-project-card {
+  
+  .header {
+    color: $theme-3;
+    font-weight: 200;
+  }
+
+  .card {
+    //cursor: pointer;
+
+    .card-image {
+      max-width: 25%;
+    }
+
+    .card-content {
+      //font-family: Arial;
+      font-weight: 300;
+      font-size: 2rem;
+      background-color: $theme-1;
+      color: $theme-3;
+    }
+
+    &:hover {
+      transition: .1s ease-out;
+      box-shadow: 0px 0px 3px 1px $theme-4;
+    }
+  }
+}
+
+
 .cs-sp {
 
  .cs-sp-title-container {

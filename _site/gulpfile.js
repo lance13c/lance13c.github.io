@@ -44,7 +44,7 @@ gulp.task('copy-js', ['usemin'], () => {
 
 gulp.task('copy-fonts', () => {
 	return gulp.src(paths.fonts)
-		.pipe(gulp.dest('./font'));
+		.pipe(gulp.dest('./fonts'));
 });
 
 

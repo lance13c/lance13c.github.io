@@ -92,6 +92,20 @@
 .cs-borderless-gallery .cs-borderless-gallery-img-desktop {
   width: 33%; }
 
+.cs-project-card .header {
+  color: #F2F2F2;
+  font-weight: 200; }
+.cs-project-card .card .card-image {
+  max-width: 25%; }
+.cs-project-card .card .card-content {
+  font-weight: 300;
+  font-size: 2rem;
+  background-color: #212A3F;
+  color: #F2F2F2; }
+.cs-project-card .card:hover {
+  transition: .1s ease-out;
+  box-shadow: 0px 0px 3px 1px #8AB839; }
+
 .cs-sp .cs-sp-title-container {
   height: 400px; }
   .cs-sp .cs-sp-title-container .cs-sp-title-image {

@@ -6,7 +6,7 @@ header
           a.page-title #{page}
   .container
     a.button-collapse.top-nav(href='#', data-activates='nav-mobile', class=(no_nav == false ? "full hide-on-large-only" : "" + "waves-effect waves-light circle hide-on-large-only"))
-      i.mdi-navigation-menu
+      i.material-icons menu
   ul#nav-mobile.side-nav.fixed
     li(class="logo")
       a#logo-container.brand-logo(href='http://materializecss.com/')
@@ -74,10 +74,12 @@ header
               li(class=(page == "Preloader" ? "active" : ""))
                 a(href='preloader.html') Preloader
         li.bold
-          a.collapsible-header(class=(page == "Dialogs" || page == "Modals" || page == "Dropdown" || page == "Tabs" || page == "ScrollFire" || page == "Scrollspy" || page == "SideNav" || page == "Pushpin" || page == "Waves" || page == "Media" || page == "Transitions" || page == "Parallax" || page == "Collapsible" ? "active" : "")+" waves-effect waves-teal")
+          a.collapsible-header(class=(page == "Dialogs" || page == "Modals" || page == "Dropdown" || page == "Tabs" || page == "ScrollFire" || page == "Scrollspy" || page == "SideNav" || page == "Pushpin" || page == "Waves" || page == "Media" || page == "Transitions" || page == "Parallax" || page == "Collapsible" ? "active" : "" || page == "Carousel" ? "active" : "")+" waves-effect waves-teal")
             | JavaScript
           .collapsible-body
             ul
+              li(class=(page == "Carousel" ? "active" : ""))
+                a(href='carousel.html') Carousel
               li(class=(page == "Collapsible" ? "active" : ""))
                 a(href='collapsible.html') Collapsible
               li(class=(page == "Dialogs" ? "active" : ""))

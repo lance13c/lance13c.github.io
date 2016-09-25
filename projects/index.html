@@ -11,6 +11,9 @@ layout: base
 
         <div class="container">
             <div class="row cs-projects-card-wrapper">
+                {% for project in site.data.data.projects %}
+                    {% include project/project_card.html %}
+                {% endfor %}
             </div>
         </div>
     </div>

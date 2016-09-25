@@ -1,41 +1,505 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d5d20c7c-0aef-4448-a721-681d0cbbe798" name="Default" comment="fix sp title button animations">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/projects/bluetoothlights/btl9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/videos.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/_videos.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projects/bluetoothlights/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projects/trebuchet/index.html" />
+    <list default="true" id="d5d20c7c-0aef-4448-a721-681d0cbbe798" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/bench/block-stream-pause.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/bench/block-stream.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/bench/dropper-pause.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/bench/dropper.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/test/basic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/test/nopad-thorough.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/test/nopad.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/test/pause-resume.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/test/thorough.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/block-stream/test/two-stream.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/hammer.prefix" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/hammer.suffix" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_propagation.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.grunt/grunt-contrib-jasmine/boot.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.grunt/grunt-contrib-jasmine/es5-shim.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.grunt/grunt-contrib-jasmine/jasmine-html.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.grunt/grunt-contrib-jasmine/jasmine.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.grunt/grunt-contrib-jasmine/jasmine.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.grunt/grunt-contrib-jasmine/jasmine_favicon.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.grunt/grunt-contrib-jasmine/json2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.grunt/grunt-contrib-jasmine/reporter.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/18562ff97755490822c39501c903bdf1d9e46c9a/_default.date.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/18562ff97755490822c39501c903bdf1d9e46c9a/_default.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/18562ff97755490822c39501c903bdf1d9e46c9a/_default.time.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/18562ff97755490822c39501c903bdf1d9e46c9a/default.date.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/18562ff97755490822c39501c903bdf1d9e46c9a/default.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/18562ff97755490822c39501c903bdf1d9e46c9a/default.time.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/4de4f9215643d814ba27c40149eca841569a18fe/ghpages-materialize.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/4de4f9215643d814ba27c40149eca841569a18fe/materialize.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/4de4f9215643d814ba27c40149eca841569a18fe/style.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_buttons.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_cards.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_collapsible.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_color.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_dropdown.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_form.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_global.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_grid.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_icons-material-design.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_materialbox.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_mixins.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_modal.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_navbar.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_normalize.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_prefixer.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_preloader.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_roboto.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_sideNav.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_slider.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_table_of_contents.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_tabs.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_toast.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_tooltip.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_typography.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.sass-cache/9b484eb3894a350ee64394b03365b37b5f6801ac/_waves.scssc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/bin/materialize-src-v0.97.4.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/bin/materialize-v0.97.4.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/material-design-icons/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/material-design-icons/Material-Design-Icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/material-design-icons/Material-Design-Icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/material-design-icons/Material-Design-Icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/material-design-icons/Material-Design-Icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/material-design-icons/Material-Design-Icons.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Bold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Bold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Bold.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Light.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Light.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Light.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Light.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Medium.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Medium.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Medium.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Medium.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Thin.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Thin.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Thin.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/font/roboto/Roboto-Thin.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/material-design-icons/LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/material-design-icons/Material-Design-Icons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/material-design-icons/Material-Design-Icons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/material-design-icons/Material-Design-Icons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/material-design-icons/Material-Design-Icons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/material-design-icons/Material-Design-Icons.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Bold.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Bold.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Bold.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Bold.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Light.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Light.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Light.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Light.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Medium.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Medium.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Medium.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Medium.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Regular.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Regular.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Regular.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Regular.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Thin.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Thin.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Thin.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/font/roboto/Roboto-Thin.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_form.scss" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/material-design-icons/LICENSE.txt" afterPath="$PROJECT_DIR$/fonts/material-design-icons/LICENSE.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/material-design-icons/Material-Design-Icons.eot" afterPath="$PROJECT_DIR$/fonts/material-design-icons/Material-Design-Icons.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/material-design-icons/Material-Design-Icons.svg" afterPath="$PROJECT_DIR$/fonts/material-design-icons/Material-Design-Icons.svg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/material-design-icons/Material-Design-Icons.ttf" afterPath="$PROJECT_DIR$/fonts/material-design-icons/Material-Design-Icons.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/material-design-icons/Material-Design-Icons.woff" afterPath="$PROJECT_DIR$/fonts/material-design-icons/Material-Design-Icons.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/material-design-icons/Material-Design-Icons.woff2" afterPath="$PROJECT_DIR$/fonts/material-design-icons/Material-Design-Icons.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Bold.eot" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Bold.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Bold.ttf" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Bold.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Bold.woff" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Bold.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Bold.woff2" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Bold.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Light.eot" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Light.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Light.ttf" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Light.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Light.woff" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Light.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Light.woff2" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Light.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Medium.eot" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Medium.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Medium.ttf" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Medium.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Medium.woff" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Medium.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Medium.woff2" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Medium.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Regular.eot" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Regular.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Regular.ttf" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Regular.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Regular.woff" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Regular.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Regular.woff2" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Regular.woff2" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Thin.eot" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Thin.eot" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Thin.ttf" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Thin.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Thin.woff" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Thin.woff" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/font/roboto/Roboto-Thin.woff2" afterPath="$PROJECT_DIR$/fonts/roboto/Roboto-Thin.woff2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template.zip" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template.zip" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template.zip" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_data/data.json" afterPath="$PROJECT_DIR$/_data/data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/nav.html" afterPath="$PROJECT_DIR$/_includes/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/project/project_title_buttons.html" afterPath="$PROJECT_DIR$/_includes/project/project_title_buttons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/specific_project.html" afterPath="$PROJECT_DIR$/_layouts/specific_project.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_main.scss" afterPath="$PROJECT_DIR$/_sass/_main.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/css/libraries_combined.css" afterPath="$PROJECT_DIR$/_includes/build/css/libraries_combined.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/js/scripts_combined.js" afterPath="$PROJECT_DIR$/_includes/build/js/scripts_combined.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/project/project_card.html" afterPath="$PROJECT_DIR$/_includes/project/project_card.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_project.scss" afterPath="$PROJECT_DIR$/_sass/_project.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/index.html" afterPath="$PROJECT_DIR$/_site/blog/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/libraries_combined.css" afterPath="$PROJECT_DIR$/_site/css/libraries_combined.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/style.css" afterPath="$PROJECT_DIR$/_site/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/gulpfile.js" afterPath="$PROJECT_DIR$/_site/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/js/scripts_combined.js" afterPath="$PROJECT_DIR$/_site/js/scripts_combined.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/package.json" afterPath="$PROJECT_DIR$/_site/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/projects/index.html" afterPath="$PROJECT_DIR$/_site/projects/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/resume/index.html" afterPath="$PROJECT_DIR$/_site/resume/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/skills/index.html" afterPath="$PROJECT_DIR$/_site/skills/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.scss" afterPath="$PROJECT_DIR$/css/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/libraries_combined.css" afterPath="$PROJECT_DIR$/css/libraries_combined.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scripts_combined.js" afterPath="$PROJECT_DIR$/js/scripts_combined.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/.bin/rimraf" afterPath="$PROJECT_DIR$/node_modules/.bin/rimraf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/block-stream/LICENCE" afterPath="$PROJECT_DIR$/node_modules/block-stream/LICENCE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/block-stream/LICENSE" afterPath="$PROJECT_DIR$/node_modules/block-stream/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/block-stream/README.md" afterPath="$PROJECT_DIR$/node_modules/block-stream/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/block-stream/block-stream.js" afterPath="$PROJECT_DIR$/node_modules/block-stream/block-stream.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/block-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/block-stream/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob/LICENSE" afterPath="$PROJECT_DIR$/node_modules/glob/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob/README.md" afterPath="$PROJECT_DIR$/node_modules/glob/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob/common.js" afterPath="$PROJECT_DIR$/node_modules/glob/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob/glob.js" afterPath="$PROJECT_DIR$/node_modules/glob/glob.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob/package.json" afterPath="$PROJECT_DIR$/node_modules/glob/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/glob/sync.js" afterPath="$PROJECT_DIR$/node_modules/glob/sync.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/.bowerrc" afterPath="$PROJECT_DIR$/node_modules/hammerjs/.bowerrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/.jscsrc" afterPath="$PROJECT_DIR$/node_modules/hammerjs/.jscsrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/.jshintrc" afterPath="$PROJECT_DIR$/node_modules/hammerjs/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/.npmignore" afterPath="$PROJECT_DIR$/node_modules/hammerjs/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/hammerjs/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/hammerjs/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/node_modules/hammerjs/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/Gruntfile.coffee" afterPath="$PROJECT_DIR$/node_modules/hammerjs/Gruntfile.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/LICENSE.md" afterPath="$PROJECT_DIR$/node_modules/hammerjs/LICENSE.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/README.md" afterPath="$PROJECT_DIR$/node_modules/hammerjs/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/bower.json" afterPath="$PROJECT_DIR$/node_modules/hammerjs/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/component.json" afterPath="$PROJECT_DIR$/node_modules/hammerjs/component.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/hammer.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/hammer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/hammer.min.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/hammer.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/hammer.min.map" afterPath="$PROJECT_DIR$/node_modules/hammerjs/hammer.min.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/package.json" afterPath="$PROJECT_DIR$/node_modules/hammerjs/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/expose.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/expose.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/hammer.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/hammer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/input.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/input.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/input/mouse.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/input/mouse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/input/pointerevent.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/input/pointerevent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/input/singletouch.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/input/singletouch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/input/touch.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/input/touch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/input/touchmouse.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/input/touchmouse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/manager.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizer.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/attribute.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/attribute.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/pan.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/pan.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/pinch.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/pinch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/press.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/press.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/rotate.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/rotate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/swipe.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/swipe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/tap.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/recognizers/tap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/touchaction.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/touchaction.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/src/utils.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/src/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/assets/style.css" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/assets/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/compute_touch_action.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/compute_touch_action.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/input.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/input.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/log.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/log.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/multiple.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/multiple.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/nested.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/nested.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/simulator-googlemaps.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/simulator-googlemaps.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/simulator.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/simulator.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/touchaction.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/touchaction.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/visual.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/manual/visual.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/blanket.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/blanket.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/jquery.min.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/lodash.compat.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/lodash.compat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/qunit.css" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/qunit.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/qunit.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/qunit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/utils.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/assets/utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/gestures/test_pan.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/gestures/test_pan.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/gestures/test_swipe.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/gestures/test_swipe.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/index.html" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_enable.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_enable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_events.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_gestures.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_gestures.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_hammer.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_hammer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_jquery_plugin.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_jquery_plugin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_multiple_taps.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_multiple_taps.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_nested_gesture_recognizers.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_nested_gesture_recognizers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_require_failure.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_require_failure.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_simultaneous_recognition.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_simultaneous_recognition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_utils.js" afterPath="$PROJECT_DIR$/node_modules/hammerjs/tests/unit/test_utils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.gitattributes" afterPath="$PROJECT_DIR$/node_modules/materialize-css/.gitattributes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.npmignore" afterPath="$PROJECT_DIR$/node_modules/materialize-css/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/.travis.yml" afterPath="$PROJECT_DIR$/node_modules/materialize-css/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/CHANGELOG.md" afterPath="$PROJECT_DIR$/node_modules/materialize-css/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/CNAME" afterPath="$PROJECT_DIR$/node_modules/materialize-css/CNAME" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/node_modules/materialize-css/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/Gruntfile.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/LICENSE" afterPath="$PROJECT_DIR$/node_modules/materialize-css/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/README.md" afterPath="$PROJECT_DIR$/node_modules/materialize-css/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/_SpecRunner.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/_SpecRunner.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/about.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/badges.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/badges.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/bin/materialize.css" afterPath="$PROJECT_DIR$/node_modules/materialize-css/bin/materialize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/bin/materialize.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/bin/materialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/bower.json" afterPath="$PROJECT_DIR$/node_modules/materialize-css/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/breadcrumbs.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/breadcrumbs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/buttons.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/buttons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/cards.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/cards.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/chips.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/chips.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/collapsible.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/collapsible.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/collections.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/collections.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/color.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/color.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/config.codekit" afterPath="$PROJECT_DIR$/node_modules/materialize-css/config.codekit" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/css/ghpages-materialize.css" afterPath="$PROJECT_DIR$/node_modules/materialize-css/css/ghpages-materialize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/css/prism.css" afterPath="$PROJECT_DIR$/node_modules/materialize-css/css/prism.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dialogs.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/dialogs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/css/materialize.css" afterPath="$PROJECT_DIR$/node_modules/materialize-css/dist/css/materialize.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/css/materialize.min.css" afterPath="$PROJECT_DIR$/node_modules/materialize-css/dist/css/materialize.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/js/materialize.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/dist/js/materialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dist/js/materialize.min.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/dist/js/materialize.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/dropdown.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/dropdown.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/extras/noUiSlider/nouislider.css" afterPath="$PROJECT_DIR$/node_modules/materialize-css/extras/noUiSlider/nouislider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/extras/noUiSlider/nouislider.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/extras/noUiSlider/nouislider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/extras/noUiSlider/nouislider.min.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/extras/noUiSlider/nouislider.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/footer.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/forms.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/forms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/fullscreen-slider-demo.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/fullscreen-slider-demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/getting-started.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/getting-started.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/grid.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/grid.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/helpers.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/helpers.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/icons.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/icons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/index.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/_footer.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/_footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/_head.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/_head.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/_navbar.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/_navbar.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/_scripts.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/_scripts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/about.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/about.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/about/about_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/about/about_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/badges.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/badges.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/breadcrumbs.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/breadcrumbs.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/buttons.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/buttons.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/cards.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/cards.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/chips.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/chips.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/collapsible.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/collapsible.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/collections.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/collections.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/color.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/color.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/dialogs.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/dialogs.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/dropdown.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/dropdown.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/footer.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/footer.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/forms.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/forms.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/fullscreen-slider-demo.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/fullscreen-slider-demo.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/getting-started.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/getting-started.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/getting_started/getting_started_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/getting_started/getting_started_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/grid.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/grid.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/helpers.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/helpers.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/icons.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/icons.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/index.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/index.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/index/index_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/index/index_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/lunr.min.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/lunr.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/media-css.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/media-css.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/media.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/media.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/mobile.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/mobile.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/mobile/mobile_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/mobile/mobile_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/modals.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/modals.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/navbar.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/navbar.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/badges_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/badges_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/breadcrumbs_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/breadcrumbs_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/buttons_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/buttons_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/cards_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/cards_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/chips_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/chips_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/collapsible_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/collapsible_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/collections_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/collections_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/color_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/color_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/dialogs_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/dialogs_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/dropdown_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/dropdown_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/footer_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/footer_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/forms_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/forms_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/fullscreen_slider_demo_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/fullscreen_slider_demo_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/grid_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/grid_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/helpers_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/helpers_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/icons_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/icons_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/media-css_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/media-css_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/media_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/media_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/modals_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/modals_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/navbar_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/navbar_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/pagination_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/pagination_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/parallax_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/parallax_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/parallax_demo_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/parallax_demo_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/preloader_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/preloader_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/pushpin_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/pushpin_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/sass_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/sass_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/scrollfire_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/scrollfire_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/scrollspy_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/scrollspy_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/shadow_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/shadow_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/sideNav_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/sideNav_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/table_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/table_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/tabs_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/tabs_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/transitions_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/transitions_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/typography_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/typography_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/waves_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/page-contents/waves_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/pagination.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/pagination.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/parallax-demo.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/parallax-demo.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/parallax.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/parallax.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/parallax/parallax_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/parallax/parallax_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/preloader.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/preloader.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/pushpin.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/pushpin.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/sass.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/sass.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/scrollFire.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/scrollFire.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/scrollspy.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/scrollspy.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/search.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/shadow.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/shadow.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/showcase.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/showcase.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/showcase/showcase_content.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/showcase/showcase_content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/sideNav.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/sideNav.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/table.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/table.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/tabs.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/tabs.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/transitions.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/transitions.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/typography.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/typography.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/jade/waves.jade" afterPath="$PROJECT_DIR$/node_modules/materialize-css/jade/waves.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/animation.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/animation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/buttons.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/buttons.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/cards.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/cards.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/carousel.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/carousel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/character_counter.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/character_counter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/chips.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/chips.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/collapsible.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/collapsible.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/date_picker/picker.date.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/date_picker/picker.date.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/date_picker/picker.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/date_picker/picker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/dropdown.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/forms.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/forms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/global.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/init.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/initial.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/initial.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/jquery.easing.1.3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/jquery.hammer.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/jquery.hammer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/leanModal.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/leanModal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/materialbox.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/materialbox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/materialize.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/materialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/parallax.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/parallax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/prism.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/prism.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/pushpin.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/pushpin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/scrollFire.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/scrollFire.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/scrollspy.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/sideNav.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/sideNav.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/slider.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/slider.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/tabs.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/tabs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/toasts.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/toasts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/tooltip.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/transitions.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/transitions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/velocity.min.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/velocity.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/js/waves.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/js/waves.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/media-css.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/media-css.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/media.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/media.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/mobile.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/mobile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/modals.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/modals.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/navbar.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/package.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/package.json" afterPath="$PROJECT_DIR$/node_modules/materialize-css/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/pagination.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/pagination.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/parallax-demo.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/parallax-demo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/parallax.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/parallax.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/preloader.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/preloader.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/pushpin.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/pushpin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/res/MaterializeLogo-3.svg" afterPath="$PROJECT_DIR$/node_modules/materialize-css/res/MaterializeLogo-3.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/res/materialize.svg" afterPath="$PROJECT_DIR$/node_modules/materialize-css/res/materialize.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/robots.txt" afterPath="$PROJECT_DIR$/node_modules/materialize-css/robots.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_buttons.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_buttons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_cards.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_cards.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_carousel.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_carousel.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_chips.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_chips.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_collapsible.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_collapsible.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_color.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_color.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_dropdown.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_dropdown.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_global.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_global.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_grid.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_grid.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_icons-material-design.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_icons-material-design.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_materialbox.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_materialbox.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_mixins.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_modal.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_modal.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_navbar.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_navbar.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_normalize.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_normalize.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_prefixer.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_prefixer.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_preloader.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_preloader.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_roboto.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_roboto.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_sideNav.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_sideNav.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_slider.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_slider.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_table_of_contents.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_table_of_contents.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_tabs.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_tabs.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_toast.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_toast.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_tooltip.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_tooltip.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_typography.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_typography.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_variables.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_waves.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/_waves.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/date_picker/_default.date.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/date_picker/_default.date.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/date_picker/_default.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/date_picker/_default.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/date_picker/_default.time.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/components/date_picker/_default.time.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/ghpages-materialize.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/ghpages-materialize.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/materialize.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/materialize.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sass/style.scss" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sass/style.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/scrollfire.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/scrollfire.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/scrollspy.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/scrollspy.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/shadow.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/shadow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/showcase.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/showcase.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/side-nav.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/side-nav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/sitemap.xml" afterPath="$PROJECT_DIR$/node_modules/materialize-css/sitemap.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/table.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/table.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tabs.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tabs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/LICENSE" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/css/style.css" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/index.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/js/init.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/js/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/js/masonry.pkgd.min.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/js/masonry.pkgd.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/preview.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/masonry-template/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/LICENSE" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/css/style.css" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/index.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/js/init.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/js/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/preview.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/parallax-template/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/LICENSE" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/css/style.css" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/index.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/js/init.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/js/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/preview.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/templates/starter-template/preview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/test.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/test.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/test/html/collapsible.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/test/html/collapsible.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/test/html/dropdown.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/test/html/dropdown.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/test/html/fixed_navbar.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/test/html/fixed_navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/test/html/forms.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/test/html/forms.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/test/html/materialbox.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/test/html/materialbox.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/test/html/multiple_modals.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/test/html/multiple_modals.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/test/html/multiple_sidenav.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/test/html/multiple_sidenav.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/test/html/tabs.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/test/html/tabs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/cards/cardsFixture.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/cards/cardsFixture.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/cards/cardsSpec.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/cards/cardsSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/collapsible/collapsible.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/collapsible/collapsible.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/collapsible/collapsibleSpec.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/collapsible/collapsibleSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/select/selectFixture.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/select/selectFixture.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/select/selectSpec.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/select/selectSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/tabs/tabsFixture.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/tabs/tabsFixture.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/tabs/tabsSpec.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/tabs/tabsSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/toast/toastSpec.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/toast/toastSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/tooltip/tooltipFixture.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/tooltip/tooltipFixture.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/tooltip/tooltipSpec.js" afterPath="$PROJECT_DIR$/node_modules/materialize-css/tests/spec/tooltip/tooltipSpec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/transitions.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/transitions.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/typography.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/typography.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/materialize-css/waves.html" afterPath="$PROJECT_DIR$/node_modules/materialize-css/waves.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimatch/LICENSE" afterPath="$PROJECT_DIR$/node_modules/minimatch/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimatch/README.md" afterPath="$PROJECT_DIR$/node_modules/minimatch/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimatch/minimatch.js" afterPath="$PROJECT_DIR$/node_modules/minimatch/minimatch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/minimatch/package.json" afterPath="$PROJECT_DIR$/node_modules/minimatch/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rimraf/LICENSE" afterPath="$PROJECT_DIR$/node_modules/rimraf/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rimraf/README.md" afterPath="$PROJECT_DIR$/node_modules/rimraf/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rimraf/bin.js" afterPath="$PROJECT_DIR$/node_modules/rimraf/bin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rimraf/package.json" afterPath="$PROJECT_DIR$/node_modules/rimraf/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/rimraf/rimraf.js" afterPath="$PROJECT_DIR$/node_modules/rimraf/rimraf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/index.html" afterPath="$PROJECT_DIR$/projects/index.html" />
     </list>
     <ignored path="browser-event-display.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,8 +544,8 @@
           <file leaf-file-name="data.json" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/_data/data.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1343">
-                  <caret line="79" column="27" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
+                <state relative-caret-position="442">
+                  <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -155,21 +619,81 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="_project.scss" pinned="false" current-in-tab="false">
+          <file leaf-file-name="_project.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/_sass/_project.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="_nav.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/gulpfile.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_nav.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/_sass/_nav.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/projects/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="project_card.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/_includes/project/project_card.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" column="21" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="21" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_cards.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/node_modules/materialize-css/sass/components/_cards.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-18">
+                  <caret line="16" column="20" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_buttons.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/node_modules/materialize-css/sass/components/_buttons.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="281">
+                  <caret line="127" column="16" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="408">
+                  <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -183,56 +707,6 @@
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_main.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/_sass/_main.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2822">
-                  <caret line="166" column="30" selection-start-line="166" selection-start-column="30" selection-end-line="166" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="videos.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/_includes/videos.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="_videos.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/_sass/_videos.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="project_title_buttons.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/_includes/project/project_title_buttons.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/projects/hero2/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="51">
-                  <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -272,8 +746,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_includes/chip.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_includes/loading.html" />
         <option value="$PROJECT_DIR$/_sass/_spinkit_custom_var.scss" />
         <option value="$PROJECT_DIR$/_layouts/home.html" />
@@ -293,8 +765,6 @@
         <option value="$PROJECT_DIR$/_includes/build/link.html" />
         <option value="$PROJECT_DIR$/_dependencies/link.html" />
         <option value="$PROJECT_DIR$/_dependencies/scripts.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/_includes/vr_world.html" />
         <option value="$PROJECT_DIR$/manifest.json" />
@@ -320,9 +790,13 @@
         <option value="$PROJECT_DIR$/_sass/_gallery.scss" />
         <option value="$PROJECT_DIR$/projects/trebuchet/index.html" />
         <option value="$PROJECT_DIR$/_includes/nav.html" />
-        <option value="$PROJECT_DIR$/_sass/_project.scss" />
-        <option value="$PROJECT_DIR$/_data/data.json" />
         <option value="$PROJECT_DIR$/_sass/_nav.scss" />
+        <option value="$PROJECT_DIR$/projects/index.html" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/_data/data.json" />
+        <option value="$PROJECT_DIR$/_includes/project/project_card.html" />
+        <option value="$PROJECT_DIR$/_sass/_project.scss" />
       </list>
     </option>
   </component>
@@ -547,14 +1021,7 @@
       <workItem from="1474483143331" duration="8282000" />
       <workItem from="1474520422708" duration="139000" />
       <workItem from="1474766852695" duration="22661000" />
-      <workItem from="1474815959503" duration="9967000" />
-    </task>
-    <task id="LOCAL-00019" summary="Added Materializecss via npm&#10;Added gitignore to ignore node_modules">
-      <created>1448348163554</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1448348163554</updated>
+      <workItem from="1474815959503" duration="13185000" />
     </task>
     <task id="LOCAL-00020" summary="Reorganized phrases for console outs">
       <created>1448348525570</created>
@@ -892,11 +1359,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474826193703</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="add video includes&#10;add footer&#10;improve sp pages&#10;add bluetoothlight project&#10;fix minor nav issues">
+      <created>1474826251445</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1474826251445</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119261000" />
+    <option name="totallyTimeSpent" value="122479000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -904,12 +1378,12 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33261105" sideWeight="0.52107483" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33261105" sideWeight="0.5231823" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34408602" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33261105" sideWeight="0.4789252" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33261105" sideWeight="0.4768177" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34127843" sideWeight="0.45995784" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34127843" sideWeight="0.45785037" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -933,7 +1407,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add more temp projects" />
     <MESSAGE value="first iteration of loading" />
     <MESSAGE value="color override" />
     <MESSAGE value="add imports" />
@@ -958,35 +1431,14 @@
     <MESSAGE value="fix mobile back button" />
     <MESSAGE value="fix sp title button animations" />
     <MESSAGE value="fix projects padding to much on right" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix projects padding to much on right" />
+    <MESSAGE value="add video includes&#10;add footer&#10;improve sp pages&#10;add bluetoothlight project&#10;fix minor nav issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="add video includes&#10;add footer&#10;improve sp pages&#10;add bluetoothlight project&#10;fix minor nav issues" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resume/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/build/link.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/build/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="16" column="66" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/build/scripts.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1008,13 +1460,6 @@
         <state relative-caret-position="85">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -1057,13 +1502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1114,13 +1552,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skills/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1132,6 +1563,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1270,32 +1702,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_data/data.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="79" column="27" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/_project.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/specific_project.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2822">
@@ -1312,10 +1718,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/specific_project.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/materialize-css/sass/components/_buttons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="127" column="16" selection-start-line="127" selection-start-column="16" selection-end-line="127" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_data/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_nav.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/materialize-css/sass/components/_cards.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret line="16" column="20" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/project/project_card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/_project.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
           <folding />
         </state>
       </provider>

@@ -1,8 +1,16 @@
-<div class="col s6 m4 l4">
-    <div ui-serf="{{project.cs_url}}" class="card blue-grey darken-1">
+<section class="col s12 cs-project-card">
+    <h2 class="header">{{project.name}}</h2>
+    <a href="{{project.cs_url}}" class="card horizontal">
         <div class="card-image">
-            <img src="{{project.images[0]}}"/>
-            <span class="card-title truncate cs-projects-card-title">{{project.name}}</span>
+            <img src="{{project.images[0]}}">
         </div>
-    </div>
-</div>
+        <div class="card-stacked">
+            <div class="card-content">
+                <p>{{project.short_des}}</p>
+            </div>
+            <!--<div class="card-action">-->
+                <!--<a href="#">This is a link</a>-->
+            <!--</div>-->
+        </div>
+    </a>
+</section>
