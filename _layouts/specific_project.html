@@ -2,18 +2,25 @@
 layout: base
 ---
 
-<section>
+<section class="cs-sp">
     {% for project in site.data.data.projects %}
-        {% if project.name == "Hero2.0" %}
+        {% if project.name == {{page.project_name}} %}
         <div class="cs-sp-title-container">
+            <div>
+                <div class="cs-sp-title-image"
+                     style="background-image: url('{{site.data.data.specific_project.title_image}}')">
+                </div>
+            </div>
 
-            <img class="materialboxed">
-            <h1 class="cs-sp-title">{{project.name}}</h1>
-            <h3 class="cs-sp-short-description">{{project.short_des}}</h3>
+            <div class="center-align">
+                <h1 class="cs-sp-title center-align">{{project.name}}</h1>
+                <h4 class="cs-sp-short-description">{{project.short_des}}</h4>
+                {% include project/project_title_buttons.html %}
+            </div>
+
         </div>
 
         {% include borderless_gallery.html %}
         {% endif %}
-
     {% endfor %}
 </section>

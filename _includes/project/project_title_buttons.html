@@ -1,0 +1,19 @@
+<section class="cs-sp-title-buttons">
+    {% if project.download_url != "" %}
+        <span class="cs-sp-title-button">
+            <a href="{{project.download_url}}" class="waves-effect waves-light btn-large">
+                <i class="fa fa-fw fa-download" aria-hidden="true"></i>Download</a>
+        </span>
+    {% endif %}
+
+    <span>
+        {% if project.demo_url != "" %}
+        <span class="cs-sp-title-button">
+            <a href="{{project.demo_url}}" class="waves-effect waves-light btn-large">
+                <i class="fa fa-fw fa-flask" aria-hidden="true"></i>Demo</a>
+        </span>
+    {% endif %}
+    </span>
+    <span></span>
+    <span></span>
+</section>

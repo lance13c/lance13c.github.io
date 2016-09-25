@@ -1,0 +1,48 @@
+.cs-sp {
+
+ .cs-sp-title-container {
+   height: 350px;
+
+   .cs-sp-title-image {
+     position: absolute;
+     top: $nav-height;
+     width: 100%;
+     height: 350px;
+   }
+
+   .cs-sp-title {
+     margin-top: 80px;
+     position: relative;
+     z-index: 1;
+     color: $theme-3
+   }
+
+   .cs-sp-short-description {
+     margin-bottom: 20px;
+     position: relative;
+     z-index: 1;
+     color: $theme-3
+   }
+ }
+  .cs-break {
+    background: $theme-2;
+    width: 100%;
+    height: 100px;
+  }
+
+  .cs-sp-title-buttons {
+
+    .fa {
+      padding-right: 30px;
+    }
+
+    a {
+      background-color: $cs-accent-color-1;
+    }
+  }
+
+  .cs-sp-sub-title {
+    margin-left: 10%;
+  }
+}
+

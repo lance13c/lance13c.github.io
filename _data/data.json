@@ -19,14 +19,15 @@
       "github_url": "",
       "cs_url": "main.home",
       "download_url": "https://www.dropbox.com/s/6winwjc686q0nm1/Hero2.0.exe?dl=0",
+      "demo_url": "",
       "blog": "",
       "images": ["/assets/images/projects/hero/hero0.png", "/assets/images/projects/hero/hero1.png", "/assets/images/projects/hero/hero2.png", "/assets/images/projects/hero/hero3.png", "/assets/images/projects/hero/hero4.png", "/assets/images/projects/hero/hero5.png",
-        "/assets/images/projects/hero/hero7.png", "/assets/images/projects/hero/hero7.png", "/assets/images/projects/hero/hero8.png", "/assets/images/projects/hero/hero9.png", "/assets/images/projects/hero/hero10.png", "/assets/images/projects/hero/hero11.png",
+        "/assets/images/projects/hero/hero7.png", "/assets/images/projects/hero/hero8.png", "/assets/images/projects/hero/hero9.png", "/assets/images/projects/hero/hero10.png", "/assets/images/projects/hero/hero11.png",
         "/assets/images/projects/hero/hero12.png", "/assets/images/projects/hero/hero13.png"],
       "videos": ""
     },
     {
-      "name": "Trebuchet3",
+      "name": "Bluetooth Lights",
       "short_des": "This is my trebuchet short description",
       "description": "This is my trebuchet long description, This is my trebuchet long description, This is my trebuchet long description",
       "github_url": "",
@@ -170,5 +171,8 @@
   },
   "resume": {
     "url": "/resume/resume.pdf"
+  },
+  "specific_project": {
+    "title_image": "/assets/images/background/hexabump/hexabump.png"
   }
 }
