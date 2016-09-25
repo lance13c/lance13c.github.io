@@ -1,13 +1,14 @@
 .cs-sp {
 
  .cs-sp-title-container {
-   height: 350px;
+   height: 400px;
 
    .cs-sp-title-image {
+     z-index: -1;
      position: absolute;
      top: $nav-height;
      width: 100%;
-     height: 350px;
+     height: 500px;
    }
 
    .cs-sp-title {
@@ -32,13 +33,29 @@
 
   .cs-sp-title-buttons {
 
+    i {
+      transition: .1s ease-out;
+
+      &:hover {
+        transition: .1s ease-out;
+      }
+    }
+
     .fa {
       padding-right: 30px;
     }
 
     a {
       background-color: $cs-accent-color-1;
+      transition: .1s ease-out;
+
+      &:hover {
+        background-color: $cs-accent-color-1-dark;
+        transition: .1s ease-out;
+      }
     }
+
+
   }
 
   .cs-sp-sub-title {
