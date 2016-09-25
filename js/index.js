@@ -21,6 +21,16 @@
 		resize();
 	});
 	
+	// Init Side Nav
+	$(".cs-mobile-menu").sideNav({
+		edge: 'right'
+	});
+	
+	// Mobile Back Button
+	$(".cs-mobile-back").on('click touchend', () => {
+		history.back();
+	});
+	
 })();
 
 

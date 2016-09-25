@@ -43,17 +43,30 @@
       }
 
       .cs-side-nav {
-        background: $theme-3;
+        margin-top: $nav-height;
+        background: $theme-1;
+        color: $theme-3;
 
         li {
-          background: inherit;
+          padding: 0;
+          background-color: $theme-2;
+          border-bottom: solid 1px $theme-5;
+
           a {
-            color: $nav-background-color;
+            font-size: 20px;
+            font-weight: 300;
+
+            i {
+              font-size: inherit;
+            }
+
+            padding: 0 20px;
+            color: $theme-3;
           }
         }
 
         .divider {
-          background: $nav-background-color;
+          color: $theme-3;
         }
       }
 

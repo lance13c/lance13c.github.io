@@ -150,13 +150,22 @@
     .cs-nav nav .nav-wrapper .cs-main-nav {
       margin-left: 200px; }
     .cs-nav nav .nav-wrapper .cs-side-nav {
-      background: #F2F2F2; }
+      margin-top: 63px;
+      background: #212A3F;
+      color: #F2F2F2; }
       .cs-nav nav .nav-wrapper .cs-side-nav li {
-        background: inherit; }
+        padding: 0;
+        background-color: #434F5B;
+        border-bottom: solid 1px #2E2E2E; }
         .cs-nav nav .nav-wrapper .cs-side-nav li a {
-          color: #212A3F; }
+          font-size: 20px;
+          font-weight: 300;
+          padding: 0 20px;
+          color: #F2F2F2; }
+          .cs-nav nav .nav-wrapper .cs-side-nav li a i {
+            font-size: inherit; }
       .cs-nav nav .nav-wrapper .cs-side-nav .divider {
-        background: #212A3F; }
+        color: #F2F2F2; }
     .cs-nav nav .nav-wrapper .cs-siteicon {
       margin-left: 10px; }
       .cs-nav nav .nav-wrapper .cs-siteicon:hover {
