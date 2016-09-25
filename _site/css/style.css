@@ -48,6 +48,11 @@
     opacity: 1; }
   to {
     opacity: 0; } }
+.cs-videos {
+  width: 100%; }
+  .cs-videos iframe {
+    width: 100%; }
+
 .sk-circle .sk-child:before {
   background-color: #007BB6; }
 
@@ -94,7 +99,7 @@
     position: absolute;
     top: 63px;
     width: 100%;
-    height: 500px; }
+    height: 481px; }
   .cs-sp .cs-sp-title-container .cs-sp-title {
     margin-top: 80px;
     position: relative;
@@ -121,6 +126,15 @@
   .cs-sp .cs-sp-title-buttons a:hover {
     background-color: #175716;
     transition: .1s ease-out; }
+.cs-sp .cs-sp-title-buttons .cs-borderless-gallery-github a {
+  background-color: #007BB6;
+  transition: .1s ease-out; }
+  .cs-sp .cs-sp-title-buttons .cs-borderless-gallery-github a i {
+    padding-right: 0;
+    font-size: 2rem; }
+  .cs-sp .cs-sp-title-buttons .cs-borderless-gallery-github a:hover {
+    background-color: #0C327F;
+    transition: .1s ease-out; }
 .cs-sp .cs-sp-sub-title {
   margin-left: 10%; }
 
@@ -133,6 +147,8 @@
     background: #212A3F; }
     .cs-nav nav .nav-wrapper .brand-logo {
       cursor: pointer; }
+    .cs-nav nav .nav-wrapper .cs-dropdown-projects-btn {
+      padding-right: 0; }
     .cs-nav nav .nav-wrapper li {
       font-size: 18px;
       font-weight: 400;
@@ -313,3 +329,11 @@ body {
 
 .cs-fa-github-square:hover {
   background: #8AB839; }
+
+.cs-footer {
+  margin-top: 200px;
+  padding-top: 10px;
+  width: 100%;
+  height: 100px;
+  background-color: #2E2E2E;
+  color: #F2F2F2; }

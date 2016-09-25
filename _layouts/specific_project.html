@@ -17,10 +17,11 @@ layout: base
                 <h4 class="cs-sp-short-description">{{project.short_des}}</h4>
                 {% include project/project_title_buttons.html %}
             </div>
-
         </div>
 
         {% include borderless_gallery.html %}
+        {% include videos.html %}
+        {% include footer.html %}
         {% endif %}
     {% endfor %}
 </section>
