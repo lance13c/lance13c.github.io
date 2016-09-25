@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<section class="cs-borderless-gallery">
+        <!-- Must be within a project for loop -->
+    <div class="row hide-on-med-and-up">
+        {% for image in project.images %}
+            <img class="materialboxed cs-borderless-gallery-img-phone" src="{{image}}">
+        {% endfor %}
+    </div>
+    <div class="hide-on-small-only">
+        {% for image in project.images %}
+        <img class="cs-borderless-gallery-img-desktop" src="{{image}}">
+        {% endfor %}
+    </div>
 
-</body>
-</html>
+        <!--</div>-->
+    </div>
+</section>

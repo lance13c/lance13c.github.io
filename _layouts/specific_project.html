@@ -3,13 +3,17 @@ layout: base
 ---
 
 <section>
-    <% for project in site.data.data.projects %>
-    <div class="cs-sp-title-container">
+    {% for project in site.data.data.projects %}
+        {% if project.name == "Hero2.0" %}
+        <div class="cs-sp-title-container">
 
-        <img class="materialboxed">
-        <h1 class="cs-sp-title">title: {{site.data.data.projects[0]}}</h1>
-        <h3 class="cs-sp-short-description"></h3>
-    </div>
+            <img class="materialboxed">
+            <h1 class="cs-sp-title">{{project.name}}</h1>
+            <h3 class="cs-sp-short-description">{{project.short_des}}</h3>
+        </div>
 
-    <% endfor %>
+        {% include borderless_gallery.html %}
+        {% endif %}
+
+    {% endfor %}
 </section>
