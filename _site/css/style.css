@@ -60,7 +60,7 @@
   height: 10em;
   position: relative; }
   .cs-loading-container div {
-    z-index: -1;
+    z-index: -5000;
     margin: 0;
     position: absolute;
     top: 100%;
