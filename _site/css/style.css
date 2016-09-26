@@ -95,8 +95,10 @@
 .cs-project-card .header {
   color: #F2F2F2;
   font-weight: 200; }
-.cs-project-card .card .card-image {
+.cs-project-card .cs-project-card-large .card-image {
   max-width: 25%; }
+.cs-project-card .cs-project-card-small {
+  padding: 50px 0; }
 .cs-project-card .card .card-content {
   font-weight: 300;
   font-size: 2rem;
@@ -106,28 +108,30 @@
   transition: .1s ease-out;
   box-shadow: 0px 0px 3px 1px #8AB839; }
 
-.cs-sp .cs-sp-title-container {
+.cs-sp-title-container {
   height: 400px; }
-  .cs-sp .cs-sp-title-container .cs-sp-title-image {
+  .cs-sp-title-container .cs-sp-title-image {
     z-index: -1;
     position: absolute;
     top: 63px;
     width: 100%;
     height: 481px; }
-  .cs-sp .cs-sp-title-container .cs-sp-title {
+  .cs-sp-title-container .cs-sp-title {
     margin-top: 80px;
     position: relative;
     z-index: 1;
     color: #F2F2F2; }
-  .cs-sp .cs-sp-title-container .cs-sp-short-description {
+  .cs-sp-title-container .cs-sp-short-description {
     margin-bottom: 20px;
     position: relative;
     z-index: 1;
     color: #F2F2F2; }
-.cs-sp .cs-break {
+
+.cs-break {
   background: #434F5B;
   width: 100%;
   height: 100px; }
+
 .cs-sp .cs-sp-title-buttons i {
   transition: .1s ease-out; }
   .cs-sp .cs-sp-title-buttons i:hover {
@@ -187,7 +191,7 @@
     .cs-nav nav .nav-wrapper .cs-main-nav {
       margin-left: 200px; }
     .cs-nav nav .nav-wrapper .cs-side-nav {
-      margin-top: 63px;
+      margin-top: 56px;
       background: #212A3F;
       color: #F2F2F2; }
       .cs-nav nav .nav-wrapper .cs-side-nav li {
@@ -200,6 +204,7 @@
           padding: 0 20px;
           color: #F2F2F2; }
           .cs-nav nav .nav-wrapper .cs-side-nav li a i {
+            float: none;
             font-size: inherit; }
       .cs-nav nav .nav-wrapper .cs-side-nav .divider {
         color: #F2F2F2; }

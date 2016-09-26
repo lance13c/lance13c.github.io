@@ -47,7 +47,7 @@
       }
 
       .cs-side-nav {
-        margin-top: $nav-height;
+        margin-top: $nav-height-small;
         background: $theme-1;
         color: $theme-3;
 
@@ -61,6 +61,7 @@
             font-weight: 300;
 
             i {
+              float: none;
               font-size: inherit;
             }
 
