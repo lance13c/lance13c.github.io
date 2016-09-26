@@ -113,16 +113,16 @@
   .cs-sp-title-container .cs-sp-title-image {
     z-index: -1;
     position: absolute;
-    top: 63px;
+    top: 0;
     width: 100%;
-    height: 481px; }
+    height: 535px; }
   .cs-sp-title-container .cs-sp-title {
     margin-top: 80px;
     position: relative;
     z-index: 1;
     color: #F2F2F2; }
   .cs-sp-title-container .cs-sp-short-description {
-    margin-bottom: 20px;
+    margin: 0 20px 20px 20px;
     position: relative;
     z-index: 1;
     color: #F2F2F2; }
