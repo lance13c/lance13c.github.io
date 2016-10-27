@@ -3,9 +3,8 @@ title: Test Post
 ---
 
 # Test Post
-alkdjflakdjf
-adjf
-jad
+alkdjflakdjfadjfjad
+<!--excerpt-->
 gadglkajdl;fkjaldkfj;lakdjf
 ja
 dfj

@@ -4,3 +4,5 @@ sass:
     sass_dir: _sass
 
 exclude: [node_modules]
+
+excerpt_separator: "<!--excerpt-->"
