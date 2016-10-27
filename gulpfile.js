@@ -10,7 +10,8 @@ const paths = {
 	css: './_includes/build/css/*.css',
 	js: './_includes/build/js/*.js',
 	build: './_includes/build',
-	pre_base: './_dependencies/base.html'
+	pre_base: './_dependencies/base.html',
+	pre_alt_base: './_dependencies/alt/base.html'
 };
 
 gulp.task('usemin', () => {

@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: alt/base
 ---
 
 <section class="cs-sp">
@@ -15,13 +15,13 @@ layout: base
             <div class="center-align">
                 <h1 class="cs-sp-title center-align">{{project.name}}</h1>
                 <h4 class="cs-sp-short-description">{{project.short_des}}</h4>
-                {% include project/project_title_buttons.html %}
+                {% include alt/project/project_title_buttons.html %}
             </div>
         </div>
 
-        {% include borderless_gallery.html %}
-        {% include videos.html %}
-        {% include footer.html %}
+        {% include alt/borderless_gallery.html %}
+        {% include alt/videos.html %}
+        {% include alt/footer.html %}
         {% endif %}
     {% endfor %}
 </section>
