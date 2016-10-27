@@ -3,7 +3,6 @@ const gulp = require('gulp');
 const usemin = require('gulp-usemin');
 const uglify = require('gulp-uglify');
 const minifyCss = require('gulp-minify-css');
-const replace = require('gulp-replace');
 
 const paths = {
 	fonts: './node_modules/materialize-css/dist/font/**/*.*',
