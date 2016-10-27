@@ -1,0 +1,21 @@
+.cs-simple-base {
+  margin: 100px auto 0 auto;
+  max-width: 550px;
+  font-family: Arial, sans-serif;
+
+
+  .cs-simple-base-title-container {
+
+    .cs-simple-base-title {
+      width: 295px;
+      margin: 0 auto;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: $cs-color-simple-accent;
+      }
+    }
+  }
+
+}

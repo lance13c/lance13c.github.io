@@ -1,8 +1,14 @@
 ---
 layout: base
+title: Cicilio Studio
 ---
 
-<section>
-    <% include simple_nav.html %>
+<section class="cs-simple-base">
+    <div class="cs-simple-base-title-container">
+        <h2 class="cs-simple-base-title">CicilioStudio</h2>
+    </div>
+    <hr>
+    <h5>{{site.data.data.life.bio}}</h5>
+    {% include simple_nav.html %}
     {{content}}
 </section>
