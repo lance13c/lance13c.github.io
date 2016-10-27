@@ -68,17 +68,19 @@ body {
     margin: 0 auto;
     cursor: pointer; }
     .cs-simple-base .cs-simple-base-title-container .cs-simple-base-title:hover {
-      text-decoration: underline;
-      text-decoration-color: #007bb6; }
+      text-decoration: underline; }
   .cs-simple-base .cs-simple-nav {
+    padding-top: 20px;
     font-family: Arial, sans-serif; }
-    .cs-simple-base .cs-simple-nav .cs-simple-nav-bar li {
+    .cs-simple-base .cs-simple-nav .cs-simple-nav-bar a {
       font-weight: 600;
-      font-size: 1.8rem; }
-      .cs-simple-base .cs-simple-nav .cs-simple-nav-bar li:hover {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: black; }
+      .cs-simple-base .cs-simple-nav .cs-simple-nav-bar a:hover {
         text-decoration: underline;
         text-decoration-color: #007bb6; }
 
 @media only screen and (max-width: 768px) {
   .cs-simple-base {
-    max-width: 55%; } }
+    max-width: 80%; } }

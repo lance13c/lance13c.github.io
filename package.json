@@ -4,9 +4,9 @@
   "description": "Placeholder",
   "main": "app/js/app.js",
   "scripts": {
-    "build": "gulp & jekyll b --incremental",
-    "serve": "jekyll s --incremental",
-    "s": "jekyll s --incremental",
+    "build": "gulp & jekyll b --incremental --watch",
+    "serve": "jekyll s --incremental --watch",
+    "s": "jekyll s --incremental --watch",
     "build_serve": "npm run build & npm run serve"
   },
   "repository": {
