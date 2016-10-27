@@ -66,9 +66,8 @@ body {
   .cs-simple-base .cs-simple-base-title-container .cs-simple-base-title {
     width: 295px;
     margin: 0 auto;
-    cursor: pointer; }
-    .cs-simple-base .cs-simple-base-title-container .cs-simple-base-title:hover {
-      text-decoration: underline; }
+    cursor: pointer;
+    color: black; }
   .cs-simple-base .cs-simple-nav {
     padding-top: 20px;
     font-family: Arial, sans-serif; }

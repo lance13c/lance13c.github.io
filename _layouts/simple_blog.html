@@ -3,3 +3,9 @@ layout: simple_base
 ---
 
 <!-- Displays the Latest 5 Blog Shorts -->
+
+<ul>
+    {% for post in site.posts %}
+        {% include blog/blog_short.html %}
+    {% endfor %}
+</ul>
