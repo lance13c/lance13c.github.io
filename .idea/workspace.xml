@@ -3,24 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d5d20c7c-0aef-4448-a721-681d0cbbe798" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_data/data.json" afterPath="$PROJECT_DIR$/_data/data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_dependencies/base.html" afterPath="$PROJECT_DIR$/_dependencies/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/css/libraries_combined.css" afterPath="$PROJECT_DIR$/_includes/build/css/libraries_combined.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/js/scripts_combined.js" afterPath="$PROJECT_DIR$/_includes/build/js/scripts_combined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/simple_base.html" afterPath="$PROJECT_DIR$/_layouts/simple_base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_colors.scss" afterPath="$PROJECT_DIR$/_sass/_colors.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/simple_nav.html" afterPath="$PROJECT_DIR$/_includes/simple_nav.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_simple_home.scss" afterPath="$PROJECT_DIR$/_sass/_simple_home.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/blog/index.html" afterPath="$PROJECT_DIR$/_site/blog/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/libraries_combined.css" afterPath="$PROJECT_DIR$/_site/css/libraries_combined.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/style.css" afterPath="$PROJECT_DIR$/_site/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/js/scripts_combined.js" afterPath="$PROJECT_DIR$/_site/js/scripts_combined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/package.json" afterPath="$PROJECT_DIR$/_site/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/libraries_combined.css" afterPath="$PROJECT_DIR$/css/libraries_combined.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.scss" afterPath="$PROJECT_DIR$/css/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/scripts_combined.js" afterPath="$PROJECT_DIR$/js/scripts_combined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="browser-event-display.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,11 +29,21 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/css/style.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="simple_nav.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/_includes/simple_nav.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -119,8 +116,8 @@
           <file leaf-file-name="_simple_home.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/_sass/_simple_home.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+                <state relative-caret-position="374">
+                  <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -161,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/images/background/hexabump/readme.txt" />
         <option value="$PROJECT_DIR$/projects/hero2/index.html" />
         <option value="$PROJECT_DIR$/life/index.html" />
         <option value="$PROJECT_DIR$/js/index.js" />
@@ -212,6 +208,7 @@
         <option value="$PROJECT_DIR$/_sass/_colors.scss" />
         <option value="$PROJECT_DIR$/_layouts/simple_base.html" />
         <option value="$PROJECT_DIR$/_sass/_simple_home.scss" />
+        <option value="$PROJECT_DIR$/_includes/simple_nav.html" />
       </list>
     </option>
   </component>
@@ -469,14 +466,7 @@
       <workItem from="1475116060360" duration="663000" />
       <workItem from="1477273701321" duration="2984000" />
       <workItem from="1477519594876" duration="1018000" />
-      <workItem from="1477530174754" duration="7616000" />
-    </task>
-    <task id="LOCAL-00028" summary="update pictures to be power of 2 compatible">
-      <created>1472864688973</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1472864688973</updated>
+      <workItem from="1477530174754" duration="10424000" />
     </task>
     <task id="LOCAL-00029" summary="exclude node_modules from jekyll compile">
       <created>1472864723583</created>
@@ -814,11 +804,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477533094633</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="update simple base">
+      <created>1477537924285</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1477537924285</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149293000" />
+    <option name="totallyTimeSpent" value="152101000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -855,7 +852,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove node_modules from github" />
     <MESSAGE value="update" />
     <MESSAGE value="add _site" />
     <MESSAGE value="change gulp to work pre jekyll" />
@@ -880,7 +876,8 @@
     <MESSAGE value="add assets" />
     <MESSAGE value="Re-organized prep for simple interface" />
     <MESSAGE value="update to use alt" />
-    <option name="LAST_COMMIT_MESSAGE" value="update to use alt" />
+    <MESSAGE value="update simple base" />
+    <option name="LAST_COMMIT_MESSAGE" value="update simple base" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1102,14 +1099,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/simple_nav.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/alt/specific_project.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1248,14 +1237,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_layouts/simple_blog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="31" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1272,26 +1253,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_dependencies/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/simple_base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/_simple_home.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1304,10 +1269,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_dependencies/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_layouts/simple_blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/_simple_home.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/simple_nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
           <folding />
         </state>
       </provider>

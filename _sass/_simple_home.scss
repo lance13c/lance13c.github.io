@@ -1,6 +1,11 @@
+body {
+  font-size: 16px;
+}
+
+
 .cs-simple-base {
   margin: 100px auto 0 auto;
-  max-width: 550px;
+  max-width: 40%;
   font-family: Arial, sans-serif;
 
 
@@ -18,4 +23,34 @@
     }
   }
 
+  .cs-simple-nav {
+    font-family: Arial, sans-serif;
+
+    .cs-simple-nav-bar {
+
+      li {
+        //padding: 0;
+        font-weight: 600;
+        font-size: 1.8rem;
+
+        &:hover {
+          text-decoration: underline;
+          text-decoration-color: $cs-color-simple-accent;
+        }
+      }
+    }
+  }
+
+
+
 }
+
+
+//Mobile
+@media only screen and (max-width: 768px) {
+  .cs-simple-base {
+    max-width: 55%;
+  }
+}
+
+

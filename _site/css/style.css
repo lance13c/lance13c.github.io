@@ -56,9 +56,12 @@
 .sk-circle .sk-child:before {
   background-color: #007BB6; }
 
+body {
+  font-size: 16px; }
+
 .cs-simple-base {
   margin: 100px auto 0 auto;
-  max-width: 550px;
+  max-width: 40%;
   font-family: Arial, sans-serif; }
   .cs-simple-base .cs-simple-base-title-container .cs-simple-base-title {
     width: 295px;
@@ -67,5 +70,15 @@
     .cs-simple-base .cs-simple-base-title-container .cs-simple-base-title:hover {
       text-decoration: underline;
       text-decoration-color: #007bb6; }
-  .cs-simple-base .cs-simple-base-title-container .hr {
-    color: #007bb6; }
+  .cs-simple-base .cs-simple-nav {
+    font-family: Arial, sans-serif; }
+    .cs-simple-base .cs-simple-nav .cs-simple-nav-bar li {
+      font-weight: 600;
+      font-size: 1.8rem; }
+      .cs-simple-base .cs-simple-nav .cs-simple-nav-bar li:hover {
+        text-decoration: underline;
+        text-decoration-color: #007bb6; }
+
+@media only screen and (max-width: 768px) {
+  .cs-simple-base {
+    max-width: 55%; } }
