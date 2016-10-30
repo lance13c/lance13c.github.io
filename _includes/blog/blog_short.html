@@ -1,14 +1,14 @@
 <li>
-    <h3>
-        <a href="{{ site.baseurl }}{{ post.url }}">
+    <h3 class="cs-simple-blog-title">
+        <span href="{{ site.baseurl }}{{ post.url }}">
             {{ post.title }}
-        </a>
+        </span>
     </h3>
 
-    <span class="post-date">{{ post.date | date: '%b %-d, %Y' }}</span>
 
-    <p>
+    <p class="cs-simple-post-excerpt">
         {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
-        <a href="{{ site.baseurl }}{{ post.url }}">... Read More</a>
     </p>
+    <span class="cs-simple-link" href="{{ site.baseurl }}{{ post.url }}">Read More</span>
+    <a class="post-date cs-simple-link">{{ post.date | date: '%b %-d, %Y' }}</a>
 </li>

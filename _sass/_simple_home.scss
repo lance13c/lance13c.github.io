@@ -15,7 +15,7 @@ body {
       width: 295px;
       margin: 0 auto;
       cursor: pointer;
-      color: black;
+      color: $cs-color-simple-text;
 
       &:hover {
         //text-decoration-color: $cs-color-simple-accent;
@@ -35,7 +35,7 @@ body {
         font-weight: 600;
         font-size: 1.8rem;
         cursor: pointer;
-        color: black;
+        color: $cs-color-simple-text;
 
         &:hover {
           text-decoration: underline;
@@ -45,8 +45,44 @@ body {
     }
   }
 
+  .cs-simple-nav-content {
 
+    li {
+      margin-bottom: 20px;
 
+      .cs-simple-post-excerpt {
+        margin-bottom: 0;
+      }
+    }
+
+    .cs-simple-blog-title {
+      display: inline;
+      color: $cs-color-simple-text;
+      font-weight: bold;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .post-date {
+      float: right;
+    }
+  }
+
+  .cs-simple-link {
+    color: $cs-color-simple-text;
+    font-weight: 600;
+    font-size: .9rem;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+      color: $cs-color-simple-accent;
+    }
+  }
 }
 
 
