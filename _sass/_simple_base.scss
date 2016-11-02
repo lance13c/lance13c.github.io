@@ -10,9 +10,14 @@ body {
 
 
   .cs-simple-base-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end;
 
     .cs-simple-base-title {
-      display: inline;
+      flex: 1 0 auto;
       margin: 0 auto;
       cursor: pointer;
       color: $cs-color-simple-text;

@@ -60,40 +60,23 @@ body {
   font-size: 16px; }
 
 .cs-simple-base {
-  margin: 100px auto 0 auto;
+  margin: 50px auto 0 auto;
   max-width: 40%;
   font-family: "Droid Sans", sans-serif; }
-  .cs-simple-base .cs-simple-base-title-container .cs-simple-base-title {
-    width: 295px;
-    margin: 0 auto;
-    cursor: pointer;
-    color: #000000;
-    font-family: Roboto, sans-serif; }
-  .cs-simple-base .cs-simple-nav {
-    padding-top: 20px;
-    font-family: "Droid Sans", sans-serif; }
-    .cs-simple-base .cs-simple-nav .cs-simple-nav-bar a {
-      font-weight: 600;
-      font-size: 1.8rem;
+  .cs-simple-base .cs-simple-base-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    align-items: flex-end; }
+    .cs-simple-base .cs-simple-base-container .cs-simple-base-title {
+      flex: 1 0 auto;
+      margin: 0 auto;
       cursor: pointer;
-      color: #000000; }
-      .cs-simple-base .cs-simple-nav .cs-simple-nav-bar a:hover {
-        text-decoration: underline; }
-  .cs-simple-base .cs-simple-nav-content li {
+      color: #000000;
+      font-family: Roboto, sans-serif; }
+  .cs-simple-base .cs-simple-content li {
     margin-bottom: 20px; }
-    .cs-simple-base .cs-simple-nav-content li .cs-simple-post-excerpt {
-      margin-bottom: 0; }
-  .cs-simple-base .cs-simple-nav-content .cs-simple-blog-title {
-    display: inline;
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.5rem;
-    cursor: pointer;
-    font-family: Roboto, sans-serif; }
-    .cs-simple-base .cs-simple-nav-content .cs-simple-blog-title:hover {
-      text-decoration: underline; }
-  .cs-simple-base .cs-simple-nav-content .post-date {
-    float: right; }
   .cs-simple-base .cs-simple-link {
     color: #000000;
     font-weight: 600;
@@ -106,6 +89,38 @@ body {
 @media only screen and (max-width: 768px) {
   .cs-simple-base {
     max-width: 80%; } }
+.cs-simple-content li {
+  margin-bottom: 20px; }
+  .cs-simple-content li .cs-simple-blog-post-excerpt {
+    margin-bottom: 0; }
+.cs-simple-content .cs-simple-blog-title {
+  display: inline;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: Roboto, sans-serif; }
+  .cs-simple-content .cs-simple-blog-title:hover {
+    text-decoration: underline; }
+.cs-simple-content .post-date {
+  float: right; }
+
+.cs-simple-nav .cs-simple-nav-bar {
+  display: inline-block;
+  padding-top: 20px;
+  margin: 0 auto;
+  font-family: "Droid Sans", sans-serif; }
+  .cs-simple-nav .cs-simple-nav-bar li {
+    display: inline;
+    margin: 0 5px; }
+    .cs-simple-nav .cs-simple-nav-bar li a {
+      font-weight: 600;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: #000000; }
+      .cs-simple-nav .cs-simple-nav-bar li a:hover {
+        text-decoration: underline; }
+
 .cs-loading-container {
   height: 10em;
   position: relative; }
