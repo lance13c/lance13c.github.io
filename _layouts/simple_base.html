@@ -4,13 +4,11 @@ title: Cicilio Studio
 ---
 
 <section class="cs-simple-base">
-    <div class="cs-simple-base-title-container">
-        <h2 class="cs-simple-base-title">CicilioStudio</h2>
+    <div class="cs-simple-base-container">
+        <h3 class="cs-simple-base-title">CicilioStudio</h3>
+        {% include simple_nav.html %}
     </div>
     <hr>
     <h5>{{site.data.data.life.bio}}</h5>
-    <section class="cs-nav-container">
-        {% include simple_nav.html %}
-        {{content}}
-    </section>
+    {{content}}
 </section>

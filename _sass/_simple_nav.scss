@@ -1,18 +1,25 @@
 .cs-simple-nav {
-  padding-top: 20px;
-  font-family: $cs-font-simple-content;
+  display: inline;
 
   .cs-simple-nav-bar {
+    display: inline;
+    padding-top: 20px;
+    font-family: $cs-font-simple-content;
 
-    a {
-      //padding: 0;
-      font-weight: 600;
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: $cs-color-simple-text;
+    li {
+      display: inline;
+      margin: 0 5px;
 
-      &:hover {
-        text-decoration: underline;
+      a {
+        //padding: 0;
+        font-weight: 600;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: $cs-color-simple-text;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
