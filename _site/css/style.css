@@ -66,7 +66,7 @@ body {
   .cs-simple-base .cs-simple-base-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-content: flex-end;
     align-items: flex-end; }
     .cs-simple-base .cs-simple-base-container .cs-simple-base-title {
@@ -86,6 +86,15 @@ body {
       text-decoration: underline;
       color: #007bb6; }
 
+@media only screen and (max-width: 1400px) {
+  .cs-simple-base {
+    max-width: 50%; } }
+@media only screen and (max-width: 1200px) {
+  .cs-simple-base {
+    max-width: 60%; } }
+@media only screen and (max-width: 900px) {
+  .cs-simple-base {
+    max-width: 70%; } }
 @media only screen and (max-width: 768px) {
   .cs-simple-base {
     max-width: 80%; } }

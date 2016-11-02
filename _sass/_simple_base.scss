@@ -12,7 +12,7 @@ body {
   .cs-simple-base-container {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-content: flex-end;
     align-items: flex-end;
 
@@ -50,12 +50,46 @@ body {
   }
 }
 
+//Mobile & Tablet
+@media only screen and (max-width: 1400px) {
+  .cs-simple-base {
+    max-width: 50%;
+  }
+}
 
-//Mobile
+//Mobile & Tablet
+@media only screen and (max-width: 1200px) {
+  .cs-simple-base {
+    max-width: 60%;
+  }
+}
+
+//Mobile & Tablet
+@media only screen and (max-width: 900px) {
+  .cs-simple-base {
+    max-width: 70%;
+  }
+}
+
+//Mobile & Tablet
 @media only screen and (max-width: 768px) {
   .cs-simple-base {
     max-width: 80%;
   }
 }
+
+//Flex Box To Center
+//@media only screen and (max-width: 600px) {
+//  .cs-simple-base {
+//
+//    .cs-simple-base-container {
+//      justify-content: center;
+//
+//      .cs-simple-base-title {
+//        flex: 0 0 auto;
+//      }
+//    }
+//  }
+//}
 
 
