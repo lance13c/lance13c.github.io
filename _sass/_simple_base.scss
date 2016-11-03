@@ -5,17 +5,20 @@ html {
   body {
     height: 100%;
     font-size: 16px;
+    background-color: $cs-color-simple-background;
   }
 
   .cs-content {
     height: 100%;
+    padding-top: 50px;
 
     .cs-simple-base {
-      padding-top: 50px;
+      padding: 0 20px 20px 20px;
       margin: 0 auto 0 auto;
       height: 100%;
       max-width: 40%;
       font-family: $cs-font-simple-content;
+      background-color: $cs-color-simple-main-background;
 
 
       .cs-simple-base-container {
@@ -59,6 +62,10 @@ html {
         }
       }
     }
+  }
+
+  .cs-simple-content-box {
+    box-shadow: 0px 1px 10px 0px $cs-color-simple-box-shadow
   }
 
   //Mobile & Tablet

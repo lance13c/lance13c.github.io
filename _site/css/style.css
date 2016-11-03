@@ -60,15 +60,18 @@ html {
   height: 100%; }
   html body {
     height: 100%;
-    font-size: 16px; }
+    font-size: 16px;
+    background-color: #f3f6f9; }
   html .cs-content {
-    height: 100%; }
+    height: 100%;
+    padding-top: 50px; }
     html .cs-content .cs-simple-base {
-      padding-top: 50px;
+      padding: 0 20px 20px 20px;
       margin: 0 auto 0 auto;
       height: 100%;
       max-width: 40%;
-      font-family: "Droid Sans", sans-serif; }
+      font-family: "Droid Sans", sans-serif;
+      background-color: #ffffff; }
       html .cs-content .cs-simple-base .cs-simple-base-container {
         display: flex;
         flex-flow: row wrap;
@@ -93,6 +96,8 @@ html {
         html .cs-content .cs-simple-base .cs-simple-link:hover {
           text-decoration: underline;
           color: #007bb6; }
+  html .cs-simple-content-box {
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
   @media only screen and (max-width: 1400px) {
     html .cs-simple-base {
       max-width: 50%; } }
