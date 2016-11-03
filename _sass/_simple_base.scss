@@ -1,80 +1,92 @@
-body {
-  font-size: 16px;
-}
+
+html {
+  height: 100%;
+
+  body {
+    height: 100%;
+    font-size: 16px;
+  }
+
+  .cs-content {
+    height: 100%;
+
+    .cs-simple-base {
+      padding-top: 50px;
+      margin: 0 auto 0 auto;
+      height: 100%;
+      max-width: 40%;
+      font-family: $cs-font-simple-content;
 
 
-.cs-simple-base {
-  margin: 50px auto 0 auto;
-  max-width: 40%;
-  font-family: $cs-font-simple-content;
+      .cs-simple-base-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-content: flex-end;
+        align-items: flex-end;
 
+        .cs-simple-base-title {
+          flex: 1 0 auto;
+          margin: 0 auto;
+          cursor: pointer;
+          color: $cs-color-simple-text;
+          font-family: $cs-font-simple-title;
 
-  .cs-simple-base-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-content: flex-end;
-    align-items: flex-end;
+          &:hover {
+            //text-decoration-color: $cs-color-simple-accent;
+          }
 
-    .cs-simple-base-title {
-      flex: 1 0 auto;
-      margin: 0 auto;
-      cursor: pointer;
-      color: $cs-color-simple-text;
-      font-family: $cs-font-simple-title;
-
-      &:hover {
-        //text-decoration-color: $cs-color-simple-accent;
+        }
       }
 
+      .cs-simple-content {
+        margin-top: 40px;
+
+        li {
+          margin-bottom: 20px;
+        }
+      }
+
+      .cs-simple-link {
+        color: $cs-color-simple-text;
+        font-weight: 600;
+        font-size: .9rem;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+          color: $cs-color-simple-accent;
+        }
+      }
     }
   }
 
-  .cs-simple-content {
-
-    li {
-      margin-bottom: 20px;
+  //Mobile & Tablet
+  @media only screen and (max-width: 1400px) {
+    .cs-simple-base {
+      max-width: 50%;
     }
   }
 
-  .cs-simple-link {
-    color: $cs-color-simple-text;
-    font-weight: 600;
-    font-size: .9rem;
-    cursor: pointer;
-
-    &:hover {
-      text-decoration: underline;
-      color: $cs-color-simple-accent;
+  //Mobile & Tablet
+  @media only screen and (max-width: 1200px) {
+    .cs-simple-base {
+      max-width: 60%;
     }
   }
-}
 
-//Mobile & Tablet
-@media only screen and (max-width: 1400px) {
-  .cs-simple-base {
-    max-width: 50%;
+  //Mobile & Tablet
+  @media only screen and (max-width: 900px) {
+    .cs-simple-base {
+      max-width: 70%;
+    }
   }
-}
 
-//Mobile & Tablet
-@media only screen and (max-width: 1200px) {
-  .cs-simple-base {
-    max-width: 60%;
-  }
-}
-
-//Mobile & Tablet
-@media only screen and (max-width: 900px) {
-  .cs-simple-base {
-    max-width: 70%;
-  }
-}
-
-//Mobile & Tablet
-@media only screen and (max-width: 768px) {
-  .cs-simple-base {
-    max-width: 80%;
+  //Mobile & Tablet
+  @media only screen and (max-width: 768px) {
+    .cs-simple-base {
+      max-width: 80%;
+    }
   }
 }
 

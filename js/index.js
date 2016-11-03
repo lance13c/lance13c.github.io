@@ -12,7 +12,7 @@
 	function resize() {
 		$("body").css('height', $(window).height());
 		$("body").css('width', $(window).width());
-		$(".cs-content").css('height', $(window).height() - navHeight);
+		//$(".cs-content").css('height', $(window).height());
 	}
 	resize();
 	
@@ -21,15 +21,15 @@
 		resize();
 	});
 	
-	// Init Side Nav
-	$(".cs-mobile-menu").sideNav({
-		edge: 'right'
-	});
-	
-	// Mobile Back Button
-	$(".cs-mobile-back").on('click touchend', () => {
-		history.back();
-	});
+	// // Init Side Nav
+	// $(".cs-mobile-menu").sideNav({
+	// 	edge: 'right'
+	// });
+	//
+	// // Mobile Back Button
+	// $(".cs-mobile-back").on('click touchend', () => {
+	// 	history.back();
+	// });
 	
 })();
 

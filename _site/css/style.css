@@ -56,48 +56,56 @@
 .sk-circle .sk-child:before {
   background-color: #007BB6; }
 
-body {
-  font-size: 16px; }
+html {
+  height: 100%; }
+  html body {
+    height: 100%;
+    font-size: 16px; }
+  html .cs-content {
+    height: 100%; }
+    html .cs-content .cs-simple-base {
+      padding-top: 50px;
+      margin: 0 auto 0 auto;
+      height: 100%;
+      max-width: 40%;
+      font-family: "Droid Sans", sans-serif; }
+      html .cs-content .cs-simple-base .cs-simple-base-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-content: flex-end;
+        align-items: flex-end; }
+        html .cs-content .cs-simple-base .cs-simple-base-container .cs-simple-base-title {
+          flex: 1 0 auto;
+          margin: 0 auto;
+          cursor: pointer;
+          color: #000000;
+          font-family: Roboto, sans-serif; }
+      html .cs-content .cs-simple-base .cs-simple-content {
+        margin-top: 40px; }
+        html .cs-content .cs-simple-base .cs-simple-content li {
+          margin-bottom: 20px; }
+      html .cs-content .cs-simple-base .cs-simple-link {
+        color: #000000;
+        font-weight: 600;
+        font-size: .9rem;
+        cursor: pointer; }
+        html .cs-content .cs-simple-base .cs-simple-link:hover {
+          text-decoration: underline;
+          color: #007bb6; }
+  @media only screen and (max-width: 1400px) {
+    html .cs-simple-base {
+      max-width: 50%; } }
+  @media only screen and (max-width: 1200px) {
+    html .cs-simple-base {
+      max-width: 60%; } }
+  @media only screen and (max-width: 900px) {
+    html .cs-simple-base {
+      max-width: 70%; } }
+  @media only screen and (max-width: 768px) {
+    html .cs-simple-base {
+      max-width: 80%; } }
 
-.cs-simple-base {
-  margin: 50px auto 0 auto;
-  max-width: 40%;
-  font-family: "Droid Sans", sans-serif; }
-  .cs-simple-base .cs-simple-base-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-content: flex-end;
-    align-items: flex-end; }
-    .cs-simple-base .cs-simple-base-container .cs-simple-base-title {
-      flex: 1 0 auto;
-      margin: 0 auto;
-      cursor: pointer;
-      color: #000000;
-      font-family: Roboto, sans-serif; }
-  .cs-simple-base .cs-simple-content li {
-    margin-bottom: 20px; }
-  .cs-simple-base .cs-simple-link {
-    color: #000000;
-    font-weight: 600;
-    font-size: .9rem;
-    cursor: pointer; }
-    .cs-simple-base .cs-simple-link:hover {
-      text-decoration: underline;
-      color: #007bb6; }
-
-@media only screen and (max-width: 1400px) {
-  .cs-simple-base {
-    max-width: 50%; } }
-@media only screen and (max-width: 1200px) {
-  .cs-simple-base {
-    max-width: 60%; } }
-@media only screen and (max-width: 900px) {
-  .cs-simple-base {
-    max-width: 70%; } }
-@media only screen and (max-width: 768px) {
-  .cs-simple-base {
-    max-width: 80%; } }
 .cs-simple-content li {
   margin-bottom: 20px; }
   .cs-simple-content li .cs-simple-blog-post-excerpt {
