@@ -9,8 +9,8 @@
     <p class="cs-{{group}}-blog-post-excerpt">
         {{ post.excerpt | remove: '<p>' | remove: '</p>' }}<a class="cs-{{group}}-link" href="{{ site.baseurl }}{{ post.url }}">...</a>
     </p>
-    <a class="cs-simple-link" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
-    <a class="post-date cs-simple-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date: '%b %-d, %Y' }}</a>
+    <a class="cs-{{group}}-link" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+    <a class="post-date cs-{{group}}-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date: '%b %-d, %Y' }}</a>
 
     <!-- Clean up -->
     {% assign group = null %}

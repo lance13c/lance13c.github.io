@@ -1,7 +1,12 @@
 ---
-layout: simple_projects
+layout: simple_base
 title: Projects
 group: simple
 ---
 
-<% include projects/projects.html %>
+<ul class="cs-simple-content">
+    {% assign group = page.group %}
+    {% for project in site.data.data.projects %}
+        {% include projects/project_short.html %}
+    {% endfor %}
+</ul>

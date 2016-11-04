@@ -1,0 +1,25 @@
+<li>
+    <div class="cs-{{group}}-project-visuals">
+        <img class="cs-{{group}}-project-image">
+        <ul class="cs-{{group}}-project-icons">
+           <li class="cs-{{group}}-project-icon"></li>
+        </ul>
+    </div>
+
+    <div class="cs-{{group}}-project-content">
+        <h3 class="cs-{{group}}-project-title">
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+            </a>
+        </h3>
+
+        <p class="cs-{{group}}-project-excerpt">
+            {{ post.excerpt | remove: '<p>' | remove: '</p>' }}<a class="cs-{{group}}-link" href="{{ site.baseurl }}{{ post.url }}">...</a>
+        </p>
+        <a class="cs-{{group}}-link" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+        <a class="post-date cs-{{group}}-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date: '%b %-d, %Y' }}</a>
+    </div>
+
+    <!-- Clean up -->
+    {% assign group = null %}
+</li>
