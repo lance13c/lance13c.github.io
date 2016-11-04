@@ -1,0 +1,13 @@
+<span class="cs-{{group}}-nav">
+    <ul class="cs-{{group}}-nav-bar">
+        {% for navItem in site.pages %}
+            {% if group == null or group == navItem.group %}
+                {% if navItem.url == page.url %}
+                    <li class="cs-navitem-active"><a class="cs-navitem-active" href="{{navItem.url}}">{{navItem.title}}</a></li>
+                {% else %}
+                    <li><a href="{{navItem.url}}">{{navItem.title}}</a></li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+</span>
