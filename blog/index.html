@@ -1,7 +1,14 @@
 ---
-layout: simple_blog
+layout: simple_base
 title: Blog
 group: simple
 ---
 
-<% include blog/blog.html %>
+<!-- Displays the Latest 5 Blog Shorts -->
+
+<ul class="cs-simple-content">
+    {% for post in site.posts %}
+        {% assign group = page.group %}
+        {% include blog/blog_short.html %}
+    {% endfor %}
+</ul>

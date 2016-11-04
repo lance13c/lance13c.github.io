@@ -143,6 +143,9 @@ html {
       .cs-simple-nav .cs-simple-nav-bar li a:hover {
         text-decoration: underline; }
 
+.cs-navitem-active {
+  text-decoration: underline; }
+
 .cs-loading-container {
   height: 10em;
   position: relative; }
