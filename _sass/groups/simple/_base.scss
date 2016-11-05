@@ -9,13 +9,13 @@ html {
   }
 
   .cs-content {
-    height: 100%;
+    min-height: 100%;
     padding-top: 50px;
 
     .cs-simple-base {
       padding: 0 20px 20px 20px;
       margin: 0 auto 0 auto;
-      height: 100%;
+      min-height: 100%;
       max-width: 40%;
       font-family: $cs-font-simple-content;
       background-color: $cs-color-simple-main-background;
