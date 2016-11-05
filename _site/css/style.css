@@ -62,13 +62,15 @@ html {
     height: 100%;
     font-size: 16px;
     background-color: #f3f6f9; }
+  html a {
+    color: #000000; }
   html .cs-content {
-    height: 100%;
+    min-height: 100%;
     padding-top: 50px; }
     html .cs-content .cs-simple-base {
       padding: 0 20px 20px 20px;
       margin: 0 auto 0 auto;
-      height: 100%;
+      min-height: 100%;
       max-width: 40%;
       font-family: "Droid Sans", sans-serif;
       background-color: #ffffff; }
@@ -142,6 +144,31 @@ html {
       color: #000000; }
       .cs-simple-nav .cs-simple-nav-bar li a:hover {
         text-decoration: underline; }
+
+.cs-simple-project-short {
+  display: flex; }
+  .cs-simple-project-short:hover {
+    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5); }
+  .cs-simple-project-short .cs-simple-project-visuals {
+    flex: 4 0; }
+    .cs-simple-project-short .cs-simple-project-visuals .cs-simple-project-image {
+      max-width: 100%; }
+  .cs-simple-project-short .cs-simple-project-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    flex: 6 0; }
+    .cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar {
+      display: flex;
+      flex: 1 0;
+      align-items: flex-end; }
+      .cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon {
+        margin: 0 5px 0 0;
+        font-size: 2rem; }
+    .cs-simple-project-short .cs-simple-project-content .cs-simple-project-title {
+      margin: 0 0; }
+    .cs-simple-project-short .cs-simple-project-content .cs-simple-project-excerpt {
+      margin: 8px 0; }
 
 .cs-navitem-active {
   text-decoration: underline; }

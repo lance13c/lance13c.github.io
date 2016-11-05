@@ -8,6 +8,12 @@ html {
     background-color: $cs-color-simple-background;
   }
 
+
+  a {
+    // Fix materialize css default
+    color: $cs-color-simple-text;
+  }
+
   .cs-content {
     min-height: 100%;
     padding-top: 50px;

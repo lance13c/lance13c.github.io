@@ -5,8 +5,8 @@ group: simple
 ---
 
 <ul class="cs-simple-content">
-    {% assign group = page.group %}
     {% for project in site.data.data.projects %}
+        {% assign group = page.group %}
         {% include projects/project_short.html %}
     {% endfor %}
 </ul>

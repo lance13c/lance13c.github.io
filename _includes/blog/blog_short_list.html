@@ -2,8 +2,8 @@
 <ul class="cs-simple-content">
     <!-- Displays the Latest 5 Blog Shorts -->
 
-    {% assign group = page.group %}
     {% for post in site.posts %}
-    {% include blog/blog_short.html %}
+        {% assign group = page.group %}
+        {% include blog/blog_short.html %}
     {% endfor %}
 </ul>

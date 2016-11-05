@@ -1,23 +1,34 @@
-<li>
+<li class="cs-{{group}}-project-short">
     <div class="cs-{{group}}-project-visuals">
-        <img class="cs-{{group}}-project-image">
-        <ul class="cs-{{group}}-project-icons">
-           <li class="cs-{{group}}-project-icon"></li>
-        </ul>
+        <a href="{{ site.baseurl }} {{project.cs_url}}"><img class="cs-{{group}}-project-image" src="{{project.images[0]}}"></a>
     </div>
 
     <div class="cs-{{group}}-project-content">
-        <h3 class="cs-{{group}}-project-title">
+        <h5 class="cs-{{group}}-project-title">
             <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }}
+                {{ project.name }}
             </a>
-        </h3>
-
+        </h5>
         <p class="cs-{{group}}-project-excerpt">
-            {{ post.excerpt | remove: '<p>' | remove: '</p>' }}<a class="cs-{{group}}-link" href="{{ site.baseurl }}{{ post.url }}">...</a>
+            {{ project.short_des }}<a class="cs-{{group}}-link" href="{{ project.url }}">...</a>
         </p>
-        <a class="cs-{{group}}-link" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
-        <a class="post-date cs-{{group}}-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.date | date: '%b %-d, %Y' }}</a>
+
+        <a class="post-date cs-{{group}}-link" href="{{ site.baseurl }}{{ project.url }}">{{ project.data }}</a>
+
+        <ul class="cs-{{group}}-project-actionbar">
+            {% if project.github_url != "" %}
+                <li class="cs-{{group}}-project-icon">
+                    <a href="{{ project.url }}"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li class="cs-{{group}}-project-icon">
+                    <a href="{{ project.url }}"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+                <li class="cs-{{group}}-project-icon">
+                    <a href="{{ project.url }}"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </li>
+            {% endif %}
+            <a class="cs-{{group}}-link" href="{{ site.baseurl }}{{ project.url }}">Read More</a>
+        </ul>
     </div>
 
     <!-- Clean up -->

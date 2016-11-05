@@ -1,17 +1,41 @@
-.cs-simple-project-visuals {
-  .cs-simple-project-image {
-
+.cs-simple-project-short {
+  display: flex;
+  &:hover {
+    box-shadow: 0px 2px 15px 0px $cs-color-simple-box-shadow;
   }
 
-  .cs-simple-project-icons {
-    .cs-simple-project-icon {
 
-    }
-  }
-}
+ .cs-simple-project-visuals {
+   flex: 4 0;
 
-.cs-simple-project-content {
-  .cs-simple-project-title {
+   .cs-simple-project-image {
+     max-width: 100%;
+   }
+ }
 
-  }
+ .cs-simple-project-content {
+   display: flex;
+   flex-direction: column;
+   margin-left: 10px;
+   flex: 6 0;
+
+   .cs-simple-project-actionbar {
+     display: flex;
+     flex: 1 0;
+     align-items: flex-end;
+
+     .cs-simple-project-icon {
+       margin: 0 5px 0 0;
+       font-size: 2rem;
+     }
+   }
+
+   .cs-simple-project-title {
+     margin: 0 0;
+   }
+
+   .cs-simple-project-excerpt {
+    margin: 8px 0;
+   }
+ }
 }
