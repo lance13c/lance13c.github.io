@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d20c7c-0aef-4448-a721-681d0cbbe798" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/icons/download.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/icons/github.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/projects/project_short.html" afterPath="$PROJECT_DIR$/_includes/projects/project_short.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_colors.scss" afterPath="$PROJECT_DIR$/_sass/_colors.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_main.scss" afterPath="$PROJECT_DIR$/_sass/_main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/groups/simple/_projects.scss" afterPath="$PROJECT_DIR$/_sass/groups/simple/_projects.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/style.css" afterPath="$PROJECT_DIR$/_site/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/projects/index.html" afterPath="$PROJECT_DIR$/_site/projects/index.html" />
@@ -41,8 +45,8 @@
           <file leaf-file-name="_projects.scss" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/_sass/groups/simple/_projects.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="318">
-                  <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -125,8 +129,48 @@
           <file leaf-file-name="project_short.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/_includes/projects/project_short.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+                <state relative-caret-position="476">
+                  <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="download.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/_includes/icons/download.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" column="45" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="45" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="github.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/_includes/icons/github.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17">
+                  <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_main.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/_sass/_main.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="107">
+                  <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_colors.scss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/_sass/_colors.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
@@ -186,10 +230,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/_includes/loading.html" />
-        <option value="$PROJECT_DIR$/_sass/_spinkit_custom_var.scss" />
-        <option value="$PROJECT_DIR$/_layouts/home.html" />
-        <option value="$PROJECT_DIR$/_sass/loading.scss" />
         <option value="$PROJECT_DIR$/_includes/blog/blog_card.html" />
         <option value="$PROJECT_DIR$/_sass/blog.scss" />
         <option value="$PROJECT_DIR$/resume/index..html" />
@@ -204,7 +244,6 @@
         <option value="$PROJECT_DIR$/_posts/blog/2016-09-02-BDayQuotes.md" />
         <option value="$PROJECT_DIR$/_sass/_variables.scss" />
         <option value="$PROJECT_DIR$/_layouts/alt/home.html" />
-        <option value="$PROJECT_DIR$/_sass/_main.scss" />
         <option value="$PROJECT_DIR$/_sass/_s_blog.scss" />
         <option value="$PROJECT_DIR$/_sass/_simple_home.scss" />
         <option value="$PROJECT_DIR$/_sass/_simple_blog.scss" />
@@ -230,12 +269,17 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_includes/blog/blog_short_list.html" />
         <option value="$PROJECT_DIR$/projects/index.html" />
-        <option value="$PROJECT_DIR$/_sass/_colors.scss" />
         <option value="$PROJECT_DIR$/_dependencies/base.html" />
         <option value="$PROJECT_DIR$/css/style.scss" />
         <option value="$PROJECT_DIR$/_sass/groups/simple/_base.scss" />
         <option value="$PROJECT_DIR$/_data/data.json" />
+        <option value="$PROJECT_DIR$/_includes/icons/icon_github.html" />
+        <option value="$PROJECT_DIR$/_includes/icons/icon_download.html" />
         <option value="$PROJECT_DIR$/_includes/projects/project_short.html" />
+        <option value="$PROJECT_DIR$/_includes/icons/download.html" />
+        <option value="$PROJECT_DIR$/_includes/icons/github.html" />
+        <option value="$PROJECT_DIR$/_sass/_colors.scss" />
+        <option value="$PROJECT_DIR$/_sass/_main.scss" />
         <option value="$PROJECT_DIR$/_sass/groups/simple/_projects.scss" />
       </list>
     </option>
@@ -323,28 +367,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="_sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lance13c.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lance13c.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_sass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="groups" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="simple" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -547,14 +569,7 @@
       <workItem from="1478279237608" duration="14005000" />
       <workItem from="1478328210075" duration="4877000" />
       <workItem from="1478647064802" duration="4170000" />
-      <workItem from="1478725810558" duration="1303000" />
-    </task>
-    <task id="LOCAL-00022" summary="Commented Materialize due to bug with chrome extension">
-      <created>1448349496071</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1448349496071</updated>
+      <workItem from="1478725810558" duration="2497000" />
     </task>
     <task id="LOCAL-00023" summary="Refactored event adding methods into a function">
       <created>1450710804844</created>
@@ -892,11 +907,18 @@
       <option name="project" value="LOCAL" />
       <updated>1478650639647</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="update project short formatting">
+      <created>1478727152661</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1478727152661</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112054000" />
+    <option name="totallyTimeSpent" value="113248000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="0" />
@@ -933,7 +955,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add imports" />
     <MESSAGE value="include loading" />
     <MESSAGE value="add design&#10;new data&#10;skill card&#10;new blog&#10;" />
     <MESSAGE value="update workspace&#10;" />
@@ -958,15 +979,14 @@
     <MESSAGE value="fix height not extending issue" />
     <MESSAGE value="first iteration project list" />
     <MESSAGE value="fix responsive sizing&#10;add download icon&#10;icons change to accent color on hover" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix responsive sizing&#10;add download icon&#10;icons change to accent color on hover" />
+    <MESSAGE value="update project short formatting" />
+    <option name="LAST_COMMIT_MESSAGE" value="update project short formatting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/_includes/vr_world.html" />
-    <entry file="file://$PROJECT_DIR$/_includes/home/link.html" />
     <entry file="file://$PROJECT_DIR$/_includes/home/scripts.html" />
     <entry file="file://$PROJECT_DIR$/resume/index.html" />
     <entry file="file://$PROJECT_DIR$/_posts/2016-07-1-testPost.md" />
@@ -1033,13 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_sass/_main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -1168,14 +1181,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/index.html" />
-    <entry file="file://$PROJECT_DIR$/_sass/_colors.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -1244,14 +1249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/blog/blog_short_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_includes/nav.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1276,14 +1273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/projects/project_short.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1292,10 +1281,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/blog/blog_short_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/icons/github.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="38" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/_colors.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sass/_main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="148" column="32" selection-start-line="148" selection-start-column="32" selection-end-line="148" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/icons/download.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="45" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/projects/project_short.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/groups/simple/_projects.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        <state relative-caret-position="68">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding />
         </state>
       </provider>

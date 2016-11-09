@@ -19,12 +19,14 @@
         <ul class="cs-{{group}}-project-actionbar">
             {% if project.github_url != "" %}
                 <li class="cs-{{group}}-project-icon">
-                    <a href="{{ project.github_url }}"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    {% assign url = project.github_url %}
+                    {% include icons/github.html %}
                 </li>
             {% endif %}
             {% if project.download_url != "" %}
                 <li class="cs-{{group}}-project-icon">
-                    <a href="{{ project.download_url }}"><i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+                    {% assign url = project.download_url %}
+                    {% include icons/download.html %}
                 </li>
             {% endif %}
         </ul>
