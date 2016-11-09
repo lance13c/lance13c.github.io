@@ -101,16 +101,16 @@ html {
   html .cs-simple-content-box {
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
   @media only screen and (max-width: 1400px) {
-    html .cs-simple-base {
+    html .cs-content .cs-simple-base {
       max-width: 50%; } }
   @media only screen and (max-width: 1200px) {
-    html .cs-simple-base {
+    html .cs-content .cs-simple-base {
       max-width: 60%; } }
   @media only screen and (max-width: 900px) {
-    html .cs-simple-base {
+    html .cs-content .cs-simple-base {
       max-width: 70%; } }
   @media only screen and (max-width: 768px) {
-    html .cs-simple-base {
+    html .cs-content .cs-simple-base {
       max-width: 80%; } }
 
 .cs-simple-content li {
@@ -165,6 +165,10 @@ html {
       .cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon {
         margin: 0 5px 0 0;
         font-size: 2rem; }
+        .cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon i {
+          display: flex; }
+          .cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon i:hover {
+            color: #007bb6; }
     .cs-simple-project-short .cs-simple-project-content .cs-simple-project-title {
       margin: 0 0; }
     .cs-simple-project-short .cs-simple-project-content .cs-simple-project-excerpt {

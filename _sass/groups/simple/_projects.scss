@@ -27,6 +27,13 @@
      .cs-simple-project-icon {
        margin: 0 5px 0 0;
        font-size: 2rem;
+
+       i {
+         display: flex;
+         &:hover {
+           color: $cs-color-simple-accent;
+         }
+       }
      }
    }
 
