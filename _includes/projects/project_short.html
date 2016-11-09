@@ -11,11 +11,10 @@
                 {{ project.name }}
             </a>
         </h5>
+        <a class="post-date cs-{{group}}-link" href="{{ site.baseurl }}{{ project.cs_url }}">{{ project.date }}</a>
         <p class="cs-{{group}}-project-excerpt">
-            {{ project.short_des }}<a class="cs-{{group}}-link" href="{{ project.url }}">...</a>
+            {{ project.short_des }}<a class="cs-{{group}}-link" href="{{ project.cs_url }}">...</a>
         </p>
-
-        <a class="post-date cs-{{group}}-link" href="{{ site.baseurl }}{{ project.url }}">{{ project.data }}</a>
 
         <ul class="cs-{{group}}-project-actionbar">
             {% if project.github_url != "" %}
@@ -28,8 +27,6 @@
                     <a href="{{ project.download_url }}"><i class="fa fa-cloud-download" aria-hidden="true"></i></a>
                 </li>
             {% endif %}
-
-            <a class="cs-{{group}}-link" href="{{ site.baseurl }}{{ project.url }}">Read More</a>
         </ul>
     </div>
 

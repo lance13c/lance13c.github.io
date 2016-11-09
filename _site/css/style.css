@@ -150,7 +150,7 @@ html {
   .cs-simple-project-short:hover {
     box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5); }
   .cs-simple-project-short .cs-simple-project-visuals {
-    flex: 4 0; }
+    flex: 3 0; }
     .cs-simple-project-short .cs-simple-project-visuals .cs-simple-project-image {
       max-width: 100%; }
   .cs-simple-project-short .cs-simple-project-content {
@@ -171,6 +171,10 @@ html {
             color: #007bb6; }
     .cs-simple-project-short .cs-simple-project-content .cs-simple-project-title {
       margin: 0 0; }
+      .cs-simple-project-short .cs-simple-project-content .cs-simple-project-title a {
+        font-family: Roboto, sans-serif; }
+        .cs-simple-project-short .cs-simple-project-content .cs-simple-project-title a:hover {
+          text-decoration: underline; }
     .cs-simple-project-short .cs-simple-project-content .cs-simple-project-excerpt {
       margin: 8px 0; }
 

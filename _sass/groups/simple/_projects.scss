@@ -6,7 +6,7 @@
 
 
  .cs-simple-project-visuals {
-   flex: 4 0;
+   flex: 3 0;
 
    .cs-simple-project-image {
      max-width: 100%;
@@ -39,6 +39,13 @@
 
    .cs-simple-project-title {
      margin: 0 0;
+      a {
+        font-family: $cs-font-simple-title;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
    }
 
    .cs-simple-project-excerpt {
