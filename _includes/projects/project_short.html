@@ -1,19 +1,19 @@
 <li class="cs-{{group}}-project-short">
     <div class="cs-{{group}}-project-visuals">
-        <a href="{{ site.baseurl }} {{project.cs_url}}">
+        <a href="{{ site.baseurl }}{{project.cs_url}}">
             <img class="cs-{{group}}-project-image" src="{{project.images[0]}}">
         </a>
     </div>
 
     <div class="cs-{{group}}-project-content">
         <h5 class="cs-{{group}}-project-title">
-            <a href="{{ site.baseurl }}{{ post.url }}">
+            <a href="{{ site.baseurl }}{{ project.cs_url }}">
                 {{ project.name }}
             </a>
         </h5>
         <a class="post-date cs-{{group}}-link" href="{{ site.baseurl }}{{ project.cs_url }}">{{ project.date }}</a>
         <p class="cs-{{group}}-project-excerpt">
-            {{ project.short_des }}<a class="cs-{{group}}-link" href="{{ project.cs_url }}">...</a>
+            {{ project.short_des }}<a class="cs-{{group}}-link" href="{{ site.baseurl }}{{ project.cs_url }}">...</a>
         </p>
 
         <ul class="cs-{{group}}-project-actionbar">
