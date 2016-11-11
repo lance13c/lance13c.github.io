@@ -1,11 +1,12 @@
 ---
+layout: post
 title: B-Day Quotes
 ---
 
-Every few days Facebook notifies you its a friend's birth. What do you do?
+###Every few days Facebook notifies you its a friend's birth. What do you do?
 <!--excerpt-->
 
-Lots of people write "Happy Birthday INSERT_NAME_HERE". Lets start a new Trend.
+###Lots of people write "Happy Birthday INSERT_NAME_HERE". Lets start a new Trend.
 
 Instead of a generic message lets send Quotes!
 Not quotes from other people, but original sayings you come up
