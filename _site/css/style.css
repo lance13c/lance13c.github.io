@@ -1,483 +1,171 @@
-@keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-moz-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-webkit-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-ms-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@-o-keyframes fadein {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@keyframes fadeout {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-@-moz-keyframes fadeout {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-@-webkit-keyframes fadeout {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-@-ms-keyframes fadeout {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-@-o-keyframes fadeout {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
-.cs-videos {
-  width: 100%; }
-  .cs-videos iframe {
-    width: 100%; }
+@keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+@-moz-keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+@-webkit-keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+@-ms-keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+@-o-keyframes fadein { from { opacity: 0; }
+  to { opacity: 1; } }
+@keyframes fadeout { from { opacity: 1; }
+  to { opacity: 0; } }
+@-moz-keyframes fadeout { from { opacity: 1; }
+  to { opacity: 0; } }
+@-webkit-keyframes fadeout { from { opacity: 1; }
+  to { opacity: 0; } }
+@-ms-keyframes fadeout { from { opacity: 1; }
+  to { opacity: 0; } }
+@-o-keyframes fadeout { from { opacity: 1; }
+  to { opacity: 0; } }
+.cs-videos { width: 100%; }
+.cs-videos iframe { width: 100%; }
 
-.sk-circle .sk-child:before {
-  background-color: #007BB6; }
+.sk-circle .sk-child:before { background-color: #007BB6; }
 
-html {
-  height: 100%; }
-  html body {
-    height: 100%;
-    font-size: 16px;
-    background-color: #f3f6f9; }
-  html a {
-    color: #000000; }
-  html .cs-content {
-    min-height: 100%;
-    padding-top: 50px; }
-    html .cs-content .cs-simple-base {
-      padding: 0 20px 20px 20px;
-      margin: 0 auto 0 auto;
-      min-height: 100%;
-      max-width: 40%;
-      font-family: "Droid Sans", sans-serif;
-      background-color: #ffffff; }
-      html .cs-content .cs-simple-base .cs-simple-base-container {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: flex-start;
-        align-content: flex-end;
-        align-items: flex-end; }
-        html .cs-content .cs-simple-base .cs-simple-base-container .cs-simple-base-title {
-          flex: 1 0 auto;
-          margin: 0 auto;
-          cursor: pointer;
-          color: #000000;
-          font-family: Roboto, sans-serif; }
-      html .cs-content .cs-simple-base .cs-simple-content {
-        margin-top: 40px; }
-        html .cs-content .cs-simple-base .cs-simple-content li {
-          margin-bottom: 20px; }
-      html .cs-content .cs-simple-base .cs-simple-link {
-        color: #000000;
-        font-weight: 600;
-        font-size: .9rem;
-        cursor: pointer; }
-        html .cs-content .cs-simple-base .cs-simple-link:hover {
-          text-decoration: underline;
-          color: #007bb6; }
-  html .cs-simple-content-box {
-    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
-  @media only screen and (max-width: 1400px) {
-    html .cs-content .cs-simple-base {
-      max-width: 50%; } }
-  @media only screen and (max-width: 1200px) {
-    html .cs-content .cs-simple-base {
-      max-width: 60%; } }
-  @media only screen and (max-width: 900px) {
-    html .cs-content .cs-simple-base {
-      max-width: 70%; } }
-  @media only screen and (max-width: 768px) {
-    html .cs-content .cs-simple-base {
-      max-width: 80%; } }
+html { height: 100%; }
+html body { height: 100%; font-size: 16px; background-color: #f3f6f9; }
+html a { color: #000000; }
+html .cs-content { min-height: 100%; padding-top: 50px; }
+html .cs-content .cs-simple-base { padding: 0 20px 20px 20px; margin: 0 auto 0 auto; min-height: 100%; max-width: 40%; font-family: "Droid Sans", sans-serif; background-color: #ffffff; }
+html .cs-content .cs-simple-base .cs-simple-base-container { display: flex; flex-flow: row wrap; justify-content: flex-start; align-content: flex-end; align-items: flex-end; }
+html .cs-content .cs-simple-base .cs-simple-base-container .cs-simple-base-title { flex: 1 0 auto; margin: 0 auto; cursor: pointer; color: #000000; font-family: Roboto, sans-serif; }
+html .cs-content .cs-simple-base .cs-simple-content { margin-top: 40px; }
+html .cs-content .cs-simple-base .cs-simple-content li { margin-bottom: 20px; }
+html .cs-content .cs-simple-base .cs-simple-link { color: #000000; font-weight: 600; font-size: .9rem; cursor: pointer; }
+html .cs-content .cs-simple-base .cs-simple-link:hover { text-decoration: underline; color: #007bb6; }
+html .cs-simple-content-box { box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
+@media only screen and (max-width: 1400px) { html .cs-content .cs-simple-base { max-width: 50%; } }
+@media only screen and (max-width: 1200px) { html .cs-content .cs-simple-base { max-width: 60%; } }
+@media only screen and (max-width: 900px) { html .cs-content .cs-simple-base { max-width: 70%; } }
+@media only screen and (max-width: 768px) { html .cs-content .cs-simple-base { max-width: 80%; } }
 
-.cs-simple-content li {
-  margin-bottom: 20px; }
-  .cs-simple-content li .cs-simple-blog-post-excerpt {
-    margin-bottom: 0; }
-.cs-simple-content .cs-simple-blog-title {
-  display: inline;
-  color: #000000;
-  font-weight: bold;
-  font-size: 1.5rem;
-  cursor: pointer;
-  font-family: Roboto, sans-serif; }
-  .cs-simple-content .cs-simple-blog-title:hover {
-    text-decoration: underline; }
-.cs-simple-content .post-date {
-  float: right; }
+.cs-simple-content li { margin-bottom: 20px; }
+.cs-simple-content li .cs-simple-blog-post-excerpt { margin-bottom: 0; }
+.cs-simple-content .cs-simple-blog-title { display: inline; color: #000000; font-weight: bold; font-size: 1.5rem; cursor: pointer; font-family: Roboto, sans-serif; }
+.cs-simple-content .cs-simple-blog-title:hover { text-decoration: underline; }
+.cs-simple-content .post-date { float: right; }
 
-.cs-simple-nav .cs-simple-nav-bar {
-  display: inline-block;
-  padding-top: 20px;
-  margin: 0 auto;
-  font-family: "Droid Sans", sans-serif; }
-  .cs-simple-nav .cs-simple-nav-bar li {
-    display: inline;
-    margin: 0 5px; }
-    .cs-simple-nav .cs-simple-nav-bar li a {
-      font-weight: 600;
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: #000000; }
-      .cs-simple-nav .cs-simple-nav-bar li a:hover {
-        text-decoration: underline; }
+.cs-simple-nav .cs-simple-nav-bar { display: inline-block; padding-top: 20px; margin: 0 auto; font-family: Roboto, sans-serif; }
+.cs-simple-nav .cs-simple-nav-bar li { display: inline; margin: 0 5px; }
+.cs-simple-nav .cs-simple-nav-bar li a { font-weight: 500; font-size: 1.5rem; cursor: pointer; color: #000000; }
+.cs-simple-nav .cs-simple-nav-bar li a:hover { color: #0f19a8; }
 
-.cs-simple-project-short {
-  display: flex; }
-  .cs-simple-project-short:hover {
-    box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5); }
-  .cs-simple-project-short .cs-simple-project-visuals {
-    flex: 3 0; }
-    .cs-simple-project-short .cs-simple-project-visuals .cs-simple-project-image {
-      max-width: 100%; }
-  .cs-simple-project-short .cs-simple-project-content {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    flex: 6 0; }
-    .cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar {
-      display: flex;
-      flex: 1 0;
-      align-items: flex-end; }
-      .cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon {
-        margin: 0 5px 0 0;
-        font-size: 2rem; }
-        .cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon i {
-          display: flex; }
-          .cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon i:hover {
-            color: #007bb6; }
-    .cs-simple-project-short .cs-simple-project-content .cs-simple-project-title {
-      margin: 0 0; }
-      .cs-simple-project-short .cs-simple-project-content .cs-simple-project-title a {
-        font-family: Roboto, sans-serif; }
-        .cs-simple-project-short .cs-simple-project-content .cs-simple-project-title a:hover {
-          text-decoration: underline; }
-    .cs-simple-project-short .cs-simple-project-content .cs-simple-project-excerpt {
-      margin: 8px 0; }
+.cs-simple-project-short { display: flex; }
+.cs-simple-project-short:hover { box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.5); }
+.cs-simple-project-short .cs-simple-project-visuals { flex: 3 0; }
+.cs-simple-project-short .cs-simple-project-visuals .cs-simple-project-image { max-width: 100%; }
+.cs-simple-project-short .cs-simple-project-content { display: flex; flex-direction: column; margin-left: 10px; flex: 6 0; }
+.cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar { display: flex; flex: 1 0; align-items: flex-end; }
+.cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon { margin: 0 5px 0 0; font-size: 2rem; }
+.cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon i { display: flex; }
+.cs-simple-project-short .cs-simple-project-content .cs-simple-project-actionbar .cs-simple-project-icon i:hover { color: #007bb6; }
+.cs-simple-project-short .cs-simple-project-content .cs-simple-project-title { margin: 0 0; }
+.cs-simple-project-short .cs-simple-project-content .cs-simple-project-title a { font-family: Roboto, sans-serif; }
+.cs-simple-project-short .cs-simple-project-content .cs-simple-project-title a:hover { text-decoration: underline; }
+.cs-simple-project-short .cs-simple-project-content .cs-simple-project-excerpt { margin: 8px 0; }
 
-.cs-navitem-active {
-  text-decoration: underline; }
+.cs-navitem-active { text-decoration: underline; }
 
-.cs-loading-container {
-  height: 10em;
-  position: relative; }
-  .cs-loading-container div {
-    z-index: -5000;
-    margin: 0;
-    position: absolute;
-    top: 100%;
-    left: 40%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) h3;
-      transform-font-weight: 500; }
-    .cs-loading-container div .sk-circle {
-      width: 15em;
-      height: 15em; }
-    .cs-loading-container div .cs-center-text {
-      text-shadow: #007BB6 1px 1px;
-      font-weight: 500;
-      transform: translate(140%, 140%);
-      position: absolute; }
+.cs-loading-container { height: 10em; position: relative; }
+.cs-loading-container div { z-index: -5000; margin: 0; position: absolute; top: 100%; left: 40%; margin-right: -50%; transform: translate(-50%, -50%) h3; transform-font-weight: 500; }
+.cs-loading-container div .sk-circle { width: 15em; height: 15em; }
+.cs-loading-container div .cs-center-text { text-shadow: #007BB6 1px 1px; font-weight: 500; transform: translate(140%, 140%); position: absolute; }
 
-.cs-resume-container {
-  width: 100%;
-  height: 100%; }
-  .cs-resume-container .cs-resume {
-    width: 100%;
-    height: 100%; }
+.cs-resume-container { width: 100%; height: 100%; }
+.cs-resume-container .cs-resume { width: 100%; height: 100%; }
 
-.cs-borderless-gallery img {
-  padding: 0;
-  margin: 0; }
-.cs-borderless-gallery .cs-borderless-gallery-img-phone {
-  width: 100%; }
-.cs-borderless-gallery .cs-borderless-gallery-img-desktop {
-  width: 33%; }
+.cs-borderless-gallery img { padding: 0; margin: 0; }
+.cs-borderless-gallery .cs-borderless-gallery-img-phone { width: 100%; }
+.cs-borderless-gallery .cs-borderless-gallery-img-desktop { width: 33%; }
 
-.cs-project-card .header {
-  color: #F2F2F2;
-  font-weight: 200; }
-.cs-project-card .cs-project-card-large .card-image {
-  max-width: 25%; }
-.cs-project-card .cs-project-card-small {
-  padding: 50px 0; }
-.cs-project-card .card .card-content {
-  font-weight: 300;
-  font-size: 2rem;
-  background-color: #212A3F;
-  color: #F2F2F2; }
-.cs-project-card .card:hover {
-  transition: .1s ease-out;
-  box-shadow: 0px 0px 3px 1px #8AB839; }
+.cs-project-card .header { color: #F2F2F2; font-weight: 200; }
+.cs-project-card .cs-project-card-large .card-image { max-width: 25%; }
+.cs-project-card .cs-project-card-small { padding: 50px 0; }
+.cs-project-card .card .card-content { font-weight: 300; font-size: 2rem; background-color: #212A3F; color: #F2F2F2; }
+.cs-project-card .card:hover { transition: .1s ease-out; box-shadow: 0px 0px 3px 1px #8AB839; }
 
-.cs-sp-title-container {
-  height: 400px; }
-  .cs-sp-title-container .cs-sp-title-image {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 535px; }
-  .cs-sp-title-container .cs-sp-title {
-    margin-top: 80px;
-    position: relative;
-    z-index: 1;
-    color: #F2F2F2; }
-  .cs-sp-title-container .cs-sp-short-description {
-    margin: 0 20px 20px 20px;
-    position: relative;
-    z-index: 1;
-    color: #F2F2F2; }
+.cs-sp-title-container { height: 400px; }
+.cs-sp-title-container .cs-sp-title-image { z-index: -1; position: absolute; top: 0; width: 100%; height: 535px; }
+.cs-sp-title-container .cs-sp-title { margin-top: 80px; position: relative; z-index: 1; color: #F2F2F2; }
+.cs-sp-title-container .cs-sp-short-description { margin: 0 20px 20px 20px; position: relative; z-index: 1; color: #F2F2F2; }
 
-.cs-break {
-  background: #434F5B;
-  width: 100%;
-  height: 100px; }
+.cs-break { background: #434F5B; width: 100%; height: 100px; }
 
-.cs-sp .cs-sp-title-buttons i {
-  transition: .1s ease-out; }
-  .cs-sp .cs-sp-title-buttons i:hover {
-    transition: .1s ease-out; }
-.cs-sp .cs-sp-title-buttons .fa {
-  padding-right: 30px; }
-.cs-sp .cs-sp-title-buttons a {
-  background-color: #168815;
-  transition: .1s ease-out; }
-  .cs-sp .cs-sp-title-buttons a:hover {
-    background-color: #175716;
-    transition: .1s ease-out; }
-.cs-sp .cs-sp-title-buttons .cs-borderless-gallery-github a {
-  background-color: #007BB6;
-  transition: .1s ease-out; }
-  .cs-sp .cs-sp-title-buttons .cs-borderless-gallery-github a i {
-    padding-right: 0;
-    font-size: 2rem; }
-  .cs-sp .cs-sp-title-buttons .cs-borderless-gallery-github a:hover {
-    background-color: #0C327F;
-    transition: .1s ease-out; }
-.cs-sp .cs-sp-sub-title {
-  margin-left: 10%; }
+.cs-sp .cs-sp-title-buttons i { transition: .1s ease-out; }
+.cs-sp .cs-sp-title-buttons i:hover { transition: .1s ease-out; }
+.cs-sp .cs-sp-title-buttons .fa { padding-right: 30px; }
+.cs-sp .cs-sp-title-buttons a { background-color: #168815; transition: .1s ease-out; }
+.cs-sp .cs-sp-title-buttons a:hover { background-color: #175716; transition: .1s ease-out; }
+.cs-sp .cs-sp-title-buttons .cs-borderless-gallery-github a { background-color: #007BB6; transition: .1s ease-out; }
+.cs-sp .cs-sp-title-buttons .cs-borderless-gallery-github a i { padding-right: 0; font-size: 2rem; }
+.cs-sp .cs-sp-title-buttons .cs-borderless-gallery-github a:hover { background-color: #0C327F; transition: .1s ease-out; }
+.cs-sp .cs-sp-sub-title { margin-left: 10%; }
 
-.cs-nav nav {
-  border-bottom: solid 1px #212A3F;
-  box-shadow: none; }
-  .cs-nav nav .cs-nav-btn-active {
-    background: #8AB839; }
-  .cs-nav nav .nav-wrapper {
-    background: #212A3F; }
-    .cs-nav nav .nav-wrapper .brand-logo {
-      cursor: pointer; }
-    .cs-nav nav .nav-wrapper .cs-dropdown-projects-btn {
-      padding-right: 0; }
-    .cs-nav nav .nav-wrapper li {
-      font-size: 18px;
-      font-weight: 400;
-      background: #212A3F;
-      cursor: pointer;
-      -webkit-transition: background 100ms linear;
-      -moz-transition: background 100ms linear;
-      -ms-transition: background 100ms linear;
-      -o-transition: background 100ms linear;
-      transition: background 100ms linear; }
-      .cs-nav nav .nav-wrapper li i {
-        font-size: 2rem;
-        margin-left: 8px;
-        margin-right: 8px; }
-    .cs-nav nav .nav-wrapper li:hover {
-      background: #8AB839;
-      -webkit-transition: background 100ms linear;
-      -moz-transition: background 100ms linear;
-      -ms-transition: background 100ms linear;
-      -o-transition: background 100ms linear;
-      transition: background 100ms linear; }
-    .cs-nav nav .nav-wrapper .cs-main-nav {
-      margin-left: 200px; }
-    .cs-nav nav .nav-wrapper .cs-side-nav {
-      margin-top: 56px;
-      background: #212A3F;
-      color: #F2F2F2; }
-      .cs-nav nav .nav-wrapper .cs-side-nav li {
-        padding: 0;
-        background-color: #434F5B;
-        border-bottom: solid 1px #2E2E2E; }
-        .cs-nav nav .nav-wrapper .cs-side-nav li a {
-          font-size: 20px;
-          font-weight: 300;
-          padding: 0 20px;
-          color: #F2F2F2; }
-          .cs-nav nav .nav-wrapper .cs-side-nav li a i {
-            float: none;
-            font-size: inherit; }
-      .cs-nav nav .nav-wrapper .cs-side-nav .divider {
-        color: #F2F2F2; }
-    .cs-nav nav .nav-wrapper .cs-siteicon {
-      margin-left: 10px; }
-      .cs-nav nav .nav-wrapper .cs-siteicon:hover {
-        color: #8AB839;
-        -webkit-transition: color 100ms linear;
-        -moz-transition: color 100ms linear;
-        -ms-transition: color 100ms linear;
-        -o-transition: color 100ms linear;
-        transition: color 100ms linear; }
-    .cs-nav nav .nav-wrapper .cs-mobile-menu {
-      margin-right: 10px;
-      cursor: pointer; }
-    .cs-nav nav .nav-wrapper .cs-mobile-back {
-      margin-left: 5px;
-      width: 40px;
-      cursor: pointer; }
+.cs-nav nav { border-bottom: solid 1px #212A3F; box-shadow: none; }
+.cs-nav nav .cs-nav-btn-active { background: #8AB839; }
+.cs-nav nav .nav-wrapper { background: #212A3F; }
+.cs-nav nav .nav-wrapper .brand-logo { cursor: pointer; }
+.cs-nav nav .nav-wrapper .cs-dropdown-projects-btn { padding-right: 0; }
+.cs-nav nav .nav-wrapper li { font-size: 18px; font-weight: 400; background: #212A3F; cursor: pointer; -webkit-transition: background 100ms linear; -moz-transition: background 100ms linear; -ms-transition: background 100ms linear; -o-transition: background 100ms linear; transition: background 100ms linear; }
+.cs-nav nav .nav-wrapper li i { font-size: 2rem; margin-left: 8px; margin-right: 8px; }
+.cs-nav nav .nav-wrapper li:hover { background: #8AB839; -webkit-transition: background 100ms linear; -moz-transition: background 100ms linear; -ms-transition: background 100ms linear; -o-transition: background 100ms linear; transition: background 100ms linear; }
+.cs-nav nav .nav-wrapper .cs-main-nav { margin-left: 200px; }
+.cs-nav nav .nav-wrapper .cs-side-nav { margin-top: 56px; background: #212A3F; color: #F2F2F2; }
+.cs-nav nav .nav-wrapper .cs-side-nav li { padding: 0; background-color: #434F5B; border-bottom: solid 1px #2E2E2E; }
+.cs-nav nav .nav-wrapper .cs-side-nav li a { font-size: 20px; font-weight: 300; padding: 0 20px; color: #F2F2F2; }
+.cs-nav nav .nav-wrapper .cs-side-nav li a i { float: none; font-size: inherit; }
+.cs-nav nav .nav-wrapper .cs-side-nav .divider { color: #F2F2F2; }
+.cs-nav nav .nav-wrapper .cs-siteicon { margin-left: 10px; }
+.cs-nav nav .nav-wrapper .cs-siteicon:hover { color: #8AB839; -webkit-transition: color 100ms linear; -moz-transition: color 100ms linear; -ms-transition: color 100ms linear; -o-transition: color 100ms linear; transition: color 100ms linear; }
+.cs-nav nav .nav-wrapper .cs-mobile-menu { margin-right: 10px; cursor: pointer; }
+.cs-nav nav .nav-wrapper .cs-mobile-back { margin-left: 5px; width: 40px; cursor: pointer; }
 
-.cs-alt {
-  font: 100% Roboto;
-  background: #434F5B; }
-  .cs-alt .cs-main-header {
-    font-weight: 700;
-    color: #F2F2F2; }
+.cs-alt { font: 100% Roboto; background: #434F5B; }
+.cs-alt .cs-main-header { font-weight: 700; color: #F2F2F2; }
 
-.cs-breadcrumb {
-  background: #434F5B; }
-  .cs-breadcrumb .navbar-fixed {
-    color: #434F5B;
-    height: 25px;
-    z-index: -1;
-    box-shadow: 0px 3px 3px 0px #434F5B;
-    -webkit-box-shadow: 0px 3px 3px 0px #434F5B;
-    -moz-box-shadow: 0px 3px 3px 0px #434F5B; }
-    .cs-breadcrumb .navbar-fixed .cs-breadcrumb {
-      margin-top: 5px;
-      margin-bottom: 5px;
-      color: #F2F2F2;
-      font-size: 14px; }
+.cs-breadcrumb { background: #434F5B; }
+.cs-breadcrumb .navbar-fixed { color: #434F5B; height: 25px; z-index: -1; box-shadow: 0px 3px 3px 0px #434F5B; -webkit-box-shadow: 0px 3px 3px 0px #434F5B; -moz-box-shadow: 0px 3px 3px 0px #434F5B; }
+.cs-breadcrumb .navbar-fixed .cs-breadcrumb { margin-top: 5px; margin-bottom: 5px; color: #F2F2F2; font-size: 14px; }
 
-.cs-dropdown-projects {
-  font-size: 1rem;
-  background: #212A3F; }
-  .cs-dropdown-projects .cs-dropdown-item {
-    font-size: 1rem;
-    color: #F2F2F2; }
+.cs-dropdown-projects { font-size: 1rem; background: #212A3F; }
+.cs-dropdown-projects .cs-dropdown-item { font-size: 1rem; color: #F2F2F2; }
 
-.cs-left-margin {
-  margin-left: 10px; }
+.cs-left-margin { margin-left: 10px; }
 
-.cs-right-margin {
-  margin-right: 10px; }
+.cs-right-margin { margin-right: 10px; }
 
-.cs-skills .cs-skills-info {
-  font-weight: 300;
-  font-size: 2rem;
-  color: #F2F2F2; }
-.cs-skills .cs-dropdown-skills-filter-btn {
-  background: #212A3F;
-  color: #F2F2F2; }
-.cs-skills .cs-skills-card-chip-holder {
-  padding: .5rem;
-  height: 60px; }
-  .cs-skills .cs-skills-card-chip-holder .cs-skills-card-text {
-    color: #F2F2F2;
-    font-size: .75rem;
-    font-weight: 300;
-    padding-bottom: 5px; }
-  .cs-skills .cs-skills-card-chip-holder .cs-skills-card-projects {
-    margin: 0; }
-    .cs-skills .cs-skills-card-chip-holder .cs-skills-card-projects .col {
-      padding-left: .5rem;
-      padding-right: .5rem;
-      width: 40px;
-      height: 30px; }
+.cs-skills .cs-skills-info { font-weight: 300; font-size: 2rem; color: #F2F2F2; }
+.cs-skills .cs-dropdown-skills-filter-btn { background: #212A3F; color: #F2F2F2; }
+.cs-skills .cs-skills-card-chip-holder { padding: .5rem; height: 60px; }
+.cs-skills .cs-skills-card-chip-holder .cs-skills-card-text { color: #F2F2F2; font-size: .75rem; font-weight: 300; padding-bottom: 5px; }
+.cs-skills .cs-skills-card-chip-holder .cs-skills-card-projects { margin: 0; }
+.cs-skills .cs-skills-card-chip-holder .cs-skills-card-projects .col { padding-left: .5rem; padding-right: .5rem; width: 40px; height: 30px; }
 
-.cs-projects .cs-projects-card-wrapper .cs-projects-card-title {
-  top: 0;
-  font-weight: 500;
-  color: #2E2E2E; }
+.cs-projects .cs-projects-card-wrapper .cs-projects-card-title { top: 0; font-weight: 500; color: #2E2E2E; }
 
-.cs-chip {
-  cursor: pointer;
-  background: transparent;
-  padding-left: .5rem; }
-  .cs-chip img {
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    margin-right: 0; }
-  .cs-chip :hover {
-    box-shadow: 0px 1px 2px 1px #F2F2F2;
-    -webkit-box-shadow: 0px 1px 2px 1px #F2F2F2;
-    -moz-box-shadow: 0px 1px 2px 1px #F2F2F2; }
+.cs-chip { cursor: pointer; background: transparent; padding-left: .5rem; }
+.cs-chip img { border-radius: 50%; width: 30px; height: 30px; margin-right: 0; }
+.cs-chip :hover { box-shadow: 0px 1px 2px 1px #F2F2F2; -webkit-box-shadow: 0px 1px 2px 1px #F2F2F2; -moz-box-shadow: 0px 1px 2px 1px #F2F2F2; }
 
-.cs-home {
-  padding-top: 10%; }
-  .cs-home .cs-home-btn-wrapper {
-    -webkit-transition: background 200ms linear;
-    -moz-transition: background 200ms linear;
-    -ms-transition: background 200ms linear;
-    -o-transition: background 200ms linear;
-    transition: background 200ms linear; }
-    .cs-home .cs-home-btn-wrapper .cs-home-projects:hover {
-      -webkit-transition: background 200ms linear;
-      -moz-transition: background 200ms linear;
-      -ms-transition: background 200ms linear;
-      -o-transition: background 200ms linear;
-      transition: background 200ms linear; }
-    .cs-home .cs-home-btn-wrapper .cs-home-btn {
-      font-size: 60px;
-      font-weight: 200;
-      color: #F2F2F2; }
-    .cs-home .cs-home-btn-wrapper .cs-home-btn:hover {
-      color: #8AB839;
-      cursor: pointer; }
+.cs-home { padding-top: 10%; }
+.cs-home .cs-home-btn-wrapper { -webkit-transition: background 200ms linear; -moz-transition: background 200ms linear; -ms-transition: background 200ms linear; -o-transition: background 200ms linear; transition: background 200ms linear; }
+.cs-home .cs-home-btn-wrapper .cs-home-projects:hover { -webkit-transition: background 200ms linear; -moz-transition: background 200ms linear; -ms-transition: background 200ms linear; -o-transition: background 200ms linear; transition: background 200ms linear; }
+.cs-home .cs-home-btn-wrapper .cs-home-btn { font-size: 60px; font-weight: 200; color: #F2F2F2; }
+.cs-home .cs-home-btn-wrapper .cs-home-btn:hover { color: #8AB839; cursor: pointer; }
 
-.backdrop {
-  background: #000000; }
+.backdrop { background: #000000; }
 
-.cs-full-width {
-  width: 100%; }
+.cs-full-width { width: 100%; }
 
-.cs-inherit-width {
-  width: inherit; }
+.cs-inherit-width { width: inherit; }
 
-.cs-fa-linkedin-square {
-  color: #007BB6;
-  background: #212A3F;
-  height: 63px; }
+.cs-fa-linkedin-square { color: #007BB6; background: #212A3F; height: 63px; }
 
-.cs-fa-linkedin-square:hover {
-  background: #8AB839; }
+.cs-fa-linkedin-square:hover { background: #8AB839; }
 
-.cs-fa-github-square {
-  color: #007BB6;
-  background: #212A3F;
-  height: 63px; }
+.cs-fa-github-square { color: #007BB6; background: #212A3F; height: 63px; }
 
-.cs-fa-github-square:hover {
-  background: #8AB839; }
+.cs-fa-github-square:hover { background: #8AB839; }
 
-.cs-footer {
-  margin-top: 200px;
-  padding-top: 10px;
-  width: 100%;
-  height: 100px;
-  background-color: #2E2E2E;
-  color: #F2F2F2; }
+.cs-footer { margin-top: 200px; padding-top: 10px; width: 100%; height: 100px; background-color: #2E2E2E; color: #F2F2F2; }

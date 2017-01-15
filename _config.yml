@@ -8,6 +8,7 @@ exclude: [node_modules]
 excerpt_separator: "<!--excerpt-->"
 
 markdown: kramdown
+highlighter: rouge
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 kramdown:

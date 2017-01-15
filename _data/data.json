@@ -1,19 +1,31 @@
 {
   "projects": [
     {
-      "name": "Trebuchet",
-      "short_des": "Trebuchet created as a side project. Participated in the Vermont Mini Maker Fair throwing 26 pumpkins.",
-      "date": "March 2012 - September 2012",
+      "name": "Web Lego Car",
+      "short_des": "Controlling a lego car via a webpage controller",
+      "date": "November 2016 - December 2016",
       "description": "",
-      "github_url": "",
+      "github_url": "https://github.com/lance13c/web-lego-car",
+      "download_url": "",
+      "cs_url": "/projects/weblegocar",
+      "blog": "",
+      "images": ["https://raw.githubusercontent.com/lance13c/web-lego-car/master/images/0.jpg"],
+      "videos": ""
+    },
+    {
+      "name": "Bluetooth Lights",
+      "short_des": "Creatively control multiple RPG LED's with a PS3 Move Controller",
+      "date": "May 2015 - Present",
+      "description": "",
+      "github_url": "https://github.com/lance13c/BluetoothLights",
       "download_url": "",
       "demo_url": "",
-      "cs_url": "/projects/trebuchet",
+      "cs_url": "/projects/bluetoothlights",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet4.jpg", "/assets/images/projects/trebuchet/trebuchet5.jpg", "/assets/images/projects/trebuchet/trebuchet3.jpg", "/assets/images/projects/trebuchet/trebuchet1.jpg",
-        "/assets/images/projects/trebuchet/trebuchet2.jpg", "/assets/images/projects/trebuchet/trebuchet6.jpg", "/assets/images/projects/trebuchet/trebuchet7.jpg", "/assets/images/projects/trebuchet/trebuchet8.jpg",
-        "/assets/images/projects/trebuchet/trebuchet9.jpg"],
-      "videos": "M3tX7j7sx44"
+      "images": ["/assets/images/projects/bluetoothlights/btl2.jpg", "/assets/images/projects/bluetoothlights/btl3.jpg", "/assets/images/projects/bluetoothlights/btl4.jpg","/assets/images/projects/bluetoothlights/btl5.jpg",
+        "/assets/images/projects/bluetoothlights/btl6.jpg", "/assets/images/projects/bluetoothlights/btl7.jpg","/assets/images/projects/bluetoothlights/btl8.jpg", "/assets/images/projects/bluetoothlights/btl9.jpg", "/assets/images/projects/bluetoothlights/btl10.jpg",
+        "/assets/images/projects/bluetoothlights/btl11.jpg", "/assets/images/projects/bluetoothlights/btl12.jpg", "/assets/images/projects/bluetoothlights/btl13.jpg", "/assets/images/projects/bluetoothlights/btl15.jpg"],
+      "videos": "IlwwBhS5HJY"
     },
     {
       "name": "Hero2.0",
@@ -31,51 +43,19 @@
       "videos": ""
     },
     {
-      "name": "Bluetooth Lights",
-      "short_des": "Creatively control multiple RPG LED's with a PS3 Move Controller",
+      "name": "Trebuchet",
+      "short_des": "Trebuchet created as a side project. Participated in the Vermont Mini Maker Fair throwing 26 pumpkins.",
+      "date": "March 2012 - September 2012",
       "description": "",
-      "github_url": "https://github.com/lance13c/BluetoothLights",
+      "github_url": "",
       "download_url": "",
       "demo_url": "",
-      "cs_url": "/projects/bluetoothlights",
+      "cs_url": "/projects/trebuchet",
       "blog": "",
-      "images": ["/assets/images/projects/bluetoothlights/btl2.jpg", "/assets/images/projects/bluetoothlights/btl3.jpg", "/assets/images/projects/bluetoothlights/btl4.jpg","/assets/images/projects/bluetoothlights/btl5.jpg",
-        "/assets/images/projects/bluetoothlights/btl6.jpg", "/assets/images/projects/bluetoothlights/btl7.jpg","/assets/images/projects/bluetoothlights/btl8.jpg", "/assets/images/projects/bluetoothlights/btl9.jpg", "/assets/images/projects/bluetoothlights/btl10.jpg",
-        "/assets/images/projects/bluetoothlights/btl11.jpg", "/assets/images/projects/bluetoothlights/btl12.jpg", "/assets/images/projects/bluetoothlights/btl13.jpg", "/assets/images/projects/bluetoothlights/btl15.jpg"],
-      "videos": "IlwwBhS5HJY"
-    },
-    {
-      "name": "Trebuchet4",
-      "short_des": "This is my trebuchet short description",
-      "description": "This is my trebuchet long description, This is my trebuchet long description, This is my trebuchet long description",
-      "github_url": "",
-      "download_url": "",
-      "cs_url": "main.home",
-      "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet4.jpg"],
-      "videos": ""
-    },
-    {
-      "name": "Trebuchet5",
-      "short_des": "This is my trebuchet short description",
-      "description": "This is my trebuchet long description, This is my trebuchet long description, This is my trebuchet long description",
-      "github_url": "",
-      "download_url": "",
-      "cs_url": "main.home",
-      "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet5.jpg"],
-      "videos": ""
-    },
-    {
-      "name": "Trebuchet6",
-      "short_des": "This is my trebuchet short description",
-      "description": "This is my trebuchet long description, This is my trebuchet long description, This is my trebuchet long description",
-      "github_url": "",
-      "download_url": "",
-      "cs_url": "main.home",
-      "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet6.jpg"],
-      "videos": ""
+      "images": ["/assets/images/projects/trebuchet/trebuchet4.jpg", "/assets/images/projects/trebuchet/trebuchet5.jpg", "/assets/images/projects/trebuchet/trebuchet3.jpg", "/assets/images/projects/trebuchet/trebuchet1.jpg",
+        "/assets/images/projects/trebuchet/trebuchet2.jpg", "/assets/images/projects/trebuchet/trebuchet6.jpg", "/assets/images/projects/trebuchet/trebuchet7.jpg", "/assets/images/projects/trebuchet/trebuchet8.jpg",
+        "/assets/images/projects/trebuchet/trebuchet9.jpg"],
+      "videos": "M3tX7j7sx44"
     }
   ],
   "skills": [
