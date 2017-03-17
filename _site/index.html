@@ -6,14 +6,17 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="assets/images/projects/ciciliostudio/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/images/projects/ciciliostudio/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
 
     <link rel="stylesheet" href="/css/libraries_combined.css"/>
 
-    <script src="/js/aframe.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v2.5.3/dist/aframe-extras.min.js"></script>
+    <script src="js/index.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script>
+
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.3.1/dist/aframe-extras.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
@@ -58,12 +61,15 @@
         
             
         
+            
+        
     </ul>
 </span>
     </span>
     <hr>
     <h5>Passionate VR Web Developer who loves swing dancing and exploring music at the piano.</h5>
-    
+    <div>
+        <span>
 <ul class="cs-simple-content">
     <!-- Displays the Latest 10 Blog Shorts -->
 
@@ -110,11 +116,19 @@
     
 </li>
     
-</ul>
-    ---
----
+</ul></span>
+        <span>
+<div id="cs-new-knowledge">
+    <a-scene id="cs-new-knowledge-a-scene" inspector>
 
-#TESTING TESTING
+        <!--<a-grid></a-grid>-->
+        <a-camera position="0 1 2" look-controls.enabled="false"></a-camera>
+        <a-light type="ambient" color="#FFF"></a-light>
+    </a-scene>
+</div>
+<script src="./js/home/new_knowledge/new_knowledge.js"></script></span>
+    </div>
+
 </section>
 </section>
 </body>

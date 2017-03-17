@@ -121,6 +121,11 @@ html .cs-simple-content-box { box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
 .cs-nav nav .nav-wrapper .cs-mobile-menu { margin-right: 10px; cursor: pointer; }
 .cs-nav nav .nav-wrapper .cs-mobile-back { margin-left: 5px; width: 40px; cursor: pointer; }
 
+#cs-new-knowledge { height: 500px; position: relative; }
+#cs-new-knowledge canvas { max-height: 100%; max-width: 100%; height: 100%; width: 100%; }
+#cs-new-knowledge .cs-title { transform-style: preserve-3d; position: absolute; height: 100%; width: 100%; }
+#cs-new-knowledge .cs-title figure { position: absolute; background-color: #168815; outline: solid 1px black; height: 20px; width: 100px; }
+
 .cs-alt { font: 100% Roboto; background: #434F5B; }
 .cs-alt .cs-main-header { font-weight: 700; color: #F2F2F2; }
 

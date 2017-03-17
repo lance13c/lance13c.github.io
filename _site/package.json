@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/lance13c/browser-event-display#readme",
   "dependencies": {
-    "aframe": "^0.3.1",
-    "aframe-extras": "^2.6.0",
+    "aframe": "^0.5.0",
+    "aframe-extras": "^3.3.1",
     "hover.css": "^2.0.2",
     "jquery": "^2.1.4",
     "materialize-css": "^0.97.7",
@@ -29,6 +29,8 @@
   },
   "devDependencies": {
     "gulp-minify-css": "^1.2.4",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^3.1.0",
     "gulp-uglify": "^2.0.0",
     "gulp-usemin": "^0.3.24"
   }

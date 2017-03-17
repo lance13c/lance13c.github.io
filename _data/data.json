@@ -169,5 +169,19 @@
   },
   "site": {
     "fav_icon": "/assets/images/projects/ciciliostudio/favicon5.png"
-  }
+  },
+  "new_knowledge": [
+    {
+      "local_url": "",
+      "external_url_list": [],
+      "date": "3/17/2017",
+      "blurb": "Looking into D3.js"
+    },
+    {
+      "local_url": "",
+      "external_url_list": [],
+      "date": "3/16/2017",
+      "blurb": "Looking into Aframe.js"
+    }
+  ]
 }

@@ -1,0 +1,19 @@
+---
+layout: base
+title: Project
+---
+<section>
+    <script src="assets/js/hololens-timer-component.js"></script>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="controller-obj" src="/assets/objects/projects/hololens-timer/vr_controller_vive.obj"></a-asset-item>
+            <a-asset-item id="controller-mtl" src="/assets/objects/projects/hololens-timer/vr_controller_vive.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-entity obj-model="obj: #controller-obj; mtl: #controller-mtl"></a-entity>
+        <a-entity vive-controls="hand: left"></a-entity>
+        <a-entity vive-controls="hand: right"></a-entity>
+
+        <a-grid></a-grid>
+    </a-scene>
+</section>
