@@ -63,6 +63,22 @@ let csData = JSON.parse(`{
         "/assets/images/projects/trebuchet/trebuchet2.jpg", "/assets/images/projects/trebuchet/trebuchet6.jpg", "/assets/images/projects/trebuchet/trebuchet7.jpg", "/assets/images/projects/trebuchet/trebuchet8.jpg",
         "/assets/images/projects/trebuchet/trebuchet9.jpg"],
       "videos": "M3tX7j7sx44"
+    },
+    {
+      "name": "HololensTimer",
+      "short_des": "Timer Application writen in Aframe & D3",
+      "date": "March 2017",
+      "description": "",
+      "github_url": "",
+      "download_url": "",
+      "demo_url": "",
+      "cs_url": "/projects/hololens-timer",
+      "blog": "",
+      "images": ["/assets/images/projects/trebuchet/trebuchet4.jpg"],
+      "videos": "",
+      "variables": {
+        "time": "00:00"
+      }
     }
   ],
   "skills": [
