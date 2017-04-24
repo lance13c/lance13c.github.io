@@ -206,7 +206,20 @@ let csData = JSON.parse(`{
       "date": "3/16/2017",
       "blurb": "Looking into Aframe.js"
     }
-  ]
+  ],
+  "weekly_life": {
+    "school_week": {
+      "swing dancing": {
+        "average_hours": 10
+      },
+      "classes": {
+        "average_hours": 20
+      },
+      "school_work": {
+        "average_hours": 20
+      }
+    }
+  }
 }`);
 
 

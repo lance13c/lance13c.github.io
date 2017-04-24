@@ -4,8 +4,14 @@ const usemin = require('gulp-usemin');
 const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const replace = require('gulp-replace');
+const concat = require('gulp-concat');
 const fs = require('fs');
 const minifyCss = require('gulp-minify-css');
+
+// Constant names
+const names = {
+	ALL_SCRIPTS: 'copied_scripts.js'
+}
 
 const paths = {
 	fonts: './node_modules/materialize-css/dist/font/**/*.*',
@@ -15,6 +21,7 @@ const paths = {
 	css_post_build: './_includes/**/*.css',
 	sass_post_build: './_includes/**/*.scss',
 	js_post_build: './_includes/**/*.js',
+	js_project: './projects/**/*.js',
 	post_build: './_includes/build',
 	pre_base: './_dependencies/*.html',
 	pre_alt_base: './_dependencies/alt/base.html'
@@ -51,7 +58,8 @@ gulp.task('copy-css', ['usemin'], () => {
 });
 
 gulp.task('copy-js', ['usemin'], () => {
-	return gulp.src(paths.js_post_build)
+	return gulp.src([paths.post_build, paths.js_project])
+		.pipe(concat(names.ALL_SCRIPTS))
 		.pipe(gulp.dest('./js'));
 });
 
