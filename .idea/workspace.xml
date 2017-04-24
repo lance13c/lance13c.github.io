@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d20c7c-0aef-4448-a721-681d0cbbe798" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/home/weekly_life/weekly_life.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/home/weekly_life/weekly_life.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/projects/solar_vr/solar_vr_display.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_sass/_includes/projects/solar_vr/solar_vr_display.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projects/solar-vr/assets/js/solar-vr-info.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projects/solar-vr/assets/js/solar_vr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/projects/solar-vr/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_includes/alt/build/js/scripts_combined.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_data/data.json" afterPath="$PROJECT_DIR$/_data/data.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_dependencies/base.html" afterPath="$PROJECT_DIR$/_dependencies/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/base.html" afterPath="$PROJECT_DIR$/_includes/build/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/css/libraries_combined.css" afterPath="$PROJECT_DIR$/_includes/build/css/libraries_combined.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/base.html" afterPath="$PROJECT_DIR$/_layouts/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/simple_base.html" afterPath="$PROJECT_DIR$/_layouts/simple_base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/style.css" afterPath="$PROJECT_DIR$/_site/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/gulpfile.js" afterPath="$PROJECT_DIR$/_site/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/js/index.js" afterPath="$PROJECT_DIR$/_site/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/package.json" afterPath="$PROJECT_DIR$/_site/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/projects/index.html" afterPath="$PROJECT_DIR$/_site/projects/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.scss" afterPath="$PROJECT_DIR$/css/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/hololens-timer/assets/js/hololens-timer-component.js" afterPath="$PROJECT_DIR$/projects/hololens-timer/assets/js/hololens-timer-component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/hololens-timer/index.html" afterPath="$PROJECT_DIR$/projects/hololens-timer/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects/solar-vr/assets/js/solar_vr.js" afterPath="$PROJECT_DIR$/projects/solar-vr/assets/js/solar_vr.js" />
     </list>
     <ignored path="browser-event-display.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +28,8 @@
           <file leaf-file-name="solar_vr.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/projects/solar-vr/assets/js/solar_vr.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="526">
-                  <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+                <state relative-caret-position="442">
+                  <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
                   <folding />
                 </state>
               </provider>
@@ -547,14 +522,7 @@
       <workItem from="1492126015709" duration="1238000" />
       <workItem from="1492968758716" duration="11977000" />
       <workItem from="1492998545898" duration="119000" />
-      <workItem from="1492998689273" duration="10045000" />
-    </task>
-    <task id="LOCAL-00035" summary="update index with nav">
-      <created>1472866425373</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1472866425373</updated>
+      <workItem from="1492998689273" duration="10661000" />
     </task>
     <task id="LOCAL-00036" summary="add sass&#10;first blog&#10;add spinkit">
       <created>1472872903908</created>
@@ -892,7 +860,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490106671903</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="add solar vr">
+      <created>1493009506264</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1493009506265</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -928,12 +903,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="210416000" />
+    <option name="totallyTimeSpent" value="211032000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32139093" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32139093" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22210184" sideWeight="0.53582716" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22210184" sideWeight="0.4641728" order="2" side_tool="false" content_ui="tabs" />
@@ -967,7 +942,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="progress nav redesign" />
     <MESSAGE value="add new nav design" />
     <MESSAGE value="nav now more mobile friendly" />
     <MESSAGE value="body tag now fills entire screen" />
@@ -992,7 +966,8 @@
     <MESSAGE value="add jekyll data assessable in global js var" />
     <MESSAGE value="add init new_knowledge section" />
     <MESSAGE value="update hololens TimerSpec and tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="update hololens TimerSpec and tests" />
+    <MESSAGE value="add solar vr" />
+    <option name="LAST_COMMIT_MESSAGE" value="add solar vr" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1340,8 +1315,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/projects/solar-vr/assets/js/solar_vr.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="36" column="36" lean-forward="true" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        <state relative-caret-position="442">
+          <caret line="29" column="24" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
           <folding />
         </state>
       </provider>

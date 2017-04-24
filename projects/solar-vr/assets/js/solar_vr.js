@@ -27,8 +27,8 @@
 			lightPosition: function () {
 				const distance = 5;
 				
-				let posX = (distance * Math.sin(this.elevationAngle)) + this.DEFAULT_POSX;
-				let posY = (distance * Math.cos(this.elevationAngle)) + this.DEFAULT_POSY;
+				let posX = -1 * (distance * Math.cos(this.elevationAngle * Math.PI/180)) + this.DEFAULT_POSX;
+				let posY = (distance * Math.sin(this.elevationAngle * Math.PI/180)) + this.DEFAULT_POSY;
 				let posZ = this.DEFAULT_POSZ;
 				
 				
@@ -36,7 +36,7 @@
 			},
 			solarEfficiency: function () {
 				let val = 100 * Math.sin((this.elevationAngle + this.tiltAngle) * Math.PI/180);
-				return Math.floor(val);
+				return Math.floor(100 * val) / 100; // floors to 2 decimal places
 			}
 		},
 		delimiters: ['<%', '%>']
