@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d20c7c-0aef-4448-a721-681d0cbbe798" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/card.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/icecream.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jTemp.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.jekyll-metadata" afterPath="$PROJECT_DIR$/.jekyll-metadata" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_dependencies/base.html" afterPath="$PROJECT_DIR$/_dependencies/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/base.html" afterPath="$PROJECT_DIR$/_includes/build/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/base.html" afterPath="$PROJECT_DIR$/_layouts/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_main.scss" afterPath="$PROJECT_DIR$/_sass/_main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/style.css" afterPath="$PROJECT_DIR$/_site/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/projects/index.html" afterPath="$PROJECT_DIR$/_site/projects/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jeselle/index.html" afterPath="$PROJECT_DIR$/jeselle/index.html" />
     </list>
     <ignored path="browser-event-display.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,8 +48,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="560">
-                  <caret line="91" column="10" lean-forward="true" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+                <state relative-caret-position="34">
+                  <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
@@ -83,7 +71,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="_main.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="_main.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/_sass/_main.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="608">
@@ -93,11 +81,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/_dependencies/base.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="557">
-                  <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
                   <folding />
                 </state>
               </provider>
@@ -173,11 +161,11 @@
         <option value="$PROJECT_DIR$/_sass/_includes/projects/solar_vr/solar_vr_display.scss" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/_layouts/place_holder.html" />
-        <option value="$PROJECT_DIR$/_dependencies/base.html" />
         <option value="$PROJECT_DIR$/js/jTemp.js" />
         <option value="$PROJECT_DIR$/_sass/_main.scss" />
         <option value="$PROJECT_DIR$/jeselle/index.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/_dependencies/base.html" />
       </list>
     </option>
   </component>
@@ -258,6 +246,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lance13c.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lance13c.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extra" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -510,21 +520,7 @@
       <workItem from="1493248985165" duration="303000" />
       <workItem from="1501224651844" duration="1964000" />
       <workItem from="1501260878033" duration="1513000" />
-      <workItem from="1501338682579" duration="12193000" />
-    </task>
-    <task id="LOCAL-00039" summary="add sass dir">
-      <created>1472968712506</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1472968712506</updated>
-    </task>
-    <task id="LOCAL-00040" summary="update home base nav">
-      <created>1472968747132</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1472968747132</updated>
+      <workItem from="1501338682579" duration="12537000" />
     </task>
     <task id="LOCAL-00041" summary="add more temp projects">
       <created>1472968758412</created>
@@ -855,7 +851,21 @@
       <option name="project" value="LOCAL" />
       <updated>1493064943975</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="update jeselle bday">
+      <created>1501357122322</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1501357122322</updated>
+    </task>
+    <task id="LOCAL-00089" summary="add images">
+      <created>1501357292315</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1501357292315</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -891,7 +901,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229610000" />
+    <option name="totallyTimeSpent" value="229954000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -931,8 +941,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="simple base background color change with box-shadow" />
-    <MESSAGE value="modularize nav for all websites" />
     <MESSAGE value="modularize blog_short for all websites" />
     <MESSAGE value="simple blog no longer layout" />
     <MESSAGE value="move blog to root forward" />
@@ -956,7 +964,9 @@
     <MESSAGE value="fixed light source positioning&#10;solar efficency floors to 2 decimal places" />
     <MESSAGE value="add copied scripts" />
     <MESSAGE value="temp UI fix, extends visibility to other displays" />
-    <option name="LAST_COMMIT_MESSAGE" value="temp UI fix, extends visibility to other displays" />
+    <MESSAGE value="update jeselle bday" />
+    <MESSAGE value="add images" />
+    <option name="LAST_COMMIT_MESSAGE" value="add images" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1269,14 +1279,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_dependencies/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -1305,8 +1307,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="91" column="10" lean-forward="true" selection-start-line="91" selection-start-column="10" selection-end-line="91" selection-end-column="10" />
+        <state relative-caret-position="34">
+          <caret line="2" column="14" lean-forward="true" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_dependencies/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="41" lean-forward="true" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
           <folding />
         </state>
       </provider>
