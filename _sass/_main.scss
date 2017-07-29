@@ -195,3 +195,101 @@
   width: 50%;
   text-align: center;
 }
+
+.j-card {
+  img {
+    transition: transform 1s;
+
+  }
+
+  img.hover {
+    transform: rotate(360deg);
+  }
+}
+
+.j-gifts {
+
+  opacity: 1;
+  transition: opacity 2s;
+
+
+  .j-gift-left {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .j-gift-right {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+
+
+  .j-lyrics {
+    width: 100%;
+    text-align: left;
+    font-family: Arial;
+    font-weight: 600;
+  }
+
+  .j-gift-content {
+    left: 50%;
+    position: absolute;
+  }
+
+  .j-gift-content-1 {
+    position: absolute;
+  }
+
+  .j-gift-box {
+
+  }
+
+  h4 {
+    color: black;
+  }
+
+  h4.hover {
+    color: #1E88E5;
+    cursor: pointer;
+  }
+}
+
+
+
+.j-card-content {
+  width: 100%;
+  position: absolute;
+}
+
+.j-hide {
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 1s
+}
+
+.j-open {
+  opacity: 1;
+  z-index: 1;
+  transition: opacity 2s
+}
+
+.j-open-up {
+  transition: transform;
+  transform: RotateX(180deg);
+  transform-origin: top;
+}
+
+.j-bbox {
+  width: 200px;
+  cursor: pointer;
+}
+
+.j-bbox-2 {
+  width: 400px;
+  cursor: pointer;
+}
