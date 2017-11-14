@@ -20,3 +20,5 @@ kramdown:
   input:          GFM
   hard_wrap:      false
   footnote_nr:    1
+
+  repository: lance13c/lance13c.github.io

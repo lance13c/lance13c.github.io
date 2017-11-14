@@ -2,47 +2,67 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5d20c7c-0aef-4448-a721-681d0cbbe798" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/simple/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/alt/index.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_layouts/alt/base.html" afterPath="$PROJECT_DIR$/_layouts/base.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_layouts/alt/home.html" afterPath="$PROJECT_DIR$/_layouts/home.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_layouts/alt/specific_project.html" afterPath="$PROJECT_DIR$/_layouts/specific_project.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_layouts/base.html" afterPath="$PROJECT_DIR$/_layouts/simple/base.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_layouts/post.html" afterPath="$PROJECT_DIR$/_layouts/simple/post.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/_layouts/simple_base.html" afterPath="$PROJECT_DIR$/_layouts/simple/simple_base.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/alt/blog/index.html" afterPath="$PROJECT_DIR$/blog/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/alt/life/index.html" afterPath="$PROJECT_DIR$/life/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/alt/projects/bluetoothlights/index.html" afterPath="$PROJECT_DIR$/projects/bluetoothlights/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/alt/projects/hero2/index.html" afterPath="$PROJECT_DIR$/projects/hero2/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/alt/projects/index.html" afterPath="$PROJECT_DIR$/projects/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/alt/projects/trebuchet/index.html" afterPath="$PROJECT_DIR$/projects/trebuchet/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projects/hololens-timer/assets/js/hololens-time.js" afterPath="$PROJECT_DIR$/simple/projects/hololens-timer/assets/js/hololens-time.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projects/hololens-timer/assets/js/hololens-timer-component.js" afterPath="$PROJECT_DIR$/simple/projects/hololens-timer/assets/js/hololens-timer-component.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projects/hololens-timer/index.html" afterPath="$PROJECT_DIR$/simple/projects/hololens-timer/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projects/index.html" afterPath="$PROJECT_DIR$/simple/projects/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projects/solar-vr/assets/js/solar-vr-info.js" afterPath="$PROJECT_DIR$/simple/projects/solar-vr/assets/js/solar-vr-info.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projects/solar-vr/assets/js/solar_vr.js" afterPath="$PROJECT_DIR$/simple/projects/solar-vr/assets/js/solar_vr.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/projects/solar-vr/index.html" afterPath="$PROJECT_DIR$/simple/projects/solar-vr/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/37aac71fe672a5142f63fe77fed8188410187ce7/_base.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/37aac71fe672a5142f63fe77fed8188410187ce7/_blog.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/37aac71fe672a5142f63fe77fed8188410187ce7/_nav.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/37aac71fe672a5142f63fe77fed8188410187ce7/_projects.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_animations.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_colors.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_gallery.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_images.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_loading.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_main.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_mixins.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_nav.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_project.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_resume.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_simple_base.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_simple_blog.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_simple_home.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_simple_nav.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_spinkit_custom_var.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_variables.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/_videos.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/474beb1bdc25481fdefce22a262ee5372557afc6/loading.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.sass-cache/b3bf03e4b127ecbc5da7c917202b372f16a72540/_nav.scssc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/bdaybox.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/bdaybox2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/bdaybox3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/bdaybox4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/bdayboxoriginal.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/card.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/happy.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/extra/icecream.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_includes/build/css/test_libraries.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_layouts/place_holder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/_layouts/test.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/alt/skills/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/build/css/test_libraries.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/home/new_knowledge/new_knowledge.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/projects/solar_vr/solar_vr_display.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/test_libraries.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jeselle/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/alt/build/js/aframe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/alt/build/js/scripts_combined.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/build/js/aframe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/build/js/scripts_combined.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/copied_scripts" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/hololens-timer/assets/js/hololens-time.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/hololens-timer/assets/js/hololens-timer-component.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/home/new_knowledge/new_knowledge.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/home/weekly_life/weekly_life.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jTemp.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karma.conf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/support/jasmine.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CNAME" afterPath="$PROJECT_DIR$/CNAME" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config.yml" afterPath="$PROJECT_DIR$/_config.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_dependencies/base.html" afterPath="$PROJECT_DIR$/_dependencies/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/alt/blog/blog_card.html" afterPath="$PROJECT_DIR$/_includes/alt/blog/blog_card.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/alt/nav.html" afterPath="$PROJECT_DIR$/_includes/alt/nav.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/alt/vr_world.html" afterPath="$PROJECT_DIR$/_includes/alt/vr_world.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/base.html" afterPath="$PROJECT_DIR$/_includes/build/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/css/libraries_combined.css" afterPath="$PROJECT_DIR$/_includes/build/css/libraries_combined.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/build/js/scripts_combined.js" afterPath="$PROJECT_DIR$/_includes/build/js/scripts_combined.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/blog/2016-07-01-test-post.markdown" afterPath="$PROJECT_DIR$/_posts/blog/2016-07-01-test-post.markdown" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/blog/2016-09-02-birthday-complements.md" afterPath="$PROJECT_DIR$/_posts/blog/2016-09-02-birthday-complements.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/base.html" afterPath="$PROJECT_DIR$/_layouts/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_includes/projects/solar_vr/solar_vr_display.scss" afterPath="$PROJECT_DIR$/_sass/_includes/projects/solar_vr/solar_vr_display.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/_main.scss" afterPath="$PROJECT_DIR$/_sass/_main.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_sass/general/_nav.scss" afterPath="$PROJECT_DIR$/_sass/general/_nav.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/css/style.css" afterPath="$PROJECT_DIR$/_site/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/CNAME" afterPath="$PROJECT_DIR$/_site/CNAME" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/package.json" afterPath="$PROJECT_DIR$/_site/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/projects/index.html" afterPath="$PROJECT_DIR$/_site/projects/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alt/resume/index.html" afterPath="$PROJECT_DIR$/alt/resume/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="browser-event-display.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,11 +81,11 @@
     <favorites_list name="browser-event-display" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_dependencies/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="375">
               <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
               <folding />
             </state>
@@ -105,7 +125,7 @@
       <file leaf-file-name="nav.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/alt/nav.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
+            <state relative-caret-position="1050">
               <caret line="42" column="80" lean-forward="false" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
               <folding />
             </state>
@@ -115,7 +135,7 @@
       <file leaf-file-name="_nav.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_sass/_nav.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
+            <state relative-caret-position="275">
               <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
               <folding />
             </state>
@@ -135,7 +155,7 @@
       <file leaf-file-name="_main.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_sass/_main.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
+            <state relative-caret-position="4825">
               <caret line="193" column="3" lean-forward="false" selection-start-line="193" selection-start-column="3" selection-end-line="193" selection-end-column="3" />
               <folding />
             </state>
@@ -145,7 +165,7 @@
       <file leaf-file-name="data.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_data/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-498">
+            <state relative-caret-position="25">
               <caret line="25" column="187" lean-forward="false" selection-start-line="25" selection-start-column="179" selection-end-line="25" selection-end-column="187" />
               <folding />
             </state>
@@ -285,7 +305,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -328,6 +347,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -563,6 +583,7 @@
       <workItem from="1510607622975" duration="668000" />
       <workItem from="1510608336503" duration="249000" />
       <workItem from="1510608607379" duration="6519000" />
+      <workItem from="1510620166087" duration="5000" />
     </task>
     <task id="LOCAL-00036" summary="add sass&#10;first blog&#10;add spinkit">
       <created>1472872903908</created>
@@ -943,7 +964,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221217000" />
+    <option name="totallyTimeSpent" value="221222000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -951,10 +972,9 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3193634" sideWeight="0.49056605" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49583828" sideWeight="0.54058355" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49702734" sideWeight="0.54058355" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34408602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49583828" sideWeight="0.45941645" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49583828" sideWeight="0.45941645" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26753864" sideWeight="0.6206713" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3193634" sideWeight="0.509434" order="2" side_tool="true" content_ui="tabs" />
@@ -965,6 +985,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32827735" sideWeight="0.49789253" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1127,7 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="42" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1135,7 +1155,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1144,7 +1163,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="25">
             <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-            <folding />
           </first_editor>
           <second_editor>
             <js_state />
@@ -1157,7 +1175,6 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="25">
             <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-            <folding />
           </first_editor>
           <second_editor>
             <js_state />
@@ -1169,7 +1186,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,7 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,7 +1200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1193,7 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,7 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1209,7 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1217,7 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1225,7 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="15" lean-forward="false" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1233,7 +1242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,7 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,7 +1256,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1257,7 +1263,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,7 +1270,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1273,7 +1277,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
           <caret line="1" column="8" lean-forward="false" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1311,7 +1314,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_dependencies/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
+        <state relative-caret-position="375">
           <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding />
         </state>
@@ -1319,7 +1322,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_nav.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
+        <state relative-caret-position="275">
           <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
           <folding />
         </state>
@@ -1327,7 +1330,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_includes/alt/nav.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="1050">
           <caret line="42" column="80" lean-forward="false" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
           <folding />
         </state>
@@ -1351,7 +1354,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_sass/_main.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="4825">
           <caret line="193" column="3" lean-forward="false" selection-start-line="193" selection-start-column="3" selection-end-line="193" selection-end-column="3" />
           <folding />
         </state>
@@ -1359,7 +1362,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_data/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-498">
+        <state relative-caret-position="25">
           <caret line="25" column="187" lean-forward="false" selection-start-line="25" selection-start-column="179" selection-end-line="25" selection-end-column="187" />
           <folding />
         </state>

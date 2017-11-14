@@ -1,0 +1,38 @@
+---
+layout: base
+---
+
+<div class="cs-skills">
+
+    <div class="container">
+        <div class="row">
+            <h1 class="cs-main-header center-align">Skills</h1>
+        </div>
+        <div class="row">
+            <div class="col 1 right">
+                <!--Filter Button-->
+                <div class='dropdown-button cs-dropdown-skills-filter-btn btn disabled' data-beloworigin="true" data-activates='dropdown-skills-filter'>
+                    Filter<i class="material-icons right">arrow_drop_down</i>
+                </div>
+
+                <!--Projects Dropdown Button-->
+                <ul id='dropdown-skills-filter' class='dropdown-content cs-dropdown-skills-filter'>
+                    <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">A-Z</a></li>
+                    <li class="divider"></li>
+                    <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Z-A</a></li>
+                    <li class="divider"></li>
+                    <li><a class="cs-dropdown-item" ui-sref="main.project.trebuchet">Most Familiar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row cs-skills-card-wrapper">
+            {% for skill in site.data.data.skills %}
+                {% include alt/skills/skill_card.html %}
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
