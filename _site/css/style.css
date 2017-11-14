@@ -128,7 +128,7 @@ html .cs-simple-content-box { box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
 #cs-new-knowledge .cs-title { transform-style: preserve-3d; position: absolute; height: 100%; width: 100%; }
 #cs-new-knowledge .cs-title figure { position: absolute; background-color: #168815; outline: solid 1px black; height: 20px; width: 100px; }
 
-#cs-solar-vr-display { position: absolute; bottom: 0%; width: 100%; height: 15%; background-color: white; border: solid black 1px; }
+#cs-solar-vr-display { position: absolute; bottom: 0%; width: 100%; height: 30%; background-color: white; border: solid black 1px; }
 #cs-solar-vr-display .cs-solar-vr-form { padding: 0 20px 0 20px; position: relative; width: 50%; }
 
 .cs-alt { font: 100% Roboto; background: #434F5B; }
@@ -182,3 +182,29 @@ html .cs-simple-content-box { box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
 
 .a-enter-vr { position: static; }
 .a-enter-vr .a-enter-vr-button { top: 0; }
+
+.cs-center-section { margin-right: auto; margin-left: auto; width: 50%; text-align: center; }
+
+.j-card img { transition: transform 1s; }
+.j-card img.hover { transform: rotate(360deg); }
+
+.j-gifts { opacity: 1; transition: opacity 2s; }
+.j-gifts .j-gift-left { text-align: center; justify-content: center; align-items: center; display: flex; }
+.j-gifts .j-gift-right { text-align: center; justify-content: center; align-items: center; display: flex; }
+.j-gifts .j-lyrics { width: 100%; text-align: left; font-family: Arial; font-weight: 600; }
+.j-gifts .j-gift-content { left: 50%; position: absolute; }
+.j-gifts .j-gift-content-1 { position: absolute; }
+.j-gifts h4 { color: black; }
+.j-gifts h4.hover { color: #1E88E5; cursor: pointer; }
+
+.j-card-content { width: 100%; position: absolute; }
+
+.j-hide { opacity: 0; z-index: -1; transition: opacity 1s; }
+
+.j-open { opacity: 1; z-index: 1; transition: opacity 2s; }
+
+.j-open-up { transition: transform; transform: RotateX(180deg); transform-origin: top; }
+
+.j-bbox { width: 200px; cursor: pointer; }
+
+.j-bbox-2 { width: 400px; cursor: pointer; }

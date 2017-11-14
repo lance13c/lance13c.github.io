@@ -58,6 +58,22 @@
       "videos": "M3tX7j7sx44"
     },
     {
+      "name": "SpaceFighter",
+      "short_des": "Wave Based SpaceFighter",
+      "date": "August 2010",
+      "description": "",
+      "github_url": "",
+      "download_url": "",
+      "demo_url": "",
+      "cs_url": "/projects/spacefighter",
+      "blog": "",
+      "images": ["/assets/images/projects/spacefighter/sf0.png", "/assets/images/projects/spacefighter/sf1.png", "/assets/images/projects/spacefighter/sf2.png",
+        "/assets/images/projects/spacefighter/sf3.png", "/assets/images/projects/spacefighter/sf4.png", "/assets/images/projects/spacefighter/sf5.png",
+        "/assets/images/projects/spacefighter/sf6.png", "/assets/images/projects/spacefighter/sf7.png"],
+      "videos": "",
+      "variables": {}
+    },
+    {
       "name": "HololensTimer",
       "short_des": "Timer Application writen in Aframe & D3",
       "date": "March 2017",
