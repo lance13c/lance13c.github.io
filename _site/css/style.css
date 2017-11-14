@@ -65,6 +65,8 @@ html .cs-simple-content-box { box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
 .cs-simple-project-short .cs-simple-project-content .cs-simple-project-title a:hover { text-decoration: underline; }
 .cs-simple-project-short .cs-simple-project-content .cs-simple-project-excerpt { margin: 8px 0; }
 
+.cs-not-available { text-decoration: line-through; }
+
 .cs-navitem-active { text-decoration: underline; }
 
 .cs-loading-container { height: 10em; position: relative; }
@@ -152,7 +154,7 @@ html .cs-simple-content-box { box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
 
 .cs-projects .cs-projects-card-wrapper .cs-projects-card-title { top: 0; font-weight: 500; color: #2E2E2E; }
 
-.cs-chip { cursor: pointer; background: transparent; padding-left: .5rem; }
+.cs-chip { cursor: pointer; background: rgba(0, 0, 0, 0); padding-left: .5rem; }
 .cs-chip img { border-radius: 50%; width: 30px; height: 30px; margin-right: 0; }
 .cs-chip :hover { box-shadow: 0px 1px 2px 1px #F2F2F2; -webkit-box-shadow: 0px 1px 2px 1px #F2F2F2; -moz-box-shadow: 0px 1px 2px 1px #F2F2F2; }
 
@@ -177,3 +179,6 @@ html .cs-simple-content-box { box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
 .cs-fa-github-square:hover { background: #8AB839; }
 
 .cs-footer { margin-top: 200px; padding-top: 10px; width: 100%; height: 100px; background-color: #2E2E2E; color: #F2F2F2; }
+
+.a-enter-vr { position: static; }
+.a-enter-vr .a-enter-vr-button { top: 0; }

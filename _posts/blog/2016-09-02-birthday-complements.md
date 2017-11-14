@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: simple/post
 title: B-Day Quotes
 ---
 

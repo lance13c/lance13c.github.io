@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="/css/libraries_combined.css"/>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.5.0/aframe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
     <script src="https://d3js.org/d3.v4.js"></script>
@@ -20,123 +20,179 @@
 </head>
 
 <body>
-<section class="cs-content">
-    <section class="cs-simple-base cs-simple-content-box">
-    <span class="cs-simple-base-container">
-        <h3 class="cs-simple-base-title">CicilioStudio</h3>
-        
-        <span class="cs-simple-nav">
-    <ul class="cs-simple-nav-bar">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-                
-                    <li><a href="/projects/">Projects</a></li>
-                
-            
-        
-            
-        
-            
-                
-                    <li class="cs-navitem-active"><a href="/">Blog</a></li>
-                
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </ul>
-</span>
-    </span>
-    <hr>
-    <h5>Passionate VR Web Developer who loves swing dancing and exploring music at the piano.</h5>
+<section>
     
-<div id="cs-new-knowledge">
-    <svg id="cs-weekly-life"></svg>
-</div>
-<script src="./js/home/weekly_life/weekly_life"></script>
-    <div>
-        <span>
-<ul class="cs-simple-content">
-    <!-- Displays the Latest 10 Blog Shorts -->
+<section>
+    <div class="cs-nav">
+        <div class="navbar-fixed">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="/" class="brand-logo cs-siteicon">CicilioStudio</a>
+                    <a href="#" data-activates="mobile-nav" class="right button-collapse cs-mobile-menu"><i class="material-icons">menu</i></a>
+                    <a class="left button-collapse cs-mobile-back"><i class="material-icons">arrow_backwords</i></a>
 
-    
-        
-        <li>
-    <h3 class="cs-simple-blog-title">
-        <a href="/2016/09/02/birthday-complements.html">
-            B-Day Quotes
-        </a>
-    </h3>
+                    <!--Main Nav-->
+                    <ul class="hide-on-med-and-down cs-main-nav">
+                        <li href="/" class="tooltipped"
+                            data-position="bottom" data-delay="10" data-tooltip="Home">
+                            <a href="/"><i class="material-icons left">home</i></a></li>
+                        <li>
+                            <a href="/projects" class='dropdown-button cs-dropdown-projects-btn' data-beloworigin="true" data-activates='dropdown-projects'>
+                                Projects<i class="material-icons right">arrow_drop_down</i>
+                            </a>
+                        </li>
+                        <li class="tooltipped cs-not-available" data-position="bottom" data-delay="10"
+                            data-tooltip="Unavailable"><a href="/life">Life</a></li>
+                        <li class="tooltipped cs-not-available" data-position="bottom" data-delay="10"
+                            data-tooltip="Unavailable"><a href="/blog">Blog</a></li>
+                        <li class="tooltipped cs-not-available" data-position="bottom" data-delay="10"
+                            data-tooltip="Unavailable"><a href="/resume">Resume</a></li>
 
-
-    <p class="cs-simple-blog-post-excerpt">
-        ###Every few days Facebook notifies you its a friend’s birth. What do you do?
-
-<a class="cs-simple-link" href="/2016/09/02/birthday-complements.html">...</a>
-    </p>
-    <a class="cs-simple-link" href="/2016/09/02/birthday-complements.html">Read More</a>
-    <a class="post-date cs-simple-link" href="/2016/09/02/birthday-complements.html">Sep 2, 2016</a>
-
-    <!-- Clean up -->
-    
-</li>
-    
-        
-        <li>
-    <h3 class="cs-simple-blog-title">
-        <a href="/2016/07/01/test-post.html">
-            Test Post
-        </a>
-    </h3>
+                        <a class="right cs-fa-linkedin-square tooltipped" href="https://www.linkedin.com/in/dominic-cicilio-96461786"
+                           data-position="bottom" data-delay="10" data-tooltip="Linkedin">
+                            <i class="fa fa-linkedin-square fa-2x"></i>
+                        </a>
+                        <a class="right cs-fa-github-square tooltipped" href="https://github.com/lance13c"
+                           data-position="bottom" data-delay="10" data-tooltip="Github">
+                            <i class="fa fa-github-square fa-2x"></i>
+                        </a>
+                    </ul>
 
 
-    <p class="cs-simple-blog-post-excerpt">
-        #Testing 123
+                    <!--Mobile Side Navigation-->
+                    <ul class="side-nav cs-side-nav" id="mobile-nav">
+                        <li><a href="/">Home<i class="fa fa-fw fa-home" aria-hidden="true"></i></a></li>
+                        <li><a href="/projects">Projects<i class="fa fa-flask" aria-hidden="true"></i></a></li>
+                        <li><a href="/">Blog<i class="fa fa-rss cs-not-available" aria-hidden="true"></i></a></li>
+                        <li><a href="/">Life<i class="fa fa-music cs-not-available" aria-hidden="true"></i></a></li>
+                        <li><a href="/">Resume<i class="fa fa-info-circle cs-not-available" aria-hidden="true"></i></a></li>
+                    </ul>
 
-<a class="cs-simple-link" href="/2016/07/01/test-post.html">...</a>
-    </p>
-    <a class="cs-simple-link" href="/2016/07/01/test-post.html">Read More</a>
-    <a class="post-date cs-simple-link" href="/2016/07/01/test-post.html">Jul 1, 2016</a>
+                    <!--Projects Dropdown Button-->
+                    <ul id='dropdown-projects' class='dropdown-content cs-dropdown-projects'>
+                        <li ><a href="/projects/bluetoothlights" class="cs-dropdown-item">Bluetooth Lights</a></li>
+                        <li class="divider"></li>
+                        <li ><a class="cs-dropdown-item">Space Fighter</a></li>
+                        <li class="divider"></li>
+                        <li ><a href="/projects/hero2" class="cs-dropdown-item">Hero 2.0</a></li>
+                        <li class="divider"></li>
+                        <li ><a href="/projects/trebuchet" class="cs-dropdown-item">Trebuchet</a></li>
+                    </ul>
 
-    <!-- Clean up -->
-    
-</li>
-    
-</ul></span>
-        <span>
-<div id="cs-new-knowledge">
-    <a-scene id="cs-new-knowledge-a-scene" inspector>
-
-        <!--<a-grid></a-grid>-->
-        <a-camera position="0 1 2" look-controls.enabled="false"></a-camera>
-        <a-light type="ambient" color="#FFF"></a-light>
-    </a-scene>
-</div>
-<script src="./js/home/new_knowledge/new_knowledge.js"></script></span>
+                </div>
+            </nav>
+        </div>
     </div>
+</section>
+</section>
+<!--<section class="cs-content">-->
+    <section>
+    <script>
+        /**
+         * Rain of Entities component.
+         *
+         * Creates a spawner on the scene, which periodically generates new entities
+         * and drops them from the sky. Objects falling below altitude=0 will be
+         * recycled after a few seconds.
+         *
+         * Requires: physics
+         */
+        AFRAME.registerPrimitive('a-cs-box', {
+            // Attaches the ocean component by default.
+            // And smartly makes the ocean parallel to the ground.
+            defaultComponents: {
+                'dynamic-body': {},
+                color: '#32004A',
+                geometry: {primitive: 'box'}
+            },
+            // Maps HTML attributes to his ocean component's properties.
+            mappings: {}
+        });
 
+        AFRAME.registerPrimitive('a-cs-box-d', {
+            // Attaches the ocean component by default.
+            // And smartly makes the ocean parallel to the ground.
+            defaultComponents: {
+                color: '#32004A',
+                geometry: {primitive: 'box'}
+            },
+            // Maps HTML attributes to his ocean component's properties.
+            mappings: {}
+        });
+
+    </script>
+    <a-scene fog="type: exponential; color: #FFF; density: 0.02;">
+        <!-- Player -->
+        <a-entity camera
+                  universal-controls="movementEnabled: true"
+                  kinematic-body
+                  position="0 1.764 0">
+        </a-entity>
+
+        <!-- Welcome-->
+        <!-- Left W -->
+        <a-cs-box position="-25 7 -35"></a-cs-box>
+        <a-cs-box position="-25 6 -35"></a-cs-box>
+        <a-cs-box position="-25 5 -35"></a-cs-box>
+        <a-cs-box position="-25 4 -35"></a-cs-box>
+        <a-cs-box position="-25 3 -35"></a-cs-box>
+        <a-cs-box position="-25 2 -35"></a-cs-box>
+        <a-cs-box position="-25 1 -35"></a-cs-box>
+        <a-cs-box position="-25 0 -35"></a-cs-box>
+
+        <!-- Middle Left W Bridge -->
+        <a-cs-box position="-24 1 -35"></a-cs-box>
+        <a-cs-box position="-23 1 -35"></a-cs-box>
+        <a-cs-box position="-22 1 -35"></a-cs-box>
+
+        <!-- Middle W V -->
+
+        <a-cs-box position="-21 5 -35"></a-cs-box>
+        <a-cs-box position="-21 4 -35"></a-cs-box>
+        <a-cs-box position="-21 3 -35"></a-cs-box>
+        <a-cs-box position="-21 2 -35"></a-cs-box>
+        <a-cs-box position="-21 1 -35"></a-cs-box>
+
+        <a-cs-box position="-20 5 -35"></a-cs-box>
+        <a-cs-box position="-20 4 -35"></a-cs-box>
+        <a-cs-box position="-20 3 -35"></a-cs-box>
+        <a-cs-box position="-20 2 -35"></a-cs-box>
+        <a-cs-box position="-20 1 -35"></a-cs-box>
+
+        <!-- Middle Right W Bridge -->
+        <a-cs-box position="-19 1 -35"></a-cs-box>
+        <a-cs-box position="-18 1 -35"></a-cs-box>
+        <a-cs-box position="-17 1 -35"></a-cs-box>
+
+        <!-- Right W -->
+        <a-cs-box position="-16 7 -35"></a-cs-box>
+        <a-cs-box position="-16 6 -35"></a-cs-box>
+        <a-cs-box position="-16 5 -35"></a-cs-box>
+        <a-cs-box position="-16 4 -35"></a-cs-box>
+        <a-cs-box position="-16 3 -35"></a-cs-box>
+        <a-cs-box position="-16 2 -35"></a-cs-box>
+        <a-cs-box position="-16 1 -35"></a-cs-box>
+        <a-cs-box position="-16 0 -35"></a-cs-box>
+
+
+
+
+
+        <!-- Terrain -->
+        <a-grid static-body></a-grid>
+
+        <a-sky color="#6EBAA7" metalness="1"></a-sky>
+
+        <!-- Lighting -->
+        <a-light type="ambient" color="#bbb"></a-light>
+        <a-light color="#ccc" position="0 30 0" distance="100" intensity="0.4" type="point"></a-light>
+        <a-light color="#ccc" position="3 10 -10" distance="50" intensity="0.4" type="point"></a-light>
+    </a-scene>
 </section>
+<section class="cs-alt">
+    
 </section>
+<!--</section>-->
 </body>
 
 

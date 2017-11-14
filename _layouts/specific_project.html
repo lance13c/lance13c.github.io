@@ -1,10 +1,10 @@
 ---
-layout: alt/base
+layout: base
 ---
 
 <section class="cs-sp">
     {% for project in site.data.data.projects %}
-        {% if project.name == {{page.project_name}} %}
+        {% if project.name == page.project_name %}
         <div class="cs-sp-title-container">
             <div>
                 <div class="cs-sp-title-image"

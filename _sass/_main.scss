@@ -187,3 +187,11 @@
   background-color: $theme-5;
   color: $theme-3;
 }
+
+// Overwrite enter-vr-button position
+.a-enter-vr {
+  position: static;
+  .a-enter-vr-button {
+    top: 0;
+  }
+}
