@@ -1,7 +1,0 @@
----
-layout: simple/post
----
-
-#Testing 123
-<!--excerpt-->
-##ABC
