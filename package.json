@@ -1,0 +1,23 @@
+{
+  "name": "lance13c.github.io",
+  "version": "1.0.0",
+  "description": "Site: [dev.ciciliostudio.com](dev.ciciliostudio.com)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lance13c/lance13c.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lance13c/lance13c.github.io/issues"
+  },
+  "homepage": "https://github.com/lance13c/lance13c.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
