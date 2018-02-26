@@ -5,9 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    overflow: inherit;
 }
 
 html {
     font-size: 62.5%;   // 10px b/c 16px is browser default
     background-color: $test-color;
+    box-sizing: border-box;
+    overflow: hidden;
 }

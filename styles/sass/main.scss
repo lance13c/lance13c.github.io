@@ -1,2 +1,8 @@
-@import "./partials/abstracts/variables";
-@import "./partials/base/global";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/global";
+
+@import "./components/sketchfabs";
+
+//Layouts
+@import "./layouts/home.scss"
