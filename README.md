@@ -5,12 +5,11 @@ Site: [dev.ciciliostudio.com](dev.ciciliostudio.com)
 
 ### Style Guidelines
 
-**Sass Naming Convention:** cs-*groupname*-*itemname*-*detail*
-
-        Ex: cs-simple-nav
+**Sass Naming Convention: BEM** 
 
 
-**Groups:**
+#Todo
 
-- simple
-- alt
+* Camera Transitions
+* Tree
+* Birds
