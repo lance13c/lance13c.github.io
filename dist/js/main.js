@@ -23,6 +23,7 @@ var abstracts = require('../abstracts');
 
 var sceneEl = document.getElementById('scene');
 
+var cameraRadius = 5;
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 var renderer = new THREE.WebGLRenderer();
@@ -51,10 +52,10 @@ function initParticles() {
         texture: {
             value: new THREE.TextureLoader().load("/assets/images/textures/grass_blade.png")
         },
-        maxParticleCount: 10000
-        // hasPerspective: false,
-        // colorize: false,
-        // blending: THREE.AdditiveBlending,
+        maxParticleCount: 10000,
+        hasPerspective: true,
+        colorize: true,
+        blending: THREE.NormalBlending
         // transparent: false,
         // alphaTest: 5,
         // depthWrite: 0,
@@ -64,32 +65,37 @@ function initParticles() {
 
     var floorEmitter = new SPE.Emitter({
         type: SPE.distributions.SPHERE,
-        particleCount: 10000,
-        isStatic: true,
+        particleCount: 100,
+        isStatic: false,
         maxAge: {
             value: 8,
             spread: 3
         },
         position: {
-            value: new THREE.Vector3(0, 0, 0)
+            value: new THREE.Vector3(0, 0, 0),
+            radius: 1,
+            width: 10,
+            height: 10
         },
         wiggle: {
-            value: 1,
-            spread: 0.1
+            value: .0001,
+            spread: .001
         },
         color: {
             value: new THREE.Color(abstracts.accentColor)
         },
         size: {
-            value: 10
+            value: 1
         },
         angle: {
-            value: .1,
-            spread: .2
+            value: .2,
+            spread: .5
         }
     });
 
     floorGroup.addEmitter(floorEmitter);
+
+    floorGroup.material.side = THREE.DoubleSide;
     scene.add(floorGroup.mesh);
 }
 
@@ -111,17 +117,20 @@ var farWallMesh = new THREE.Mesh(farWallG, farWallM);
 farWallMesh.translateZ(-500);
 scene.add(farWallMesh);
 
-var testOBJG = new THREE.BoxGeometry(1, 1, 1);
+var testOBJG = new THREE.BoxGeometry(-1, 1, 1);
 var testOBJM = new THREE.MeshStandardMaterial({ color: abstracts.accentColor });
 var testOBJMesh = new THREE.Mesh(testOBJG, testOBJM);
+testOBJMesh.translateX(-3);
+testOBJMesh.translateY(0);
+testOBJMesh.translateZ(0);
 scene.add(testOBJMesh);
 
 // Lights
-var light = new THREE.HemisphereLight(0xffffbb, 0x080820, 6);
+var light = new THREE.HemisphereLight(0xffffbb, 0x080820, 10);
 scene.add(light);
 
 // Camera
-camera.position.z = 5;
+camera.position.z = cameraRadius;
 
 sceneEl.appendChild(renderer.domElement);
 
@@ -139,11 +148,38 @@ window.addEventListener('resize', function () {
     renderer.setSize(w, h);
 }, false);
 
+//let x = 0;
+var z = cameraRadius;
+var x = 0;
+var zUp = 0;
+var xUp = 1;
+
 function render(dt) {
-    //camera.rotateY(0.01);
-    //camera.rotateX(0.02);
+    camera.translateZ(zUp / 200);
+    camera.translateX(xUp / 200);
+    //camera.rotateY();
     particleGroupUpdate(dt);
     renderer.render(scene, camera);
+
+    if (zUp) {
+        z += 0.1;
+    } else {
+        z -= 0.1;
+    }
+
+    if (xUp) {
+        x += 0.1;
+    } else {
+        x -= 0.1;
+    }
+
+    if (x >= cameraRadius || x <= -cameraRadius) {
+        xUp != xUp;
+    }
+
+    if (z >= cameraRadius || z <= -cameraRadius) {
+        zUp != zUp;
+    }
 }
 
 // Animate
