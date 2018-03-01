@@ -1,8 +1,10 @@
 const abstracts = require('../abstracts');
+const Orbit = require('./orbit');
 
+// Constents
 
-let sceneEl = document.getElementById('scene');
-
+const sceneEl = document.getElementById('scene');
+const FLOOR_LEVEL = -10;
 const cameraRadius = 5;
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -18,6 +20,7 @@ let floorGroup;
 // Default Vectors
 // Position based on field
 let posMiddle = new THREE.Vector3(500, 0, 500);
+let posShort = new THREE.Vector3(10, 0, 10);
 // Rotation
 // Objects
 // Floor Texture
@@ -32,7 +35,7 @@ function initParticles() {
         texture: {
             value: new THREE.TextureLoader().load( "/assets/images/textures/grass_blade.png")
         },
-        maxParticleCount: 10000,
+        maxParticleCount: 50000,
         hasPerspective: true,
         colorize: true,
         blending: THREE.NormalBlending,
@@ -43,32 +46,36 @@ function initParticles() {
         // scale: 1
     });
     
+    let grassSize = 1;
+
     let floorEmitter = new SPE.Emitter({
         type: SPE.distributions.SPHERE,
-        particleCount: 100,
+        particleCount: 10000,
         isStatic: false,
         maxAge: {
-            value: 8,
+            value: 10,
             spread: 3
         },
         position: {
-            value: new THREE.Vector3(0,0,0),
+            value: new THREE.Vector3(0, FLOOR_LEVEL - (grassSize/2), -50),
             radius: 1,
-            width: 10,
-            height: 10
+            radiusScale: new THREE.Vector3(50, 0.001, 50),
         },
         wiggle: {
             value: .0001,
             spread: .001
         },
         color: {
-            value: new THREE.Color(abstracts.accentColor)
+            value: new THREE.Color('green')
+        },
+        opacity: {
+            value: [0, 1, 1, 1, 1, 0]
         },
         size: {
-            value: 1
+            value: grassSize
         },
         angle: {
-            value: .2,
+            value: [0.2 , -1, 0.2],
             spread: .5
         }
     });
@@ -88,9 +95,9 @@ let floorM = new THREE.MeshStandardMaterial( {
     side: THREE.DoubleSide
 });
 
-// let floorMesh = new THREE.Mesh( floorG, floorM );
-// floorMesh.translateY(-10);
-// scene.add( floorMesh );
+let floorMesh = new THREE.Mesh( floorG, floorM );
+floorMesh.translateY(FLOOR_LEVEL);
+scene.add( floorMesh );
 
 
 let farWallG = new THREE.BoxGeometry( 10000, 10000, 0.1);
@@ -112,8 +119,12 @@ scene.add( testOBJMesh );
 
 
 // Lights
-let light = new THREE.HemisphereLight( 0xffffbb, 0x080820, 10 );
+let light = new THREE.HemisphereLight( 0x0000ff, 0x00ff00, 10 );
 scene.add( light );
+
+let pointLight = new THREE.PointLight(0x000000, 0.1, 1000);
+light.position.set( 50, 50, 50 );
+scene.add( pointLight );
 
 // Camera
 camera.position.z = cameraRadius;
@@ -137,43 +148,25 @@ window.addEventListener( 'resize', function() {
 
 
 //let x = 0;
-let z = cameraRadius;
-let x = 0;
-let zUp = 0;
-let xUp = 1;
+
+
+
+
+let orbit = new Orbit(cameraRadius, camera);
 
 function render(dt) {
-    camera.translateZ(zUp / 200);
-    camera.translateX(xUp / 200);
+    
     //camera.rotateY();
     particleGroupUpdate(dt);
     renderer.render( scene, camera );
-
-    if (zUp) {
-        z += 0.1;
-    } else {
-        z -= 0.1;
-    }
-
-    if (xUp) {
-        x += 0.1;
-    } else {
-        x -= 0.1;
-    }
-
-    if (x >= cameraRadius || x <= -cameraRadius) {
-        xUp != xUp
-    }
-
-    if (z >= cameraRadius || z <= -cameraRadius) {
-        zUp != zUp
-    }
 }
 
 // Animate
 function animate() {
     requestAnimationFrame( animate );
     render(clock.getDelta());
+
+    //orbit.update();
 }
 
 
