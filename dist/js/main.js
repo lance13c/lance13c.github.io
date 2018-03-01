@@ -7,6 +7,7 @@ var abstracts = {
     accentColor: 0x5588ff,
     skyColor: 0x87CEFA,
     groudColor: 0x3CB371,
+    warmColor: 0xe5a665,
 
     themeMonoColor1: 0xF6FAFB,
     themeMonoColor2: 0xC3CACD,
@@ -89,16 +90,18 @@ testOBJMesh.translateZ(0);
 scene.add(testOBJMesh);
 
 // Lights
-var light = new THREE.HemisphereLight(abstracts.groudColor, abstracts.skyColor, 1);
+var light = new THREE.HemisphereLight(abstracts.themeMonoColor1, abstracts.themeMonoColor1, 1);
 light.position.set(50, 50, 50);
 scene.add(light);
 
-var pointLight = new THREE.PointLight(0xe5a665, 0.5, 1000, 2);
-light.position.set(0, 800, 0);
-scene.add(pointLight);
+// let pointLight = new THREE.PointLight(abstracts.warmColor, 0.5, 1000, 2);
+// light.position.set( 0, 800, 0);
+//scene.add( pointLight );
 
 // Camera
 camera.position.z = cameraRadius;
+camera.rotateY(1);
+camera.rotateX(-0.5);
 
 // Add scene to HTML
 sceneEl.appendChild(renderer.domElement);
@@ -208,7 +211,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var abstracts = require('../abstracts');
-var GRASS_SIZE = 1;
+var GRASS_SIZE = 8;
 
 // Assets
 var assets = {
@@ -241,14 +244,15 @@ var Particles = function () {
                 texture: {
                     value: new THREE.TextureLoader().load(assets.grassBlade)
                 },
-                maxParticleCount: 50000,
+                //isStatic: true,
+                maxParticleCount: 100000,
                 hasPerspective: true,
                 colorize: true,
-                blending: THREE.NormalBlending
+                blending: THREE.NormalBlending,
                 // transparent: false,
                 // alphaTest: 5,
-                // depthWrite: 0,
-                // fog: 1,
+                depthWrite: 1,
+                fog: 1
                 // scale: 1
             });
 
@@ -261,7 +265,7 @@ var Particles = function () {
                     spread: 3
                 },
                 position: {
-                    value: new THREE.Vector3(0, abstracts.particles.FLOOR_LEVEL - GRASS_SIZE / 2, -50),
+                    value: new THREE.Vector3(-40, abstracts.particles.FLOOR_LEVEL - 1, -10),
                     radius: 1,
                     radiusScale: new THREE.Vector3(50, 0.001, 50)
                 },
@@ -280,7 +284,7 @@ var Particles = function () {
                 },
                 angle: {
                     value: [0.2, -1, 0.2],
-                    spread: .5
+                    spread: 1
                 }
             });
 
