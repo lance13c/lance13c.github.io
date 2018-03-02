@@ -34,59 +34,37 @@ var abstracts = require('./abstracts');
 var sceneEl = document.querySelector('a-scene');
 var scene = sceneEl.object3D;
 
-// let floorEl = document.createElement('a-plane');
-// floorEl.setAttribute('height', 100);
-// floorEl.setAttribute('width', 100);
-// floorEl.setAttribute('rotation', "-90 0 0");
-// floorEl.setAttribute('color', '#FFF');
-// floorEl.setAttribute('shadow', 'receive: true');
-// floorEl.setAttribute('metalness', '0');
+var homePanelEl = document.querySelector('.home__panel');
+var projectsPanelEl = document.querySelector('.projects__panel');
 
-// sceneEl.appendChild(floorEl);
+var cameraEl = document.querySelector('.camera');
 
-// // Floor
-// let floorG = new THREE.BoxGeometry( 1000, 0.001, 1000 );
-// let floorM = new THREE.MeshBasicMaterial( { 
-//     color: 0xFFFFFF,
-//     side: THREE.DoubleSide,
+var homeEl = document.querySelector('.nav--home');
+var projectsEl = document.querySelector('.nav--projects');
+var blogEl = document.querySelector('.nav--blog');
+var resumeEl = document.querySelector('.nav--resume');
+var lifeEl = document.querySelector('.nav--life');
 
-// });
-
-// let floorMesh = new THREE.Mesh( floorG, floorM );
-// floorMesh.translateY(-1);
-// floorMesh.receiveShadow = true;
-// scene.add( floorMesh );
-
-
-// let floorG2 = new THREE.BoxGeometry( 10, 0.001, 10 );
-// let floorM2 = new THREE.MeshStandardMaterial( { 
-//     color: abstracts.themeMonoColor1,
-//     side: THREE.DoubleSide,
-
-// });
-
-// let floorMesh2 = new THREE.Mesh( floorG2, floorM2 );
-// floorMesh2.translateZ(1);
-// floorMesh2.receiveShadow = true;
-// scene.add( floorMesh2 );
-
-
-// // Panels
-var HomeG = new THREE.BoxGeometry(2, 3, 0.1);
-var HomeM = new THREE.MeshBasicMaterial({
-    color: abstracts.themeMonoColor1,
-    side: THREE.DoubleSide
-
+homeEl.addEventListener('click', function (e) {
+    goTo('home');
 });
 
-var HomeMesh = new THREE.Mesh(HomeG, HomeM);
-HomeMesh.position.set(0, 1, -2);
-HomeMesh.castShadow = true;
+projectsEl.addEventListener('click', function (e) {
+    goTo('projects');
+});
 
-//HomeMesh.translateY(abstracts.particles.FLOOR_LEVEL);
-scene.add(HomeMesh);
+blogEl.addEventListener('click', function (e) {
+    goTo('blog');
+});
 
-console.log(sceneEl.object3D);
+console.log(homePanelEl);
+console.log(projectsPanelEl);
+
+// Emits an event on the camera element;
+function goTo(route) {
+    cameraEl.emit(route);
+    console.log('Emit: ' + route);
+}
 
 },{"./abstracts":1}]},{},[2])
 
