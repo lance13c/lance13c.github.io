@@ -10,8 +10,10 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize( window.innerWidth, window.innerHeight );
-scene.fog = new THREE.Fog( abstracts.skyColor, 90, 330 );
-renderer.setClearColor( abstracts.skyColor );
+//scene.fog = new THREE.Fog( abstracts.skyColor, 90, 330 );
+renderer.setClearColor( abstracts.themeMonoColor1 );
+
+
 // Setup
 
 let particles = new Particles(scene);
@@ -45,10 +47,10 @@ let floorM = new THREE.MeshStandardMaterial( {
     side: THREE.DoubleSide
 });
 
-let floorMesh = new THREE.Mesh( floorG, floorM );
-//floorMesh.rotateX(1.6);
-floorMesh.translateY(abstracts.particles.FLOOR_LEVEL);
-scene.add( floorMesh );
+// let floorMesh = new THREE.Mesh( floorG, floorM );
+// //floorMesh.rotateX(1.6);
+// floorMesh.translateY(abstracts.particles.FLOOR_LEVEL);
+// scene.add( floorMesh );
 
 
 // let farWallG = new THREE.BoxGeometry( 10000, 10000, 0.1);
@@ -70,7 +72,7 @@ scene.add( testOBJMesh );
 
 
 // Lights
-let light = new THREE.HemisphereLight( abstracts.themeMonoColor1, abstracts.themeMonoColor1, 1 );
+let light = new THREE.DirectionalLight( abstracts.themeMonoColor1, 1 );
 light.position.set( 50, 50, 50 );
 scene.add( light );
 
@@ -80,8 +82,8 @@ scene.add( light );
 
 // Camera
 camera.position.z = cameraRadius;
-camera.rotateY(1);
-camera.rotateX(-0.5);
+//camera.rotateY(1);
+//camera.rotateX(-0.5);
 
 // Add scene to HTML
 sceneEl.appendChild( renderer.domElement );
@@ -99,7 +101,7 @@ let orbit = new Orbit(cameraRadius, camera);
 
 function render(dt) {
     
-    particles.groupUpdate(dt);
+    //particles.groupUpdate(dt);
     renderer.render( scene, camera );
 }
 
@@ -112,5 +114,5 @@ function animate() {
 
 
 init();
-particles.init();
+//particles.init();
 animate();

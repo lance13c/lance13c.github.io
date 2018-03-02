@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./dist/styles/css/main.css">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
     <title>Cicilio Studio</title>
 </head>
 <body>
@@ -14,9 +15,15 @@
             <li class="nav-item">Resume</li>
             <li class="nav-item">Life</li>
         </ul> -->
-        <div id="scene"></div>
+        <div id="scene">
+            <a-scene>
+                <a-sky color="#F6FAFB"></a-sky>
+            </a-scene>
+        </div>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/90/three.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/shader-particle-engine@1.0.6/build/SPE.min.js"></script>
+
         <script src="/dist/js/main.js"></script>
 </body>
 </html>
