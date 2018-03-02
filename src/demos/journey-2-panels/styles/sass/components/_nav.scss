@@ -1,0 +1,29 @@
+.nav {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+
+
+    .nav-item {
+        font-size: 4rem;
+        color: $theme-mono-color-3;
+        cursor: pointer;
+        list-style-type: none;
+
+        &:hover {
+            color: $accent-color;
+            //text-shadow: //1rem -1rem 1rem rgba($theme-mono-color-4, .3),
+                //3rem -3rem 1rem  rgba($theme-mono-color-4, .3),
+             //   5rem -5rem 2px  rgba($theme-mono-color-4, 0.5);
+            filter: drop-shadow(30px, 30px, 4px, 0, $theme-mono-color-6);
+        }
+
+        &:not(:first-child) {
+            padding-bottom: 4rem;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 4rem;
+        }
+    }
+}
