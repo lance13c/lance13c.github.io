@@ -9865,7 +9865,7 @@ select {
   right: 0;
   height: 120vh;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 997;
+  z-index: 1;
   will-change: opacity;
 }
 

@@ -50,6 +50,11 @@
         margin-top: $nav-height-small;
         background: $theme-1;
         color: $theme-3;
+        
+
+        &:hover {
+          //color: $theme-4;
+        }
 
         li {
           padding: 0;
@@ -59,14 +64,17 @@
           a {
             font-size: 20px;
             font-weight: 300;
+            padding: 0 20px;
+            color: $theme-3;
 
             i {
               float: none;
               font-size: inherit;
             }
 
-            padding: 0 20px;
-            color: $theme-3;
+            &:hover {
+              color: lighten($theme-3, 20%);
+            }
           }
         }
 
@@ -79,19 +87,31 @@
         margin-left: $buffer;
 
         &:hover {
-          color: $theme-4;
+          color: $theme-7;
           @include cs-fade-in-color($fade-color-time);
         }
       }
       .cs-mobile-menu {
         margin-right: $buffer;
         cursor: pointer;
+
+        i {
+          color: $theme-3;
+        }
       }
       .cs-mobile-back {
         margin-left: ($buffer - 5px); //Back button offset because centered icon
         width: 40px; //Need set otherwise takes up half of the navbar
         cursor: pointer;
+
+        i {
+          color: $theme-3;
+        }
       }
     }
   }
+}
+
+#sidenav-overlay {
+  z-index: 1
 }

@@ -117,11 +117,16 @@ html .cs-simple-content-box { box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5); }
 .cs-nav nav .nav-wrapper .cs-side-nav li { padding: 0; background-color: #434F5B; border-bottom: solid 1px #2E2E2E; }
 .cs-nav nav .nav-wrapper .cs-side-nav li a { font-size: 20px; font-weight: 300; padding: 0 20px; color: #F2F2F2; }
 .cs-nav nav .nav-wrapper .cs-side-nav li a i { float: none; font-size: inherit; }
+.cs-nav nav .nav-wrapper .cs-side-nav li a:hover { color: white; }
 .cs-nav nav .nav-wrapper .cs-side-nav .divider { color: #F2F2F2; }
 .cs-nav nav .nav-wrapper .cs-siteicon { margin-left: 10px; }
-.cs-nav nav .nav-wrapper .cs-siteicon:hover { color: #8AB839; -webkit-transition: color 100ms linear; -moz-transition: color 100ms linear; -ms-transition: color 100ms linear; -o-transition: color 100ms linear; transition: color 100ms linear; }
+.cs-nav nav .nav-wrapper .cs-siteicon:hover { color: #0C327F; -webkit-transition: color 100ms linear; -moz-transition: color 100ms linear; -ms-transition: color 100ms linear; -o-transition: color 100ms linear; transition: color 100ms linear; }
 .cs-nav nav .nav-wrapper .cs-mobile-menu { margin-right: 10px; cursor: pointer; }
+.cs-nav nav .nav-wrapper .cs-mobile-menu i { color: #F2F2F2; }
 .cs-nav nav .nav-wrapper .cs-mobile-back { margin-left: 5px; width: 40px; cursor: pointer; }
+.cs-nav nav .nav-wrapper .cs-mobile-back i { color: #F2F2F2; }
+
+#sidenav-overlay { z-index: 1; }
 
 #cs-new-knowledge { height: 500px; position: relative; }
 #cs-new-knowledge canvas { max-height: 100%; max-width: 100%; height: 100%; width: 100%; }

@@ -8,3 +8,6 @@
 let csData = JSON.parse(`DATA_LOCATION`);
 
 
+// Nav bar, side nav instantiation
+$(".cs-mobile-menu").sideNav();
+

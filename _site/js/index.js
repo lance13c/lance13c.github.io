@@ -239,3 +239,6 @@ let csData = JSON.parse(`{
 }`);
 
 
+// Nav bar, side nav instantiation
+$(".cs-mobile-menu").sideNav();
+
