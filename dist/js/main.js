@@ -34,30 +34,41 @@ var abstracts = require('./abstracts');
 var sceneEl = document.querySelector('a-scene');
 var scene = sceneEl.object3D;
 
+var floorEl = document.createElement('a-plane');
+floorEl.setAttribute('height', 100);
+floorEl.setAttribute('width', 100);
+floorEl.setAttribute('rotation', "-90 0 0");
+floorEl.setAttribute('color', abstracts.themeMonoColor1);
+floorEl.setAttribute('shadow', 'receive: true');
+
+sceneEl.appendChild(floorEl);
+
 // Floor
-var floorG = new THREE.BoxGeometry(1000, 0.001, 1000);
-var floorM = new THREE.MeshStandardMaterial({
-    color: abstracts.themeMonoColor1,
-    side: THREE.DoubleSide
+// let floorG = new THREE.BoxGeometry( 1000, 0.001, 1000 );
+// let floorM = new THREE.MeshStandardMaterial( { 
+//     color: abstracts.themeMonoColor1,
+//     side: THREE.DoubleSide,
 
-});
+// });
 
-var floorMesh = new THREE.Mesh(floorG, floorM);
-floorMesh.translateY(abstracts.particles.FLOOR_LEVEL);
-floorMesh.receiveShadow = true;
-scene.add(floorMesh);
+// let floorMesh = new THREE.Mesh( floorG, floorM );
+// floorMesh.translateY(abstracts.particles.FLOOR_LEVEL);
+// floorMesh.receiveShadow = true;
+// scene.add( floorMesh );
 
-var floorG2 = new THREE.BoxGeometry(10, 0.001, 10);
-var floorM2 = new THREE.MeshStandardMaterial({
-    color: abstracts.themeMonoColor1,
-    side: THREE.DoubleSide
 
-});
+// let floorG2 = new THREE.BoxGeometry( 10, 0.001, 10 );
+// let floorM2 = new THREE.MeshStandardMaterial( { 
+//     color: abstracts.themeMonoColor1,
+//     side: THREE.DoubleSide,
 
-var floorMesh2 = new THREE.Mesh(floorG2, floorM2);
-floorMesh2.translateZ(100);
-floorMesh2.receiveShadow = true;
-scene.add(floorMesh2);
+// });
+
+// let floorMesh2 = new THREE.Mesh( floorG2, floorM2 );
+// floorMesh2.translateZ(1);
+// floorMesh2.receiveShadow = true;
+// scene.add( floorMesh2 );
+
 
 // // Panels
 // let HomeG = new THREE.BoxGeometry( 0.1, 0.1, 0.1 );
