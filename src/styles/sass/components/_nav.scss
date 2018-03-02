@@ -1,11 +1,12 @@
 .nav {
     position: absolute;
-    top: 10%;
-    left: 20%;
+    top: 0;
+    left: 0;
 
 
-    .nav-item {
-        font-size: 4rem;
+    .nav__item {
+        font-size: 2rem;
+        display: inline-block;
         color: $theme-mono-color-3;
         cursor: pointer;
         list-style-type: none;

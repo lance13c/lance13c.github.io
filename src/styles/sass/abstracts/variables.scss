@@ -1,4 +1,5 @@
-$background-color: #fefefe;
+$background-image: url('/assets/images/background/gray.jpg');
+
 $accent-color: #5588ff;
 
 $theme-mono-color-1: #F6FAFB;
@@ -8,4 +9,5 @@ $theme-mono-color-4: #717C80;
 $theme-mono-color-5: #49565A;
 $theme-mono-color-6: #1F282C;
 
+$background-color: $theme-mono-color-4;
 

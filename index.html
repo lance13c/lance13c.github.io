@@ -10,12 +10,15 @@
 </head>
 <body>
         <div class="content-overlay">
-            <ul class="nav">
-                <li class="nav-item nav--home">Home</li>
-                <li class="nav-item nav--projects">Projects</li>
-                <li class="nav-item nav--blog">Blog</li>
-                <li class="nav-item nav--resume">Resume</li>
-                <li class="nav-item nav--life">Life</li>
+            <ul class="nav grid">
+                <li class="nav__item nav--home col-1-5">
+                        <i class="fas fa-flask"></i>
+                        <div class="nav__item--icon">Home</div>
+                </li>
+                <li class="nav__item nav--projects col-1-5">Projects</li>
+                <li class="nav__item nav--blog col-1-5">Blog</li>
+                <li class="nav__item nav--resume col-1-5">Resume</li>
+                <li class="nav__item nav--life col-1-5">Life</li>
             </ul>
         </div>
         
@@ -87,7 +90,7 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/90/three.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/shader-particle-engine@1.0.6/build/SPE.min.js"></script>
-
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
         <script src="/dist/js/main.js"></script>
 </body>
 </html>

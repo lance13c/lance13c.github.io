@@ -9,7 +9,11 @@
 
 html {
     font-size: 62.5%;   // 10px b/c 16px is browser default
-    background-color: $background-color;
+    //background: $background-color;
     box-sizing: border-box;
     overflow: hidden;
+
+    body {
+        background: $background-image;
+    } 
 }
