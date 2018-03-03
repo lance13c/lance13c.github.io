@@ -19,15 +19,18 @@ let resumeEl = document.querySelector('.nav--resume');
 let lifeEl = document.querySelector('.nav--life');
 
 
-homeEl.addEventListener('click', (e) => {
+homeEl.addEventListener('mouseup', (e) => {
     goTo('home');
 });
 
-projectsEl.addEventListener('click', (e) => {
+//homeEl.addEventListener('')
+
+projectsEl.addEventListener('mouseup', (e) => {
     goTo('projects');
 });
+//projectsEl.addEventListener('mouseout', )
 
-blogEl.addEventListener('click', (e) => {
+blogEl.addEventListener('mouseup', (e) => {
     goTo('blog');
 });
 

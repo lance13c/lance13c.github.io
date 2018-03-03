@@ -14,8 +14,11 @@
             <ul class="nav row">
                 <li class="nav__item nav--home col-xs-3">
                         <!-- <i class="fas fa-flask"></i> -->
-                        
-                        <div class="nav__item--note">Home</div>
+                        <span class="fa-layers fa-fw mobile">
+                            <i class="fas fa-flask"></i>
+                            <i class="fas fa-home" data-fa-transform="shrink-10 up-2"></i>
+                        </span>
+                        <div class="nav__item--note desktop">Home</div>
                 </li>
                 <li class="nav__item nav--projects col-xs-3">
                             <span class="fa-layers fa-fw mobile">
@@ -26,8 +29,21 @@
                             </span>
                             <div class="desktop">Projects</div>
                         </li>
-                <li class="nav__item nav--blog col-xs-3">Blog</li>
-                <li class="nav__item nav--resume col-xs-3">Resume</li>
+                <li class="nav__item nav--blog col-xs-3">
+                        <span class="fa-layers fa-fw mobile">
+                            <i class="far fa-square" data-fa-transform="grow-2"></i>
+                            <i class="fal fa-bars" data-fa-transform="shrink-5"></i>
+                            <i class="fas fa-pen pen--animate" data-fa-transform="shrink-2 up-10 right-2"></i>
+                        </span>
+                        <div class="desktop">Blog</div>
+                </li>
+                <li class="nav__item nav--resume col-xs-3">
+                    <span class="fa-layers fa-fw mobile">
+                        <i class="fas fa-flask"></i>
+                        <i class="fas fa-home" data-fa-transform="shrink-10 up-2"></i>
+                    </span> 
+                    <div class="desktop">Resume</div>
+                </li>
             </ul>
         </div>
         
@@ -100,7 +116,7 @@
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/90/three.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/shader-particle-engine@1.0.6/build/SPE.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+        <script defer src="/assets/icons/fontawesome-pro-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
         <script src="/dist/js/main.js"></script>
 </body>
 </html>

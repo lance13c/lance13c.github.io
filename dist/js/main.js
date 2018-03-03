@@ -45,15 +45,18 @@ var blogEl = document.querySelector('.nav--blog');
 var resumeEl = document.querySelector('.nav--resume');
 var lifeEl = document.querySelector('.nav--life');
 
-homeEl.addEventListener('click', function (e) {
+homeEl.addEventListener('mouseup', function (e) {
     goTo('home');
 });
 
-projectsEl.addEventListener('click', function (e) {
+//homeEl.addEventListener('')
+
+projectsEl.addEventListener('mouseup', function (e) {
     goTo('projects');
 });
+//projectsEl.addEventListener('mouseout', )
 
-blogEl.addEventListener('click', function (e) {
+blogEl.addEventListener('mouseup', function (e) {
     goTo('blog');
 });
 
