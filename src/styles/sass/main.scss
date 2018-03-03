@@ -2,8 +2,13 @@
 @import "./abstracts/mixins";
 @import "./base/global";
 
+//Layouts
+@import "./layouts/responsive";
+@import "./layouts/home";
+
 @import "./components/sketchfabs";
 @import "./components/nav";
 
-//Layouts
-@import "./layouts/home";
+// Icons
+@import "./components/icon_flask_a";
+
