@@ -21,6 +21,22 @@
 
         &:hover {
             color: $theme-mono-color-6;
+            
+            .nav__item--info {
+                opacity: 1;
+                transition-timing-function: linear;
+                transform: translate3d(0px, 0px, 0px)
+                           rotateX(0deg);
+                transition: all 0.15s,
+            }
+        }
+
+        .nav__item--info {
+            opacity: 0;
+            transition-timing-function: linear;
+            transform: translate3d(0, 10px, 5px)
+                       rotateX(-90deg);
+            transition: all 0.15s;
         }
     }
 
@@ -248,10 +264,20 @@
                 transform: translateY(0px)
                             translateX(0px);
             }
-            }
+        }
 
         .pen--animate {
-            animation: pen 3s infinite;
+            transition-timing-function: ease;
+            //color: $accent-color-violet;
+            opacity: 0;
+            
+        }
+
+        &:hover {
+            .pen--animate {
+                animation: pen 3s infinite;
+                opacity: 1;
+            }
         }
     }
 }
