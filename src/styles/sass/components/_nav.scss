@@ -45,12 +45,15 @@
         &:hover {
             .circle--animate--1 {
                 animation: circle-1 1.2s infinite;
+                animation-timing-function: linear;
             }
             .circle--animate--2 {      
                 animation: circle-2 1.5s infinite;
+                animation-timing-function: linear;
             }
             .circle--animate--3 {      
                 animation: circle-3 1.9s infinite;
+                animation-timing-function: linear;
             }
         }
     }
@@ -58,7 +61,6 @@
     .nav--blog {
 
         .pen--animate {
-            transition-timing-function: ease;
             //color: $accent-color-violet;
             opacity: 0;
             
