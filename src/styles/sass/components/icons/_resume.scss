@@ -1,5 +1,62 @@
 .icon__container {
 
+    &:hover {
+
+        #resume__icon {
+            .resume__page--tool--1 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--2 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--3 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--4 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--5 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--6 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--7 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--8 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--9 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--10 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--11 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--12 {
+                visibility: hidden;
+            }
+    
+            .resume__page--tool--13 {
+                visibility: hidden;
+            }
+        }
+    }
+
     #resume__icon {
 
         .resume__page--left {
@@ -9,9 +66,56 @@
             transform-origin: left;
         }
 
-        .resume__page--right {
-            //transform: rotateZ(-10deg)
-              //      translate3d(0px , 0px, 0px);
+        .resume__page--tool--1 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--2 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--3 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--4 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--5 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--6 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--7 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--8 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--9 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--10 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--11 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--12 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--13 {
+            visibility: hidden;
         }
     }
 }
