@@ -1,14 +1,48 @@
 
+.icon__container {
+    &:hover {
+        #profile__icon {
+            .profile__background {
+                color: $profile-background;
+            } 
+    
+            .profile__sun {
+                color: $profile-sun;
+            }
+        
+            .profile__cloud {
+                color: $profile-cloud;
+            }
+        
+            .profile__person {
+                color: $profile-person;
+            }
+        
+            .profile__frame {
+                color: $profile-background;
+            }
 
-
-.profile__icon {
-
+            .profile__face {
+                color: $profile-face;
+                visibility: visible;
+            }
+        
+            .profile__eyes {
+                color: $profile-eyes;
+            }
+        
+            .profile__cap {
+                color: $profile-cap;
+            }
+            
+        }
+    }
+    
     .profile__background {
-        color: $profile__background; 
+        color: $theme-mono-color-2;
     }
 
     .profile__sun {
-        color: $profile-sun;
     }
 
     .profile__sun--animate {
@@ -16,7 +50,6 @@
     }
 
     .profile__cloud {
-        color: $profile-cloud;
     }
 
     .profile__cloud--animate-1 {
@@ -28,23 +61,21 @@
     }
 
     .profile__person {
-        color: $profile-person;
     }
 
     .profile__frame {
-        color: $profile-background;
     }
 
     .profile__eyes {
-        color: $profile-eyes;
     }
 
-    .profile__mouth {
-        //color: $profile-person;
-        color: $theme-mono-color-5;
+    .profile__face {
+        //color: $theme-mono-color-3;
+        visibility: hidden;
     }
 
     .profile__cap {
-        color: $profile-cap;
+        color: $theme-mono-color-5;
     }
 }
+
