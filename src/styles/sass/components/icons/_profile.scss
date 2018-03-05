@@ -1,0 +1,50 @@
+
+
+
+.profile__icon {
+
+    .profile__background {
+        color: $profile__background; 
+    }
+
+    .profile__sun {
+        color: $profile-sun;
+    }
+
+    .profile__sun--animate {
+
+    }
+
+    .profile__cloud {
+        color: $profile-cloud;
+    }
+
+    .profile__cloud--animate-1 {
+
+    }
+
+    .profile__cloud--animate-2 {
+
+    }
+
+    .profile__person {
+        color: $profile-person;
+    }
+
+    .profile__frame {
+        color: $profile-background;
+    }
+
+    .profile__eyes {
+        color: $profile-eyes;
+    }
+
+    .profile__mouth {
+        //color: $profile-person;
+        color: $theme-mono-color-5;
+    }
+
+    .profile__cap {
+        color: $profile-cap;
+    }
+}
