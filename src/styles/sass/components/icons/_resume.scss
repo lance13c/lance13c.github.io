@@ -1,0 +1,17 @@
+.icon__container {
+
+    #resume__icon {
+
+        .resume__page--left {
+            //transform: rotateZ(10deg);
+            animation: resume-page-left 3s infinite;
+            animation-timing-function: ease;
+            transform-origin: left;
+        }
+
+        .resume__page--right {
+            //transform: rotateZ(-10deg)
+              //      translate3d(0px , 0px, 0px);
+        }
+    }
+}
