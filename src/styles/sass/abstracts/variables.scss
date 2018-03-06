@@ -1,11 +1,15 @@
 $background-image: url('/assets/images/background/preview.jpg');
 
-$accent-color: #5588ff;
+$accent-color-blue: #5588ff;
 $accent-color-light-blue: #5588ff;
 $accent-color-green: #11BB6C;
 $accent-color-purple: #9A75D4;
 $accent-color-violet: #D090D7;
 $accent-color-red: #DF7280;
+$accent-color-orange: #F3B85A;
+
+$accent-color: $accent-color-blue;
+
 
 
 $theme-mono-color-1: #F6FAFB;
