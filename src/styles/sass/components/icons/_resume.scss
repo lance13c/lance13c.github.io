@@ -1,6 +1,7 @@
 //@mixin animate-icon ($)
 
 $tool-duration: 1s;
+$cover-delay: 14.5s;  // How many tools there are
 
 @keyframes tool-appear {
     0% {
@@ -17,6 +18,22 @@ $tool-duration: 1s;
     }
 }
 
+@keyframes tool-appear-2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@mixin tool-animation ($start-time, $color) {
+    color: $color;
+    animation: tool-appear $tool-duration ease $start-time;
+    animation-fill-mode: forwards;
+}
+
 
 .icon__container {
 
@@ -24,88 +41,77 @@ $tool-duration: 1s;
 
         #resume__icon {
 
-            .resume__page--tool--1 {
-                color: $accent-color;
-                animation: tool-appear $tool-duration ease;
+            .resume__page--cover {
+                opacity: 0;
+                transition: opacity 0.5s;
+                animation: tool-appear-2 1s ease $cover-delay;
                 animation-fill-mode: forwards;
+            }
+
+            .resume__page--tool--1 {
+                @include tool-animation(0.5s, $accent-color);
             }
             
     
             .resume__page--tool--2 {
-                color: $accent-color;
-                animation: tool-appear $tool-duration ease 1s;
-                animation-fill-mode: forwards;
+                @include tool-animation(1.5s, $accent-color);
             }
     
             .resume__page--tool--3 {
-                color: $accent-color;
-                animation: tool-appear 1s ease 2s;
-                animation-fill-mode: forwards;
+                @include tool-animation(2.5s, $accent-color);
             }
     
             .resume__page--tool--4 {
-                color: $accent-color;
-                animation: tool-appear 1s ease 3s;
-                animation-fill-mode: forwards;
+                @include tool-animation(3.5s, $accent-color);
             }
      
             .resume__page--tool--5 {
-                color: $accent-color;
-                animation: tool-appear 1s ease 4s;
-                animation-fill-mode: forwards;
+                @include tool-animation(4.5s, $accent-color);
             }
     
             .resume__page--tool--6 {
-                color: $accent-color;
-                animation: tool-appear 1s ease 5s;
-                animation-fill-mode: forwards;
+                @include tool-animation(5.5s, $accent-color);
             }
     
             .resume__page--tool--7 {
-                color: $accent-color;
-                animation: tool-appear 1s ease 6s;
-                animation-fill-mode: forwards;
+                @include tool-animation(6.5s, $accent-color);
             }
     
             .resume__page--tool--8 {
-                color: $accent-color;
-                animation: tool-appear 1s ease 7s;
-                animation-fill-mode: forwards;
+                @include tool-animation(7.5s, $accent-color);
             }
     
             .resume__page--tool--9 {
-                color: $accent-color;
-                animation: tool-appear 1s ease 8s;
-                animation-fill-mode: forwards;
+                @include tool-animation(8.5s, $accent-color);
             }
     
             .resume__page--tool--10 {
-                color: $accent-color;
-                animation: tool-appear 1s ease 9s;
-                animation-fill-mode: forwards;
+                @include tool-animation(9.5s, $accent-color);
             }
     
             .resume__page--tool--11 {
-                visibility: hidden;
+                @include tool-animation(10.5s, $accent-color);
             }
     
             .resume__page--tool--12 {
-                visibility: hidden;
+                @include tool-animation(11.5s, $accent-color);
             }
     
             .resume__page--tool--13 {
-                visibility: hidden;
+                @include tool-animation(12.5s, $accent-color);
+            }
+
+            .resume__page--tool--14 {
+                @include tool-animation(13.5s, $accent-color);
             }
         }
     }
 
     #resume__icon {
 
-        .resume__page--left {
-            //transform: rotateZ(10deg);
-            animation: resume-page-left 3s infinite;
-            animation-timing-function: ease;
-            transform-origin: left;
+        .resume__page--cover {
+            opacity: 1;
+            transition: opacity 0.2s;
         }
 
         .resume__page--tool--1 {
@@ -157,6 +163,10 @@ $tool-duration: 1s;
         }
 
         .resume__page--tool--13 {
+            visibility: hidden;
+        }
+
+        .resume__page--tool--14 {
             visibility: hidden;
         }
     }
