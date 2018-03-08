@@ -7,12 +7,14 @@ AFRAME.registerComponent('item-selector', {
         //      obj:     // 3D object location
         //      preview: // Preview image location
         // }
-        assetList: {type: 'map', default: {}}
+        assetList: {type: 'string', default: "[]"}
     },
 
     init: function () {
 
         console.log(this.data.assetList);
+
+        this.assetList = [];
 
         // Display rectangle
         let displayG = new THREE.BoxBufferGeometry(0.2, 0.01, 0.3);
@@ -24,6 +26,7 @@ AFRAME.registerComponent('item-selector', {
 
         this.el.setObject3D('display', this.displayMesh);
         this.el.setAttribute('position', '-0.2 0 0.1');
+
 
         // Preview Icon Container
         const ICON_HEIGHT = 0.05;
@@ -37,13 +40,17 @@ AFRAME.registerComponent('item-selector', {
             side: 'double'
         });
         this.previewIconContainerMesh = new THREE.Mesh(displayG, displayM);
-    
-        
-
-        this.updateAssetList(this.data.assetList);
-    
     },
-    update: function () {},
+    update: function () {
+
+        // Setup assertList
+        try {
+            this.assetList = JSON.parse(this.data.assetList);
+            this.updateAssetList(this.assetList);
+        } catch(e) {
+            throw new Error(e);
+        }
+    },
     tick: function () {},
     remove: function () {},
     pause: function () {},
@@ -64,9 +71,10 @@ AFRAME.registerComponent('item-selector', {
                 //this.el.setObject3D('icon_' + i, this.displayMesh);
                 let icon = document.createElement('a-entity');
                 
-                this.el.appendChild(icon);
-                icon.setAttribute('preview-icon', `name: ${asset.name}; obj: ${asset.obj}`);
+                icon.setAttribute('preview-icon', `name: ${asset.name}; obj: ${asset.obj}; mtl: ${asset.mtl}`);
                 icon.setAttribute('position', `0 0.01 ${(-i*this.ICON_MULTIPLYER) + this.ICON_OFFSET}`);
+                this.el.appendChild(icon);
+                
                 console.log('Element Created');
             });
         }

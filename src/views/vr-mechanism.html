@@ -3,28 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/css/main.css">
+    <link rel="stylesheet" href="/dist/styles/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>    
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="/dist/js/main.js"></script>
     <title>VR Item Selector</title>
 </head>
 <body>
     <a-scene>
 
+        <a-assets>
+                <a-asset-item id="obj-asset-1" src="/assets/objects/senior_project/The_Brain.obj"></a-asset-item>
+                <a-asset-item id="mtl-asset-1" src="/assets/objects/senior_project/The_Brain.mtl"></a-asset-item>
+        </a-assets>
+
         <a-grid></a-grid>
         <a-entity preview-icon></a-entity>
         <a-entity vive-controls="hand: left">
             <a-sphere radius="0.03" color="blue" position="0 -0.01 -0.1"></a-sphere>
-            <a-item-selector></a-item-selector>
         </a-entity>
         <a-entity vive-controls="hand: right">
             <a-sphere radius="0.03" color="blue" position="0 -0.01 -0.1"></a-sphere>
-            <a-entity item-selector="assetList: {name: 'test', obj: '/assets/objects/senior_project/The_Brain.obj', mtl: '/assets/objects/senior_project/The_Brain.mtl'}, {name: 'test2'};">
-            </a-entity>
+            <a-entity item-selector></a-entity>
         </a-entity>
     </a-scene>
 
+    <script>
 
-    <script src="/dist/js/main.js"></script>
+        // Mocking out react templates by adding array via setAttribute
+
+        let scene = document.querySelector('a-scene');
+        
+        if (scene.hasLoaded) {
+            run();
+        } else {
+            scene.addEventListener('loaded', run);
+        }
+
+        function run() {
+            console.log('htitttt');
+            let assetList = [{
+                    name: 'test',
+                    obj: '#obj-asset-1',
+                    mtl: '#mtl-asset-1'
+                }, 
+                {
+                    name: 'test2'
+                }
+            ];
+            let itemSelector = document.querySelector('a-entity[item-selector]');
+            itemSelector.setAttribute('item-selector', 'assetList:' + JSON.stringify(assetList));
+            console.log('ITEMSEL', itemSelector);
+        }
+        </script>
 </body>
+
+
 </html>
