@@ -13,7 +13,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const pathsSrc = {
   js: './src/js/**/*.js',
   jsEntry: './src/js/main.js',
-  views: './src/views/**/*',
+  views: './src/views/**/*.html',
   styles: {
     src: './src/styles/sass/partials',
     main: './src/styles/sass/main.scss',

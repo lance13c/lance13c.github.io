@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script>
-    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
-    <script src="https://unpkg.com/aframe-navigation/dist/aframe-navigation.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>    
     <title>VR Item Selector</title>
 </head>
 <body>
     <a-scene>
-        <a-entity nav-layout="navMapUrl: '/assets/data/nav-map.json'; layoutView:LAYOUT_VIEW_NAME_HERE"></a-entity>
+
+        <a-grid></a-grid>
+        <a-entity preview-icon></a-entity>
+        <a-entity vive-controls="hand: left">
+            <a-sphere radius="0.03" color="blue" position="0 -0.01 -0.1"></a-sphere>
+            <a-item-selector></a-item-selector>
+        </a-entity>
+        <a-entity vive-controls="hand: right">
+            <a-sphere radius="0.03" color="blue" position="0 -0.01 -0.1"></a-sphere>
+            <a-entity item-selector="assetList: {name: 'test', obj: '/assets/objects/senior_project/The_Brain.obj', mtl: '/assets/objects/senior_project/The_Brain.mtl'}, {name: 'test2'};">
+            </a-entity>
+        </a-entity>
     </a-scene>
 
 
-    <script src="./js/main.js"></script>
+    <script src="/dist/js/main.js"></script>
 </body>
 </html>

@@ -26,49 +26,137 @@ module.exports = abstracts;
 },{}],2:[function(require,module,exports){
 'use strict';
 
-//import './components/background';
+AFRAME.registerComponent('item-selector', {
+    schema: {
+        // size: {type: 'vec2', default: {x:0.5, y:0.2}}
+        // Contain a list of objects
+        // ex: {
+        //      name:    // Name of object
+        //      obj:     // 3D object location
+        //      preview: // Preview image location
+        // }
+        assetList: { type: 'map', default: {} }
+    },
+
+    init: function init() {
+
+        console.log(this.data.assetList);
+
+        // Display rectangle
+        var displayG = new THREE.BoxBufferGeometry(0.2, 0.01, 0.3);
+        var displayM = new THREE.MeshBasicMaterial({
+            color: 0xbbbbff,
+            side: 'double'
+        });
+        this.displayMesh = new THREE.Mesh(displayG, displayM);
+
+        this.el.setObject3D('display', this.displayMesh);
+        this.el.setAttribute('position', '-0.2 0 0.1');
+
+        // Preview Icon Container
+        var ICON_HEIGHT = 0.05;
+        var ICON_WIDTH = 0.05;
+        this.ICON_OFFSET = 0.11;
+        this.ICON_MULTIPLYER = 0.08;
+
+        var previewIconContainerG = new THREE.BoxBufferGeometry(ICON_HEIGHT, 0.01, ICON_WIDTH);
+        var previewIconContainerM = new THREE.MeshBasicMaterial({
+            color: 0x999999,
+            side: 'double'
+        });
+        this.previewIconContainerMesh = new THREE.Mesh(displayG, displayM);
+
+        this.updateAssetList(this.data.assetList);
+    },
+    update: function update() {},
+    tick: function tick() {},
+    remove: function remove() {},
+    pause: function pause() {},
+    play: function play() {},
+
+    updateAssetList: function updateAssetList(newAssetList) {
+        var _this = this;
+
+        // Remove all previous elements from the list
+        // if (this.currentAssetElements.length > 0) {
+        //     this.currentAssetElements.forEach((asset) => {
+        //         this.el.removeObject3D(asset.name. asset.mesh);
+        //     });
+        // }
+        console.log('hit1');
+        if (newAssetList.length > 0) {
+            newAssetList.forEach(function (asset, i) {
+                console.log('Asset', asset);
+                console.log('hit inside');
+                //this.el.setObject3D('icon_' + i, this.displayMesh);
+                var icon = document.createElement('a-entity');
+
+                _this.el.appendChild(icon);
+                icon.setAttribute('preview-icon', 'name: ' + asset.name + '; obj: ' + asset.obj);
+                icon.setAttribute('position', '0 0.01 ' + (-i * _this.ICON_MULTIPLYER + _this.ICON_OFFSET));
+                console.log('Element Created');
+            });
+        }
+
+        //this.el.setObject3D('icon_1', this.displayMesh);
+        //this.el.setAttribute('position', '-0.2 0 0.1');
+    }
+});
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
+AFRAME.registerComponent('preview-icon', {
+    schema: {
+        name: { type: "string", default: "temp" },
+        previewImage: { type: "asset" },
+        obj: { type: "string", default: '' },
+        mtl: { type: "string", default: '' }
+    },
+
+    init: function init() {
+        var ICON_HEIGHT = 0.05;
+        var ICON_WIDTH = 0.05;
+
+        console.log('obj', this.data.obj);
+
+        // Preview Icons
+        this.assetElementsMap = [];
+
+        var previewIconG = new THREE.BoxBufferGeometry(ICON_HEIGHT, 0.01, ICON_WIDTH);
+        var previewIconM = new THREE.MeshBasicMaterial({
+            color: 0x999999,
+            side: 'double'
+        });
+        this.previewIconMesh = new THREE.Mesh(previewIconG, previewIconM);
+
+        this.el.setObject3D('icon', this.previewIconMesh);
+        //this.el.setAttribute('position', '-0.2 0.1 0.1');
+    },
+    update: function update() {},
+    tick: function tick() {},
+    remove: function remove() {},
+    pause: function pause() {},
+    play: function play() {}
+});
+
+},{}],4:[function(require,module,exports){
+'use strict';
+
+require('./projects/vr-mechanism');
+
+require('./components/vr-arm-item-selector');
+
+require('./components/vr-arm-preview-icon');
+
+var abstracts = require('./abstracts'); //import './components/background';
 //import './components/birds';
 
-var abstracts = require('./abstracts');
+//import './components/vr-background-nav';
 
-var sceneEl = document.querySelector('a-scene');
-var scene = sceneEl.object3D;
+},{"./abstracts":1,"./components/vr-arm-item-selector":2,"./components/vr-arm-preview-icon":3,"./projects/vr-mechanism":5}],5:[function(require,module,exports){
+"use strict";
 
-var homePanelEl = document.querySelector('.home__panel');
-var projectsPanelEl = document.querySelector('.projects__panel');
-
-var cameraEl = document.querySelector('.camera');
-
-var homeEl = document.querySelector('.nav--home');
-var projectsEl = document.querySelector('.nav--projects');
-var blogEl = document.querySelector('.nav--blog');
-var resumeEl = document.querySelector('.nav--resume');
-var lifeEl = document.querySelector('.nav--life');
-
-homeEl.addEventListener('mouseup', function (e) {
-    goTo('home');
-});
-
-//homeEl.addEventListener('')
-
-projectsEl.addEventListener('mouseup', function (e) {
-    goTo('projects');
-});
-//projectsEl.addEventListener('mouseout', )
-
-blogEl.addEventListener('mouseup', function (e) {
-    goTo('blog');
-});
-
-console.log(homePanelEl);
-console.log(projectsPanelEl);
-
-// Emits an event on the camera element;
-function goTo(route) {
-    cameraEl.emit(route);
-    console.log('Emit: ' + route);
-}
-
-},{"./abstracts":1}]},{},[2])
+},{}]},{},[4])
 
 //# sourceMappingURL=main.js.map

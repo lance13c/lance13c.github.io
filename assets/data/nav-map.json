@@ -1,11 +1,9 @@
 {
-    "baseDir": "views",
+    "baseDir": "dist/views/vrViews",
     "layoutViews": {
-      "basic": "/layouts/helloworld.html"
+      "arm-menu": "/layouts/arm-menu.html"
     },
     "panelViews": {
-      "home": "/panels/home.html",
-      "settings": "/panels/settings.html",
-      "profile": "/panels/profile.html"
+      "main": "/panels/mainPanel.html"
     }
   }
