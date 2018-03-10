@@ -25,6 +25,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
+    "gulp-sync": "^0.1.4",
     "gulp-uglify": "^3.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"

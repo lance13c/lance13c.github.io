@@ -107,6 +107,17 @@ $cover-delay: 14.5s;  // How many tools there are
         }
     }
 
+    &:focus {
+
+        #resume__icon {
+            color: $theme-mono-color-6;
+
+            .resume__page--cover {
+                opacity: 1;
+            }
+        }
+    }
+
     #resume__icon {
 
         .resume__page--cover {

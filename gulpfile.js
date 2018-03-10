@@ -9,6 +9,7 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 const babel = require('babelify');
 const sourcemaps = require('gulp-sourcemaps');
+const gulpsync = require('gulp-sync')(gulp);
 
 const pathsSrc = {
   js: './src/js/**/*.js',
@@ -73,4 +74,4 @@ gulp.task('views', function() {
 
 gulp.task('dev', ['compileJS', 'sass', 'views']);
 
-gulp.task('default', ["watch"]);
+gulp.task('default', gulpsync.sync(["dev", "watch"]));
