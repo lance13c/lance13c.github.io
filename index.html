@@ -7,81 +7,14 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     <link rel="stylesheet" href="/dist/styles/css/main.css">
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
     <title>Cicilio Studio</title>
 </head>
 <body>
-        <div class="content-overlay">
-            <ul class="nav row">
-                <a href="#" class="nav__item nav--home col-xs-3 icon__container">
-                        <!-- <i class="fas fa-flask"></i> -->
-                        <span id="profile__icon" class="fa-layers fa-fw">
-                            <i class="fas fa-rectangle-landscape profile__background" data-fa-transform="grow-12"></i>
-                            <i class="fas fa-circle profile__sun" data-fa-transform="shrink-12 up-7 left-11"></i>
-                            <i class="fas fa-sun profile__sun profile__sun--animate" data-fa-transform="shrink-10 up-7 left-11"></i>
-                            <i class="fas fa-cloud profile__cloud profile__cloud--animate-1" data-fa-transform="shrink-10  left-9"></i>
-                            <i class="fas fa-cloud profile__cloud profile__cloud--animate-2" data-fa-transform="shrink-10 up-6 right-4"></i>
-                            <i class="fas fa-user-alt profile__person" data-fa-transform="shrink-4 down-4"></i>
-                            <i class="fal fa-rectangle-landscape profile__frame" data-fa-transform="grow-12"></i>
-                            <i class="fas fa-rectangle-landscape profile__eyes" data-fa-transform="shrink-11"></i>
-                            <i class="fa-inverse fas fa-smile profile__face" data-fa-transform="shrink-8 down-1"></i>   
-                            <i class="far fa-graduation-cap profile__cap" data-fa-transform="shrink-8 up-4"></i>   
-                            <i class="fas fa-graduation-cap profile__cap" data-fa-transform="shrink-8 up-4"></i>   
-                        </span>
-                        <div class="nav__item--info nav__item--info--profile mobile text__content">Home</div>
-                        <span class="nav__item--note nav__item--note--profile desktop text__content">Home</span>
-                    </a>
-                <li class="nav__item nav--projects col-xs-3">
-                            <span class="fa-layers fa-fw">
-                                <i class="fas fa-circle circle--animate--1" data-fa-transform="shrink-12 up-2"></i>
-                                <i class="fas fa-circle circle--animate--2" data-fa-transform="shrink-12 up-2"></i>
-                                <i class="fas fa-circle circle--animate--3" data-fa-transform="shrink-12 up-2"></i>
-                                <i class="fas fa-flask"></i>
-                            </span>
-                            <div class="nav__item--info mobile text__content">Projects</div>
-                            <span class="desktop nav__item--note text__content">Projects</span>
-                        </li>
-                <li class="nav__item nav--blog col-xs-3">
-                        <span class="fa-layers fa-fw">
-                            <i class="far fa-square" data-fa-transform="grow-2"></i>
-                            <i class="fal fa-bars" data-fa-transform="shrink-5"></i>        <i class="fas fa-pen pen--animate" data-fa-transform="shrink-2 up-10 right-2"></i>
-                        </span>
-                        <div class="nav__item--info mobile text__content">Blog</div>
-                        <span class="desktop nav__item--note text__content">Blog</span>
-                </li>
-                <li class="nav__item nav--resume col-xs-3 icon__container">
-                    <span id="resume__icon" class="fa-layers fa-fw">
-                        <!-- <i class="fas fa-user resume__page--left" data-fa-transform="shrink-5" style="color: red"></i> -->
-                        <!-- <i class="fas fa-address-book resume__page--left"></i> -->
-                        <i class="fal fa-file resume__page--right" data-fa-transform="grow-4"></i>
-                        <i class="fal fa-file-pdf resume__page--cover" data-fa-transform="grow-4"></i>
-                        <i class="fab fa-angular resume__page--tool--1" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="fab fa-node resume__page--tool--2" data-fa-transform="shrink-8 down-2"></i>
-                        <i class="fab fa-gulp resume__page--tool--3" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="fab fa-css3-alt resume__page--tool--4" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="fab fa-html5 resume__page--tool--5" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="far fa-code resume__page--tool--6" data-fa-transform="shrink-7 down-2"></i>
-                        <i class="fab fa-git resume__page--tool--7" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="fab fa-gitlab resume__page--tool--8" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="far fa-code-merge resume__page--tool--9" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="fab fa-digital-ocean resume__page--tool--10" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="fab fa-jenkins resume__page--tool--11" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="fab fa-d-and-d resume__page--tool--12" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="fab fa-linkedin resume__page--tool--13" data-fa-transform="shrink-6 down-2"></i>
-                        <i class="far fa-terminal resume__page--tool--14" data-fa-transform="shrink-8 down-2"></i>
-                        
-                        
-                        <!-- <i class="fas fa-home" data-fa-transform="shrink-10 up-2"></i> -->
-                    </span>
-                    <div class="nav__item--info mobile text__content">Resume</div>
-                    <span class="desktop nav__item--note text__content">Resume</span>
-                </li>
-            </ul>
-        </div>
         
-
-
         <div id="scene">
             <a-scene shadow="shadowMapType: basic">
+            <a-grid></a-grid>
                 <!-- <a-sky color="#F6FAFB"></a-sky> -->
                 <a-entity   light="type: ambient; intensity: 0.5;"></a-entity>
                 <a-entity   light="type:directional; 
@@ -143,7 +76,6 @@
                     </a-animation>
                 </a-entity>
             </a-scene>
-        </div>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/90/three.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/shader-particle-engine@1.0.6/build/SPE.min.js"></script>
