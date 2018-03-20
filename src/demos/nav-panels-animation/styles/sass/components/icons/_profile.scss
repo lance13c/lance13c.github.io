@@ -1,0 +1,119 @@
+
+.icon__container {
+    
+    &:hover {
+        #profile__icon {
+            .profile__background {
+                color: $profile-background;
+            } 
+    
+            .profile__sun {
+                color: $profile-sun;
+            }
+
+            
+            .profile__sun--animate {
+                animation: profile-sun 8s infinite;
+                animation-timing-function: linear;
+            }
+        
+            .profile__cloud {
+                color: $profile-cloud;
+            }
+
+            .profile__cloud--animate-1 {
+                animation: profile-cloud-1 7.5s infinite;
+                animation-timing-function: linear;
+            }
+        
+            .profile__cloud--animate-2 {
+                animation: profile-cloud-2 7s infinite;
+                animation-timing-function: linear;
+           }
+        
+            .profile__person {
+                color: $profile-person;
+            }
+
+            .profile__face {
+                color: $profile-face;
+                visibility: visible;
+            }
+        
+            .profile__eyes {
+                color: $profile-eyes;
+            }
+        
+            .profile__cap {
+                color: $profile-cap;
+            }
+            
+        }
+    }
+
+    &:focus {
+        color: $theme-mono-color-6;
+
+        #profile__icon {
+
+            .profile__background {
+                color: $profile-background;
+            }
+    
+            .profile__sun {
+                color: $profile-sun;
+            }
+        
+            .profile__cloud {
+                color: $profile-cloud;
+            }
+        
+            .profile__person {
+                color: $profile-person;
+            }
+
+            .profile__face {
+                color: $profile-face;
+                visibility: visible;
+            }
+        
+            .profile__eyes {
+                color: $profile-eyes;
+            }
+        
+            .profile__cap {
+                color: $profile-cap;
+            }
+            
+        }
+    }
+    
+    .profile__background {
+        color: $theme-mono-color-2;
+    }
+
+    .profile__sun {
+    }
+
+    .profile__cloud {
+    }
+
+    .profile__person {
+    }
+
+    .profile__frame {
+    }
+
+    .profile__eyes {
+    }
+
+    .profile__face {
+        //color: $theme-mono-color-3;
+        visibility: hidden;
+    }
+
+    .profile__cap {
+        color: $theme-mono-color-5;
+    }
+}
+

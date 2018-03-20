@@ -1,0 +1,17 @@
+.icon__container {
+
+    &:hover {
+        #blog__icon {
+            .pen--animate {
+                animation: pen 3s infinite;
+                opacity: 1;
+            }
+        }
+    }
+
+    #blog__icon {
+        .pen--animate {
+            opacity: 0;
+        }
+    }
+}
