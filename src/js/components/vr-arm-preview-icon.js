@@ -1,7 +1,7 @@
 AFRAME.registerComponent('preview-icon', {
     schema: {
         name: {type: "string", default: "temp"},
-        previewImage: {type: "asset"},
+        previewImage: {type: "string", 'default': ''},
         obj: {type: "string", default: ''},
         mtl: {type: "string", default: ''}
     },
@@ -15,11 +15,18 @@ AFRAME.registerComponent('preview-icon', {
 
         let previewIconG = new THREE.BoxBufferGeometry(ICON_HEIGHT, 0.01, ICON_WIDTH);
         let previewIconM = new THREE.MeshBasicMaterial({
-            color: 0x999999,
+            color: 0xeeeeee,
             side: 'double'
         });
-        this.previewIconMesh = new THREE.Mesh(previewIconG, previewIconM);
 
+        let image = this.getImage();
+        if (image !== null) {
+            previewIconM.map = image;
+        }
+
+        this.previewIconMesh = new THREE.Mesh(previewIconG, previewIconM);
+        // Aligns Picture Icon in the correct orientation
+        this.previewIconMesh.rotateY(Math.PI/2);
         this.el.setObject3D('icon', this.previewIconMesh);
 
         // Check if preview obj is present
@@ -39,8 +46,7 @@ AFRAME.registerComponent('preview-icon', {
                 this.el.appendChild(previewObj);
                 //previewObj.material.wireframe = true;
                 console.log('ICON', this.el); 
-            })
-            
+            });
             
         } else {
             console.warn(`Data obj not found on`, this.el);
@@ -53,4 +59,17 @@ AFRAME.registerComponent('preview-icon', {
     remove: function () {},
     pause: function () {},
     play: function () {},
+
+    getImage() {
+        let previewImage = this.data.previewImage;
+        if (previewImage !== 'undefined' && previewImage !== undefined) {
+            try {
+                let image = THREE.ImageUtils.loadTexture(previewImage);
+                return image;
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        return null;
+    }
   });

@@ -71,7 +71,7 @@ AFRAME.registerComponent('item-selector', {
                 //this.el.setObject3D('icon_' + i, this.displayMesh);
                 let icon = document.createElement('a-entity');
                 
-                icon.setAttribute('preview-icon', `name: ${asset.name}; obj: ${asset.obj}; mtl: ${asset.mtl}`);
+                icon.setAttribute('preview-icon', `name: ${asset.name}; obj: ${asset.obj}; mtl: ${asset.mtl}; previewImage: ${asset.previewImage}`);
                 icon.setAttribute('position', `0 0.01 ${(-i*this.ICON_MULTIPLYER) + this.ICON_OFFSET}`);
                 this.el.appendChild(icon);
                 

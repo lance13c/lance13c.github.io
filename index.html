@@ -14,7 +14,10 @@
         
         <div id="scene">
             <a-scene shadow="shadowMapType: basic">
-            <a-grid></a-grid>
+
+                <a-assets>
+                    
+                </a-assets>
                 <!-- <a-sky color="#F6FAFB"></a-sky> -->
                 <a-entity   light="type: ambient; intensity: 0.5;"></a-entity>
                 <a-entity   light="type:directional; 
@@ -30,56 +33,65 @@
                     rotation="90 0 0">
                     </a-box>
 
-                <a-box  class="home__panel"
-                        material="shader: flat; side: double; color: #F6FAFB"
-                        shadow="cast: true"
-                        position="0 0.5 0"
-                        width="1"
-                        height="2"
-                        depth="0.1">
-                </a-box>
 
-                <a-box  class="projects__panel"
-                        material="shader: flat; side: double; color: #F6FAFB"
-                        shadow="cast: true"
-                        position="2 0.5 0"
-                        width="1"
-                        height="2"
-                        depth="0.1">
-                </a-box>
-
-                <a-box  class="blog__panel"
-                        material="shader: flat; side: double; color: #F6FAFB"
-                        shadow="cast: true"
-                        position="-2 0.5 -5"
-                        width="1"
-                        height="2"
-                        depth="0.1">
-                </a-box>
-                <a-entity class="camera" position="0 -1 1.7" rotation="0 0 0">
-                    <a-camera></a-camera>
-                    <a-animation
-                        attribute="position"
-                        begin="home"
-                        easing: "ease"                        
-                        to="0 -1 1.7">
-                    </a-animation>
-                    <a-animation
-                        attribute="position"
-                        begin="projects"                        
-                        to="2 -1 1.7">
-                    </a-animation>
-                    <a-animation
-                        attribute="position"
-                        begin="blog"                        
-                        to="-2 -1 -3">
-                    </a-animation>
+                <a-entity vive-controls="hand: right">
+                    <a-sphere radius="0.03" color="blue" position="0 -0.01 -0.1"></a-sphere>
+                    <a-entity item-selector></a-entity>
+                 </a-entity>
+                 <a-entity vive-controls="hand: left">
+                    <a-sphere radius="0.03" color="blue" position="0 -0.01 -0.1"></a-sphere>
+                    <a-entity item-selector></a-entity>
                 </a-entity>
             </a-scene>
+ 
+    <script>
+        // Mocking out react templates by adding array via setAttribute
+
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/90/three.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/shader-particle-engine@1.0.6/build/SPE.min.js"></script>
+
+        let scene = document.querySelector('a-scene');
+        
+        if (scene.hasLoaded) {
+            run();
+        } else {
+            scene.addEventListener('loaded', run);
+        }
+
+        function run() {
+            // Dynamic assets test
+            // <a-asset-item id="obj-asset-1" src="/assets/objects/senior_project/The_Brain.obj"></a-asset-item>
+            // <a-asset-item id="mtl-asset-1" src="/assets/objects/senior_project/The_Brain.mtl"></a-asset-item>
+            let objAsset1 = document.createElement('a-asset-item');
+            objAsset1.setAttribute('id', 'obj-asset-1');
+            objAsset1.setAttribute('src', '/assets/objects/senior_project/The_Brain.obj');
+
+            let mtlAsset1 = document.createElement('a-asset-item');
+            mtlAsset1.setAttribute('id', 'mtl-asset-1');
+            mtlAsset1.setAttribute('src', '/assets/objects/senior_project/The_Brain.mtl');
+
+            let assets = document.querySelector('a-assets');
+            assets.appendChild(objAsset1);
+            assets.appendChild(mtlAsset1);
+            
+
+            console.log('htitttt');
+            let assetList = [{
+                    name: 'test',
+                    obj: '#obj-asset-1',
+                    mtl: '#mtl-asset-1',
+                    previewImage: '/assets/objects/senior_project/bird.jpg'
+                }, 
+                {
+                    name: 'test2'
+                }
+            ];
+            let itemSelector = document.querySelector('a-entity[item-selector]');
+            itemSelector.setAttribute('item-selector', 'assetList:' + JSON.stringify(assetList));
+            console.log('ITEMSEL', itemSelector);
+        }
+        </script>
+
         <script defer src="/assets/icons/fontawesome-pro-5.0.8/svg-with-js/js/fontawesome-all.min.js"></script>
         <script src="/dist/js/main.js"></script>
-</body>
+    </body>
 </html>

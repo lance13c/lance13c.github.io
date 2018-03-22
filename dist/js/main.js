@@ -100,7 +100,7 @@ AFRAME.registerComponent('item-selector', {
                 //this.el.setObject3D('icon_' + i, this.displayMesh);
                 var icon = document.createElement('a-entity');
 
-                icon.setAttribute('preview-icon', 'name: ' + asset.name + '; obj: ' + asset.obj + '; mtl: ' + asset.mtl);
+                icon.setAttribute('preview-icon', 'name: ' + asset.name + '; obj: ' + asset.obj + '; mtl: ' + asset.mtl + '; previewImage: ' + asset.previewImage);
                 icon.setAttribute('position', '0 0.01 ' + (-i * _this.ICON_MULTIPLYER + _this.ICON_OFFSET));
                 _this.el.appendChild(icon);
 
@@ -119,7 +119,7 @@ AFRAME.registerComponent('item-selector', {
 AFRAME.registerComponent('preview-icon', {
     schema: {
         name: { type: "string", default: "temp" },
-        previewImage: { type: "asset" },
+        previewImage: { type: "string", 'default': '' },
         obj: { type: "string", default: '' },
         mtl: { type: "string", default: '' }
     },
@@ -135,11 +135,18 @@ AFRAME.registerComponent('preview-icon', {
 
         var previewIconG = new THREE.BoxBufferGeometry(ICON_HEIGHT, 0.01, ICON_WIDTH);
         var previewIconM = new THREE.MeshBasicMaterial({
-            color: 0x999999,
+            color: 0xeeeeee,
             side: 'double'
         });
-        this.previewIconMesh = new THREE.Mesh(previewIconG, previewIconM);
 
+        var image = this.getImage();
+        if (image !== null) {
+            previewIconM.map = image;
+        }
+
+        this.previewIconMesh = new THREE.Mesh(previewIconG, previewIconM);
+        // Aligns Picture Icon in the correct orientation
+        this.previewIconMesh.rotateY(Math.PI / 2);
         this.el.setObject3D('icon', this.previewIconMesh);
 
         // Check if preview obj is present
@@ -169,7 +176,20 @@ AFRAME.registerComponent('preview-icon', {
     tick: function tick() {},
     remove: function remove() {},
     pause: function pause() {},
-    play: function play() {}
+    play: function play() {},
+
+    getImage: function getImage() {
+        var previewImage = this.data.previewImage;
+        if (previewImage !== 'undefined' && previewImage !== undefined) {
+            try {
+                var image = THREE.ImageUtils.loadTexture(previewImage);
+                return image;
+            } catch (e) {
+                console.error(e);
+            }
+        }
+        return null;
+    }
 });
 
 },{}],4:[function(require,module,exports){
