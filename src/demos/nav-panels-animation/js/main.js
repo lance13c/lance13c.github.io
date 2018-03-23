@@ -42,3 +42,11 @@ function goTo(route) {
     cameraEl.emit(route);
     console.log(`Emit: ${route}`);
 }
+
+
+var material = new AFRAME.THREE.MeshBasicMaterial({ wireframe: true });
+var geometry = new AFRAME.THREE.PlaneGeometry();
+var planeMesh= new AFRAME.THREE.Mesh( geometry, material );
+planeMesh.position.set(1, 1, 1);
+// add it to the WebGL scene
+scene.add(planeMesh);

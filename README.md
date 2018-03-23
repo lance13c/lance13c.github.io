@@ -10,6 +10,6 @@ Site: [dev.ciciliostudio.com](dev.ciciliostudio.com)
 
 #Todo
 
-* Camera Transitions
-* Tree
-* Birds
+* Camera Transition Routing
+* HTML in THREE.js
+* Dynamiclly change html
