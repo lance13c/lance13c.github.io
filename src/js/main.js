@@ -13,7 +13,7 @@ let homePanelEl = document.querySelector('.home__panel');
 let projectsPanelEl = document.querySelector('.projects__panel');
 
 let cameraEl = document.querySelector('.camera');
-let camera = cameraEl.getObject3D('camera');
+let camera = cameraEl.object3D;
 
 
 let homeEl = document.querySelector('.nav--home');

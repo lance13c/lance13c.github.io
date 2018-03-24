@@ -41,7 +41,7 @@ var homePanelEl = document.querySelector('.home__panel');
 var projectsPanelEl = document.querySelector('.projects__panel');
 
 var cameraEl = document.querySelector('.camera');
-var camera = cameraEl.getObject3D('camera');
+var camera = cameraEl.object3D;
 
 var homeEl = document.querySelector('.nav--home');
 var projectsEl = document.querySelector('.nav--projects');
