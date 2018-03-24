@@ -1,15 +1,5 @@
 
 
-##Dominic Cicilio's Profolio Website
-Site: [dev.ciciliostudio.com](dev.ciciliostudio.com)
+#### Menu left Right Hands
+Talk about left or right hands. Having the ability to specify which one the menu should be put on.
 
-### Style Guidelines
-
-**Sass Naming Convention: BEM** 
-
-
-#Todo
-
-* Camera Transitions
-* Tree
-* Birds

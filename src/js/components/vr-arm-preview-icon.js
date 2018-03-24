@@ -3,7 +3,8 @@ AFRAME.registerComponent('preview-icon', {
         name: {type: "string", default: "temp"},
         previewImage: {type: "string", 'default': ''},
         obj: {type: "string", default: ''},
-        mtl: {type: "string", default: ''}
+        mtl: {type: "string", default: ''},
+        collisionObjs: {type: "array", default: []}
     },
 
     init: function () {
@@ -29,6 +30,8 @@ AFRAME.registerComponent('preview-icon', {
         this.previewIconMesh.rotateY(Math.PI/2);
         this.el.setObject3D('icon', this.previewIconMesh);
 
+        
+
         // Check if preview obj is present
         if (this.data.obj !== '' && this.data.mtl !== '') {
 
@@ -47,12 +50,26 @@ AFRAME.registerComponent('preview-icon', {
                 //previewObj.material.wireframe = true;
                 console.log('ICON', this.el); 
             });
+
+            
             
         } else {
             console.warn(`Data obj not found on`, this.el);
         }
         //this.el.setAttribute('position', '-0.2 0.1 0.1');
     
+
+        // Sets aframe extra's sphere collider onto icon
+        this.el.setAttribute('class', "preview-icon");
+        this.el.setAttribute('aabb-collider', 'objects: .sphere-controller');
+        
+        this.el.addEventListener('hitstart', function(e) {
+            console.log("HIT HAS HAPPENED");
+        });
+
+        this.el.addEventListener('hitend', function(e) {
+            console.log("HIT END HAS HAPPENED");
+        });
     },
     update: function () {},
     tick: function () {},
