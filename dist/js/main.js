@@ -52,7 +52,7 @@ AFRAME.registerComponent('item-selector', {
         });
         this.displayMesh = new THREE.Mesh(displayG, displayM);
 
-        this.el.setObject3D('display', this.displayMesh);
+        this.el.setObject3D('mesh', this.displayMesh);
         this.el.setAttribute('position', '-0.2 0 0.1');
 
         // Preview Icon Container
@@ -148,7 +148,7 @@ AFRAME.registerComponent('preview-icon', {
         this.previewIconMesh = new THREE.Mesh(previewIconG, previewIconM);
         // Aligns Picture Icon in the correct orientation
         this.previewIconMesh.rotateY(Math.PI / 2);
-        this.el.setObject3D('icon', this.previewIconMesh);
+        this.el.setObject3D('mesh', this.previewIconMesh);
 
         // Check if preview obj is present
         if (this.data.obj !== '' && this.data.mtl !== '') {
@@ -164,7 +164,7 @@ AFRAME.registerComponent('preview-icon', {
                 previewObj.setAttribute('scale', '0.01 0.01 0.01');
                 previewObj.setAttribute('position', '-0.12 0 0');
                 previewObj.setAttribute('rotation', '-90 0 90');
-                _this.el.appendChild(previewObj);
+                _this.el.appendChild("Added Object");
                 //previewObj.material.wireframe = true;
                 console.log('ICON', _this.el);
             });
@@ -175,7 +175,7 @@ AFRAME.registerComponent('preview-icon', {
 
 
         // Sets aframe extra's sphere collider onto icon
-        this.el.setAttribute('class', "preview-icon");
+        //this.el.setAttribute('class', "preview-icon");
         this.el.setAttribute('aabb-collider', 'objects: .sphere-controller');
 
         this.el.addEventListener('hitstart', function (e) {

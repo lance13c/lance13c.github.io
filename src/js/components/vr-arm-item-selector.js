@@ -24,7 +24,7 @@ AFRAME.registerComponent('item-selector', {
         });
         this.displayMesh = new THREE.Mesh(displayG, displayM);
 
-        this.el.setObject3D('display', this.displayMesh);
+        this.el.setObject3D('mesh', this.displayMesh);
         this.el.setAttribute('position', '-0.2 0 0.1');
 
 
