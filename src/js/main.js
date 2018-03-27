@@ -6,7 +6,6 @@ const ThreeCSS = require('three-css3drenderer');
 THREE.CSS3DRenderer = ThreeCSS.CSS3DRenderer;
 THREE.CSS3DObject = ThreeCSS.CSS3DObject;
 THREE.CSS3DSprite = ThreeCSS.CSS3DSprite;
-console.log(THREE.CSS3DRenderer);
 
 const abstracts = require('./abstracts');
 
@@ -14,6 +13,7 @@ let sceneEl = document.querySelector('a-scene');
 let scene = sceneEl.object3D;
 
 let homePanelEl = document.querySelector('.home__panel');
+let homePanel = homePanelEl.getObject3D('mesh');
 let projectsPanelEl = document.querySelector('.projects__panel');
 
 let cameraEl = document.querySelector('[camera]');
@@ -51,17 +51,8 @@ function goTo(route) {
     console.log(`Emit: ${route}`);
 }
 
-var material = new AFRAME.THREE.MeshBasicMaterial({ color: 0xeeeeee, wireframe: false, visible: false});
-var geometry = new AFRAME.THREE.PlaneGeometry(2, 2, 32, 32);
-var planeMesh= new AFRAME.THREE.Mesh( geometry, material );
-planeMesh.position.set(0, 0, 1);
-// add it to the WebGL scene
-scene.add(planeMesh);
-
+// CSS Setup
 let cssScene = new AFRAME.THREE.Scene();
-
-
-
 let cssRenderer = new THREE.CSS3DRenderer();
 cssRenderer.setSize( window.innerWidth, window.innerHeight );
 cssRenderer.domElement.style.position = 'absolute';
@@ -72,13 +63,25 @@ document.body.appendChild(cssRenderer.domElement);
 //var element = document.createElement( 'img' );
 //element.src = 'assets/images/projects/hero/hero0.png';
 
-// CSS Object
-var element = document.createElement('h1');
-element.innerHTML = "testing";
+// CSS Objects
+
+let cssContainerEl = document.createElement('div');
+
+var cssHeaderEl = document.createElement('h1');
+cssHeaderEl.innerHTML = "testing";
+
+let cssTextEl = document.createElement("p");
+cssTextEl.innerHTML =`Testing html in webGL Testing html in webGL 
+Testing html in webGL Testing html in webGL
+Testing html in webGL
+Testing html in webGL`;
+
+cssContainerEl.appendChild(cssHeaderEl);
+cssContainerEl.appendChild(cssTextEl);
 // create the object3d for this element
-var cssObject = new THREE.CSS3DObject( element );
+var cssObject = new THREE.CSS3DObject( cssContainerEl );
 // we reference the same position and rotation 
-cssObject.position.set(0, 0, 0);
+cssObject.position.set(homePanel.position.x, homePanel.position.y, homePanel.position.z);
 cssObject.scale.set(0.01, 0.01, 0.01);
 cssObject.rotation.set(0, 0, 0);
 // add it to the css scene
