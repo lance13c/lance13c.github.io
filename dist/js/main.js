@@ -133,6 +133,9 @@ AFRAME.registerComponent('preview-icon', {
 
         // Preview Icons
         this.assetElementsMap = [];
+        var startPos = this.el.getAttribute('position');
+
+        this.previewObj = null;
 
         var previewIconG = new THREE.BoxBufferGeometry(ICON_HEIGHT, 0.01, ICON_WIDTH);
         var previewIconM = new THREE.MeshBasicMaterial({
@@ -150,24 +153,36 @@ AFRAME.registerComponent('preview-icon', {
         this.previewIconMesh.rotateY(Math.PI / 2);
         this.el.setObject3D('mesh', this.previewIconMesh);
 
+        // Pressing Animations
+        var animationDown = document.createElement('a-animation');
+        animationDown.setAttribute('attribute', "position");
+        animationDown.setAttribute('dur', "100");
+        animationDown.setAttribute('to', startPos.x + " " + (startPos.y + -0.005) + " " + startPos.z);
+        animationDown.setAttribute('begin', "down");
+        this.el.appendChild(animationDown);
+
+        var animationUp = document.createElement('a-animation');
+        animationUp.setAttribute('attribute', "position");
+        animationUp.setAttribute('dur', "100");
+        animationUp.setAttribute('to', startPos.x + " " + startPos.y + " " + startPos.z);
+        animationUp.setAttribute('begin', "up");
+        this.el.appendChild(animationUp);
+
+        this.el.flushToDOM();
+
         // Check if preview obj is present
         if (this.data.obj !== '' && this.data.mtl !== '') {
 
             // Create preview Obj
-            var previewObj = document.createElement('a-entity');
-            previewObj.setAttribute('obj-model', {
+            this.previewObj = document.createElement('a-entity');
+            this.previewObj.setAttribute('obj-model', {
                 obj: this.data.obj,
                 mtl: this.data.mtl
             });
 
-            document.addEventListener('keypress', function (e) {
-                previewObj.setAttribute('scale', '0.01 0.01 0.01');
-                previewObj.setAttribute('position', '-0.12 0 0');
-                previewObj.setAttribute('rotation', '-90 0 90');
-                _this.el.appendChild("Added Object");
-                //previewObj.material.wireframe = true;
-                console.log('ICON', _this.el);
-            });
+            this.previewObj.setAttribute('scale', '0.01 0.01 0.01');
+            this.previewObj.setAttribute('position', '-0.12 0 0');
+            this.previewObj.setAttribute('rotation', '-90 0 90');
         } else {
             console.warn("Data obj not found on", this.el);
         }
@@ -180,11 +195,18 @@ AFRAME.registerComponent('preview-icon', {
 
         this.el.addEventListener('hitstart', function (e) {
             console.log("HIT HAS HAPPENED");
+            _this.el.emit('down');
+            _this.addPreviewObj();
         });
 
         this.el.addEventListener('hitend', function (e) {
             console.log("HIT END HAS HAPPENED");
+            _this.el.emit('up');
+            _this.removePreviewObj();
         });
+
+        //previewObj.material.wireframe = true;
+        console.log('ICON', this.el);
     },
     update: function update() {},
     tick: function tick() {},
@@ -203,6 +225,19 @@ AFRAME.registerComponent('preview-icon', {
             }
         }
         return null;
+    },
+    addPreviewObj: function addPreviewObj() {
+        if (this.previewObj) {
+            this.el.appendChild(this.previewObj);
+        }
+    },
+    removePreviewObj: function removePreviewObj() {
+        var preObj = this.el.querySelector('a-entity[obj-model]');
+        if (preObj) {
+            this.el.removeChild(preObj);
+        } else {
+            console.log('No preview object to remove');
+        }
     }
 });
 

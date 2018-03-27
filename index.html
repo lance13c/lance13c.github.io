@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     <link rel="stylesheet" href="/dist/styles/css/main.css">
-    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-aabb-collider-component/dist/aframe-aabb-collider-component.min.js"></script>
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
     <title>Cicilio Studio</title>
@@ -52,8 +52,8 @@
                 </a-entity>
             </a-scene>
 
-            <a-entity position="0 0 0">
-            </a-entity camera></a-entity>
+            <a-entity position="0 0 1">
+                <a-entity id="camera" camera></a-entity>
             </a-entity>
  
     <script>
@@ -65,8 +65,14 @@
         els.forEach((el) => {
             console.log('ELEMENT');
             console.log(el);
-            el.addEventListener('hitstart', () => {
-                console.log("TESTing 123");
+            el.addEventListener('hitstart', (e) => {
+                //console.log("TESTing 123");
+                e.target.setAttribute('material', 'color: #39ceef')
+            });
+
+            el.addEventListener('hitend', (e) => {
+                //console.log("TESTing 123");
+                e.target.setAttribute('material', 'color: #1d39d7')
             });
         })
         // end test
