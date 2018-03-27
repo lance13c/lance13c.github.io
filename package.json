@@ -29,5 +29,9 @@
     "gulp-uglify": "^3.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "three": "^0.91.0",
+    "three-css3drenderer": "^1.0.1"
   }
 }
