@@ -6,5 +6,6 @@
 import './projects/vr-mechanism';
 import './components/vr-arm-item-selector';
 import './components/vr-arm-preview-icon';
+import './components/grab-assets';
 
 const abstracts = require('./abstracts');

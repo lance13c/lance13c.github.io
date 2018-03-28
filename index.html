@@ -43,11 +43,11 @@
                     rotation="0 0 0">
                     </a-box>
 
-                <a-entity hand-controls="left" aabb-collider="objects: [preview-icon]">
+                <a-entity hand-controls="left" grab-assets aabb-collider="objects: [preview-icon]">
                     <a-sphere class="sphere-controller" radius="0.03" color="blue" position="0 -0.01 0.2"></a-sphere>
                     <a-entity class="testSelector" item-selector></a-entity>
                  </a-entity>
-                 <a-entity hand-controls="right" aabb-collider="objects: [preview-icon]">
+                 <a-entity hand-controls="right" grab-assets aabb-collider="objects: [preview-icon]">
                     <a-sphere class="sphere-controller" radius="0.03" color="blue" position="0 -0.01 0.2"></a-sphere>
                 </a-entity>
             </a-scene>
@@ -67,16 +67,18 @@
             console.log(el);
             el.addEventListener('hitstart', (e) => {
                 //console.log("TESTing 123");
+                e.target.addState('colliding');
                 let sphere = e.target.querySelector('.sphere-controller');
                 sphere.setAttribute('material', 'color: #39ceef');
             });
 
             el.addEventListener('hitend', (e) => {
                 //console.log("TESTing 123");
+                e.target.addState('free');
                 let sphere = e.target.querySelector('.sphere-controller');
                 sphere.setAttribute('material', 'color: #1d39d7');
             });
-        })
+        });
         // end test
 
         let scene = document.querySelector('a-scene');

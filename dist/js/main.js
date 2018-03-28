@@ -26,6 +26,97 @@ module.exports = abstracts;
 },{}],2:[function(require,module,exports){
 'use strict';
 
+// Must be placed on controller elements
+AFRAME.registerComponent('grab-assets', {
+    schema: {},
+    init: function init() {
+        var _this = this;
+
+        this.controller = this.el;
+
+        //this.el.
+
+        this.assetWorldPos = new THREE.Vector3();
+        this.currentAssetEl = undefined; // The assets element
+        this.updateAsset = false; // Whether to continuously update the assets being grabbed
+
+        this.currentAssetRotation = new THREE.Vector3();
+
+        //this.icons = document.querySelectorAll('[preview-icon]')
+
+        // When the controller tigger is pressed down
+        this.controller.addEventListener('triggerdown', function (e) {
+            console.log('trigger down');
+            // The controller can either be "free" or "colliding" as specified in the main.js file
+            // Colliding refers to colliding with a preview-icon
+            if (_this.controller.is('colliding')) {
+                try {
+                    var previewIconEl = _this.el.components['aabb-collider']['intersectedEls'][0];
+                    var assetData = previewIconEl.components['preview-icon'].data;
+
+                    _this.createAsset(assetData.obj, assetData.mtl);
+
+                    //console.log(previewIconEl);
+                    //console.log(previewIconEl.components['preview-icon']);
+                    console.log('colliding');
+                } catch (e) {
+                    console.log(e);
+                }
+            }
+        });
+
+        this.controller.addEventListener('triggerup', function (e) {
+            if (_this.controller.is('colliding')) {
+                console.log('colliding');
+            }
+            _this.updateAsset = false;
+            console.log('trigger up');
+        });
+    },
+    update: function update() {},
+    tick: function tick() {
+        if (this.updateAsset !== false && this.currentAssetEl !== undefined) {
+            var worldPos = this.calcWorldPos(this.el.object3D.matrixWorld);
+            this.currentAssetEl.setAttribute('position', worldPos.x + ' ' + worldPos.y + ' ' + worldPos.z);
+
+            // Rotation
+            //.applyQuaternion(this.el.object3D.getWorldQuaternion());
+            this.currentAssetEl.object3D.setRotationFromQuaternion(this.el.object3D.getWorldQuaternion()); //setAttribute('rotation', `${this.currentAssetRotation.x} ${this.currentAssetRotation.y} ${this.currentAssetRotation.z}`);
+        } else {
+                //console.log('update', this.updateAsset, 'asset', this.currentAssetEl);
+                //console.log('asset', this.currentAsset);
+            }
+    },
+    remove: function remove() {},
+    pause: function pause() {},
+    play: function play() {},
+
+    createAsset: function createAsset(objUrl, mtlUrl) {
+        this.currentAssetEl = document.createElement('a-entity');
+        this.currentAssetEl.setAttribute('obj-model', {
+            obj: objUrl,
+            mtl: mtlUrl
+        });
+
+        this.currentAssetEl.setAttribute('scale', '0.01 0.01 0.01');
+
+        console.log('POSITION');
+
+        //this.calcWorldPos(this.el.object3D.matrixWorld);
+        //this.currentAssetEl.setAttribute('position', `${this.assetWorldPos.x} ${this.assetWorldPos.y} ${this.assetWorldPos.z}`);
+
+        this.el.sceneEl.appendChild(this.currentAssetEl);
+
+        this.updateAsset = true;
+    },
+    calcWorldPos: function calcWorldPos(elementMatrix) {
+        return this.assetWorldPos.setFromMatrixPosition(elementMatrix);
+    }
+});
+
+},{}],3:[function(require,module,exports){
+'use strict';
+
 AFRAME.registerComponent('item-selector', {
     schema: {
         // size: {type: 'vec2', default: {x:0.5, y:0.2}}
@@ -114,7 +205,7 @@ AFRAME.registerComponent('item-selector', {
     }
 });
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 AFRAME.registerComponent('preview-icon', {
@@ -263,7 +354,7 @@ AFRAME.registerComponent('preview-icon', {
     }
 });
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 require('./projects/vr-mechanism');
@@ -272,14 +363,18 @@ require('./components/vr-arm-item-selector');
 
 require('./components/vr-arm-preview-icon');
 
-var abstracts = require('./abstracts'); //import './components/background';
+require('./components/grab-assets');
+
+//import './components/background';
 //import './components/birds';
 
 //import './components/vr-background-nav';
 
-},{"./abstracts":1,"./components/vr-arm-item-selector":2,"./components/vr-arm-preview-icon":3,"./projects/vr-mechanism":5}],5:[function(require,module,exports){
+var abstracts = require('./abstracts');
+
+},{"./abstracts":1,"./components/grab-assets":2,"./components/vr-arm-item-selector":3,"./components/vr-arm-preview-icon":4,"./projects/vr-mechanism":6}],6:[function(require,module,exports){
 "use strict";
 
-},{}]},{},[4])
+},{}]},{},[5])
 
 //# sourceMappingURL=main.js.map
