@@ -10,8 +10,9 @@ AFRAME.registerComponent('grab-assets', {
         this.currentAssetEl = undefined;              // The assets element
         this.updateAsset = false;                   // Whether to continuously update the assets being grabbed
 
-        this.currentAssetRotation = new THREE.Vector3();
-
+        this.currentAssetQuaternion = new THREE.Quaternion();
+        this.tempAssetQuanternion = new THREE.Quaternion();
+        this.startingAssetQuanternion = new THREE.Quaternion();
         //this.icons = document.querySelectorAll('[preview-icon]')
         
         // When the controller tigger is pressed down
@@ -21,13 +22,21 @@ AFRAME.registerComponent('grab-assets', {
             // Colliding refers to colliding with a preview-icon
             if (this.controller.is('colliding')) {
                 try {
-                    let previewIconEl = this.el.components['aabb-collider']['intersectedEls'][0];
-                    let assetData = previewIconEl.components['preview-icon'].data;
-                    
-                    this.createAsset(assetData.obj, assetData.mtl);
-                    
-                    //console.log(previewIconEl);
-                    //console.log(previewIconEl.components['preview-icon']);
+                    let assetEl = this.el.components['aabb-collider']['intersectedEls'][0];
+                    let assetData = undefined; 
+                    if (assetEl) {
+                        if (assetEl.components['preview-icon']) {
+                            // Preview Icon Click
+                            assetData = assetEl.components['preview-icon'].data;
+                            this.createAsset(assetData.obj, assetData.mtl);
+                        } else if (assetEl.components['obj-model']) {
+                            // Object Model Clicked
+                            this.currentAssetEl = assetEl;
+                            this.updateAsset = true;
+                            //console.log(assetEl.object3D.position);
+                            //previewIconEl.components['preview-icon'].data;
+                        }
+                    }
                     console.log('colliding');
                 } catch (e) {
                     console.log(e);
@@ -48,10 +57,16 @@ AFRAME.registerComponent('grab-assets', {
         if (this.updateAsset !== false && this.currentAssetEl !== undefined) {
             let worldPos = this.calcWorldPos(this.el.object3D.matrixWorld);
             this.currentAssetEl.setAttribute('position', `${worldPos.x} ${worldPos.y} ${worldPos.z}`);
-
+            this.currentAssetQuaternion.copy(this.el.object3D.getWorldQuaternion());
+            console.log(this.currentAssetQuaternion);
+            this.tempAssetQuanternion.multiplyQuaternions(this.startingAssetQuaternion, this.currentAssetQuaternion);
+            
+            //console.log(this.currentAssetQuaternion);
+            //this.currentAssetQuaternion.multiply(this.el.object3D.getWorldQuaternion());
             // Rotation
             //.applyQuaternion(this.el.object3D.getWorldQuaternion());
-            this.currentAssetEl.object3D.setRotationFromQuaternion(this.el.object3D.getWorldQuaternion());//setAttribute('rotation', `${this.currentAssetRotation.x} ${this.currentAssetRotation.y} ${this.currentAssetRotation.z}`);
+            //this.currentAssetEl.object3D.setRotationFromQuaternion(this.tempAssetQuanternion);
+            //this.currentAssetEl.object3D.setRotationFromQuaternion(this.el.object3D.getWorldQuaternion());
 
         } else {
             //console.log('update', this.updateAsset, 'asset', this.currentAssetEl);
@@ -70,6 +85,26 @@ AFRAME.registerComponent('grab-assets', {
         });
 
         this.currentAssetEl.setAttribute('scale', '0.01 0.01 0.01');
+        this.currentAssetEl.setAttribute('class', 'collides');
+
+        console.log('POSITION');
+
+        //this.calcWorldPos(this.el.object3D.matrixWorld);
+        //this.currentAssetEl.setAttribute('position', `${this.assetWorldPos.x} ${this.assetWorldPos.y} ${this.assetWorldPos.z}`);
+        
+        //this.currentAssetQuaternion.copy(this.currentAssetEl.object3D.getWorldQuaternion());
+        this.startingAssetQuanternion.copy(this.currentAssetEl.object3D.getWorldQuaternion());
+        console.log(this.startingAssetQuanternion);
+
+        this.el.sceneEl.appendChild(this.currentAssetEl);
+        this.currentAssetEl.flushToDOM();
+        this.updateAsset = true;
+    },
+
+    updateExistingAsset(assetEl) {
+
+        this.currentAssetEl.setAttribute('scale', '0.01 0.01 0.01');
+        this.currentAssetEl.setAttribute('class', 'collides');
 
         console.log('POSITION');
 
@@ -77,7 +112,7 @@ AFRAME.registerComponent('grab-assets', {
         //this.currentAssetEl.setAttribute('position', `${this.assetWorldPos.x} ${this.assetWorldPos.y} ${this.assetWorldPos.z}`);
         
         this.el.sceneEl.appendChild(this.currentAssetEl);
-
+        this.currentAssetEl.flushToDOM();
         this.updateAsset = true;
     },
 

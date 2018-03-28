@@ -23,6 +23,7 @@ AFRAME.registerComponent('preview-icon', {
             side: 'double'
         });
 
+        // Adds image to icon(button) if present
         let image = this.getImage();
         if (image !== null) {
             previewIconM.map = image;
@@ -71,13 +72,14 @@ AFRAME.registerComponent('preview-icon', {
             console.warn(`Data obj not found on`, this.el);
         }
 
-        this.el.flushToDOM();
+        //this.el.flushToDOM();
         //this.el.setAttribute('position', '-0.2 0.1 0.1');
     
 
         // Sets aframe extra's sphere collider onto icon
         //this.el.setAttribute('class', "preview-icon");
         this.el.setAttribute('aabb-collider', 'objects: [hand-controls]');
+        this.el.setAttribute('class', 'collides');
         
         this.el.addEventListener('hitstart', (e) => {
             console.log("HIT HAS HAPPENED");
