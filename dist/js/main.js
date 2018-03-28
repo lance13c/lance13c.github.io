@@ -45,7 +45,7 @@ AFRAME.registerComponent('item-selector', {
         this.assetList = [];
 
         // Display rectangle
-        var displayG = new THREE.BoxBufferGeometry(0.2, 0.01, 0.3);
+        var displayG = new THREE.BoxBufferGeometry(0.2, 0.01, 0.35);
         var displayM = new THREE.MeshBasicMaterial({
             color: 0xbbbbff,
             side: 'double'
@@ -53,7 +53,8 @@ AFRAME.registerComponent('item-selector', {
         this.displayMesh = new THREE.Mesh(displayG, displayM);
 
         this.el.setObject3D('mesh', this.displayMesh);
-        this.el.setAttribute('position', '-0.2 0 0.1');
+        this.el.setAttribute('position', '-0.1 0.2 0.1');
+        this.el.setAttribute('rotation', '0 0 -75');
 
         // Preview Icon Container
         var ICON_HEIGHT = 0.05;
@@ -183,15 +184,20 @@ AFRAME.registerComponent('preview-icon', {
             this.previewObj.setAttribute('scale', '0.01 0.01 0.01');
             this.previewObj.setAttribute('position', '-0.12 0 0');
             this.previewObj.setAttribute('rotation', '-90 0 90');
+            // this.previewObj.setAttribute('material', 'visible: false');
+
+            this.previewObj.flushToDOM();
         } else {
             console.warn("Data obj not found on", this.el);
         }
+
+        this.el.flushToDOM();
         //this.el.setAttribute('position', '-0.2 0.1 0.1');
 
 
         // Sets aframe extra's sphere collider onto icon
         //this.el.setAttribute('class', "preview-icon");
-        this.el.setAttribute('aabb-collider', 'objects: .sphere-controller');
+        this.el.setAttribute('aabb-collider', 'objects: [hand-controls]');
 
         this.el.addEventListener('hitstart', function (e) {
             console.log("HIT HAS HAPPENED");
@@ -237,6 +243,22 @@ AFRAME.registerComponent('preview-icon', {
             this.el.removeChild(preObj);
         } else {
             console.log('No preview object to remove');
+        }
+    },
+    previewObjVisible: function previewObjVisible() {
+        var preObj = this.el.querySelector('a-entity[obj-model]');
+        if (preObj) {
+            preObj.setAttribute('material', 'visible: true');
+        } else {
+            console.log('No preview object found');
+        }
+    },
+    hidePreviewObj: function hidePreviewObj() {
+        var preObj = this.el.querySelector('a-entity[obj-model]');
+        if (preObj) {
+            preObj.setAttribute('material', 'visible: false');
+        } else {
+            console.log('No preview object found');
         }
     }
 });

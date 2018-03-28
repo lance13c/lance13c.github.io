@@ -17,7 +17,7 @@ AFRAME.registerComponent('item-selector', {
         this.assetList = [];
 
         // Display rectangle
-        let displayG = new THREE.BoxBufferGeometry(0.2, 0.01, 0.3);
+        let displayG = new THREE.BoxBufferGeometry(0.2, 0.01, 0.35);
         let displayM = new THREE.MeshBasicMaterial({
             color: 0xbbbbff,
             side: 'double'
@@ -25,7 +25,8 @@ AFRAME.registerComponent('item-selector', {
         this.displayMesh = new THREE.Mesh(displayG, displayM);
 
         this.el.setObject3D('mesh', this.displayMesh);
-        this.el.setAttribute('position', '-0.2 0 0.1');
+        this.el.setAttribute('position', '-0.1 0.2 0.1');
+        this.el.setAttribute('rotation', '0 0 -75');
 
 
         // Preview Icon Container

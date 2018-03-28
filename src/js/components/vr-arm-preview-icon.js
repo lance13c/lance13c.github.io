@@ -64,16 +64,20 @@ AFRAME.registerComponent('preview-icon', {
             this.previewObj.setAttribute('scale', '0.01 0.01 0.01');
             this.previewObj.setAttribute('position', '-0.12 0 0');
             this.previewObj.setAttribute('rotation', '-90 0 90');
-            
+            // this.previewObj.setAttribute('material', 'visible: false');
+
+            this.previewObj.flushToDOM();
         } else {
             console.warn(`Data obj not found on`, this.el);
         }
+
+        this.el.flushToDOM();
         //this.el.setAttribute('position', '-0.2 0.1 0.1');
     
 
         // Sets aframe extra's sphere collider onto icon
         //this.el.setAttribute('class', "preview-icon");
-        this.el.setAttribute('aabb-collider', 'objects: .sphere-controller');
+        this.el.setAttribute('aabb-collider', 'objects: [hand-controls]');
         
         this.el.addEventListener('hitstart', (e) => {
             console.log("HIT HAS HAPPENED");
@@ -123,6 +127,24 @@ AFRAME.registerComponent('preview-icon', {
             this.el.removeChild(preObj);
         } else {
             console.log('No preview object to remove');
+        }
+    },
+
+    previewObjVisible() {
+        let preObj = this.el.querySelector('a-entity[obj-model]');
+        if (preObj) {
+            preObj.setAttribute('material', 'visible: true');
+        } else {
+            console.log('No preview object found');
+        }
+    },
+
+    hidePreviewObj() {
+        let preObj = this.el.querySelector('a-entity[obj-model]');
+        if (preObj) {
+            preObj.setAttribute('material', 'visible: false');
+        } else {
+            console.log('No preview object found');
         }
     }
   });
