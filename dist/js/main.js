@@ -46644,85 +46644,87 @@ THREE.CSS3DSprite = ThreeCSS.CSS3DSprite;
 var abstracts = require('./abstracts');
 
 var sceneEl = document.querySelector('a-scene');
-var scene = sceneEl.object3D;
 
-var homePanelEl = document.querySelector('.home__panel');
-var homePanel = homePanelEl.getObject3D('mesh');
-var projectsPanelEl = document.querySelector('.projects__panel');
+sceneEl.addEventListener('loaded', function () {
 
-var cameraEl = document.querySelector('[camera]');
-var camera = cameraEl.getObject3D('camera');
+    var homePanelEl = document.querySelector('.home__panel');
+    var homePanel = homePanelEl.getObject3D('mesh');
+    var projectsPanelEl = document.querySelector('.projects__panel');
 
-var homeEl = document.querySelector('.nav--home');
-var projectsEl = document.querySelector('.nav--projects');
-var blogEl = document.querySelector('.nav--blog');
-var resumeEl = document.querySelector('.nav--resume');
-var lifeEl = document.querySelector('.nav--life');
+    var cameraEl = document.querySelector('[camera]');
+    var camera = cameraEl.getObject3D('camera');
 
-homeEl.addEventListener('mouseup', function (e) {
-    goTo('home');
+    var homeEl = document.querySelector('.nav--home');
+    var projectsEl = document.querySelector('.nav--projects');
+    var blogEl = document.querySelector('.nav--blog');
+    var resumeEl = document.querySelector('.nav--resume');
+    var lifeEl = document.querySelector('.nav--life');
+
+    homeEl.addEventListener('mouseup', function (e) {
+        goTo('home');
+    });
+
+    //homeEl.addEventListener('')
+
+    projectsEl.addEventListener('mouseup', function (e) {
+        goTo('projects');
+    });
+    //projectsEl.addEventListener('mouseout', )
+
+    blogEl.addEventListener('mouseup', function (e) {
+        goTo('blog');
+    });
+
+    console.log(homePanelEl);
+    console.log(projectsPanelEl);
+
+    // Emits an event on the camera element;
+    function goTo(route) {
+        cameraEl.emit(route);
+        console.log('Emit: ' + route);
+    }
+
+    // CSS Setup
+    var cssScene = new AFRAME.THREE.Scene();
+    var cssRenderer = new THREE.CSS3DRenderer();
+    cssRenderer.setSize(window.innerWidth, window.innerHeight);
+    cssRenderer.domElement.style.position = 'absolute';
+    cssRenderer.domElement.style.top = 0;
+    document.body.appendChild(cssRenderer.domElement);
+
+    //var element = document.createElement( 'img' );
+    //element.src = 'assets/images/projects/hero/hero0.png';
+
+    // CSS Objects
+
+    var cssContainerEl = document.createElement('div');
+
+    var cssHeaderEl = document.createElement('h1');
+    cssHeaderEl.innerHTML = "testing";
+
+    var cssTextEl = document.createElement("p");
+    cssTextEl.innerHTML = 'Testing html in webGL Testing html in webGL \n    Testing html in webGL Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL';
+
+    cssContainerEl.appendChild(cssHeaderEl);
+    cssContainerEl.appendChild(cssTextEl);
+    // create the object3d for this element
+    var cssObject = new THREE.CSS3DObject(cssContainerEl);
+    // we reference the same position and rotation 
+    cssObject.position.set(homePanel.position.x, homePanel.position.y, homePanel.position.z);
+    cssObject.scale.set(0.01, 0.01, 0.01);
+    cssObject.rotation.set(0, 0, 0);
+    // add it to the css scene
+    cssScene.add(cssObject);
+
+    console.log('Camera');
+    console.log(camera);
+
+    function animate() {
+        requestAnimationFrame(animate);
+        cssRenderer.render(cssScene, camera);
+    }
+    animate();
 });
-
-//homeEl.addEventListener('')
-
-projectsEl.addEventListener('mouseup', function (e) {
-    goTo('projects');
-});
-//projectsEl.addEventListener('mouseout', )
-
-blogEl.addEventListener('mouseup', function (e) {
-    goTo('blog');
-});
-
-console.log(homePanelEl);
-console.log(projectsPanelEl);
-
-// Emits an event on the camera element;
-function goTo(route) {
-    cameraEl.emit(route);
-    console.log('Emit: ' + route);
-}
-
-// CSS Setup
-var cssScene = new AFRAME.THREE.Scene();
-var cssRenderer = new THREE.CSS3DRenderer();
-cssRenderer.setSize(window.innerWidth, window.innerHeight);
-cssRenderer.domElement.style.position = 'absolute';
-cssRenderer.domElement.style.top = 0;
-document.body.appendChild(cssRenderer.domElement);
-
-//var element = document.createElement( 'img' );
-//element.src = 'assets/images/projects/hero/hero0.png';
-
-// CSS Objects
-
-var cssContainerEl = document.createElement('div');
-
-var cssHeaderEl = document.createElement('h1');
-cssHeaderEl.innerHTML = "testing";
-
-var cssTextEl = document.createElement("p");
-cssTextEl.innerHTML = 'Testing html in webGL Testing html in webGL \nTesting html in webGL Testing html in webGL\nTesting html in webGL\nTesting html in webGL';
-
-cssContainerEl.appendChild(cssHeaderEl);
-cssContainerEl.appendChild(cssTextEl);
-// create the object3d for this element
-var cssObject = new THREE.CSS3DObject(cssContainerEl);
-// we reference the same position and rotation 
-cssObject.position.set(homePanel.position.x, homePanel.position.y, homePanel.position.z);
-cssObject.scale.set(0.01, 0.01, 0.01);
-cssObject.rotation.set(0, 0, 0);
-// add it to the css scene
-cssScene.add(cssObject);
-
-console.log('Camera');
-console.log(camera);
-
-function animate() {
-    requestAnimationFrame(animate);
-    cssRenderer.render(cssScene, camera);
-}
-animate();
 
 },{"./abstracts":3,"three-css3drenderer":1}]},{},[4])
 
