@@ -1,4 +1,4 @@
-(function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
 var abstracts = {
@@ -39,6 +39,12 @@ AFRAME.registerComponent('grab-assets', {
         this.assetWorldPos = new THREE.Vector3();
         this.currentAssetEl = undefined; // The assets element
         this.updateAsset = false; // Whether to continuously update the assets being grabbed
+
+        this.startingCtrlPos = new THREE.Vector3();
+        this.secondaryCtrlPos = new THREE.Vector3();
+        this.deltaCtrlPos = new THREE.Vector3();
+        this.startingAssetPos = new THREE.Vector3();
+        this.finalAssetPos = new THREE.Vector3();
 
         //this.currentAssetQuaternion = new THREE.Quaternion();
         this.secondaryCtrlQuanternion = new THREE.Quaternion();
@@ -85,27 +91,26 @@ AFRAME.registerComponent('grab-assets', {
     update: function update() {},
     tick: function tick() {
         if (this.updateAsset !== false && this.currentAssetEl !== undefined) {
-            var worldPos = this.calcWorldPos(this.el.object3D.matrixWorld);
-            this.currentAssetEl.setAttribute('position', worldPos.x + ' ' + worldPos.y + ' ' + worldPos.z);
+            //let worldPos = this.calcWorldPos(this.el.object3D.matrixWorld);
+            //this.currentAssetEl.setAttribute('position', `${worldPos.x} ${worldPos.y} ${worldPos.z}`);
+
+            this.secondaryCtrlPos.copy(this.el.object3D.getWorldPosition());
+            this.deltaCtrlPos.subVectors(this.secondaryCtrlPos, this.startingCtrlPos);
+            this.finalAssetPos.addVectors(this.startingAssetPos, this.deltaCtrlPos);
+
+            this.currentAssetEl.setAttribute('position', this.finalAssetPos.x + ' ' + this.finalAssetPos.y + ' ' + this.finalAssetPos.z);
 
             this.secondaryCtrlQuanternion.copy(this.el.object3D.getWorldQuaternion());
             this.secondaryCtrlQuanternion.normalize();
-            //this.startingAssetQuanternion(
-            //this.deltaCtrlQuanternion.inverse();
 
             this.deltaCtrlQuanternion.multiplyQuaternions(this.secondaryCtrlQuanternion, this.startingCtrlQuanternion);
             this.finalAssetQuanternion.multiplyQuaternions(this.deltaCtrlQuanternion, this.startingAssetQuanternion);
 
-            //console.log(this.currentAssetQuaternion);
-            //this.currentAssetQuaternion.multiply(this.el.object3D.getWorldQuaternion());
-            // Rotation
-            //.applyQuaternion(this.el.object3D.getWorldQuaternion());
             this.currentAssetEl.object3D.setRotationFromQuaternion(this.finalAssetQuanternion);
-            //this.currentAssetEl.object3D.setRotationFromQuaternion(this.el.object3D.getWorldQuaternion());
         } else {
-                //console.log('update', this.updateAsset, 'asset', this.currentAssetEl);
-                //console.log('asset', this.currentAsset);
-            }
+            //console.log('update', this.updateAsset, 'asset', this.currentAssetEl);
+            //console.log('asset', this.currentAsset);
+        }
     },
     remove: function remove() {},
     pause: function pause() {},
@@ -120,6 +125,12 @@ AFRAME.registerComponent('grab-assets', {
 
         this.currentAssetEl.setAttribute('scale', '0.01 0.01 0.01');
         this.currentAssetEl.setAttribute('class', 'collides');
+
+        this.startingAssetPos.copy(this.el.object3D.getWorldPosition());
+        this.startingCtrlPos.copy(this.startingAssetPos);
+        //this.currentAssetEl.object3D.position.set(this.startingAssetPos.x, this.startingAssetPos.y, this.startingAssetPos.z);
+
+        this.currentAssetEl.setAttribute('position', this.startingAssetPos.x + ' ' + this.startingAssetPos.y + ' ' + this.startingAssetPos.z);
 
         console.log('POSITION');
 
@@ -141,6 +152,9 @@ AFRAME.registerComponent('grab-assets', {
     updateExistingAsset: function updateExistingAsset(assetEl) {
 
         this.currentAssetEl = assetEl;
+
+        this.startingAssetPos.copy(this.el.object3D.getWorldPosition());
+        this.startingCtrlPos.copy(this.startingAssetPos);
 
         this.startingAssetQuanternion.copy(this.currentAssetEl.object3D.getWorldQuaternion());
         this.startingAssetQuanternion.normalize();

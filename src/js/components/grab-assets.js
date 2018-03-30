@@ -10,6 +10,12 @@ AFRAME.registerComponent('grab-assets', {
         this.currentAssetEl = undefined;              // The assets element
         this.updateAsset = false;                   // Whether to continuously update the assets being grabbed
 
+        this.startingCtrlPos = new THREE.Vector3();
+        this.secondaryCtrlPos = new THREE.Vector3();
+        this.deltaCtrlPos = new THREE.Vector3();
+        this.startingAssetPos = new THREE.Vector3();
+        this.finalAssetPos = new THREE.Vector3();
+
         //this.currentAssetQuaternion = new THREE.Quaternion();
         this.secondaryCtrlQuanternion = new THREE.Quaternion();
         this.startingAssetQuanternion = new THREE.Quaternion();
@@ -55,23 +61,23 @@ AFRAME.registerComponent('grab-assets', {
     update: function () {},
     tick: function () {
         if (this.updateAsset !== false && this.currentAssetEl !== undefined) {
-            let worldPos = this.calcWorldPos(this.el.object3D.matrixWorld);
-            this.currentAssetEl.setAttribute('position', `${worldPos.x} ${worldPos.y} ${worldPos.z}`);
+            //let worldPos = this.calcWorldPos(this.el.object3D.matrixWorld);
+            //this.currentAssetEl.setAttribute('position', `${worldPos.x} ${worldPos.y} ${worldPos.z}`);
             
+            this.secondaryCtrlPos.copy(this.el.object3D.getWorldPosition());
+            this.deltaCtrlPos.subVectors(this.secondaryCtrlPos, this.startingCtrlPos);
+            this.finalAssetPos.addVectors(this.startingAssetPos, this.deltaCtrlPos);
+
+            this.currentAssetEl.setAttribute('position', `${this.finalAssetPos.x} ${this.finalAssetPos.y} ${this.finalAssetPos.z}`);
+
+
             this.secondaryCtrlQuanternion.copy(this.el.object3D.getWorldQuaternion());
             this.secondaryCtrlQuanternion.normalize();
-            //this.startingAssetQuanternion(
-            //this.deltaCtrlQuanternion.inverse();
 
             this.deltaCtrlQuanternion.multiplyQuaternions(this.secondaryCtrlQuanternion, this.startingCtrlQuanternion);
             this.finalAssetQuanternion.multiplyQuaternions(this.deltaCtrlQuanternion, this.startingAssetQuanternion);
             
-            //console.log(this.currentAssetQuaternion);
-            //this.currentAssetQuaternion.multiply(this.el.object3D.getWorldQuaternion());
-            // Rotation
-            //.applyQuaternion(this.el.object3D.getWorldQuaternion());
             this.currentAssetEl.object3D.setRotationFromQuaternion(this.finalAssetQuanternion);
-            //this.currentAssetEl.object3D.setRotationFromQuaternion(this.el.object3D.getWorldQuaternion());
 
         } else {
             //console.log('update', this.updateAsset, 'asset', this.currentAssetEl);
@@ -91,6 +97,12 @@ AFRAME.registerComponent('grab-assets', {
 
         this.currentAssetEl.setAttribute('scale', '0.01 0.01 0.01');
         this.currentAssetEl.setAttribute('class', 'collides');
+
+        this.startingAssetPos.copy(this.el.object3D.getWorldPosition());
+        this.startingCtrlPos.copy(this.startingAssetPos);
+        //this.currentAssetEl.object3D.position.set(this.startingAssetPos.x, this.startingAssetPos.y, this.startingAssetPos.z);
+        
+        this.currentAssetEl.setAttribute('position', `${this.startingAssetPos.x} ${this.startingAssetPos.y} ${this.startingAssetPos.z}`);
 
         console.log('POSITION');
 
@@ -113,6 +125,9 @@ AFRAME.registerComponent('grab-assets', {
     updateExistingAsset(assetEl) {
 
         this.currentAssetEl = assetEl;
+
+        this.startingAssetPos.copy(this.el.object3D.getWorldPosition());
+        this.startingCtrlPos.copy(this.startingAssetPos);
 
         this.startingAssetQuanternion.copy(this.currentAssetEl.object3D.getWorldQuaternion());
         this.startingAssetQuanternion.normalize();
