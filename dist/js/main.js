@@ -46632,6 +46632,10 @@ module.exports = abstracts;
 },{}],4:[function(require,module,exports){
 'use strict';
 
+require('./until/nav');
+
+require('./pages/home');
+
 //import './components/background';
 //import './components/birds';
 
@@ -46653,36 +46657,6 @@ sceneEl.addEventListener('loaded', function () {
 
     var cameraEl = document.querySelector('[camera]');
     var camera = cameraEl.getObject3D('camera');
-
-    var homeEl = document.querySelector('.nav--home');
-    var projectsEl = document.querySelector('.nav--projects');
-    var blogEl = document.querySelector('.nav--blog');
-    var resumeEl = document.querySelector('.nav--resume');
-    var lifeEl = document.querySelector('.nav--life');
-
-    homeEl.addEventListener('mouseup', function (e) {
-        goTo('home');
-    });
-
-    //homeEl.addEventListener('')
-
-    projectsEl.addEventListener('mouseup', function (e) {
-        goTo('projects');
-    });
-    //projectsEl.addEventListener('mouseout', )
-
-    blogEl.addEventListener('mouseup', function (e) {
-        goTo('blog');
-    });
-
-    console.log(homePanelEl);
-    console.log(projectsPanelEl);
-
-    // Emits an event on the camera element;
-    function goTo(route) {
-        cameraEl.emit(route);
-        console.log('Emit: ' + route);
-    }
 
     // CSS Setup
     var cssScene = new AFRAME.THREE.Scene();
@@ -46726,6 +46700,76 @@ sceneEl.addEventListener('loaded', function () {
     animate();
 });
 
-},{"./abstracts":3,"three-css3drenderer":1}]},{},[4])
+},{"./abstracts":3,"./pages/home":5,"./until/nav":6,"three-css3drenderer":1}],5:[function(require,module,exports){
+"use strict";
+
+},{}],6:[function(require,module,exports){
+'use strict';
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
+var homeEl = document.querySelector('.nav--home');
+var projectsEl = document.querySelector('.nav--projects');
+var blogEl = document.querySelector('.nav--blog');
+var resumeEl = document.querySelector('.nav--resume');
+var lifeEl = document.querySelector('.nav--life');
+
+var cameraEl = document.querySelector('[camera]');
+
+var BUFFER = 20; // Attempt to reduce nav hicups
+var ANIMATION_TIME = 800 + BUFFER;
+//let curAnimationRoute = cameraEl.querySelector('a-animation[begin="home"]');/
+//console.log(curAnimationRoute);
+
+homeEl.addEventListener('mouseup', function (e) {
+    goTo('home', homeEl);
+});
+
+projectsEl.addEventListener('mouseup', function (e) {
+    goTo('projects', projectsEl);
+});
+
+blogEl.addEventListener('mouseup', function (e) {
+    goTo('blog', blogEl);
+});
+
+// Emits an event on the camera element;
+// route - string name of route to emit
+// el - element that correlates to route
+function goTo(route, el) {
+    cameraEl.emit(route);
+    setBeforePos(route, el);
+    console.log('Emit: ' + route);
+}
+
+// Sets the animation before position to the route, after route is emitted
+// route - string name of route to emit
+// el - element that correlates to route
+function setBeforePos(route) {
+    try {
+        //let pos = curAnimationRoute.getAttribute('to');
+        var curAnimationRoute = cameraEl.querySelector('a-animation[begin="' + route + '"]');
+        var pos = curAnimationRoute.getAttribute('to');
+        console.log('currentRoute');
+        console.log(curAnimationRoute);
+        var animations = [].concat(_toConsumableArray(cameraEl.querySelectorAll('a-animation')));
+
+        // Animation nodes must be replaced, because animation attribute from and to can not be dynamically updated.
+        setTimeout(function () {
+            animations.forEach(function (a) {
+                var aCopy = a.cloneNode();
+                aCopy.setAttribute('from', pos);
+                cameraEl.removeChild(a);
+                cameraEl.appendChild(aCopy);
+            });
+        }, ANIMATION_TIME);
+
+        console.log(animations);
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+},{}]},{},[4])
 
 //# sourceMappingURL=main.js.map

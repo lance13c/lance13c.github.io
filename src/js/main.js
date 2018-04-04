@@ -1,6 +1,9 @@
 //import './components/background';
 //import './components/birds';
 
+import './until/nav';
+import './pages/home';
+
 const THREE = AFRAME.THREE;
 const ThreeCSS = require('three-css3drenderer');
 THREE.CSS3DRenderer = ThreeCSS.CSS3DRenderer;
@@ -22,36 +25,7 @@ sceneEl.addEventListener('loaded', function() {
     let camera = cameraEl.getObject3D('camera');
 
 
-    let homeEl = document.querySelector('.nav--home');
-    let projectsEl = document.querySelector('.nav--projects');
-    let blogEl = document.querySelector('.nav--blog');
-    let resumeEl = document.querySelector('.nav--resume');
-    let lifeEl = document.querySelector('.nav--life');
-
-
-    homeEl.addEventListener('mouseup', (e) => {
-        goTo('home');
-    });
-
-    //homeEl.addEventListener('')
-
-    projectsEl.addEventListener('mouseup', (e) => {
-        goTo('projects');
-    });
-    //projectsEl.addEventListener('mouseout', )
-
-    blogEl.addEventListener('mouseup', (e) => {
-        goTo('blog');
-    });
-
-    console.log(homePanelEl);
-    console.log(projectsPanelEl);
-
-    // Emits an event on the camera element;
-    function goTo(route) {
-        cameraEl.emit(route);
-        console.log(`Emit: ${route}`);
-    }
+    
 
     // CSS Setup
     let cssScene = new AFRAME.THREE.Scene();

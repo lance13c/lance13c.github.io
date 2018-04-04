@@ -127,22 +127,25 @@
                 </a-box>
 
 
-                <a-entity position="0 0 1.7" camera="active: true" look-controls wasd-controls rotation="0 0 0">
+                <a-entity position="0 0.3 1.7" camera="active: true" look-controls wasd-controls rotation="0 0 0">
                     <a-animation
                         attribute="position"
                         begin="home"
+                        dur: "800"
                         easing: "ease"                        
-                        to="0 0 1.7">
+                        to="0 0.3 1.7">
                     </a-animation>
                     <a-animation
                         attribute="position"
-                        begin="home"                        
-                        to="2 0 1.7">
+                        begin="projects"
+                        dur: "800",                     
+                        to="2 0.3 1.7">
                     </a-animation>
                     <a-animation
                         attribute="position"
-                        begin="home"                        
-                        to="-2 0 -3">
+                        begin="blog"
+                        dur: "800"                        
+                        to="-2 0.3 -3">
                     </a-animation>
                 </a-entity>
             </a-scene>
