@@ -46634,7 +46634,11 @@ module.exports = abstracts;
 
 require('./until/nav');
 
-require('./pages/home');
+var _home = require('./pages/home');
+
+var _home2 = _interopRequireDefault(_home);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //import './components/background';
 //import './components/birds';
@@ -46651,15 +46655,18 @@ var sceneEl = document.querySelector('a-scene');
 
 sceneEl.addEventListener('loaded', function () {
 
-    var homePanelEl = document.querySelector('.home__panel');
-    var homePanel = homePanelEl.getObject3D('mesh');
-    var projectsPanelEl = document.querySelector('.projects__panel');
+    var elements = {
+        homePanelEl: document.querySelector('.home__panel'),
+        projectsPanelEl: document.querySelector('.projects__panel'),
+        cameraEl: document.querySelector('[camera]')
+    };
 
-    var cameraEl = document.querySelector('[camera]');
-    var camera = cameraEl.getObject3D('camera');
+    var objects3d = {
+        camera: elements.cameraEl.getObject3D('camera'),
+        homePanel: elements.homePanelEl.getObject3D('mesh')
 
-    // CSS Setup
-    var cssScene = new AFRAME.THREE.Scene();
+        // CSS Setup
+    };var cssScene = new AFRAME.THREE.Scene();
     var cssRenderer = new THREE.CSS3DRenderer();
     cssRenderer.setSize(window.innerWidth, window.innerHeight);
     cssRenderer.domElement.style.position = 'absolute';
@@ -46671,8 +46678,23 @@ sceneEl.addEventListener('loaded', function () {
 
     // CSS Objects
 
-    var cssContainerEl = document.createElement('div');
+    _home2.default.init(cssScene, elements, objects3d);
 
+    console.log('Camera');
+    console.log(objects3d.camera);
+
+    function animate() {
+        requestAnimationFrame(animate);
+        cssRenderer.render(cssScene, objects3d.camera);
+    }
+    animate();
+});
+
+},{"./abstracts":3,"./pages/home":5,"./until/nav":6,"three-css3drenderer":1}],5:[function(require,module,exports){
+'use strict';
+
+function init(cssScene, elements, objects3d) {
+    var cssContainerEl = document.createElement('div');
     var cssHeaderEl = document.createElement('h1');
     cssHeaderEl.innerHTML = "testing";
 
@@ -46684,24 +46706,16 @@ sceneEl.addEventListener('loaded', function () {
     // create the object3d for this element
     var cssObject = new THREE.CSS3DObject(cssContainerEl);
     // we reference the same position and rotation 
-    cssObject.position.set(homePanel.position.x, homePanel.position.y, homePanel.position.z);
+    cssObject.position.set(objects3d.homePanel.position.x, objects3d.homePanel.position.y, objects3d.homePanel.position.z);
     cssObject.scale.set(0.01, 0.01, 0.01);
     cssObject.rotation.set(0, 0, 0);
     // add it to the css scene
     cssScene.add(cssObject);
+}
 
-    console.log('Camera');
-    console.log(camera);
-
-    function animate() {
-        requestAnimationFrame(animate);
-        cssRenderer.render(cssScene, camera);
-    }
-    animate();
-});
-
-},{"./abstracts":3,"./pages/home":5,"./until/nav":6,"three-css3drenderer":1}],5:[function(require,module,exports){
-"use strict";
+module.exports = {
+    init: init
+};
 
 },{}],6:[function(require,module,exports){
 'use strict';
