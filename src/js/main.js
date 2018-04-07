@@ -2,6 +2,7 @@
 //import './components/birds';
 
 import './until/nav';
+import responsiveVR from './layout/responsive_vr';
 import homePage from "./pages/home";
 
 const THREE = AFRAME.THREE;
@@ -17,6 +18,9 @@ let sceneEl = document.querySelector('a-scene');
 
 sceneEl.addEventListener('loaded', function() {
 
+    // Initialize Responsive VR
+    responsiveVR.init();
+
     let elements = {
         homePanelEl: document.querySelector('.home__panel'),
         projectsPanelEl: document.querySelector('.projects__panel'),
@@ -27,8 +31,6 @@ sceneEl.addEventListener('loaded', function() {
         camera: elements.cameraEl.getObject3D('camera'),
         homePanel: elements.homePanelEl.getObject3D('mesh'),
     }
-
-
     
 
     // CSS Setup

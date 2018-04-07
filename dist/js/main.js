@@ -46632,7 +46632,40 @@ module.exports = abstracts;
 },{}],4:[function(require,module,exports){
 'use strict';
 
+function init() {
+    var homePanel = document.querySelector('.home__panel');
+    var projectsPanel = document.querySelector('.projects__panel');
+    var blogPanel = document.querySelector('.blog__panel');
+    var resumePanel = document.querySelector('.resume__panel');
+    var lifePanel = document.querySelector('.life__panel');
+
+    var panels = [homePanel, projectsPanel, blogPanel, resumePanel, lifePanel];
+
+    // nav size
+    if (window.innerWidth > 700) {
+        var widthValue = 2; // 2 Meters width value
+        panels.forEach(function (panel) {
+            console.log(panel);
+            if (panel) {
+                panel.setAttribute("width", widthValue);
+            }
+        });
+        console.log("Desktop Mode");
+    }
+}
+
+module.exports = {
+    init: init
+};
+
+},{}],5:[function(require,module,exports){
+'use strict';
+
 require('./until/nav');
+
+var _responsive_vr = require('./layout/responsive_vr');
+
+var _responsive_vr2 = _interopRequireDefault(_responsive_vr);
 
 var _home = require('./pages/home');
 
@@ -46640,10 +46673,9 @@ var _home2 = _interopRequireDefault(_home);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//import './components/background';
+var THREE = AFRAME.THREE; //import './components/background';
 //import './components/birds';
 
-var THREE = AFRAME.THREE;
 var ThreeCSS = require('three-css3drenderer');
 THREE.CSS3DRenderer = ThreeCSS.CSS3DRenderer;
 THREE.CSS3DObject = ThreeCSS.CSS3DObject;
@@ -46654,6 +46686,9 @@ var abstracts = require('./abstracts');
 var sceneEl = document.querySelector('a-scene');
 
 sceneEl.addEventListener('loaded', function () {
+
+    // Initialize Responsive VR
+    _responsive_vr2.default.init();
 
     var elements = {
         homePanelEl: document.querySelector('.home__panel'),
@@ -46690,19 +46725,20 @@ sceneEl.addEventListener('loaded', function () {
     animate();
 });
 
-},{"./abstracts":3,"./pages/home":5,"./until/nav":6,"three-css3drenderer":1}],5:[function(require,module,exports){
+},{"./abstracts":3,"./layout/responsive_vr":4,"./pages/home":6,"./until/nav":7,"three-css3drenderer":1}],6:[function(require,module,exports){
 "use strict";
 
 function init(cssScene, elements, objects3d) {
     var cssContainerEl = document.createElement('div');
     cssContainerEl.setAttribute("id", "vr-home");
+    cssContainerEl.setAttribute("class", "vr-page__scale--1");
 
     var cssHeaderEl = document.createElement('h1');
     cssHeaderEl.innerHTML = "testing";
     cssHeaderEl.setAttribute('class', "header");
 
     var cssTextEl = document.createElement("p");
-    cssTextEl.innerHTML = "Testing html in webGL Testing html in webGL \n    Testing html in webGL Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    \n    ";
+    cssTextEl.innerHTML = "Testing html in webGL Testing html in webGL \n    Testing html in webGL Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    <a href=\"#\">Testing html in webGL</a>\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n\n    ";
 
     cssContainerEl.appendChild(cssHeaderEl);
     cssContainerEl.appendChild(cssTextEl);
@@ -46723,7 +46759,7 @@ module.exports = {
     init: init
 };
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -46740,6 +46776,7 @@ var BUFFER = 20; // Attempt to reduce nav hicups
 var ANIMATION_TIME = 800 + BUFFER;
 //let curAnimationRoute = cameraEl.querySelector('a-animation[begin="home"]');/
 //console.log(curAnimationRoute);
+
 
 homeEl.addEventListener('mouseup', function (e) {
     goTo('home', homeEl);
@@ -46790,6 +46827,6 @@ function setBeforePos(route) {
     }
 }
 
-},{}]},{},[4])
+},{}]},{},[5])
 
 //# sourceMappingURL=main.js.map

@@ -1,8 +1,12 @@
+
+
+
 let homeEl = document.querySelector('.nav--home');
 let projectsEl = document.querySelector('.nav--projects');
 let blogEl = document.querySelector('.nav--blog');
 let resumeEl = document.querySelector('.nav--resume');
 let lifeEl = document.querySelector('.nav--life');
+
 
 let cameraEl = document.querySelector('[camera]');
 
@@ -10,6 +14,10 @@ const BUFFER = 20;                  // Attempt to reduce nav hicups
 const ANIMATION_TIME = 800 + BUFFER;
 //let curAnimationRoute = cameraEl.querySelector('a-animation[begin="home"]');/
 //console.log(curAnimationRoute);
+
+
+
+
 
 homeEl.addEventListener('mouseup', (e) => {
     goTo('home', homeEl);

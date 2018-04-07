@@ -2,6 +2,7 @@
 function init(cssScene, elements, objects3d) {
     let cssContainerEl = document.createElement('div');
     cssContainerEl.setAttribute("id", "vr-home");
+    cssContainerEl.setAttribute("class", "vr-page__scale--1");
 
     let cssHeaderEl = document.createElement('h1');
     cssHeaderEl.innerHTML = "testing";
@@ -13,11 +14,13 @@ function init(cssScene, elements, objects3d) {
     Testing html in webGL
     Testing html in webGL
     Testing html in webGL
+    <a href="#">Testing html in webGL</a>
     Testing html in webGL
     Testing html in webGL
     Testing html in webGL
     Testing html in webGL
-    
+    Testing html in webGL
+
     `;
 
     cssContainerEl.appendChild(cssHeaderEl);
