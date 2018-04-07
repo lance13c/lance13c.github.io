@@ -1,30 +1,14 @@
+import homeHTML from '../../../dist/js/vrViews/home.html';
 
 function init(cssScene, elements, objects3d) {
-    let cssContainerEl = document.createElement('div');
+    console.log(homeHTML);
+
+    let cssContainerEl = document.createElement('section');
     cssContainerEl.setAttribute("id", "vr-home");
     cssContainerEl.setAttribute("class", "vr-page__scale--1");
 
-    let cssHeaderEl = document.createElement('h1');
-    cssHeaderEl.innerHTML = "testing";
-    cssHeaderEl.setAttribute('class', "header");
+    cssContainerEl.innerHTML += homeHTML;
 
-    let cssTextEl = document.createElement("p");
-    cssTextEl.innerHTML =`Testing html in webGL Testing html in webGL 
-    Testing html in webGL Testing html in webGL
-    Testing html in webGL
-    Testing html in webGL
-    Testing html in webGL
-    <a href="#">Testing html in webGL</a>
-    Testing html in webGL
-    Testing html in webGL
-    Testing html in webGL
-    Testing html in webGL
-    Testing html in webGL
-
-    `;
-
-    cssContainerEl.appendChild(cssHeaderEl);
-    cssContainerEl.appendChild(cssTextEl);
     // create the object3d for this element
     var cssObject = new THREE.CSS3DObject( cssContainerEl );
     // we reference the same position and rotation 

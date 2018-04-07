@@ -1,4 +1,9 @@
 (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
+'use strict';
+
+module.exports = '<div>\n    <h1 class="header">Test123</h1>\n    <p>\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n    </p>\n</div>\n';
+
+},{}],2:[function(require,module,exports){
 /**
  * Based on http://www.emagix.net/academic/mscs-project/item/camera-sync-with-css3-and-webgl-threejs
  * @author mrdoob / http://mrdoob.com/
@@ -317,7 +322,7 @@ CSS3DRenderer.prototype = Object.create( THREE.EventDispatcher.prototype );
 CSS3DRenderer.prototype.constructor = CSS3DRenderer;
 module.exports.CSS3DRenderer = CSS3DRenderer;
 
-},{"three":2}],2:[function(require,module,exports){
+},{"three":3}],3:[function(require,module,exports){
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -46604,7 +46609,7 @@ module.exports.CSS3DRenderer = CSS3DRenderer;
 
 })));
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 var abstracts = {
@@ -46629,7 +46634,7 @@ var abstracts = {
 
 module.exports = abstracts;
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 'use strict';
 
 function init() {
@@ -46658,7 +46663,7 @@ module.exports = {
     init: init
 };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 require('./until/nav');
@@ -46725,23 +46730,24 @@ sceneEl.addEventListener('loaded', function () {
     animate();
 });
 
-},{"./abstracts":3,"./layout/responsive_vr":4,"./pages/home":6,"./until/nav":7,"three-css3drenderer":1}],6:[function(require,module,exports){
-"use strict";
+},{"./abstracts":4,"./layout/responsive_vr":5,"./pages/home":7,"./until/nav":8,"three-css3drenderer":2}],7:[function(require,module,exports){
+'use strict';
+
+var _home = require('../../../dist/js/vrViews/home.html');
+
+var _home2 = _interopRequireDefault(_home);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function init(cssScene, elements, objects3d) {
-    var cssContainerEl = document.createElement('div');
+    console.log(_home2.default);
+
+    var cssContainerEl = document.createElement('section');
     cssContainerEl.setAttribute("id", "vr-home");
     cssContainerEl.setAttribute("class", "vr-page__scale--1");
 
-    var cssHeaderEl = document.createElement('h1');
-    cssHeaderEl.innerHTML = "testing";
-    cssHeaderEl.setAttribute('class', "header");
+    cssContainerEl.innerHTML += _home2.default;
 
-    var cssTextEl = document.createElement("p");
-    cssTextEl.innerHTML = "Testing html in webGL Testing html in webGL \n    Testing html in webGL Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    <a href=\"#\">Testing html in webGL</a>\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n    Testing html in webGL\n\n    ";
-
-    cssContainerEl.appendChild(cssHeaderEl);
-    cssContainerEl.appendChild(cssTextEl);
     // create the object3d for this element
     var cssObject = new THREE.CSS3DObject(cssContainerEl);
     // we reference the same position and rotation 
@@ -46759,7 +46765,7 @@ module.exports = {
     init: init
 };
 
-},{}],7:[function(require,module,exports){
+},{"../../../dist/js/vrViews/home.html":1}],8:[function(require,module,exports){
 'use strict';
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -46827,6 +46833,6 @@ function setBeforePos(route) {
     }
 }
 
-},{}]},{},[5])
+},{}]},{},[6])
 
 //# sourceMappingURL=main.js.map

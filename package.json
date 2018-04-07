@@ -23,6 +23,7 @@
     "browserify": "^16.1.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-html-to-js": "0.0.6",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-sync": "^0.1.4",
