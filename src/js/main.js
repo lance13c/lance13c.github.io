@@ -18,8 +18,6 @@ let sceneEl = document.querySelector('a-scene');
 
 sceneEl.addEventListener('loaded', function() {
 
-    // Initialize Responsive VR
-    responsiveVR.init();
 
     let elements = {
         homePanelEl: document.querySelector('.home__panel'),
@@ -46,7 +44,6 @@ sceneEl.addEventListener('loaded', function() {
     //element.src = 'assets/images/projects/hero/hero0.png';
 
     // CSS Objects
-
     homePage.init(cssScene, elements, objects3d);
 
 
@@ -59,6 +56,8 @@ sceneEl.addEventListener('loaded', function() {
     }
     animate();
 
+    // Initialize Responsive VR
+    responsiveVR.init();
 });
 
 

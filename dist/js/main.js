@@ -46644,7 +46644,10 @@ function init() {
     var resumePanel = document.querySelector('.resume__panel');
     var lifePanel = document.querySelector('.life__panel');
 
+    var vrHome = document.querySelector('#vr-home');
+
     var panels = [homePanel, projectsPanel, blogPanel, resumePanel, lifePanel];
+    var panelHTML = [vrHome];
 
     // nav size
     if (window.innerWidth > 700) {
@@ -46655,7 +46658,33 @@ function init() {
                 panel.setAttribute("width", widthValue);
             }
         });
+
+        panelHTML.forEach(function (html) {
+            if (html) {
+                html.setAttribute("class", "vr-page__scale--2");
+                console.log('html changed');
+            }
+        });
+
         console.log("Desktop Mode");
+    }
+
+    if (window.innerWidth <= 700) {
+        var _widthValue = 1; // 2 Meters width value
+        panels.forEach(function (panel) {
+            console.log(panel);
+            if (panel) {
+                panel.setAttribute("width", _widthValue);
+            }
+        });
+
+        panelHTML.forEach(function (html) {
+            if (html) {
+                html.setAttribute("class", "vr-page__scale--1");
+            }
+        });
+
+        console.log("Mobile Mode");
     }
 }
 
@@ -46692,9 +46721,6 @@ var sceneEl = document.querySelector('a-scene');
 
 sceneEl.addEventListener('loaded', function () {
 
-    // Initialize Responsive VR
-    _responsive_vr2.default.init();
-
     var elements = {
         homePanelEl: document.querySelector('.home__panel'),
         projectsPanelEl: document.querySelector('.projects__panel'),
@@ -46717,7 +46743,6 @@ sceneEl.addEventListener('loaded', function () {
     //element.src = 'assets/images/projects/hero/hero0.png';
 
     // CSS Objects
-
     _home2.default.init(cssScene, elements, objects3d);
 
     console.log('Camera');
@@ -46728,6 +46753,9 @@ sceneEl.addEventListener('loaded', function () {
         cssRenderer.render(cssScene, objects3d.camera);
     }
     animate();
+
+    // Initialize Responsive VR
+    _responsive_vr2.default.init();
 });
 
 },{"./abstracts":4,"./layout/responsive_vr":5,"./pages/home":7,"./until/nav":8,"three-css3drenderer":2}],7:[function(require,module,exports){
