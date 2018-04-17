@@ -28,6 +28,13 @@ AFRAME.registerComponent('item-selector', {
         this.el.setAttribute('position', '-0.1 0.2 0.1');
         this.el.setAttribute('rotation', '0 0 -75');
 
+        
+        // Add Tools
+        // Adding Remover Tool
+        let removerTool = document.createElement('a-entity');
+        removerTool.setAttribute('vr-eraser-toggle', "");
+        this.el.appendChild(removerTool);
+
 
         // Preview Icon Container
         const ICON_HEIGHT = 0.05;

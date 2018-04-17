@@ -190,6 +190,12 @@ AFRAME.registerComponent('item-selector', {
         this.el.setAttribute('position', '-0.1 0.2 0.1');
         this.el.setAttribute('rotation', '0 0 -75');
 
+        // Add Tools
+        // Adding Remover Tool
+        var removerTool = document.createElement('a-entity');
+        removerTool.setAttribute('vr-eraser-toggle', "");
+        this.el.appendChild(removerTool);
+
         // Preview Icon Container
         var ICON_HEIGHT = 0.05;
         var ICON_WIDTH = 0.05;
@@ -402,6 +408,60 @@ AFRAME.registerComponent('preview-icon', {
 },{}],5:[function(require,module,exports){
 'use strict';
 
+AFRAME.registerComponent('vr-eraser-toggle', {
+    // This is a controller tool. Must be placed on the controller element.
+    schema: {},
+
+    init: function init() {
+        var _this = this;
+
+        // Variables
+        this.buttonHover = false;
+
+        // Sliding Toggle Circle 
+        var stcGeo = new THREE.CircleBufferGeometry(0.1, 30);
+        var stcMat = new THREE.MeshBasicMaterial({
+            color: '#7993C7'
+        });
+        var stcMesh = new THREE.Mesh(ssrGeo, ssrMat);
+
+        // Sliding Surface Rectangle
+        var ssrGeo = new THREE.CubeGeometry(0.01, 0.1, 0.2);
+        var ssrMat = new THREE.MeshBasicMaterial({
+            color: '#444455'
+        });
+        var ssrMesh = new THREE.Mesh(ssrGeo, ssrMat);
+
+        this.el.setObject3D('ssr', ssrMesh);
+        this.el.setObject3D('stc', stcMesh);
+
+        // Event Listeners
+        this.el.addEventListener('hitstart', function (e) {
+
+            var assetEl = _this.el.components['aabb-collider']['intersectedEls'][0];
+
+            // Create a bounding box if the element is an object model
+            if (assetEl) {
+                if (assetEl.components['hand-controls']) {
+                    console.log("Hit Toggle");
+                }
+            }
+        });
+
+        this.el.addEventListener('hitend', function (e) {
+            console.log("Moved Away from Toggle");
+        });
+    },
+    update: function update() {},
+    tick: function tick() {},
+    remove: function remove() {},
+    pause: function pause() {},
+    play: function play() {}
+});
+
+},{}],6:[function(require,module,exports){
+'use strict';
+
 AFRAME.registerComponent('vr-eraser', {
     // This is a controller tool. Must be placed on the controller element.
     schema: {},
@@ -503,7 +563,7 @@ AFRAME.registerComponent('vr-eraser', {
     play: function play() {}
 });
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 require('./projects/vr-mechanism');
@@ -516,14 +576,18 @@ require('./components/grab-assets');
 
 require('./components/vr-eraser');
 
-var abstracts = require('./abstracts'); //import './components/background';
+require('./components/vr-eraser-toggle');
+
+//import './components/background';
 //import './components/birds';
 
 //import './components/vr-background-nav';
 
-},{"./abstracts":1,"./components/grab-assets":2,"./components/vr-arm-item-selector":3,"./components/vr-arm-preview-icon":4,"./components/vr-eraser":5,"./projects/vr-mechanism":7}],7:[function(require,module,exports){
+var abstracts = require('./abstracts');
+
+},{"./abstracts":1,"./components/grab-assets":2,"./components/vr-arm-item-selector":3,"./components/vr-arm-preview-icon":4,"./components/vr-eraser":6,"./components/vr-eraser-toggle":5,"./projects/vr-mechanism":8}],8:[function(require,module,exports){
 "use strict";
 
-},{}]},{},[6])
+},{}]},{},[7])
 
 //# sourceMappingURL=main.js.map
