@@ -65,6 +65,9 @@ AFRAME.registerComponent('grab-assets', {
                         } else if (assetEl.components['obj-model']) {
                             // Object Model Clicked
                             _this.updateExistingAsset(assetEl);
+                        } else if (assetEl.components['vr-eraser-toggle']) {
+                            console.log("vr-eraser toggle");
+                            assetEl.emit('click', { el: _this.el });
                         }
                     }
                     console.log('colliding');
@@ -179,7 +182,7 @@ AFRAME.registerComponent('item-selector', {
         this.assetList = [];
 
         // Display rectangle
-        var displayG = new THREE.BoxBufferGeometry(0.2, 0.01, 0.35);
+        var displayG = new THREE.BoxBufferGeometry(0.3, 0.01, 0.5);
         var displayM = new THREE.MeshBasicMaterial({
             color: 0xbbbbff,
             side: 'double'
@@ -187,19 +190,38 @@ AFRAME.registerComponent('item-selector', {
         this.displayMesh = new THREE.Mesh(displayG, displayM);
 
         this.el.setObject3D('mesh', this.displayMesh);
-        this.el.setAttribute('position', '-0.1 0.2 0.1');
+        this.el.setAttribute('position', '-0.1 0.3 0.1');
         this.el.setAttribute('rotation', '0 0 -75');
+
+        // Add Labels
+        var assetText = document.createElement('a-text');
+        assetText.setAttribute('value', 'Assets');
+        assetText.setAttribute('rotation', '-90 90 0');
+        assetText.setAttribute('scale', '0.1 0.1 0.1');
+        assetText.setAttribute('position', '-0.11 0.01 0.24');
+        assetText.setAttribute('color', '#010101');
+
+        this.el.appendChild(assetText);
+
+        var toolsText = document.createElement('a-text');
+        toolsText.setAttribute('rotation', '-90 90 0');
+        toolsText.setAttribute('scale', '0.1 0.1 0.1');
+        toolsText.setAttribute('position', '0.03 0.01 0.24');
+        toolsText.setAttribute('color', '#010101');
+        toolsText.setAttribute('value', 'Tools');
+        this.el.appendChild(toolsText);
 
         // Add Tools
         // Adding Remover Tool
         var removerTool = document.createElement('a-entity');
         removerTool.setAttribute('vr-eraser-toggle', "");
+        removerTool.setAttribute('position', "0.08 0.01 0.21");
         this.el.appendChild(removerTool);
 
         // Preview Icon Container
         var ICON_HEIGHT = 0.05;
         var ICON_WIDTH = 0.05;
-        this.ICON_OFFSET = 0.11;
+        this.ICON_OFFSET = 0.21;
         this.ICON_MULTIPLYER = 0.08;
 
         var previewIconContainerG = new THREE.BoxBufferGeometry(ICON_HEIGHT, 0.01, ICON_WIDTH);
@@ -227,7 +249,7 @@ AFRAME.registerComponent('item-selector', {
     updateAssetList: function updateAssetList(newAssetList) {
         var _this = this;
 
-        // Remove all previous elements from the list
+        // TODO: Remove all previous elements from the list
         // if (this.currentAssetElements.length > 0) {
         //     this.currentAssetElements.forEach((asset) => {
         //         this.el.removeObject3D(asset.name. asset.mesh);
@@ -242,7 +264,7 @@ AFRAME.registerComponent('item-selector', {
                 var icon = document.createElement('a-entity');
 
                 icon.setAttribute('preview-icon', 'name: ' + asset.name + '; obj: ' + asset.obj + '; mtl: ' + asset.mtl + '; previewImage: ' + asset.previewImage);
-                icon.setAttribute('position', '0 0.01 ' + (-i * _this.ICON_MULTIPLYER + _this.ICON_OFFSET));
+                icon.setAttribute('position', '-0.045 0.01 ' + (-i * _this.ICON_MULTIPLYER + _this.ICON_OFFSET));
                 _this.el.appendChild(icon);
 
                 console.log('Element Created');
@@ -416,47 +438,78 @@ AFRAME.registerComponent('vr-eraser-toggle', {
         var _this = this;
 
         // Variables
-        this.buttonHover = false;
+        this.eraserActive = false;
 
-        // Sliding Toggle Circle 
-        var stcGeo = new THREE.CircleBufferGeometry(0.1, 30);
-        var stcMat = new THREE.MeshBasicMaterial({
-            color: '#7993C7'
+        // Eraser Tool Rectangle
+        var etGeo = new THREE.BoxBufferGeometry(0.025, 0.01, 0.05);
+        var etMat = new THREE.MeshBasicMaterial({
+            color: '#e8a5a0'
         });
-        var stcMesh = new THREE.Mesh(ssrGeo, ssrMat);
+        this.etMesh = new THREE.Mesh(etGeo, etMat);
 
-        // Sliding Surface Rectangle
-        var ssrGeo = new THREE.CubeGeometry(0.01, 0.1, 0.2);
-        var ssrMat = new THREE.MeshBasicMaterial({
-            color: '#444455'
+        // Placeholder for the Eraser
+        var pGeo = new THREE.BoxBufferGeometry(0.025, 0.001, 0.05);
+        var pMat = new THREE.MeshBasicMaterial({
+            color: '#C5344A',
+            wireframe: true
         });
-        var ssrMesh = new THREE.Mesh(ssrGeo, ssrMat);
+        this.pMesh = new THREE.Mesh(pGeo, pMat);
 
-        this.el.setObject3D('ssr', ssrMesh);
-        this.el.setObject3D('stc', stcMesh);
+        this.el.setObject3D('et', this.etMesh);
+        // Must be called 'mesh' in order for aabb colider to work
+        this.el.setObject3D('mesh', this.pMesh);
+
+        // Text
+        // Todo: A tool UI component should be created that has the option of text instead of creating tool specific text and icons here.
+        var eraserText = document.createElement('a-text');
+        eraserText.setAttribute('value', 'Eraser');
+        eraserText.setAttribute('rotation', '-90 90 0');
+        eraserText.setAttribute('scale', '0.05 0.05 0.05');
+        eraserText.setAttribute('position', '0.03 0 0.02');
+        eraserText.setAttribute('color', '#010101');
+        this.el.appendChild(eraserText);
+
+        this.el.flushToDOM();
+
+        // Set collider
+        this.el.setAttribute('aabb-collider', 'objects: [hand-controls]');
+        this.el.setAttribute('class', 'collides');
+        this.el.flushToDOM();
 
         // Event Listeners
-        this.el.addEventListener('hitstart', function (e) {
-
-            var assetEl = _this.el.components['aabb-collider']['intersectedEls'][0];
-
-            // Create a bounding box if the element is an object model
-            if (assetEl) {
-                if (assetEl.components['hand-controls']) {
-                    console.log("Hit Toggle");
-                }
+        this.el.addEventListener('click', function (e) {
+            var targetEl = e.detail.el;
+            console.log('targetEl');
+            console.log(targetEl);
+            if (_this.eraserActive) {
+                _this.removeEraser(targetEl);
+                _this.eraserActive = false;
+                console.log("Remove Eraser");
+            } else {
+                _this.attachEraser(targetEl);
+                _this.eraserActive = true;
+                console.log("Add Eraser");
             }
-        });
-
-        this.el.addEventListener('hitend', function (e) {
-            console.log("Moved Away from Toggle");
         });
     },
     update: function update() {},
     tick: function tick() {},
     remove: function remove() {},
     pause: function pause() {},
-    play: function play() {}
+    play: function play() {},
+
+    attachEraser: function attachEraser(controllerEl) {
+        if (controllerEl) {
+            controllerEl.setAttribute('vr-eraser', "");
+            this.el.removeObject3D('et');
+        }
+    },
+    removeEraser: function removeEraser(controllerEl) {
+        if (controllerEl) {
+            controllerEl.removeAttribute('vr-eraser');
+            this.el.setObject3D('et', this.etMesh);
+        }
+    }
 });
 
 },{}],6:[function(require,module,exports){
@@ -499,66 +552,72 @@ AFRAME.registerComponent('vr-eraser', {
 
         this.el.flushToDOM();
 
-        this.el.addEventListener('hitstart', function (e) {
+        this.events = {
+            hitstart: function hitstart(e) {
 
-            var assetEl = _this.el.components['aabb-collider']['intersectedEls'][0];
+                var assetEl = _this.el.components['aabb-collider']['intersectedEls'][0];
 
-            // Create a bounding box if the element is an object model
-            if (assetEl) {
-                if (assetEl.components['obj-model']) {
-                    // Object Model Clicked
-                    //let boundingBox = new THREE.BoundingBoxHelper(assetEl.getObject3D('mesh'), 0xff0000);
-                    //this.el.sceneEl.add(boundingBox);
-                    assetEl.setObject3D('ddBox', _this.ddBoxMesh);
-                    _this.previousAssetHit = assetEl;
-                }
-            }
-
-            console.log("Eraser HIT");
-            _this.eraserHover = true;
-            _this.eraserMesh.material.color.setHex(0xFF0000);
-        });
-
-        this.el.addEventListener('hitend', function (e) {
-
-            // Remove a bounding box if the element is an object model
-            if (_this.previousAssetHit) {
-                _this.previousAssetHit.removeObject3D('ddBox');
-                _this.previousAssetHit = undefined;
-            }
-
-            console.log("Eraser END");
-            _this.eraserHover = false;
-            _this.eraserMesh.material.color.setHex(0xCC6666);
-        });
-
-        // Collision Detection
-
-        this.controller.addEventListener('triggerdown', function (e) {
-            console.log('trigger down');
-            // The controller can either be "free" or "colliding" as specified in the main.js file
-            // Colliding refers to colliding with a preview-icon
-            if (_this.controller.is('colliding')) {
-                try {
-                    var assetEl = _this.el.components['aabb-collider']['intersectedEls'][0];
-                    var assetData = undefined;
-                    if (assetEl) {
-                        if (assetEl.components['obj-model']) {
-                            assetEl.parentNode.removeChild(assetEl);
-                        }
+                // Create a bounding box if the element is an object model
+                if (assetEl) {
+                    if (assetEl.components['obj-model']) {
+                        // Object Model Clicked
+                        //let boundingBox = new THREE.BoundingBoxHelper(assetEl.getObject3D('mesh'), 0xff0000);
+                        //this.el.sceneEl.add(boundingBox);
+                        assetEl.setObject3D('ddBox', _this.ddBoxMesh);
+                        _this.previousAssetHit = assetEl;
                     }
-                    console.log('colliding');
-                } catch (e) {
-                    console.log(e);
+                }
+
+                console.log("Eraser HIT");
+                _this.eraserHover = true;
+                _this.eraserMesh.material.color.setHex(0xFF0000);
+            },
+            hitend: function hitend(e) {
+
+                // Remove a bounding box if the element is an object model
+                if (_this.previousAssetHit) {
+                    _this.previousAssetHit.removeObject3D('ddBox');
+                    _this.previousAssetHit = undefined;
+                }
+
+                console.log("Eraser END");
+                _this.eraserHover = false;
+                _this.eraserMesh.material.color.setHex(0xCC6666);
+            },
+            triggerdown: function triggerdown(e) {
+                console.log('trigger down');
+                // The controller can either be "free" or "colliding" as specified in the main.js file
+                // Colliding refers to colliding with a preview-icon
+                if (_this.controller.is('colliding')) {
+                    try {
+                        var assetEl = _this.el.components['aabb-collider']['intersectedEls'][0];
+                        var assetData = undefined;
+                        if (assetEl) {
+                            if (assetEl.components['obj-model']) {
+                                assetEl.parentNode.removeChild(assetEl);
+                            }
+                        }
+                        console.log('colliding');
+                    } catch (e) {
+                        console.log(e);
+                    }
                 }
             }
-        });
+        };
+
+        this.el.addEventListener('hitstart', this.events.hitstart);
+        this.el.addEventListener('hitend', this.events.hitend);
+        this.el.addEventListener('triggerdown', this.events.triggerdown);
     },
     update: function update() {},
-    tick: function tick() {
-        if (this.eraserHover) {}
+    tick: function tick() {},
+    remove: function remove() {
+        this.el.removeEventListener('hitstart', this.events.hitstart);
+        this.el.removeEventListener('hitend', this.events.hitend);
+        this.el.removeEventListener('triggerdown', this.events.triggerdown);
+
+        this.el.removeObject3D('eraser');
     },
-    remove: function remove() {},
     pause: function pause() {},
     play: function play() {}
 });
