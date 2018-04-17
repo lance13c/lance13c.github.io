@@ -402,6 +402,110 @@ AFRAME.registerComponent('preview-icon', {
 },{}],5:[function(require,module,exports){
 'use strict';
 
+AFRAME.registerComponent('vr-eraser', {
+    // This is a controller tool. Must be placed on the controller element.
+    schema: {},
+
+    init: function init() {
+        var _this = this;
+
+        this.controller = this.el;
+
+        // Variables
+        this.eraserHover = false;
+        this.previousAssetHit = undefined; // Tracks the previous asset the eraser was in contact with
+
+
+        // Set Eraser
+        var eraserGeo = new THREE.CubeGeometry(0.05, 0.1, 0.02);
+        var eraserMat = new THREE.MeshBasicMaterial({
+            color: '#e8a5a0'
+        });
+
+        this.eraserMesh = new THREE.Mesh(eraserGeo, eraserMat);
+        this.eraserMesh.translateZ(-0.1);
+        this.eraserMesh.rotateX(Math.PI / 2);
+        this.el.setObject3D('eraser', this.eraserMesh);
+        this.el.setAttribute('aabb-collider', 'objects: .collides');
+
+        // Deletion Detection Box
+        var ddBoxGeo = new THREE.CubeGeometry(25, 25, 25);
+        var ddBoxMat = new THREE.MeshBasicMaterial({
+            color: '#ff0000',
+            wireframe: true
+        });
+
+        this.ddBoxMesh = new THREE.Mesh(ddBoxGeo, ddBoxMat);
+
+        this.el.flushToDOM();
+
+        this.el.addEventListener('hitstart', function (e) {
+
+            var assetEl = _this.el.components['aabb-collider']['intersectedEls'][0];
+
+            // Create a bounding box if the element is an object model
+            if (assetEl) {
+                if (assetEl.components['obj-model']) {
+                    // Object Model Clicked
+                    //let boundingBox = new THREE.BoundingBoxHelper(assetEl.getObject3D('mesh'), 0xff0000);
+                    //this.el.sceneEl.add(boundingBox);
+                    assetEl.setObject3D('ddBox', _this.ddBoxMesh);
+                    _this.previousAssetHit = assetEl;
+                }
+            }
+
+            console.log("Eraser HIT");
+            _this.eraserHover = true;
+            _this.eraserMesh.material.color.setHex(0xFF0000);
+        });
+
+        this.el.addEventListener('hitend', function (e) {
+
+            // Remove a bounding box if the element is an object model
+            if (_this.previousAssetHit) {
+                _this.previousAssetHit.removeObject3D('ddBox');
+                _this.previousAssetHit = undefined;
+            }
+
+            console.log("Eraser END");
+            _this.eraserHover = false;
+            _this.eraserMesh.material.color.setHex(0xCC6666);
+        });
+
+        // Collision Detection
+
+        this.controller.addEventListener('triggerdown', function (e) {
+            console.log('trigger down');
+            // The controller can either be "free" or "colliding" as specified in the main.js file
+            // Colliding refers to colliding with a preview-icon
+            if (_this.controller.is('colliding')) {
+                try {
+                    var assetEl = _this.el.components['aabb-collider']['intersectedEls'][0];
+                    var assetData = undefined;
+                    if (assetEl) {
+                        if (assetEl.components['obj-model']) {
+                            assetEl.parentNode.removeChild(assetEl);
+                        }
+                    }
+                    console.log('colliding');
+                } catch (e) {
+                    console.log(e);
+                }
+            }
+        });
+    },
+    update: function update() {},
+    tick: function tick() {
+        if (this.eraserHover) {}
+    },
+    remove: function remove() {},
+    pause: function pause() {},
+    play: function play() {}
+});
+
+},{}],6:[function(require,module,exports){
+'use strict';
+
 require('./projects/vr-mechanism');
 
 require('./components/vr-arm-item-selector');
@@ -410,16 +514,16 @@ require('./components/vr-arm-preview-icon');
 
 require('./components/grab-assets');
 
-//import './components/background';
+require('./components/vr-eraser');
+
+var abstracts = require('./abstracts'); //import './components/background';
 //import './components/birds';
 
 //import './components/vr-background-nav';
 
-var abstracts = require('./abstracts');
-
-},{"./abstracts":1,"./components/grab-assets":2,"./components/vr-arm-item-selector":3,"./components/vr-arm-preview-icon":4,"./projects/vr-mechanism":6}],6:[function(require,module,exports){
+},{"./abstracts":1,"./components/grab-assets":2,"./components/vr-arm-item-selector":3,"./components/vr-arm-preview-icon":4,"./components/vr-eraser":5,"./projects/vr-mechanism":7}],7:[function(require,module,exports){
 "use strict";
 
-},{}]},{},[5])
+},{}]},{},[6])
 
 //# sourceMappingURL=main.js.map

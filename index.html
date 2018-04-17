@@ -35,7 +35,7 @@
                     </a-box>
 
                     <a-box class="testBox" 
-                    position="-0.5 1 -1sasa"
+                    position="-0.5 1 -1"
                     width="1"
                     height="1"
                     depth="1"
@@ -43,11 +43,11 @@
                     rotation="0 0 0">
                     </a-box>
 
-                <a-entity hand-controls="left" grab-assets aabb-collider="objects: .collides">
+                <a-entity hand-controls="left" grab-assets vr-eraser aabb-collider="objects: .collides">
                     <a-sphere class="sphere-controller" radius="0.03" color="blue" position="0 -0.01 0.2"></a-sphere>
                     <a-entity class="testSelector" item-selector></a-entity>
                  </a-entity>
-                 <a-entity hand-controls="right" grab-assets aabb-collider="objects: .collides">
+                 <a-entity hand-controls="right" grab-assets vr-eraser aabb-collider="objects: .collides">
                     <a-sphere class="sphere-controller" radius="0.03" color="blue" position="0 -0.01 0.2"></a-sphere>
                 </a-entity>
             </a-scene>
