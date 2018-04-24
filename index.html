@@ -99,6 +99,18 @@
                     rotation="90 0 0">
                     </a-box>
 
+
+                <a-box  class="welcome__panel"
+                    material="shader: flat; side: double; color: #F6FAFB"
+                    shadow="cast: true"
+                    position="0 5 19"
+                    width="1"
+                    height="1"
+                    depth="1"
+                    visible="false"
+                    color="0xff00ff">
+                </a-box>
+
                 <a-box  class="home__panel"
                         material="shader: flat; side: double; color: #F6FAFB"
                         shadow="cast: true"
@@ -127,7 +139,7 @@
                 </a-box>
 
 
-                <a-entity position="0 0.4 1.7" camera="active: true" look-controls wasd-controls rotation="0 0 0">
+                <a-entity position="0 5 20" camera="active: true" look-controls wasd-controls rotation="0 0 0">
                     <a-animation
                         attribute="position"
                         begin="home"
@@ -146,6 +158,13 @@
                         begin="blog"
                         dur: "800"                        
                         to="-2 0.3 -3">
+                    </a-animation>
+
+                    <a-animation
+                        attribute="position"
+                        begin="welcome"
+                        dur: "800"                        
+                        to="0 5 -8">
                     </a-animation>
                 </a-entity>
             </a-scene>

@@ -1,9 +1,14 @@
 (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
 'use strict';
 
-module.exports = '<div>\n    <h1 class="header">Test123</h1>\n    <p>\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n    </p>\n</div>\n';
+module.exports = '<div>\n    <h1 class="header">Test123</h1>\n    <p>\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n\n    </p>\n</div>\n';
 
 },{}],2:[function(require,module,exports){
+'use strict';
+
+module.exports = '<section>\n    <h1 class="typewriter welcome-title">Cicilio Studio</h1>\n</section>';
+
+},{}],3:[function(require,module,exports){
 /**
  * Based on http://www.emagix.net/academic/mscs-project/item/camera-sync-with-css3-and-webgl-threejs
  * @author mrdoob / http://mrdoob.com/
@@ -322,7 +327,7 @@ CSS3DRenderer.prototype = Object.create( THREE.EventDispatcher.prototype );
 CSS3DRenderer.prototype.constructor = CSS3DRenderer;
 module.exports.CSS3DRenderer = CSS3DRenderer;
 
-},{"three":3}],3:[function(require,module,exports){
+},{"three":4}],4:[function(require,module,exports){
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -46609,7 +46614,7 @@ module.exports.CSS3DRenderer = CSS3DRenderer;
 
 })));
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 var abstracts = {
@@ -46634,7 +46639,7 @@ var abstracts = {
 
 module.exports = abstracts;
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 'use strict';
 
 function init() {
@@ -46692,7 +46697,7 @@ module.exports = {
     init: init
 };
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 require('./until/nav');
@@ -46705,11 +46710,17 @@ var _home = require('./pages/home');
 
 var _home2 = _interopRequireDefault(_home);
 
+var _welcome = require('./pages/welcome');
+
+var _welcome2 = _interopRequireDefault(_welcome);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var THREE = AFRAME.THREE; //import './components/background';
+// Pages
+//import './components/background';
 //import './components/birds';
 
+var THREE = AFRAME.THREE;
 var ThreeCSS = require('three-css3drenderer');
 THREE.CSS3DRenderer = ThreeCSS.CSS3DRenderer;
 THREE.CSS3DObject = ThreeCSS.CSS3DObject;
@@ -46723,13 +46734,15 @@ sceneEl.addEventListener('loaded', function () {
 
     var elements = {
         homePanelEl: document.querySelector('.home__panel'),
+        welcomePanelEl: document.querySelector('.welcome__panel'),
         projectsPanelEl: document.querySelector('.projects__panel'),
         cameraEl: document.querySelector('[camera]')
     };
 
     var objects3d = {
         camera: elements.cameraEl.getObject3D('camera'),
-        homePanel: elements.homePanelEl.getObject3D('mesh')
+        homePanel: elements.homePanelEl.getObject3D('mesh'),
+        welcomePanel: elements.welcomePanelEl.getObject3D('mesh')
 
         // CSS Setup
     };var cssScene = new AFRAME.THREE.Scene();
@@ -46742,8 +46755,9 @@ sceneEl.addEventListener('loaded', function () {
     //var element = document.createElement( 'img' );
     //element.src = 'assets/images/projects/hero/hero0.png';
 
-    // CSS Objects
+    // CSS Objects  / Pages
     _home2.default.init(cssScene, elements, objects3d);
+    _welcome2.default.init(cssScene, elements, objects3d);
 
     console.log('Camera');
     console.log(objects3d.camera);
@@ -46758,23 +46772,23 @@ sceneEl.addEventListener('loaded', function () {
     _responsive_vr2.default.init();
 });
 
-},{"./abstracts":4,"./layout/responsive_vr":5,"./pages/home":7,"./until/nav":8,"three-css3drenderer":2}],7:[function(require,module,exports){
+},{"./abstracts":5,"./layout/responsive_vr":6,"./pages/home":8,"./pages/welcome":9,"./until/nav":10,"three-css3drenderer":3}],8:[function(require,module,exports){
 'use strict';
 
-var _home = require('../../../dist/js/vrViews/home.html');
+var _homeHtml = require('../../../dist/js/vrViews/home.html.js');
 
-var _home2 = _interopRequireDefault(_home);
+var _homeHtml2 = _interopRequireDefault(_homeHtml);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function init(cssScene, elements, objects3d) {
-    console.log(_home2.default);
+    console.log(_homeHtml2.default);
 
     var cssContainerEl = document.createElement('section');
     cssContainerEl.setAttribute("id", "vr-home");
     cssContainerEl.setAttribute("class", "vr-page__scale--1");
 
-    cssContainerEl.innerHTML += _home2.default;
+    cssContainerEl.innerHTML += _homeHtml2.default;
 
     // create the object3d for this element
     var cssObject = new THREE.CSS3DObject(cssContainerEl);
@@ -46793,7 +46807,44 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/home.html":1}],8:[function(require,module,exports){
+},{"../../../dist/js/vrViews/home.html.js":1}],9:[function(require,module,exports){
+'use strict';
+
+var _welcomeHtml = require('../../../dist/js/vrViews/welcome.html.js');
+
+var _welcomeHtml2 = _interopRequireDefault(_welcomeHtml);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function init(cssScene, elements, objects3d) {
+    //console.log(welcomeHTML);
+
+    var cssContainerEl = document.createElement('section');
+    cssContainerEl.setAttribute("id", "vr-welcome");
+    //cssContainerEl.setAttribute("class", "vr-page__scale--1");
+
+    cssContainerEl.innerHTML += _welcomeHtml2.default;
+
+    // create the object3d for this element
+    var cssObject = new THREE.CSS3DObject(cssContainerEl);
+    // we reference the same position and rotation 
+
+
+    var welcomePos = elements.welcomePanelEl.components.position.data;
+
+    //const yOffset = 0.55;
+    cssObject.position.set(welcomePos.x, welcomePos.y, welcomePos.z);
+    cssObject.scale.set(0.01, 0.01, 0.01);
+    cssObject.rotation.set(0, 0, 0);
+    // add it to the css scene
+    cssScene.add(cssObject);
+}
+
+module.exports = {
+    init: init
+};
+
+},{"../../../dist/js/vrViews/welcome.html.js":2}],10:[function(require,module,exports){
 'use strict';
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -46861,6 +46912,6 @@ function setBeforePos(route) {
     }
 }
 
-},{}]},{},[6])
+},{}]},{},[7])
 
 //# sourceMappingURL=main.js.map

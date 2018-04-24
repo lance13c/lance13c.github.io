@@ -3,7 +3,10 @@
 
 import './until/nav';
 import responsiveVR from './layout/responsive_vr';
+
+// Pages
 import homePage from "./pages/home";
+import welcomePage from "./pages/welcome";
 
 const THREE = AFRAME.THREE;
 const ThreeCSS = require('three-css3drenderer');
@@ -21,6 +24,7 @@ sceneEl.addEventListener('loaded', function() {
 
     let elements = {
         homePanelEl: document.querySelector('.home__panel'),
+        welcomePanelEl: document.querySelector('.welcome__panel'),
         projectsPanelEl: document.querySelector('.projects__panel'),
         cameraEl: document.querySelector('[camera]'),
     }
@@ -28,6 +32,7 @@ sceneEl.addEventListener('loaded', function() {
     let objects3d = {
         camera: elements.cameraEl.getObject3D('camera'),
         homePanel: elements.homePanelEl.getObject3D('mesh'),
+        welcomePanel: elements.welcomePanelEl.getObject3D('mesh'),
     }
     
 
@@ -43,8 +48,9 @@ sceneEl.addEventListener('loaded', function() {
     //var element = document.createElement( 'img' );
     //element.src = 'assets/images/projects/hero/hero0.png';
 
-    // CSS Objects
+    // CSS Objects  / Pages
     homePage.init(cssScene, elements, objects3d);
+    welcomePage.init(cssScene, elements, objects3d);
 
 
     console.log('Camera');

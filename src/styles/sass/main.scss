@@ -13,6 +13,7 @@
 // VR Pages
 @import "./layouts/vrpages/shared";
 @import "./layouts/vrpages/home";
+@import "./layouts/vrpages/welcome";
 
 // Components
 @import "./components/sketchfabs";
@@ -21,6 +22,8 @@
 @import "./components/icons/resume";
 @import "./components/icons/projects";
 @import "./components/icons/blog";
+
+@import "./components/misc/typewriter";
 
 // Icons
 @import "./components/icon_flask_a";
