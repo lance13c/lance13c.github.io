@@ -1,2 +1,2 @@
 'use strict';
-module.exports = '<section>\n    <h1 class="typewriter welcome-title">Cicilio Studio</h1>\n</section>';
+module.exports = '<section class="welcome-container">\n    <span class="typewriter welcome-title">Cicilio Studio</span><span class="welcome-title blink welcome-cursor">_</span>\n</section>\n';

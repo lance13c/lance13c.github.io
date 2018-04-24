@@ -1,4 +1,15 @@
-.welcome-title { 
-    margin-bottom: 140px;
-    font-size: 32px;
+.welcome-container {
+    vertical-align: top;
+    white-space: nowrap;
+    margin-bottom: 70px;
+
+        .welcome-title { 
+        vertical-align: top;
+        display: inline-block;
+        font-size: 32px;
+
+        .welcome-cursor {
+            color: limegreen;
+        }
+    }
 }
