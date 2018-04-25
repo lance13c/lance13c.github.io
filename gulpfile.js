@@ -72,9 +72,9 @@ gulp.task('vrViews', function() {
  
 gulp.task('watch', function() {
   gulp.watch(pathsSrc.styles.files, ['sass']);
-  gulp.watch(pathsSrc.views, ['views']);
+  gulp.watch(pathsSrc.views, ['views', 'compileJS']);
   gulp.watch(pathsSrc.js, ['compileJS']);
-  gulp.watch(pathsSrc.vrViews, ['vrViews']);
+  gulp.watch(pathsSrc.vrViews, ['vrViews', 'compileJS']);
 });
 
 gulp.task('views', function() {
