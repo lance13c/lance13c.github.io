@@ -1,6 +1,4 @@
 
-
-
 // Desktop
 @media (min-width: 701px) {
 
@@ -8,10 +6,6 @@
         //font-size: 62.5%;
         .mobile {
             display: none;
-        }
-
-        .welcome__title {
-            font-size: 330%;
         }
     }
     
@@ -21,8 +15,6 @@
 @media (max-width: 700px) {
 
     html {
-        //font-size: 50%;
-
         .desktop {
             display: none;
         }
@@ -30,17 +22,7 @@
         .text__content {
             font-size: 56%;
         }
-
-        .welcome__title {
-            font-size: 150%;
-        }
-
     }
-
-    // .text__content {
-    //     font-size: 50%;
-    // }
-    
 }
 
 // Mobile
@@ -54,14 +36,6 @@
 
         .text__content {
             font-size: 50%;
-        }
-
-        .welcome__container {
-            margin-bottom: 100px;
-
-            .welcome__title {
-                font-size: 80%;
-            }
         }
         
     }

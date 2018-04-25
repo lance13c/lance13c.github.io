@@ -3,20 +3,22 @@
     white-space: nowrap;
     margin-bottom: 150px;
 
-        .welcome__title { 
-            vertical-align: top;
-            display: inline-block;
-
-        .welcome__cursor {
-            color: limegreen;
-        }
-
-        .welcome__sub__title {
-            display: inline-block;
-            //animation: title-fade-in 0.5s  ease;
-            //animation-delay: $title-fade-in-time;
-        }
+    .welcome__cursor {
+        color: limegreen;
     }
+    
+}
+
+@mixin welcome__title--mixin() { 
+    vertical-align: top;
+    display: inline-block;
+}
+
+@mixin welcome__sub__title--mixin() {
+    font-family: $default-font;
+    text-align: center;
+    //animation: title-fade-in 0.5s  ease;
+    //animation-delay: $title-fade-in-time;
 }
 
 @keyframes title-fade-in {
@@ -25,5 +27,58 @@
     }
     to {
         opacity: 1;
+    }
+}
+
+
+// Desktop
+@media (min-width: 701px) {
+
+    html {
+        .welcome__title {
+            @include welcome__title--mixin();
+            font-size: 250%;
+        }
+
+        .welcome__sub__title {
+            @include welcome__sub__title--mixin();
+            font-size: 90%;
+        }
+    }
+    
+}
+
+// Tablet/small desktop
+@media (max-width: 700px) {
+
+    html {
+        .welcome__title {
+            @include welcome__title--mixin();
+            font-size: 150%;
+        }
+
+        .welcome__sub__title {
+            @include welcome__sub__title--mixin();
+            font-size: 50%;
+        }
+    }    
+}
+
+// Mobile
+@media (max-width: 500px) {
+    html {
+        .welcome__container {
+            margin-bottom: 100px;
+
+            .welcome__title {
+                @include welcome__title--mixin();
+                font-size: 80%;
+            }
+
+            .welcome__sub__title {
+                @include welcome__sub__title--mixin();
+                font-size: 50%;
+            }
+        }
     }
 }
