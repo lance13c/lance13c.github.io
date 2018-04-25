@@ -6,7 +6,7 @@ module.exports = '<div>\n    <h1 class="header">Test123</h1>\n    <p>\n        T
 },{}],2:[function(require,module,exports){
 'use strict';
 
-module.exports = '<section class="welcome-container">\n    <span class="typewriter welcome-title">Cicilio Studio</span><span class="welcome-title blink welcome-cursor">_</span>\n</section>\n';
+module.exports = '<section class="welcome__container">\n    <span class="console-writer welcome__title">Cicilio Studio</span><span class="welcome__title blink welcome__cursor">_</span>\n    <div class="welcome__sub__title">Testing 123</div>\n</section>\n';
 
 },{}],3:[function(require,module,exports){
 /**
@@ -46706,9 +46706,9 @@ var _responsive_vr = require('./layout/responsive_vr');
 
 var _responsive_vr2 = _interopRequireDefault(_responsive_vr);
 
-var _home = require('./pages/home');
+var _resume = require('./pages/resume');
 
-var _home2 = _interopRequireDefault(_home);
+var _resume2 = _interopRequireDefault(_resume);
 
 var _welcome = require('./pages/welcome');
 
@@ -46733,7 +46733,7 @@ var sceneEl = document.querySelector('a-scene');
 sceneEl.addEventListener('loaded', function () {
 
     var elements = {
-        homePanelEl: document.querySelector('.home__panel'),
+        resumePanelEl: document.querySelector('.resume__panel'),
         welcomePanelEl: document.querySelector('.welcome__panel'),
         projectsPanelEl: document.querySelector('.projects__panel'),
         cameraEl: document.querySelector('[camera]')
@@ -46741,8 +46741,9 @@ sceneEl.addEventListener('loaded', function () {
 
     var objects3d = {
         camera: elements.cameraEl.getObject3D('camera'),
-        homePanel: elements.homePanelEl.getObject3D('mesh'),
-        welcomePanel: elements.welcomePanelEl.getObject3D('mesh')
+        resumePanel: elements.resumePanelEl.getObject3D('mesh'),
+        welcomePanel: elements.welcomePanelEl.getObject3D('mesh'),
+        projectsPanel: elements.projectsPanelEl.getObject3D('mesh')
 
         // CSS Setup
     };var cssScene = new AFRAME.THREE.Scene();
@@ -46756,7 +46757,7 @@ sceneEl.addEventListener('loaded', function () {
     //element.src = 'assets/images/projects/hero/hero0.png';
 
     // CSS Objects  / Pages
-    _home2.default.init(cssScene, elements, objects3d);
+    _resume2.default.init(cssScene, elements, objects3d);
     _welcome2.default.init(cssScene, elements, objects3d);
 
     console.log('Camera');
@@ -46772,23 +46773,22 @@ sceneEl.addEventListener('loaded', function () {
     _responsive_vr2.default.init();
 });
 
-},{"./abstracts":5,"./layout/responsive_vr":6,"./pages/home":8,"./pages/welcome":9,"./until/nav":10,"three-css3drenderer":3}],8:[function(require,module,exports){
+},{"./abstracts":5,"./layout/responsive_vr":6,"./pages/resume":8,"./pages/welcome":9,"./until/nav":10,"three-css3drenderer":3}],8:[function(require,module,exports){
 'use strict';
 
-var _homeHtml = require('../../../dist/js/vrViews/home.html.js');
+var _resumeHtml = require('../../../dist/js/vrViews/resume.html.js');
 
-var _homeHtml2 = _interopRequireDefault(_homeHtml);
+var _resumeHtml2 = _interopRequireDefault(_resumeHtml);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function init(cssScene, elements, objects3d) {
-    console.log(_homeHtml2.default);
 
     var cssContainerEl = document.createElement('section');
-    cssContainerEl.setAttribute("id", "vr-home");
+    cssContainerEl.setAttribute("id", "vr-resume");
     cssContainerEl.setAttribute("class", "vr-page__scale--1");
 
-    cssContainerEl.innerHTML += _homeHtml2.default;
+    cssContainerEl.innerHTML += _resumeHtml2.default;
 
     // create the object3d for this element
     var cssObject = new THREE.CSS3DObject(cssContainerEl);
@@ -46796,7 +46796,7 @@ function init(cssScene, elements, objects3d) {
 
 
     //const yOffset = 0.55;
-    cssObject.position.set(objects3d.homePanel.position.x, 0, objects3d.homePanel.position.z);
+    cssObject.position.set(objects3d.resumePanel.position.x, 0, objects3d.resumePanel.position.z);
     cssObject.scale.set(0.01, 0.01, 0.01);
     cssObject.rotation.set(0, 0, 0);
     // add it to the css scene
@@ -46807,7 +46807,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/home.html.js":1}],9:[function(require,module,exports){
+},{"../../../dist/js/vrViews/resume.html.js":1}],9:[function(require,module,exports){
 'use strict';
 
 var _welcomeHtml = require('../../../dist/js/vrViews/welcome.html.js');
@@ -46849,10 +46849,10 @@ module.exports = {
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
-var homeEl = document.querySelector('.nav--home');
 var projectsEl = document.querySelector('.nav--projects');
 var blogEl = document.querySelector('.nav--blog');
 var resumeEl = document.querySelector('.nav--resume');
+var welcomeEl = document.querySelector('.nav--home');
 var lifeEl = document.querySelector('.nav--life');
 
 var cameraEl = document.querySelector('[camera]');
@@ -46863,8 +46863,8 @@ var ANIMATION_TIME = 800 + BUFFER;
 //console.log(curAnimationRoute);
 
 
-homeEl.addEventListener('mouseup', function (e) {
-    goTo('home', homeEl);
+welcomeEl.addEventListener('mouseup', function (e) {
+    goTo('welcome', welcomeEl);
 });
 
 projectsEl.addEventListener('mouseup', function (e) {
@@ -46873,6 +46873,10 @@ projectsEl.addEventListener('mouseup', function (e) {
 
 blogEl.addEventListener('mouseup', function (e) {
     goTo('blog', blogEl);
+});
+
+resumeEl.addEventListener('mouseup', function (e) {
+    goTo('resume', resumeEl);
 });
 
 // Emits an event on the camera element;

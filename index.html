@@ -111,7 +111,7 @@
                     color="0xff00ff">
                 </a-box>
 
-                <a-box  class="home__panel"
+                <a-box  class="resume__panel"
                         material="shader: flat; side: double; color: #F6FAFB"
                         shadow="cast: true"
                         position="0 0.3 0"
@@ -139,10 +139,10 @@
                 </a-box>
 
 
-                <a-entity position="0 5 20" camera="active: true" look-controls wasd-controls rotation="0 0 0">
+                <a-entity position="0 5 20" camera="active: true" wasd-controls rotation="0 0 0">
                     <a-animation
                         attribute="position"
-                        begin="home"
+                        begin="resume"
                         dur: "800"
                         easing: "ease"                        
                         to="0 0.3 1.7">
@@ -164,7 +164,7 @@
                         attribute="position"
                         begin="welcome"
                         dur: "800"                        
-                        to="0 5 -8">
+                        to="0 5 20">
                     </a-animation>
                 </a-entity>
             </a-scene>

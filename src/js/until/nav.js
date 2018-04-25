@@ -1,10 +1,10 @@
 
 
 
-let homeEl = document.querySelector('.nav--home');
 let projectsEl = document.querySelector('.nav--projects');
 let blogEl = document.querySelector('.nav--blog');
 let resumeEl = document.querySelector('.nav--resume');
+let welcomeEl = document.querySelector('.nav--home');
 let lifeEl = document.querySelector('.nav--life');
 
 
@@ -17,10 +17,8 @@ const ANIMATION_TIME = 800 + BUFFER;
 
 
 
-
-
-homeEl.addEventListener('mouseup', (e) => {
-    goTo('home', homeEl);
+welcomeEl.addEventListener('mouseup', (e) => {
+    goTo('welcome', welcomeEl);
 });
 
 projectsEl.addEventListener('mouseup', (e) => {
@@ -29,6 +27,10 @@ projectsEl.addEventListener('mouseup', (e) => {
 
 blogEl.addEventListener('mouseup', (e) => {
     goTo('blog', blogEl);
+});
+
+resumeEl.addEventListener('mouseup', (e) => {
+    goTo('resume', resumeEl);
 });
 
 // Emits an event on the camera element;

@@ -5,7 +5,7 @@ import './until/nav';
 import responsiveVR from './layout/responsive_vr';
 
 // Pages
-import homePage from "./pages/home";
+import resumePage from "./pages/resume";
 import welcomePage from "./pages/welcome";
 
 const THREE = AFRAME.THREE;
@@ -23,7 +23,7 @@ sceneEl.addEventListener('loaded', function() {
 
 
     let elements = {
-        homePanelEl: document.querySelector('.home__panel'),
+        resumePanelEl: document.querySelector('.resume__panel'),
         welcomePanelEl: document.querySelector('.welcome__panel'),
         projectsPanelEl: document.querySelector('.projects__panel'),
         cameraEl: document.querySelector('[camera]'),
@@ -31,8 +31,9 @@ sceneEl.addEventListener('loaded', function() {
 
     let objects3d = {
         camera: elements.cameraEl.getObject3D('camera'),
-        homePanel: elements.homePanelEl.getObject3D('mesh'),
+        resumePanel: elements.resumePanelEl.getObject3D('mesh'),
         welcomePanel: elements.welcomePanelEl.getObject3D('mesh'),
+        projectsPanel: elements.projectsPanelEl.getObject3D('mesh'),
     }
     
 
@@ -49,7 +50,7 @@ sceneEl.addEventListener('loaded', function() {
     //element.src = 'assets/images/projects/hero/hero0.png';
 
     // CSS Objects  / Pages
-    homePage.init(cssScene, elements, objects3d);
+    resumePage.init(cssScene, elements, objects3d);
     welcomePage.init(cssScene, elements, objects3d);
 
 

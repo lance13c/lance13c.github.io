@@ -1,4 +1,4 @@
-.typewriter {
+.console-writer {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: 2px solid $theme-mono-color-6; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -15,7 +15,7 @@
   /* The typing effect */
   @keyframes typing {
     0% { width: 0 }
-    100% { width: 92%; }
+    100% { width: 94%; }    // 94% because otherwise carrot is too far away from 
   }
   
   /* The typewriter cursor effect */

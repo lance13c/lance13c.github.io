@@ -1,15 +1,29 @@
-.welcome-container {
+.welcome__container {
     vertical-align: top;
     white-space: nowrap;
-    margin-bottom: 70px;
+    margin-bottom: 150px;
 
-        .welcome-title { 
-        vertical-align: top;
-        display: inline-block;
-        font-size: 32px;
+        .welcome__title { 
+            vertical-align: top;
+            display: inline-block;
 
-        .welcome-cursor {
+        .welcome__cursor {
             color: limegreen;
         }
+
+        .welcome__sub__title {
+            display: inline-block;
+            //animation: title-fade-in 0.5s  ease;
+            //animation-delay: $title-fade-in-time;
+        }
+    }
+}
+
+@keyframes title-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
