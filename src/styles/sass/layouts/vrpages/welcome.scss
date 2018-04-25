@@ -4,7 +4,7 @@
     margin-bottom: 150px;
 
     .welcome__cursor {
-        color: limegreen;
+        //color: limegreen;
     }
     
 }
@@ -16,17 +16,22 @@
 
 @mixin welcome__sub__title--mixin() {
     font-family: $default-font;
-    text-align: center;
-    //animation: title-fade-in 0.5s  ease;
-    //animation-delay: $title-fade-in-time;
+    padding-left: 1px;
+    color: transparent;
+    animation: title-fade-in 0.5s  ease;
+    animation-delay: $title-fade-in-time;
+    animation-fill-mode: forwards;
+    transform: rotate(0deg);
 }
 
 @keyframes title-fade-in {
     from {
-        opacity: 0;
+        color: transparent;
+        //transform: translateX(-5px);
     }
     to {
-        opacity: 1;
+        color: initial;
+        //transform: translateX(0px);
     }
 }
 
@@ -59,7 +64,7 @@
 
         .welcome__sub__title {
             @include welcome__sub__title--mixin();
-            font-size: 50%;
+            font-size: 20%;
         }
     }    
 }
@@ -72,12 +77,12 @@
 
             .welcome__title {
                 @include welcome__title--mixin();
-                font-size: 80%;
+                font-size: 100%;
             }
 
             .welcome__sub__title {
                 @include welcome__sub__title--mixin();
-                font-size: 50%;
+                font-size: 5px;
             }
         }
     }
