@@ -1,12 +1,15 @@
 //import './components/background';
 //import './components/birds';
 
-import './until/nav';
+import './util/nav';
 import responsiveVR from './layout/responsive_vr';
 
 // Pages
 import resumePage from "./pages/resume";
 import welcomePage from "./pages/welcome";
+
+// Projects
+import ProjectWheel from './util/projectwheel';
 
 const THREE = AFRAME.THREE;
 const ThreeCSS = require('three-css3drenderer');
@@ -53,6 +56,12 @@ sceneEl.addEventListener('loaded', function() {
     resumePage.init(cssScene, elements, objects3d);
     welcomePage.init(cssScene, elements, objects3d);
 
+    // Init Projects
+    let projectPos = elements.projectsPanelEl.components.position.data;
+
+    let projectwheel = new ProjectWheel(sceneEl, cssScene, projectPos);
+    projectwheel.spawnRooms();
+
 
     console.log('Camera');
     console.log(objects3d.camera);
@@ -64,7 +73,7 @@ sceneEl.addEventListener('loaded', function() {
     animate();
 
     // Initialize Responsive VR
-    responsiveVR.init();
+    responsiveVR.update();
 });
 
 

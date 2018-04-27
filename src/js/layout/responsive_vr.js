@@ -1,18 +1,21 @@
 
 
 
-function init() {
+function update() {
     let homePanel = document.querySelector('.home__panel');
     let projectsPanel = document.querySelector('.projects__panel');
     let blogPanel = document.querySelector('.blog__panel');
     let resumePanel = document.querySelector('.resume__panel');
     let lifePanel = document.querySelector('.life__panel');
+    let cameraEl = document.querySelector('[camera]');
 
     let vrHome = document.querySelector('#vr-home');
 
-
-    let panels = [homePanel, projectsPanel, blogPanel, resumePanel, lifePanel];
+// TODO: change the panels to query all .panel classes instead
+    //let panels = [homePanel, projectsPanel, blogPanel, resumePanel, lifePanel];
     let panelHTML = [vrHome];
+
+    let panels = document.querySelectorAll('.panel');
 
 
 
@@ -32,6 +35,9 @@ function init() {
                 console.log('html changed');
             }
         });
+
+        // Add look controls
+        //cameraEl.setAttribute('look-controls');
         
         console.log("Desktop Mode");
     }
@@ -57,5 +63,5 @@ function init() {
 }
 
 module.exports = {
-    init: init
+    update: update
 };

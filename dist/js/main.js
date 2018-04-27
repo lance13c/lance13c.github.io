@@ -1,14 +1,247 @@
 (function(){function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s}return e})()({1:[function(require,module,exports){
+module.exports={
+  "projects": [
+    {
+      "name": "Web Lego Car",
+      "short_des": "Controlling a lego car via a webpage controller",
+      "date": "November 2016 - December 2016",
+      "description": "",
+      "github_url": "https://github.com/lance13c/web-lego-car",
+      "download_url": "",
+      "cs_url": "/projects/weblegocar",
+      "blog": "",
+      "images": ["https://raw.githubusercontent.com/lance13c/web-lego-car/master/images/0.jpg"],
+      "videos": ""
+    },
+    {
+      "name": "Bluetooth Lights",
+      "short_des": "Creatively control multiple RPG LED's with a PS3 Move Controller",
+      "date": "May 2015 - Present",
+      "description": "",
+      "github_url": "https://github.com/lance13c/BluetoothLights",
+      "download_url": "",
+      "demo_url": "",
+      "cs_url": "/projects/bluetoothlights",
+      "blog": "",
+      "images": ["/assets/images/projects/bluetoothlights/btl2.jpg", "/assets/images/projects/bluetoothlights/btl3.jpg", "/assets/images/projects/bluetoothlights/btl4.jpg","/assets/images/projects/bluetoothlights/btl5.jpg",
+        "/assets/images/projects/bluetoothlights/btl6.jpg", "/assets/images/projects/bluetoothlights/btl7.jpg","/assets/images/projects/bluetoothlights/btl8.jpg", "/assets/images/projects/bluetoothlights/btl9.jpg", "/assets/images/projects/bluetoothlights/btl10.jpg",
+        "/assets/images/projects/bluetoothlights/btl11.jpg", "/assets/images/projects/bluetoothlights/btl12.jpg", "/assets/images/projects/bluetoothlights/btl13.jpg", "/assets/images/projects/bluetoothlights/btl15.jpg"],
+      "videos": "IlwwBhS5HJY"
+    },
+    {
+      "name": "Hero2.0",
+      "short_des": "2D Platform Shooter. Inspired by Thing Thing Arena 2",
+      "description": "2D Platform Shooter. Inspired by Thing Thing Arena 2. Developed during junior year in high school",
+      "date": "January 2012 - November 2012",
+      "github_url": "",
+      "cs_url": "/projects/hero2",
+      "download_url": "https://www.dropbox.com/s/6winwjc686q0nm1/Hero2.0.exe?dl=0",
+      "demo_url": "",
+      "blog": "",
+      "images": ["/assets/images/projects/hero/hero0.png", "/assets/images/projects/hero/hero1.png", "/assets/images/projects/hero/hero2.png", "/assets/images/projects/hero/hero3.png", "/assets/images/projects/hero/hero4.png", "/assets/images/projects/hero/hero5.png",
+        "/assets/images/projects/hero/hero7.png", "/assets/images/projects/hero/hero8.png", "/assets/images/projects/hero/hero9.png", "/assets/images/projects/hero/hero10.png", "/assets/images/projects/hero/hero11.png",
+        "/assets/images/projects/hero/hero12.png", "/assets/images/projects/hero/hero13.png"],
+      "videos": ""
+    },
+    {
+      "name": "Trebuchet",
+      "short_des": "Trebuchet created as a side project. Participated in the Vermont Mini Maker Fair throwing 26 pumpkins.",
+      "date": "March 2012 - September 2012",
+      "description": "",
+      "github_url": "",
+      "download_url": "",
+      "demo_url": "",
+      "cs_url": "/projects/trebuchet",
+      "blog": "",
+      "images": ["/assets/images/projects/trebuchet/trebuchet4.jpg", "/assets/images/projects/trebuchet/trebuchet5.jpg", "/assets/images/projects/trebuchet/trebuchet3.jpg", "/assets/images/projects/trebuchet/trebuchet1.jpg",
+        "/assets/images/projects/trebuchet/trebuchet2.jpg", "/assets/images/projects/trebuchet/trebuchet6.jpg", "/assets/images/projects/trebuchet/trebuchet7.jpg", "/assets/images/projects/trebuchet/trebuchet8.jpg",
+        "/assets/images/projects/trebuchet/trebuchet9.jpg"],
+      "videos": "M3tX7j7sx44"
+    },
+    {
+      "name": "SpaceFighter",
+      "short_des": "Wave Based SpaceFighter",
+      "date": "August 2010",
+      "description": "",
+      "github_url": "",
+      "download_url": "",
+      "demo_url": "",
+      "cs_url": "/projects/spacefighter",
+      "blog": "",
+      "images": ["/assets/images/projects/spacefighter/sf0.png", "/assets/images/projects/spacefighter/sf1.png", "/assets/images/projects/spacefighter/sf2.png",
+        "/assets/images/projects/spacefighter/sf3.png", "/assets/images/projects/spacefighter/sf4.png", "/assets/images/projects/spacefighter/sf5.png",
+        "/assets/images/projects/spacefighter/sf6.png", "/assets/images/projects/spacefighter/sf7.png"],
+      "videos": "",
+      "variables": {}
+    },
+    {
+      "name": "HololensTimer",
+      "short_des": "Timer Application writen in Aframe & D3",
+      "date": "March 2017",
+      "description": "",
+      "github_url": "",
+      "download_url": "",
+      "demo_url": "",
+      "cs_url": "/projects/hololens-timer",
+      "blog": "",
+      "images": ["/assets/images/projects/trebuchet/trebuchet4.jpg"],
+      "videos": "",
+      "variables": {
+        "time": "00:00"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "name": "JavaScript",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "main.home",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+        },
+        {
+          "name" : "Browser Pal",
+          "url": "main.projects",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet7.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Java",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "main.skills",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Piano",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+        }
+      ]
+    },
+    {
+      "name": "Swing Dancing",
+      "experience": "4/5",
+      "description": "",
+      "projects" : []
+    },
+    {
+      "name": "Python",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+        }
+      ]
+    },
+    {
+      "name": "NodeJS",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "main.skills",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+        }
+      ]
+    },
+    {
+      "name": "AngularJS",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "Trebuchet",
+          "url": "main.projects",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+        }
+      ]
+    },
+    {
+      "name": "CSS",
+      "experience": "4/5",
+      "description": "",
+      "projects" : [
+        {
+          "name" : "CicilioStudio",
+          "url": "",
+          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+        }
+      ]
+    }
+  ],
+  "life" : {
+    "blog" : "Music and Dancing ",
+    "bio": "Passionate VR Web Developer who loves swing dancing and exploring music at the piano.",
+    "images": [],
+    "videos": []
+  },
+  "resume": {
+    "url": "/resume/resume.pdf"
+  },
+  "specific_project": {
+    "title_image": "/assets/images/background/hexabump/hexabump.png"
+  },
+  "site": {
+    "fav_icon": "/assets/images/projects/ciciliostudio/favicon5.png"
+  },
+  "new_knowledge": [
+    {
+      "local_url": "",
+      "external_url_list": [],
+      "date": "3/17/2017",
+      "blurb": "Looking into D3.js"
+    },
+    {
+      "local_url": "",
+      "external_url_list": [],
+      "date": "3/16/2017",
+      "blurb": "Looking into Aframe.js"
+    }
+  ],
+  "weekly_life": {
+    "school_week": {
+      "swing dancing": {
+        "average_hours": 10
+      },
+      "classes": {
+        "average_hours": 20
+      },
+      "school_work": {
+        "average_hours": 20
+      }
+    }
+  }
+}
+},{}],2:[function(require,module,exports){
 'use strict';
 
 module.exports = '<div>\n    <h1 class="header">Test123</h1>\n    <p>\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n\n    </p>\n</div>\n';
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 'use strict';
 
 module.exports = '<section class="welcome__container">\n    <span><span class="console-writer welcome__title">Cicilio Studio</span><span class="welcome__title blink welcome__cursor">_</span></span>\n    <div class="welcome__sub__title">Dominic Cicilio 3D Web Developer</div>\n</section>\n';
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /**
  * Based on http://www.emagix.net/academic/mscs-project/item/camera-sync-with-css3-and-webgl-threejs
  * @author mrdoob / http://mrdoob.com/
@@ -327,7 +560,7 @@ CSS3DRenderer.prototype = Object.create( THREE.EventDispatcher.prototype );
 CSS3DRenderer.prototype.constructor = CSS3DRenderer;
 module.exports.CSS3DRenderer = CSS3DRenderer;
 
-},{"three":4}],4:[function(require,module,exports){
+},{"three":5}],5:[function(require,module,exports){
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -46614,7 +46847,7 @@ module.exports.CSS3DRenderer = CSS3DRenderer;
 
 })));
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 "use strict";
 
 var abstracts = {
@@ -46639,20 +46872,24 @@ var abstracts = {
 
 module.exports = abstracts;
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
-function init() {
+function update() {
     var homePanel = document.querySelector('.home__panel');
     var projectsPanel = document.querySelector('.projects__panel');
     var blogPanel = document.querySelector('.blog__panel');
     var resumePanel = document.querySelector('.resume__panel');
     var lifePanel = document.querySelector('.life__panel');
+    var cameraEl = document.querySelector('[camera]');
 
     var vrHome = document.querySelector('#vr-home');
 
-    var panels = [homePanel, projectsPanel, blogPanel, resumePanel, lifePanel];
+    // TODO: change the panels to query all .panel classes instead
+    //let panels = [homePanel, projectsPanel, blogPanel, resumePanel, lifePanel];
     var panelHTML = [vrHome];
+
+    var panels = document.querySelectorAll('.panel');
 
     // nav size
     if (window.innerWidth > 700) {
@@ -46670,6 +46907,9 @@ function init() {
                 console.log('html changed');
             }
         });
+
+        // Add look controls
+        //cameraEl.setAttribute('look-controls');
 
         console.log("Desktop Mode");
     }
@@ -46694,13 +46934,13 @@ function init() {
 }
 
 module.exports = {
-    init: init
+    update: update
 };
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 'use strict';
 
-require('./until/nav');
+require('./util/nav');
 
 var _responsive_vr = require('./layout/responsive_vr');
 
@@ -46714,13 +46954,21 @@ var _welcome = require('./pages/welcome');
 
 var _welcome2 = _interopRequireDefault(_welcome);
 
+var _projectwheel = require('./util/projectwheel');
+
+var _projectwheel2 = _interopRequireDefault(_projectwheel);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var THREE = AFRAME.THREE;
+
+// Projects
+
 
 // Pages
 //import './components/background';
 //import './components/birds';
 
-var THREE = AFRAME.THREE;
 var ThreeCSS = require('three-css3drenderer');
 THREE.CSS3DRenderer = ThreeCSS.CSS3DRenderer;
 THREE.CSS3DObject = ThreeCSS.CSS3DObject;
@@ -46760,6 +47008,12 @@ sceneEl.addEventListener('loaded', function () {
     _resume2.default.init(cssScene, elements, objects3d);
     _welcome2.default.init(cssScene, elements, objects3d);
 
+    // Init Projects
+    var projectPos = elements.projectsPanelEl.components.position.data;
+
+    var projectwheel = new _projectwheel2.default(sceneEl, cssScene, projectPos);
+    projectwheel.spawnRooms();
+
     console.log('Camera');
     console.log(objects3d.camera);
 
@@ -46770,10 +47024,10 @@ sceneEl.addEventListener('loaded', function () {
     animate();
 
     // Initialize Responsive VR
-    _responsive_vr2.default.init();
+    _responsive_vr2.default.update();
 });
 
-},{"./abstracts":5,"./layout/responsive_vr":6,"./pages/resume":8,"./pages/welcome":9,"./until/nav":10,"three-css3drenderer":3}],8:[function(require,module,exports){
+},{"./abstracts":6,"./layout/responsive_vr":7,"./pages/resume":9,"./pages/welcome":10,"./util/nav":11,"./util/projectwheel":12,"three-css3drenderer":4}],9:[function(require,module,exports){
 'use strict';
 
 var _resumeHtml = require('../../../dist/js/vrViews/resume.html.js');
@@ -46807,7 +47061,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/resume.html.js":1}],9:[function(require,module,exports){
+},{"../../../dist/js/vrViews/resume.html.js":2}],10:[function(require,module,exports){
 'use strict';
 
 var _welcomeHtml = require('../../../dist/js/vrViews/welcome.html.js');
@@ -46844,7 +47098,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/welcome.html.js":2}],10:[function(require,module,exports){
+},{"../../../dist/js/vrViews/welcome.html.js":3}],11:[function(require,module,exports){
 'use strict';
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -46916,6 +47170,135 @@ function setBeforePos(route) {
     }
 }
 
-},{}]},{},[7])
+},{}],12:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _data = require('../../../assets/data/data.json');
+
+var _data2 = _interopRequireDefault(_data);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ProjectWheel = function () {
+    function ProjectWheel(sceneEl, cssScene, initPos) {
+        _classCallCheck(this, ProjectWheel);
+
+        this.initPos = initPos;
+        this.projects = _data2.default.projects;
+        this.radius = 3;
+        this.sceneEl = sceneEl;
+        this.cssScene = cssScene;
+        this.ZOFFSET = 1.8;
+    }
+
+    _createClass(ProjectWheel, [{
+        key: 'spawnRooms',
+        value: function spawnRooms() {
+            var _this = this;
+
+            if (this.projects) {
+                this.projects.forEach(function (project, index, array) {
+                    _this.createProjectPanel(index, array.length);
+                });
+            }
+        }
+    }, {
+        key: 'createProjectPanel',
+        value: function createProjectPanel(index, total) {
+
+            // Panel Creation
+            var el = document.createElement('a-box');
+            var pos = this.calcCirclePos(index, total); // Gets x and z positions
+            console.log(this.initPos.x + pos.x + ' ' + this.initPos.y + ' ' + (this.initPos.z + pos.z));
+            var panelFinalPos = { x: this.initPos.x + pos.x, y: this.initPos.y, z: this.initPos.z - this.ZOFFSET + pos.z / 3 };
+            el.setAttribute('position', ' ' + panelFinalPos.x + ' ' + panelFinalPos.y + ' ' + panelFinalPos.z);
+            el.setAttribute('class', 'panel panel__project');
+            el.setAttribute('material', 'shader: flat; side: double; color: #F6FAFB, blending: normal');
+            el.setAttribute('width', 1);
+            el.setAttribute('height', 2);
+            el.setAttribute('depth', 0.1);
+
+            this.sceneEl.appendChild(el);
+
+            // HTML Object Creation
+            var cssContainerEl = document.createElement('section');
+            cssContainerEl.setAttribute("class", "vr-page__scale--1 project__panel__html");
+
+            // Set HTML
+            var html = this.createPanelHTML(this.projects[index]);
+            console.log(this.projects[index]);
+            cssContainerEl.innerHTML += html;
+
+            // create the object3d for this element
+            var cssObject = new THREE.CSS3DObject(cssContainerEl);
+            //this.cssScene.blending = 'none';
+
+            console.log('material');
+            console.log(cssObject);
+            // we reference the same position and rotation 
+
+
+            //const yOffset = 0.55;
+            cssObject.position.set(panelFinalPos.x, panelFinalPos.y, panelFinalPos.z);
+            cssObject.scale.set(0.01, 0.01, 0.01);
+            cssObject.rotation.set(0, 0, 0);
+            // add it to the css scene
+            this.cssScene.add(cssObject);
+        }
+
+        // Calculates a position within a circle to place an obj
+
+    }, {
+        key: 'calcCirclePos',
+        value: function calcCirclePos(index, total) {
+            var angle = Math.PI * 2 / total * index;
+            console.log('angle ' + angle);
+            var z = this.radius * Math.sin(angle);
+            var x = this.radius * Math.cos(angle);
+            return { x: x, z: z };
+        }
+
+        // Removes every project panel currently existing
+
+    }, {
+        key: 'removeAllProjectPanels',
+        value: function removeAllProjectPanels() {
+            var projectPanels = document.querySelectorAll('.panel__project');
+            if (projectPanels) {
+                projectPanels.forEach(function (panel) {
+                    panel.parentElement.removeChild(panel);
+                });
+            }
+        }
+    }, {
+        key: 'createPanelHTML',
+        value: function createPanelHTML(projectData) {
+            var html = '\n            <h1>' + projectData.name + '</h1>\n            <h3>' + projectData.short_des + '</h3>\n            <div class="project__image__container">\n                ' + function () {
+                return '<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>';
+                //return projectData.imageList.forEach((src) => {
+
+                //})
+            } + '\n            </div>\n        ';
+
+            //let imageList = `<img></img>`
+
+            return html;
+        }
+    }]);
+
+    return ProjectWheel;
+}();
+
+exports.default = ProjectWheel;
+
+},{"../../../assets/data/data.json":1}]},{},[8])
 
 //# sourceMappingURL=main.js.map
