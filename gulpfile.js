@@ -11,6 +11,7 @@ const babel = require('babelify');
 const sourcemaps = require('gulp-sourcemaps');
 const gulpsync = require('gulp-sync')(gulp);
 const htmlToJS = require('gulp-html-to-js');
+const autoprefixer = require('gulp-autoprefixer');
 
 const pathsSrc = {
   js: './src/js/**/*.js',
@@ -39,6 +40,10 @@ gulp.task('sass', function () {
         includePaths : [pathsSrc.styles.src]
       }
     ).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
     .pipe(gulp.dest(pathsDist.styles));
 });
 
