@@ -47223,10 +47223,13 @@ var ProjectWheel = function () {
         key: 'createPanelHTML',
         value: function createPanelHTML(projectData) {
             var html = '\n            <section class="project__container vr-page">\n                <h1>' + projectData.name + '</h1>\n                <h3>' + projectData.short_des + '</h3>\n                <div class="project__image__container">\n                    ' + function () {
-                return '<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>';
-                //return projectData.imageList.forEach((src) => {
+                //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
+                var imageList = '';
+                projectData.images.forEach(function (src) {
+                    imageList += '<img class="project__image" src="' + src + '"></img>';
+                });
 
-                //})
+                return imageList;
             }() + '\n                </div>\n            </section>\n        ';
 
             //let imageList = `<img></img>`
