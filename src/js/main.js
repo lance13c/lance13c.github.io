@@ -2,7 +2,7 @@
 //import './components/birds';
 
 import './util/nav';
-import responsiveVR from './layout/responsive_vr';
+//import responsiveVR from './layout/responsive_vr';
 
 // Pages
 import resumePage from "./pages/resume";
@@ -21,9 +21,12 @@ const abstracts = require('./abstracts');
 
 let sceneEl = document.querySelector('a-scene');
 
+// sceneEl.addEventListener('render-target-loaded', function () {
+   
+// });
+
 
 sceneEl.addEventListener('loaded', function() {
-
 
     let elements = {
         resumePanelEl: document.querySelector('.resume__panel'),
@@ -73,7 +76,7 @@ sceneEl.addEventListener('loaded', function() {
     animate();
 
     // Initialize Responsive VR
-    responsiveVR.update();
+    //responsiveVR.update();
 });
 
 

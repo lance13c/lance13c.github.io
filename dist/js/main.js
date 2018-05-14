@@ -46873,101 +46873,34 @@ var abstracts = {
 module.exports = abstracts;
 
 },{}],7:[function(require,module,exports){
-'use strict';
+"use strict";
 
-function update() {
-    var homePanel = document.querySelector('.home__panel');
-    var projectsPanel = document.querySelector('.projects__panel');
-    var blogPanel = document.querySelector('.blog__panel');
-    var resumePanel = document.querySelector('.resume__panel');
-    var lifePanel = document.querySelector('.life__panel');
-    var cameraEl = document.querySelector('[camera]');
+require("./util/nav");
 
-    var vrHome = document.querySelector('#vr-home');
-
-    // TODO: change the panels to query all .panel classes instead
-    //let panels = [homePanel, projectsPanel, blogPanel, resumePanel, lifePanel];
-    var panelHTML = [vrHome];
-
-    var panels = document.querySelectorAll('.panel');
-
-    // nav size
-    if (window.innerWidth > 700) {
-        var widthValue = 2; // 2 Meters width value
-        panels.forEach(function (panel) {
-            console.log(panel);
-            if (panel) {
-                panel.setAttribute("width", widthValue);
-            }
-        });
-
-        panelHTML.forEach(function (html) {
-            if (html) {
-                html.setAttribute("class", "vr-page__scale--2");
-                console.log('html changed');
-            }
-        });
-
-        // Add look controls
-        //cameraEl.setAttribute('look-controls');
-
-        console.log("Desktop Mode");
-    }
-
-    if (window.innerWidth <= 700) {
-        var _widthValue = 1; // 2 Meters width value
-        panels.forEach(function (panel) {
-            console.log(panel);
-            if (panel) {
-                panel.setAttribute("width", _widthValue);
-            }
-        });
-
-        panelHTML.forEach(function (html) {
-            if (html) {
-                html.setAttribute("class", "vr-page__scale--1");
-            }
-        });
-
-        console.log("Mobile Mode");
-    }
-}
-
-module.exports = {
-    update: update
-};
-
-},{}],8:[function(require,module,exports){
-'use strict';
-
-require('./util/nav');
-
-var _responsive_vr = require('./layout/responsive_vr');
-
-var _responsive_vr2 = _interopRequireDefault(_responsive_vr);
-
-var _resume = require('./pages/resume');
+var _resume = require("./pages/resume");
 
 var _resume2 = _interopRequireDefault(_resume);
 
-var _welcome = require('./pages/welcome');
+var _welcome = require("./pages/welcome");
 
 var _welcome2 = _interopRequireDefault(_welcome);
 
-var _projectwheel = require('./util/projectwheel');
+var _projectwheel = require("./util/projectwheel");
 
 var _projectwheel2 = _interopRequireDefault(_projectwheel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//import './components/background';
+//import './components/birds';
+
 var THREE = AFRAME.THREE;
 
 // Projects
 
+//import responsiveVR from './layout/responsive_vr';
 
 // Pages
-//import './components/background';
-//import './components/birds';
 
 var ThreeCSS = require('three-css3drenderer');
 THREE.CSS3DRenderer = ThreeCSS.CSS3DRenderer;
@@ -46977,6 +46910,11 @@ THREE.CSS3DSprite = ThreeCSS.CSS3DSprite;
 var abstracts = require('./abstracts');
 
 var sceneEl = document.querySelector('a-scene');
+
+// sceneEl.addEventListener('render-target-loaded', function () {
+
+// });
+
 
 sceneEl.addEventListener('loaded', function () {
 
@@ -47024,10 +46962,10 @@ sceneEl.addEventListener('loaded', function () {
     animate();
 
     // Initialize Responsive VR
-    _responsive_vr2.default.update();
+    //responsiveVR.update();
 });
 
-},{"./abstracts":6,"./layout/responsive_vr":7,"./pages/resume":9,"./pages/welcome":10,"./util/nav":11,"./util/projectwheel":12,"three-css3drenderer":4}],9:[function(require,module,exports){
+},{"./abstracts":6,"./pages/resume":8,"./pages/welcome":9,"./util/nav":10,"./util/projectwheel":11,"three-css3drenderer":4}],8:[function(require,module,exports){
 'use strict';
 
 var _resumeHtml = require('../../../dist/js/vrViews/resume.html.js');
@@ -47061,7 +46999,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/resume.html.js":2}],10:[function(require,module,exports){
+},{"../../../dist/js/vrViews/resume.html.js":2}],9:[function(require,module,exports){
 'use strict';
 
 var _welcomeHtml = require('../../../dist/js/vrViews/welcome.html.js');
@@ -47098,7 +47036,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/welcome.html.js":3}],11:[function(require,module,exports){
+},{"../../../dist/js/vrViews/welcome.html.js":3}],10:[function(require,module,exports){
 'use strict';
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -47170,7 +47108,7 @@ function setBeforePos(route) {
     }
 }
 
-},{}],12:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47214,22 +47152,24 @@ var ProjectWheel = function () {
         key: 'createProjectPanel',
         value: function createProjectPanel(index, total) {
 
+            var PANEL_DEPTH = 0.1;
+
             // Panel Creation
-            var el = document.createElement('a-box');
+            // let el = document.createElement('a-box');
             var pos = this.calcCirclePos(index, total); // Gets x and z positions
-            console.log(this.initPos.x + pos.x + ' ' + this.initPos.y + ' ' + (this.initPos.z + pos.z));
-            var panelFinalPos = { x: this.initPos.x + pos.x, y: this.initPos.y, z: this.initPos.z - this.ZOFFSET + pos.z / 3 };
-            el.setAttribute('position', ' ' + panelFinalPos.x + ' ' + panelFinalPos.y + ' ' + panelFinalPos.z);
-            el.setAttribute('class', 'panel panel__project');
-            el.setAttribute('material', 'shader: flat; side: double; color: #F6FAFB, blending: normal');
-            el.setAttribute('width', 1);
-            el.setAttribute('height', 2);
-            el.setAttribute('depth', 0.1);
+            // console.log(`${this.initPos.x + pos.x} ${this.initPos.y} ${this.initPos.z + pos.z}`);
+            var panelFinalPos = { x: this.initPos.x + pos.x, y: this.initPos.y - 0.3, z: this.initPos.z - this.ZOFFSET + pos.z / 3
+                // el.setAttribute('position', ` ${panelFinalPos.x} ${panelFinalPos.y} ${panelFinalPos.z}`);
+                // el.setAttribute('class', 'panel panel__project');
+                // el.setAttribute('material', 'shader: flat; side: double; color: #F6FAFB, blending: normal');
+                // el.setAttribute('width', 1);
+                // el.setAttribute('height', 2);
+                // el.setAttribute('depth', PANEL_DEPTH);
 
-            this.sceneEl.appendChild(el);
+                //this.sceneEl.appendChild(el);
 
-            // HTML Object Creation
-            var cssContainerEl = document.createElement('section');
+                // HTML Object Creation
+            };var cssContainerEl = document.createElement('section');
             cssContainerEl.setAttribute("class", "vr-page__scale--1 project__panel__html");
 
             // Set HTML
@@ -47247,6 +47187,7 @@ var ProjectWheel = function () {
 
 
             //const yOffset = 0.55;
+            var CSS_OBJECT_OFFSET = PANEL_DEPTH;
             cssObject.position.set(panelFinalPos.x, panelFinalPos.y, panelFinalPos.z);
             cssObject.scale.set(0.01, 0.01, 0.01);
             cssObject.rotation.set(0, 0, 0);
@@ -47281,12 +47222,12 @@ var ProjectWheel = function () {
     }, {
         key: 'createPanelHTML',
         value: function createPanelHTML(projectData) {
-            var html = '\n            <h1>' + projectData.name + '</h1>\n            <h3>' + projectData.short_des + '</h3>\n            <div class="project__image__container">\n                ' + function () {
+            var html = '\n            <section class="project__container vr-page">\n                <h1>' + projectData.name + '</h1>\n                <h3>' + projectData.short_des + '</h3>\n                <div class="project__image__container">\n                    ' + function () {
                 return '<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>';
                 //return projectData.imageList.forEach((src) => {
 
                 //})
-            } + '\n            </div>\n        ';
+            }() + '\n                </div>\n            </section>\n        ';
 
             //let imageList = `<img></img>`
 
@@ -47299,6 +47240,6 @@ var ProjectWheel = function () {
 
 exports.default = ProjectWheel;
 
-},{"../../../assets/data/data.json":1}]},{},[8])
+},{"../../../assets/data/data.json":1}]},{},[7])
 
 //# sourceMappingURL=main.js.map

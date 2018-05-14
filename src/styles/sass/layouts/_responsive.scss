@@ -8,6 +8,10 @@
             display: none;
         }
     }
+
+    .vr-page {
+        width: 250px;
+    }
     
 }
 
@@ -21,6 +25,10 @@
 
         .text__content {
             font-size: 56%;
+        }
+
+        .vr-page {
+            width: 200px;
         }
     }
 }
@@ -38,5 +46,8 @@
             font-size: 50%;
         }
         
+        .vr-page {
+            width: 100px;
+        }
     }
 }

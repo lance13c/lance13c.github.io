@@ -9,11 +9,11 @@ function update() {
     let lifePanel = document.querySelector('.life__panel');
     let cameraEl = document.querySelector('[camera]');
 
-    let vrHome = document.querySelector('#vr-home');
+    //let vrHome = document.querySelector('#vr-home');
 
 // TODO: change the panels to query all .panel classes instead
     //let panels = [homePanel, projectsPanel, blogPanel, resumePanel, lifePanel];
-    let panelHTML = [vrHome];
+    let panelHTML = document.querySelectorAll('.panelHTML');
 
     let panels = document.querySelectorAll('.panel');
 
