@@ -12,6 +12,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const gulpsync = require('gulp-sync')(gulp);
 const htmlToJS = require('gulp-html-to-js');
 const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
 
 const pathsSrc = {
   js: './src/js/**/*.js',
@@ -22,14 +23,16 @@ const pathsSrc = {
     src: './src/styles/sass/partials',
     main: './src/styles/sass/main.scss',
     files: './src/styles/sass/**/*.scss'
-  }
+  },
+  images: './assets/pre_images/**/*'
 }
 
 const pathsDist = {
   js: './dist/js',
   styles: './dist/styles/css',
   views: './dist/views',
-  vrViews: './dist/js/vrViews'
+  vrViews: './dist/js/vrViews',
+  images: './assets/images'
 }
 
 gulp.task('sass', function () {
@@ -47,9 +50,11 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(pathsDist.styles));
 });
 
-// function compileJS() {
-  
-// }
+gulp.task('images', function () {
+  gulp.src(pathsSrc.images)
+    .pipe(imagemin())
+    .pipe(gulp.dest(pathsDist.images));
+});
 
 gulp.task('compileJS', function() {
   const bundler = browserify(pathsSrc.jsEntry, {
@@ -80,6 +85,7 @@ gulp.task('watch', function() {
   gulp.watch(pathsSrc.views, ['views', 'compileJS']);
   gulp.watch(pathsSrc.js, ['compileJS']);
   gulp.watch(pathsSrc.vrViews, ['vrViews', 'compileJS']);
+  gulp.watch(pathsSrc.images, ['images']);
 });
 
 gulp.task('views', function() {
@@ -87,6 +93,6 @@ gulp.task('views', function() {
   .pipe(gulp.dest(pathsDist.views));
 });
 
-gulp.task('dev', ['compileJS', 'sass', 'views', 'vrViews']);
+gulp.task('dev', ['compileJS', 'sass', 'views', 'images',  'vrViews']);
 
 gulp.task('default', gulpsync.sync(["dev", "watch"]));

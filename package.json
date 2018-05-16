@@ -25,6 +25,7 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-to-js": "0.0.6",
+    "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-sync": "^0.1.4",
@@ -33,6 +34,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
+    "blazy": "^1.8.2",
     "three": "^0.91.0",
     "three-css3drenderer": "^1.0.1"
   }

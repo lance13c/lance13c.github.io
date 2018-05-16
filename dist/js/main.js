@@ -46889,18 +46889,22 @@ var _projectwheel = require("./util/projectwheel");
 
 var _projectwheel2 = _interopRequireDefault(_projectwheel);
 
+var _lazyload = require("./util/lazyload");
+
+var _lazyload2 = _interopRequireDefault(_lazyload);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//import './components/background';
-//import './components/birds';
-
-var THREE = AFRAME.THREE;
 
 // Projects
 
 //import responsiveVR from './layout/responsive_vr';
 
 // Pages
+var THREE = AFRAME.THREE;
+
+// Image Util
+//import './components/background';
+//import './components/birds';
 
 var ThreeCSS = require('three-css3drenderer');
 THREE.CSS3DRenderer = ThreeCSS.CSS3DRenderer;
@@ -46961,11 +46965,28 @@ sceneEl.addEventListener('loaded', function () {
     }
     animate();
 
+    // Init lazyload
+    var lazyload = new _lazyload2.default();
+    setTimeout(function () {
+        lazyload.load(document);
+    }, 5000);
+
+    //     // Image Lazy Load
+    //     let bLazy = new Blazy({
+    //         breakpoints: [{
+    // 	    width: 420 // Max-width
+    //         , src: 'data-src-small'
+    // 	}]
+    //       , success: function(element) {
+    // 	    console.log("Sucess Image Blazy");
+    //         }
+    //    });
+
     // Initialize Responsive VR
     //responsiveVR.update();
 });
 
-},{"./abstracts":6,"./pages/resume":8,"./pages/welcome":9,"./util/nav":10,"./util/projectwheel":11,"three-css3drenderer":4}],8:[function(require,module,exports){
+},{"./abstracts":6,"./pages/resume":8,"./pages/welcome":9,"./util/lazyload":10,"./util/nav":11,"./util/projectwheel":12,"three-css3drenderer":4}],8:[function(require,module,exports){
 'use strict';
 
 var _resumeHtml = require('../../../dist/js/vrViews/resume.html.js');
@@ -47039,6 +47060,83 @@ module.exports = {
 },{"../../../dist/js/vrViews/welcome.html.js":3}],10:[function(require,module,exports){
 'use strict';
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var LazyLoad = function () {
+    function LazyLoad() {
+        _classCallCheck(this, LazyLoad);
+    }
+    // Fina
+
+
+    // Loads the elements within a container element
+
+
+    _createClass(LazyLoad, [{
+        key: 'load',
+        value: function load(containerElement) {
+            var images = this.findImages(containerElement);
+
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = images.values()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var entry = _step.value;
+
+                    try {
+                        //entry
+                        entry.setAttribute('src', entry.getAttribute('data-src'));
+                    } catch (e) {
+                        console.error('Entry not Element: ', e);
+                    }
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
+            }
+        }
+
+        // Find all images with data-src
+        // @return images
+
+    }, {
+        key: 'findImages',
+        value: function findImages(containerElement) {
+            var images = containerElement.querySelectorAll('img[data-src]');
+            if (images.length <= 0) {
+                console.warn('Lazyload found no images');
+            }
+            console.log(images);
+            return images;
+        }
+    }]);
+
+    return LazyLoad;
+}();
+
+exports.default = LazyLoad;
+
+},{}],11:[function(require,module,exports){
+'use strict';
+
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var projectsEl = document.querySelector('.nav--projects');
@@ -47108,7 +47206,7 @@ function setBeforePos(route) {
     }
 }
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47232,11 +47330,11 @@ var ProjectWheel = function () {
                 }
 
                 return iconList;
-            }() + '\n                    </span>\n                </div>\n                    <div class="project__image__container">\n                    ' + function () {
+            }() + '\n                    </span>\n                </div>\n                    <div class="project__image-container">\n                    ' + function () {
                 //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
                 var imageList = '';
                 projectData.images.forEach(function (src) {
-                    imageList += '<img class="project__image" src="' + src + '"></img>';
+                    imageList += '<img class="project__image b-lazy" data-src="' + src + '"></img>';
                 });
 
                 return imageList;

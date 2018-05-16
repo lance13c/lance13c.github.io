@@ -11,6 +11,9 @@ import welcomePage from "./pages/welcome";
 // Projects
 import ProjectWheel from './util/projectwheel';
 
+// Image Util
+import LazyLoad from './util/lazyload';
+
 const THREE = AFRAME.THREE;
 const ThreeCSS = require('three-css3drenderer');
 THREE.CSS3DRenderer = ThreeCSS.CSS3DRenderer;
@@ -74,6 +77,24 @@ sceneEl.addEventListener('loaded', function() {
         cssRenderer.render( cssScene, objects3d.camera );
     }
     animate();
+    
+    // Init lazyload
+    let lazyload = new LazyLoad();
+    setTimeout(() => {
+        lazyload.load(document);
+    }, 5000);
+
+
+//     // Image Lazy Load
+//     let bLazy = new Blazy({
+//         breakpoints: [{
+// 	    width: 420 // Max-width
+//         , src: 'data-src-small'
+// 	}]
+//       , success: function(element) {
+// 	    console.log("Sucess Image Blazy");
+//         }
+//    });
 
     // Initialize Responsive VR
     //responsiveVR.update();

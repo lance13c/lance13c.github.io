@@ -13,6 +13,7 @@
     padding: 10px 10px;
     font-family: $default-font;
     font-weight: 400;
+    max-height: 500px;
     //width: 300px;
     //text-align: center;
 
@@ -73,6 +74,21 @@
                     background-color: $accent-color-dark-blue;
                 }
             }
+        }
+    }
+
+    .project__image-container {
+        width: 100%;
+        display: flex;
+        padding: 0 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .project__image {
+            padding: 0 2px 4px 2px;
+            width: 55px;
+            height: 40px;
+            
         }
     }
 }
