@@ -9,7 +9,7 @@ class ProjectWheel {
         this.radius = 3;
         this.sceneEl = sceneEl;
         this.cssScene = cssScene;
-        this.ZOFFSET = 1.8;
+        this.ZOFFSET = 3;
     }
 
     spawnRooms() {
@@ -87,9 +87,24 @@ class ProjectWheel {
     createPanelHTML(projectData) {
         let html =  `
             <section class="project__container vr-page">
-                <h1>${projectData.name}</h1>
-                <h3>${projectData.short_des}</h3>
-                <div class="project__image__container">
+                <div class="project__header">
+                    <h1 class="project__header--main">${projectData.name}</h1>
+                    <h3 class="project__header--sub">${projectData.short_des}</h3>
+                    <span class="project__icon-list"> 
+                        ${(() => {
+                            let iconList = '';
+                            if (projectData.download_url !== "") {
+                                iconList += `<a class="project__icon project__icon--download" href="#"><i class="fas fa-download" data-fa-transform="grow-10"></i></a>`;
+                            }
+                            if (projectData.github_url !== "") {
+                                iconList += `<a class="project__icon project__icon--github" href="#"><i class="fab fa-github" data-fa-transform="grow-10"></i></a>`;
+                            }
+
+                            return iconList;
+                        })()}
+                    </span>
+                </div>
+                    <div class="project__image__container">
                     ${(() => {
                         //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
                         let imageList = '';

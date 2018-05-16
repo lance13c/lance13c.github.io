@@ -10,7 +10,69 @@
 
 .project__container {
     background-color: white;
-    padding: 10px 30px;
+    padding: 10px 10px;
+    font-family: $default-font;
+    font-weight: 400;
     //width: 300px;
     //text-align: center;
+
+    .project__header {
+        background-color: gray;
+        padding: 0 0 20px 0px;
+        margin-bottom: 20px;
+        clip-path: polygon(0 10%, 5% 0, 95% 0, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%);
+        
+        //position: absolute;
+        
+        .project__header--main {
+            padding-top: 20px;
+            padding-bottom: 5px; 
+            font-size: 2.2rem;
+            text-align: center;
+        }
+
+        .project__header--sub {
+            padding: 0 10px;
+        }
+
+        .project__icon-list {
+            padding: 20px 0px 10px 0px;
+            display: flex;
+            justify-content: center;
+            
+
+            .project__icon {
+                width: 20%;
+                height: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;                color: $theme-mono-color-1;
+                box-shadow: $theme-mono-color-6 0px 1px 5px 0px;
+                border-radius: 2px;
+                transform: translateY(0);
+                transition-duration: 0.15s;
+
+                &:hover {
+                    cursor: pointer;                    transform: translateY(1px);
+                    box-shadow: $theme-mono-color-5 0px 1px 5px 0px;
+                }
+            }
+
+            .project__icon--download {
+                background-color: $accent-color-green;
+
+                &:hover {
+                    background-color: $accent-color-dark-green;
+                }
+            }
+
+            .project__icon--github {
+                background-color: $accent-color-blue;
+
+                &:hover {
+                    background-color: $accent-color-dark-blue;
+                }
+            }
+        }
+    }
 }
