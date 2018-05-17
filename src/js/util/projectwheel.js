@@ -6,10 +6,12 @@ class ProjectWheel {
     constructor(sceneEl, cssScene, initPos) {
         this.initPos = initPos;
         this.projects = data.projects;
-        this.radius = 3;
+        this.radius = 3.2;
         this.sceneEl = sceneEl;
         this.cssScene = cssScene;
         this.ZOFFSET = 3;
+        this.YOFFSET = 0.3;
+        this.cssObjectList = [];
     }
 
     spawnRooms() {
@@ -27,8 +29,9 @@ class ProjectWheel {
         // Panel Creation
         // let el = document.createElement('a-box');
          let pos = this.calcCirclePos(index, total);         // Gets x and z positions
-        // console.log(`${this.initPos.x + pos.x} ${this.initPos.y} ${this.initPos.z + pos.z}`);
-         let panelFinalPos = {x: this.initPos.x + pos.x, y: this.initPos.y - 0.3, z: this.initPos.z - this.ZOFFSET + (pos.z/3)}
+         let panelFinalPos = {x: this.initPos.x + pos.x, y: this.initPos.y - this.YOFFSET , z: this.initPos.z - this.ZOFFSET + (pos.z/this.ZOFFSET)}
+
+         // console.log(`${this.initPos.x + pos.x} ${this.initPos.y} ${this.initPos.z + pos.z}`);
         // el.setAttribute('position', ` ${panelFinalPos.x} ${panelFinalPos.y} ${panelFinalPos.z}`);
         // el.setAttribute('class', 'panel panel__project');
         // el.setAttribute('material', 'shader: flat; side: double; color: #F6FAFB, blending: normal');
@@ -43,7 +46,7 @@ class ProjectWheel {
         cssContainerEl.setAttribute("class", "vr-page__scale--1 project__panel__html");
 
         // Set HTML
-        let html = this.createPanelHTML(this.projects[index]);
+        let html = this.createPanelHTML(this.projects[index], index);
         console.log(this.projects[index]);
         cssContainerEl.innerHTML += html;
 
@@ -61,17 +64,34 @@ class ProjectWheel {
         cssObject.position.set(panelFinalPos.x, panelFinalPos.y, panelFinalPos.z);
         cssObject.scale.set(0.01, 0.01, 0.01);
         cssObject.rotation.set(0, 0, 0);
+        cssObject.index = index;
+
+        this.cssObjectList.push(cssObject);
         // add it to the css scene
         this.cssScene.add(cssObject);
     }
 
     // Calculates a position within a circle to place an obj
     calcCirclePos(index, total) {
-        let angle = ((Math.PI*2) / total) * index;
+        const OFFSET_ANGLE = (Math.PI*2) / total;
+        let angle = ( OFFSET_ANGLE * index);
         console.log(`angle ${angle}`);
+        angle -= OFFSET_ANGLE/2;
+        
         let z = this.radius * Math.sin(angle);
         let x = this.radius * Math.cos(angle);
         return {x: x, z: z}
+    }
+
+    // Rotates the projects around
+    rotateWheel(angle) {
+        let initAngle = 0;
+        this.cssObjectList.forEach((cssObject) => {
+            let pos = this.calcCirclePos(index, total);         // Gets x and z positions
+            let panelFinalPos = {x: this.initPos.x + pos.x, y: this.initPos.y - this.YOFFSET , z: this.initPos.z - this.ZOFFSET + (pos.z/this.ZOFFSET)}
+   
+            //cssObject.
+        });
     }
 
     // Removes every project panel currently existing
@@ -84,11 +104,11 @@ class ProjectWheel {
         }
     }
 
-    createPanelHTML(projectData) {
+    createPanelHTML(projectData, index) {
         let html =  `
             <section class="project__container vr-page">
                 <div class="project__header">
-                    <h1 class="project__header--main">${projectData.name}</h1>
+                    <h1 class="project__header--main">${projectData.name + index}</h1>
                     <h3 class="project__header--sub">${projectData.short_des}</h3>
                     <span class="project__icon-list"> 
                         ${(() => {

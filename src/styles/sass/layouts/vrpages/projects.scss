@@ -9,22 +9,23 @@
 }
 
 .project__container {
-    background-color: white;
+    //background-color: white;
     padding: 10px 10px;
-    font-family: $default-font;
-    font-weight: 400;
+    font-family: $font-roboto;
+    //font-weight: 400;
     max-height: 500px;
     //width: 300px;
     //text-align: center;
 
     .project__header {
-        background-color: gray;
+        background-color: $accent-color-black;
         padding: 0 0 20px 0px;
-        margin-bottom: 20px;
+        //margin-bottom: 20px;
         clip-path: polygon(0 10%, 5% 0, 95% 0, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%);
-        
+        color: $theme-mono-color-1;
+        font-weight: 400;
         //position: absolute;
-        
+       
         .project__header--main {
             padding-top: 20px;
             padding-bottom: 5px; 
@@ -47,15 +48,17 @@
                 height: 3rem;
                 display: flex;
                 justify-content: center;
-                align-items: center;                color: $theme-mono-color-1;
+                align-items: center;                
+                color: $theme-mono-color-1;
                 box-shadow: $theme-mono-color-6 0px 1px 5px 0px;
                 border-radius: 2px;
                 transform: translateY(0);
                 transition-duration: 0.15s;
 
                 &:hover {
-                    cursor: pointer;                    transform: translateY(1px);
-                    box-shadow: $theme-mono-color-5 0px 1px 5px 0px;
+                    cursor: pointer;                    
+                    transform: translateY(1px);
+                    //box-shadow: $theme-mono-color-5 0px 1px 5px 0px;
                 }
             }
 
@@ -80,10 +83,12 @@
     .project__image-container {
         width: 100%;
         display: flex;
-        padding: 0 20px;
+        padding: 40px  0px 20px 0px;
         justify-content: center;
         flex-wrap: wrap;
-
+        background-color: rgba($accent-color-blue-trans, 0.8);
+        clip-path: polygon(0 10%, 5% 0, 95% 0, 100% 10%, 100% 90%, 95% 100%, 5% 100%, 0% 90%);
+        //40% 0, 50% -10%, 60% 0,
         .project__image {
             padding: 0 2px 4px 2px;
             width: 55px;
