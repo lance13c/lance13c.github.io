@@ -129,7 +129,7 @@ class ProjectWheel {
                         //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
                         let imageList = '';
                         projectData.images.forEach((src) => {
-                            imageList += `<img class="project__image b-lazy" data-src="${src}"></img>`;
+                            imageList += `<a class="project_image-frame"><img class="project__image b-lazy" data-src="${src}"></img></a>`;
                         });
 
                         return imageList;
