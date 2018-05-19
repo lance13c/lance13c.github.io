@@ -47092,10 +47092,15 @@ var LazyLoad = function () {
                     var entry = _step.value;
 
                     try {
-                        //entry
-                        entry.setAttribute('src', entry.getAttribute('data-src'));
+                        (function () {
+                            var loader = entry.parentNode.querySelector('.image__loader');
+                            entry.setAttribute('src', entry.getAttribute('data-src'));
+                            entry.addEventListener('load', function () {
+                                loader.parentNode.removeChild(loader);
+                            });
+                        })();
                     } catch (e) {
-                        console.error('Entry not Element: ', e);
+                        console.error(e);
                     }
                 }
             } catch (err) {
@@ -47360,7 +47365,7 @@ var ProjectWheel = function () {
                 //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
                 var imageList = '';
                 projectData.images.forEach(function (src) {
-                    imageList += '<a class="project_image-frame"><img class="project__image b-lazy" data-src="' + src + '"></img></a>';
+                    imageList += '<a class="project_image-frame">\n                            <div class="image__loader">\n                                <div class="bounce1"></div>\n                                <div class="bounce2"></div>\n                                <div class="bounce3"></div>\n                            </div>\n                            <img class="project__image" data-src="' + src + '"></img>\n                            </a>';
                 });
 
                 return imageList;

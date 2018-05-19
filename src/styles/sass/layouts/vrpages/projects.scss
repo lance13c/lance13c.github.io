@@ -101,11 +101,10 @@
                 height: 100%;
                 background-position: center;
                 background-size: cover;
-                
+                transform: scale(1);
                 transition: all .15s;
     
                 &:hover {
-                    filter: blur(.5px);
                     transform: scale(1.2);
                 }
             }   
