@@ -1,10 +1,24 @@
 .welcome__container {
     vertical-align: top;
     white-space: nowrap;
-    margin-bottom: 150px;
+    margin-bottom: 105px;
 
     .welcome__cursor {
         //color: limegreen;
+    }
+
+    .welcome__title-tag {
+        position: absolute;
+        letter-spacing: 1px;
+        color: transparent;
+        top: -2px;
+        right: 0;
+        font-size: 3px;
+        font-weight: 700;
+        animation: title-tag-fade-in 0.5s ease;
+        animation-delay: $title-fade-in-time;
+        animation-fill-mode: forwards;
+        transform: rotate(0deg);
     }
     
 }
@@ -22,6 +36,17 @@
     animation-delay: $title-fade-in-time;
     animation-fill-mode: forwards;
     transform: rotate(0deg);
+}
+
+@keyframes title-tag-fade-in {
+    from {
+        color: transparent;
+        //transform: translateX(-5px);
+    }
+    to {
+        color: $accent-color-dark-red;
+        //transform: translateX(0px);
+    }
 }
 
 @keyframes title-fade-in {

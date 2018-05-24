@@ -88,7 +88,7 @@ class ProjectWheel {
         let initAngle = 0;
         this.cssObjectList.forEach((cssObject) => {
             let pos = this.calcCirclePos(index, total);         // Gets x and z positions
-            let panelFinalPos = {x: this.initPos.x + pos.x, y: this.initPos.y - this.YOFFSET , z: this.initPos.z - this.ZOFFSET + (pos.z/this.ZOFFSET)}
+            let panelInitPos = {x: this.initPos.x + pos.x, y: this.initPos.y - this.YOFFSET , z: this.initPos.z - this.ZOFFSET + (pos.z/this.ZOFFSET)}
    
             //cssObject.
         });

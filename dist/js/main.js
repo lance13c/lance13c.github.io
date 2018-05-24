@@ -234,14 +234,19 @@ module.exports={
 },{}],2:[function(require,module,exports){
 'use strict';
 
-module.exports = '<div>\n    <h1 class="header">Test123</h1>\n    <p>\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n        TEST Test Test Test Test\n\n    </p>\n</div>\n';
+module.exports = '<div class="panel-container">\n    <h1 class="header">Coming Soon</h1>\n</div>\n';
 
 },{}],3:[function(require,module,exports){
 'use strict';
 
-module.exports = '<section class="welcome__container">\n    <span><span class="console-writer welcome__title">Cicilio Studio</span><span class="welcome__title blink welcome__cursor">_</span></span>\n    <div class="welcome__sub__title">Dominic Cicilio 3D Web Developer</div>\n</section>\n';
+module.exports = '<div>\n    <h1 class="header">Coming Soon</h1>\n</div>\n';
 
 },{}],4:[function(require,module,exports){
+'use strict';
+
+module.exports = '<section class="welcome__container">\n    <span><span class="console-writer welcome__title">Cicilio Studio\n        <div class="welcome__title-tag">BETA</div>\n    </span><span class="welcome__title blink welcome__cursor">_</span></span>\n    <div class="welcome__sub__title">Dominic Cicilio 3D Web Developer</div>\n</section>\n';
+
+},{}],5:[function(require,module,exports){
 /**
  * Based on http://www.emagix.net/academic/mscs-project/item/camera-sync-with-css3-and-webgl-threejs
  * @author mrdoob / http://mrdoob.com/
@@ -560,7 +565,7 @@ CSS3DRenderer.prototype = Object.create( THREE.EventDispatcher.prototype );
 CSS3DRenderer.prototype.constructor = CSS3DRenderer;
 module.exports.CSS3DRenderer = CSS3DRenderer;
 
-},{"three":5}],5:[function(require,module,exports){
+},{"three":6}],6:[function(require,module,exports){
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -46847,7 +46852,7 @@ module.exports.CSS3DRenderer = CSS3DRenderer;
 
 })));
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 var abstracts = {
@@ -46872,7 +46877,7 @@ var abstracts = {
 
 module.exports = abstracts;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 "use strict";
 
 require("./util/nav");
@@ -46880,6 +46885,10 @@ require("./util/nav");
 var _resume = require("./pages/resume");
 
 var _resume2 = _interopRequireDefault(_resume);
+
+var _blog = require("./pages/blog");
+
+var _blog2 = _interopRequireDefault(_blog);
 
 var _welcome = require("./pages/welcome");
 
@@ -46896,15 +46905,16 @@ var _lazyload2 = _interopRequireDefault(_lazyload);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Projects
+//import './components/background';
+//import './components/birds';
+
+var THREE = AFRAME.THREE;
+
+// Image Util
 
 //import responsiveVR from './layout/responsive_vr';
 
 // Pages
-var THREE = AFRAME.THREE;
-
-// Image Util
-//import './components/background';
-//import './components/birds';
 
 var ThreeCSS = require('three-css3drenderer');
 THREE.CSS3DRenderer = ThreeCSS.CSS3DRenderer;
@@ -46924,6 +46934,7 @@ sceneEl.addEventListener('loaded', function () {
 
     var elements = {
         resumePanelEl: document.querySelector('.resume__panel'),
+        blogPanelEl: document.querySelector('.blog__panel'),
         welcomePanelEl: document.querySelector('.welcome__panel'),
         projectsPanelEl: document.querySelector('.projects__panel'),
         cameraEl: document.querySelector('[camera]')
@@ -46932,6 +46943,7 @@ sceneEl.addEventListener('loaded', function () {
     var objects3d = {
         camera: elements.cameraEl.getObject3D('camera'),
         resumePanel: elements.resumePanelEl.getObject3D('mesh'),
+        blogPanel: elements.blogPanelEl.getObject3D('mesh'),
         welcomePanel: elements.welcomePanelEl.getObject3D('mesh'),
         projectsPanel: elements.projectsPanelEl.getObject3D('mesh')
 
@@ -46949,6 +46961,7 @@ sceneEl.addEventListener('loaded', function () {
     // CSS Objects  / Pages
     _resume2.default.init(cssScene, elements, objects3d);
     _welcome2.default.init(cssScene, elements, objects3d);
+    _blog2.default.init(cssScene, elements, objects3d);
 
     // Init Projects
     var projectPos = elements.projectsPanelEl.components.position.data;
@@ -46971,22 +46984,45 @@ sceneEl.addEventListener('loaded', function () {
         lazyload.load(document);
     }, 5000);
 
-    //     // Image Lazy Load
-    //     let bLazy = new Blazy({
-    //         breakpoints: [{
-    // 	    width: 420 // Max-width
-    //         , src: 'data-src-small'
-    // 	}]
-    //       , success: function(element) {
-    // 	    console.log("Sucess Image Blazy");
-    //         }
-    //    });
-
     // Initialize Responsive VR
     //responsiveVR.update();
 });
 
-},{"./abstracts":6,"./pages/resume":8,"./pages/welcome":9,"./util/lazyload":10,"./util/nav":11,"./util/projectwheel":12,"three-css3drenderer":4}],8:[function(require,module,exports){
+},{"./abstracts":7,"./pages/blog":9,"./pages/resume":10,"./pages/welcome":11,"./util/lazyload":12,"./util/nav":13,"./util/projectwheel":14,"three-css3drenderer":5}],9:[function(require,module,exports){
+'use strict';
+
+var _blogHtml = require('../../../dist/js/vrViews/blog.html.js');
+
+var _blogHtml2 = _interopRequireDefault(_blogHtml);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function init(cssScene, elements, objects3d) {
+
+    var cssContainerEl = document.createElement('section');
+    cssContainerEl.setAttribute("id", "vr-blog");
+    cssContainerEl.setAttribute("class", "vr-page__scale--1 panelHTML");
+
+    cssContainerEl.innerHTML += _blogHtml2.default;
+
+    // create the object3d for this element
+    var cssObject = new THREE.CSS3DObject(cssContainerEl);
+    // we reference the same position and rotation 
+
+
+    //const yOffset = 0.55;
+    cssObject.position.set(objects3d.blogPanel.position.x, 0, objects3d.blogPanel.position.z);
+    cssObject.scale.set(0.01, 0.01, 0.01);
+    cssObject.rotation.set(0, 0, 0);
+    // add it to the css scene
+    cssScene.add(cssObject);
+}
+
+module.exports = {
+    init: init
+};
+
+},{"../../../dist/js/vrViews/blog.html.js":2}],10:[function(require,module,exports){
 'use strict';
 
 var _resumeHtml = require('../../../dist/js/vrViews/resume.html.js');
@@ -46999,7 +47035,7 @@ function init(cssScene, elements, objects3d) {
 
     var cssContainerEl = document.createElement('section');
     cssContainerEl.setAttribute("id", "vr-resume");
-    cssContainerEl.setAttribute("class", "vr-page__scale--1");
+    cssContainerEl.setAttribute("class", "vr-page__scale--1 panelHTML");
 
     cssContainerEl.innerHTML += _resumeHtml2.default;
 
@@ -47020,7 +47056,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/resume.html.js":2}],9:[function(require,module,exports){
+},{"../../../dist/js/vrViews/resume.html.js":3}],11:[function(require,module,exports){
 'use strict';
 
 var _welcomeHtml = require('../../../dist/js/vrViews/welcome.html.js');
@@ -47057,7 +47093,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/welcome.html.js":3}],10:[function(require,module,exports){
+},{"../../../dist/js/vrViews/welcome.html.js":4}],12:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47094,7 +47130,7 @@ var LazyLoad = function () {
                     try {
                         (function () {
                             var loader = entry.parentNode.querySelector('.image__loader');
-                            entry.setAttribute('src', entry.getAttribute('data-src'));
+                            //entry.setAttribute('src', entry.getAttribute('data-src'));
                             entry.addEventListener('load', function () {
                                 loader.parentNode.removeChild(loader);
                             });
@@ -47139,7 +47175,7 @@ var LazyLoad = function () {
 
 exports.default = LazyLoad;
 
-},{}],11:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -47211,7 +47247,7 @@ function setBeforePos(route) {
     }
 }
 
-},{}],12:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47329,7 +47365,7 @@ var ProjectWheel = function () {
             var initAngle = 0;
             this.cssObjectList.forEach(function (cssObject) {
                 var pos = _this2.calcCirclePos(index, total); // Gets x and z positions
-                var panelFinalPos = { x: _this2.initPos.x + pos.x, y: _this2.initPos.y - _this2.YOFFSET, z: _this2.initPos.z - _this2.ZOFFSET + pos.z / _this2.ZOFFSET
+                var panelInitPos = { x: _this2.initPos.x + pos.x, y: _this2.initPos.y - _this2.YOFFSET, z: _this2.initPos.z - _this2.ZOFFSET + pos.z / _this2.ZOFFSET
 
                     //cssObject.
                 };
@@ -47382,6 +47418,6 @@ var ProjectWheel = function () {
 
 exports.default = ProjectWheel;
 
-},{"../../../assets/data/data.json":1}]},{},[7])
+},{"../../../assets/data/data.json":1}]},{},[8])
 
 //# sourceMappingURL=main.js.map

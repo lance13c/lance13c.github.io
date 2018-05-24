@@ -6,6 +6,7 @@ import './util/nav';
 
 // Pages
 import resumePage from "./pages/resume";
+import blogPage from "./pages/blog";
 import welcomePage from "./pages/welcome";
 
 // Projects
@@ -33,6 +34,7 @@ sceneEl.addEventListener('loaded', function() {
 
     let elements = {
         resumePanelEl: document.querySelector('.resume__panel'),
+        blogPanelEl: document.querySelector('.blog__panel'),
         welcomePanelEl: document.querySelector('.welcome__panel'),
         projectsPanelEl: document.querySelector('.projects__panel'),
         cameraEl: document.querySelector('[camera]'),
@@ -41,6 +43,7 @@ sceneEl.addEventListener('loaded', function() {
     let objects3d = {
         camera: elements.cameraEl.getObject3D('camera'),
         resumePanel: elements.resumePanelEl.getObject3D('mesh'),
+        blogPanel: elements.blogPanelEl.getObject3D('mesh'),
         welcomePanel: elements.welcomePanelEl.getObject3D('mesh'),
         projectsPanel: elements.projectsPanelEl.getObject3D('mesh'),
     }
@@ -61,6 +64,7 @@ sceneEl.addEventListener('loaded', function() {
     // CSS Objects  / Pages
     resumePage.init(cssScene, elements, objects3d);
     welcomePage.init(cssScene, elements, objects3d);
+    blogPage.init(cssScene, elements, objects3d);
 
     // Init Projects
     let projectPos = elements.projectsPanelEl.components.position.data;
@@ -83,18 +87,6 @@ sceneEl.addEventListener('loaded', function() {
     setTimeout(() => {
         lazyload.load(document);
     }, 5000);
-
-
-//     // Image Lazy Load
-//     let bLazy = new Blazy({
-//         breakpoints: [{
-// 	    width: 420 // Max-width
-//         , src: 'data-src-small'
-// 	}]
-//       , success: function(element) {
-// 	    console.log("Sucess Image Blazy");
-//         }
-//    });
 
     // Initialize Responsive VR
     //responsiveVR.update();
