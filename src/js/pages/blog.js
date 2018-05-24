@@ -4,7 +4,7 @@ function init(cssScene, elements, objects3d) {
 
     let cssContainerEl = document.createElement('section');
     cssContainerEl.setAttribute("id", "vr-blog");
-    cssContainerEl.setAttribute("class", "vr-page__scale--1 panelHTML");
+    cssContainerEl.setAttribute("class", "vr-page");
 
     cssContainerEl.innerHTML += blogHTML;
 

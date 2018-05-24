@@ -47001,7 +47001,7 @@ function init(cssScene, elements, objects3d) {
 
     var cssContainerEl = document.createElement('section');
     cssContainerEl.setAttribute("id", "vr-blog");
-    cssContainerEl.setAttribute("class", "vr-page__scale--1 panelHTML");
+    cssContainerEl.setAttribute("class", "vr-page");
 
     cssContainerEl.innerHTML += _blogHtml2.default;
 
@@ -47035,7 +47035,7 @@ function init(cssScene, elements, objects3d) {
 
     var cssContainerEl = document.createElement('section');
     cssContainerEl.setAttribute("id", "vr-resume");
-    cssContainerEl.setAttribute("class", "vr-page__scale--1 panelHTML");
+    cssContainerEl.setAttribute("class", "vr-page");
 
     cssContainerEl.innerHTML += _resumeHtml2.default;
 
