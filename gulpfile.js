@@ -1,79 +1,98 @@
+'use strict';
+ 
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+const concat = require("gulp-concat");
+const uglify = require("gulp-uglify");
+const babel = require('babelify');
+const sourcemaps = require('gulp-sourcemaps');
+const gulpsync = require('gulp-sync')(gulp);
+const htmlToJS = require('gulp-html-to-js');
+const autoprefixer = require('gulp-autoprefixer');
+const imagemin = require('gulp-imagemin');
 
-const gulp = require('gulp');
-const usemin = require('gulp-usemin');
-const uglify = require('gulp-uglify');
-const sass = require('gulp-sass');
-const replace = require('gulp-replace');
-const concat = require('gulp-concat');
-const fs = require('fs');
-const minifyCss = require('gulp-minify-css');
-
-// Constant names
-const names = {
-	ALL_SCRIPTS: 'copied_scripts.js'
+const pathsSrc = {
+  js: './src/js/**/*.js',
+  jsEntry: './src/js/main.js',
+  views: './src/views/**/*',
+  vrViews: './src/views/vrViews/**/*',
+  styles: {
+    src: './src/styles/sass/partials',
+    main: './src/styles/sass/main.scss',
+    files: './src/styles/sass/**/*.scss'
+  },
+  images: './assets/pre_images/**/*'
 }
 
-const paths = {
-	fonts: './node_modules/materialize-css/dist/font/**/*.*',
-	data: './_data/data.json',
-	src_index_js: './_dependencies/index.js',
-	dist_index_js: './js',
-	css_post_build: './_includes/**/*.css',
-	sass_post_build: './_includes/**/*.scss',
-	js_post_build: './_includes/**/*.js',
-	js_project: './projects/**/*.js',
-	post_build: './_includes/build',
-	pre_base: './_dependencies/*.html',
-	pre_alt_base: './_dependencies/alt/base.html'
-};
+const pathsDist = {
+  js: './dist/js',
+  styles: './dist/styles/css',
+  views: './dist/views',
+  vrViews: './dist/js/vrViews',
+  images: './assets/images'
+}
 
-gulp.task('usemin', () => {
-	return gulp.src(paths.pre_base)
-		.pipe(usemin({
-			css: [],
-			js: []
-		}))
-		.pipe(gulp.dest(paths.post_build));
+gulp.task('sass', function () {
+  return gulp.src(pathsSrc.styles.main)
+    .pipe(sass({
+        outputStyle: 'compressed',
+        sourceComments: 'map',
+        includePaths : [pathsSrc.styles.src]
+      }
+    ).on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest(pathsDist.styles));
 });
 
-gulp.task('replace-hrefs', ['usemin'], () => {
-	return gulp.src(`${paths.build}/link.html`)
-		.pipe(gulp.dest('./_includes/build'));
+gulp.task('images', function () {
+  gulp.src(pathsSrc.images)
+    .pipe(imagemin())
+    .pipe(gulp.dest(pathsDist.images));
 });
 
-gulp.task('copy-base', ['usemin'], () => {
-	return gulp.src(`${paths.post_build}/*.html`)
-		.pipe(gulp.dest('./_layouts/'));
+gulp.task('compileJS', function() {
+  const bundler = browserify(pathsSrc.jsEntry, {
+    debug: true,
+    paths: ['./src/js/', './node_modules']
+  });
+
+  bundler
+    .transform(babel, {presets: 'env'})             // Compiles js, needs to happen before browserify
+    .bundle()
+    .on('error', function(err) { console.error(err); this.emit('end'); })
+    .pipe(source('main.js'))                        // End file name
+    .pipe(buffer())
+    .pipe(sourcemaps.init({ loadMaps: true }))      // Adds onto existing sourcemaps
+    //.pipe((gulpif(env.PROD == 1, uglify())))
+    .pipe(sourcemaps.write('./'))                   // Adds source maps
+    .pipe(gulp.dest(pathsDist.js));
 });
 
-gulp.task('copy-sass', ['usemin'], () => {
-	return gulp.src(paths.sass_post_build)
-		.pipe(sass().on('error', sass.logError))
-		.pipe(gulp.dest('./css'));
+gulp.task('vrViews', function() {
+  return gulp.src(pathsSrc.vrViews)
+    .pipe(htmlToJS())
+    .pipe(gulp.dest(pathsDist.vrViews));
+});
+ 
+gulp.task('watch', function() {
+  gulp.watch(pathsSrc.styles.files, ['sass']);
+  gulp.watch(pathsSrc.views, ['views', 'compileJS']);
+  gulp.watch(pathsSrc.js, ['compileJS']);
+  gulp.watch(pathsSrc.vrViews, ['vrViews', 'compileJS']);
+  gulp.watch(pathsSrc.images, ['images']);
 });
 
-gulp.task('copy-css', ['usemin'], () => {
-	return gulp.src(paths.css_post_build)
-		.pipe(gulp.dest('./css'));
+gulp.task('views', function() {
+  gulp.src(pathsSrc.views)
+  .pipe(gulp.dest(pathsDist.views));
 });
 
-gulp.task('copy-js', ['usemin'], () => {
-	return gulp.src([paths.post_build, paths.js_project])
-		.pipe(concat(names.ALL_SCRIPTS))
-		.pipe(gulp.dest('./js'));
-});
+gulp.task('dev', ['compileJS', 'sass', 'views', 'images',  'vrViews']);
 
-gulp.task('copy-fonts', () => {
-	return gulp.src(paths.fonts)
-		.pipe(gulp.dest('./fonts'));
-});
-
-gulp.task('insert-data', () => {
-	let fileContent = fs.readFileSync(paths.data, "utf8");
-	
-	return gulp.src(paths.src_index_js)
-		.pipe(replace('DATA_LOCATION', fileContent))
-		.pipe(gulp.dest(paths.dist_index_js));
-});
-
-gulp.task('default', ['usemin', 'copy-base', 'copy-css', 'copy-sass', 'copy-js', 'copy-fonts', 'insert-data']);
+gulp.task('default', gulpsync.sync(["dev", "watch"]));

@@ -1,45 +1,41 @@
 {
-  "name": "browser-event-display",
+  "name": "lance13c.github.io",
   "version": "1.0.0",
-  "description": "Placeholder",
-  "main": "app/js/app.js",
+  "description": "Site: [dev.ciciliostudio.com](dev.ciciliostudio.com)",
+  "main": "gulpfile.js",
   "scripts": {
-    "build": "gulp & bundle exec jekyll b --incremental",
-    "serve": "bundle exec jekyll s --incremental --watch",
-    "s": "bundle exec jekyll s --incremental --watch",
-    "build_serve": "npm run build & npm run serve"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lance13c/browser-event-display.git"
+    "url": "git+https://github.com/lance13c/lance13c.github.io.git"
   },
-  "author": "Dominic Cicilio",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lance13c/browser-event-display/issues"
+    "url": "https://github.com/lance13c/lance13c.github.io/issues"
   },
-  "homepage": "https://github.com/lance13c/browser-event-display#readme",
-  "dependencies": {
-    "aframe": "^0.5.0",
-    "aframe-extras": "^3.3.1",
-    "d3": "^4.7.3",
-    "hover.css": "^2.0.2",
-    "jquery": "^2.1.4",
-    "materialize-css": "^0.97.7",
-    "spinkit": "^1.2.5",
-    "vue": "^2.2.6"
-  },
+  "homepage": "https://github.com/lance13c/lance13c.github.io#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^16.1.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-replace": "^0.5.4",
+    "gulp-html-to-js": "0.0.6",
+    "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.0.0",
-    "gulp-usemin": "^0.3.24",
-    "jasmine": "^2.5.3",
-    "karma": "^1.5.0",
-    "karma-chrome-launcher": "^2.0.0",
-    "karma-firefox-launcher": "^1.0.1",
-    "karma-jasmine": "^1.1.0"
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-sync": "^0.1.4",
+    "gulp-uglify": "^3.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "blazy": "^1.8.2",
+    "three": "^0.91.0",
+    "three-css3drenderer": "^1.0.1"
   }
 }

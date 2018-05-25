@@ -1,0 +1,15 @@
+
+
+@keyframes blink {
+    0% {
+        color: initial;
+    }
+    50% {
+        color: transparent;
+    }
+}
+
+.blink {
+    animation: blink 0.8s step-end;
+    animation-iteration-count: 8;
+}

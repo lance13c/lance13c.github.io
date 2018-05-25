@@ -1,0 +1,53 @@
+
+// Desktop
+@media (min-width: 701px) {
+
+    html {
+        //font-size: 62.5%;
+        .mobile {
+            display: none;
+        }
+    }
+
+    .vr-page {
+        width: 250px;
+    }
+    
+}
+
+// Tablet/small desktop
+@media (max-width: 700px) {
+
+    html {
+        .desktop {
+            display: none;
+        }
+
+        .text__content {
+            font-size: 56%;
+        }
+
+        .vr-page {
+            width: 200px;
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 500px) {
+    html {
+    //font-size: 62.5%;
+        
+        .desktop {
+            display: none;
+        }
+
+        .text__content {
+            font-size: 50%;
+        }
+        
+        .vr-page {
+            width: 100px;
+        }
+    }
+}

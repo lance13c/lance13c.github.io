@@ -1,0 +1,114 @@
+.welcome__container {
+    vertical-align: top;
+    white-space: nowrap;
+    margin-bottom: 105px;
+
+    .welcome__cursor {
+        //color: limegreen;
+    }
+
+    .welcome__title-tag {
+        position: absolute;
+        letter-spacing: 1px;
+        color: transparent;
+        top: -3px;
+        right: 0;
+        font-size: 7%;
+        font-weight: 700;
+        animation: title-tag-fade-in 0.5s ease;
+        animation-delay: $title-fade-in-time;
+        animation-fill-mode: forwards;
+        transform: rotate(0deg);
+    }
+    
+}
+
+@mixin welcome__title--mixin() { 
+    vertical-align: top;
+    display: inline-block;
+}
+
+@mixin welcome__sub__title--mixin() {
+    font-family: $default-font;
+    padding-left: 1px;
+    color: transparent;
+    animation: title-fade-in 0.5s  ease;
+    animation-delay: $title-fade-in-time;
+    animation-fill-mode: forwards;
+    transform: rotate(0deg);
+}
+
+@keyframes title-tag-fade-in {
+    from {
+        color: transparent;
+        //transform: translateX(-5px);
+    }
+    to {
+        color: $accent-color-dark-red;
+        //transform: translateX(0px);
+    }
+}
+
+@keyframes title-fade-in {
+    from {
+        color: transparent;
+        //transform: translateX(-5px);
+    }
+    to {
+        color: initial;
+        //transform: translateX(0px);
+    }
+}
+
+
+// Desktop
+@media (min-width: 701px) {
+
+    html {
+        .welcome__title {
+            @include welcome__title--mixin();
+            font-size: 250%;
+        }
+
+        .welcome__sub__title {
+            @include welcome__sub__title--mixin();
+            font-size: 90%;
+        }
+    }
+    
+}
+
+// Tablet/small desktop
+@media (max-width: 700px) {
+
+    html {
+        .welcome__title {
+            @include welcome__title--mixin();
+            font-size: 150%;
+        }
+
+        .welcome__sub__title {
+            @include welcome__sub__title--mixin();
+            font-size: 20%;
+        }
+    }    
+}
+
+// Mobile
+@media (max-width: 500px) {
+    html {
+        .welcome__container {
+            margin-bottom: 100px;
+
+            .welcome__title {
+                @include welcome__title--mixin();
+                font-size: 100%;
+            }
+
+            .welcome__sub__title {
+                @include welcome__sub__title--mixin();
+                font-size: 5px;
+            }
+        }
+    }
+}
