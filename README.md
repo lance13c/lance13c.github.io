@@ -1,5 +1,5 @@
-# Dominic Cicilio's Profolio Website
-Site: [dev.ciciliostudio.com](dev.ciciliostudio.com)
+# Dominic Cicilio's Portfolio Website
+Site: [dev.ciciliostudio.com](http://dev.ciciliostudio.com)
 
 **Version 3.0 Beta**
 
