@@ -114,10 +114,10 @@ class ProjectWheel {
                         ${(() => {
                             let iconList = '';
                             if (projectData.download_url !== "") {
-                                iconList += `<a class="project__icon project__icon--download" href="#"><i class="fas fa-download" data-fa-transform="grow-10"></i></a>`;
+                                iconList += `<a class="project__icon project__icon--download" href="${projectData.download_url}"><i class="fas fa-download" data-fa-transform="grow-10"></i></a>`;
                             }
                             if (projectData.github_url !== "") {
-                                iconList += `<a class="project__icon project__icon--github" href="#"><i class="fab fa-github" data-fa-transform="grow-10"></i></a>`;
+                                iconList += `<a class="project__icon project__icon--github" href="${projectData.github_url}"><i class="fab fa-github" data-fa-transform="grow-10"></i></a>`;
                             }
 
                             return iconList;
@@ -129,15 +129,19 @@ class ProjectWheel {
                         //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
                         let imageList = '';
                         projectData.images.forEach((src) => {
-                            imageList += `<a class="project_image-frame">
-                            <div class="image__loader">
-                                <div class="bounce1"></div>
-                                <div class="bounce2"></div>
-                                <div class="bounce3"></div>
-                            </div>
-                            <img class="project__image" data-src="${src}"></img>
+                            imageList += `
+                            <a class="project_image-frame">
+                                <img class="project__image" data-src="${src}"></img>
                             </a>`;
                         });
+
+                        // IMAGE LOADER
+                        // <a class="project_image-frame">
+                        //     <div class="image__loader">
+                        //         <div class="bounce1"></div>
+                        //         <div class="bounce2"></div>
+                        //         <div class="bounce3"></div>
+                        //     </div>
 
                         return imageList;
                     })()}
