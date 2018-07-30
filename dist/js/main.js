@@ -46909,13 +46909,11 @@ var ImageViewer = function () {
         // Setup HTML
         this.HTML = document.createElement('section');
         this.HTML.setAttribute("class", "image-viewer__overlay");
-        this.HTML.innerHTML = this.initHTML();
-        document.body.appendChild(this.HTML);
     }
 
     /**
      * @param projectData - All data on a specific project
-     * @param imageSrc {String} - A string of the image source 
+     * @param imageSrc {String} - A string of the thumbnail image source 
      */
 
 
@@ -46923,15 +46921,37 @@ var ImageViewer = function () {
         key: "open",
         value: function open(projectData, imageSrc) {
 
+            this.HTML.innerHTML = this.initHTML(imageSrc);
             document.body.appendChild(this.HTML);
         }
     }, {
         key: "close",
         value: function close() {}
+
+        /**
+         * Changes thumbnail src into the regular image source 
+         */
+
+    }, {
+        key: "thumbnailToRegular",
+        value: function thumbnailToRegular(thumbnailSrc) {
+            return thumbnailSrc.replace(/thumbnails\/(.*)-thumbnail\s(\([0-9]?[0-9]\))/, 'regular/$1 $2');
+        }
+
+        /**
+         * Initalizes the HTML
+         * @param {String} imageSrc - The source location of the image
+         */
+
     }, {
         key: "initHTML",
-        value: function initHTML() {
-            return "\n            <div class=\"image-viewer__container\">\n                <div class=\"image-viewer__arrow--left cs-button\">\n                    <i class=\"fas fa-arrow-left fa-3x\"></i>\n                </div>\n                <div class=\"image-viewer__arrow--right cs-button\">\n                    <i class=\"fas fa-arrow-right fa-3x\"></i>\n                </div>\n                <img src=\"https://upload.wikimedia.org/wikipedia/commons/3/32/House_sparrow04.jpg\" class=\"image-viewer__image\">\n            </div>\n        ";
+        value: function initHTML(imageSrc) {
+
+            // Changes the thubnail image src to the regular image src
+            // The regular image source is higher in quality
+            imageSrc = this.thumbnailToRegular(imageSrc);
+
+            return "\n            <div class=\"image-viewer__container\">\n                <div class=\"image-viewer__close-button cs-button\">\n                    <i class=\"far fa-times-circle fa-5x\"></i>\n                </div>\n                <div class=\"image-viewer__arrow--left cs-button\">\n                    <i class=\"fas fa-arrow-left fa-3x\"></i>\n                </div>\n                <div class=\"image-viewer__arrow--right cs-button\">\n                    <i class=\"fas fa-arrow-right fa-3x\"></i>\n                </div>\n                <img src=\"" + imageSrc + "\" class=\"image-viewer__image\">\n            </div>\n        ";
         }
     }]);
 
@@ -47344,7 +47364,7 @@ var ProjectWheel = function () {
         this.YOFFSET = 0.3;
         this.cssObjectList = [];
 
-        this.ImageViewer = new _imageviewer2.default();
+        this.imageViewer = new _imageviewer2.default();
     }
 
     _createClass(ProjectWheel, [{
@@ -47456,6 +47476,8 @@ var ProjectWheel = function () {
     }, {
         key: 'createPanelHTML',
         value: function createPanelHTML(projectData, index) {
+            var _this3 = this;
+
             var html = '\n            <section class="project__container vr-page">\n                <div class="project__header">\n                    <h1 class="project__header--main">' + (projectData.name + index) + '</h1>\n                    <h3 class="project__header--sub">' + projectData.short_des + '</h3>\n                    <span class="project__icon-list"> \n                        ' + function () {
                 var iconList = '';
                 if (projectData.download_url !== "") {
@@ -47469,8 +47491,20 @@ var ProjectWheel = function () {
             }() + '\n                    </span>\n                </div>\n                    <div class="project__image-container">\n                    ' + function () {
                 //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
                 var imageList = '';
-                projectData.thumbnails.forEach(function (src) {
-                    imageList += '\n                            <a class="project_image-frame">\n                                <div class="image__loader">\n                                    <div class="bounce1"></div>\n                                    <div class="bounce2"></div>\n                                    <div class="bounce3"></div>\n                                </div>\n                                <img class="project__image" data-src="' + src + '"></img>\n                            </a>';
+                projectData.thumbnails.forEach(function (src, i) {
+
+                    var rand = Math.round(Math.random() * 10000000);
+                    var uniqueClass = 'image-' + (rand + i);
+
+                    imageList += '\n                            <a class="project_image-frame ' + uniqueClass + '">\n                                <div class="image__loader">\n                                    <div class="bounce1"></div>\n                                    <div class="bounce2"></div>\n                                    <div class="bounce3"></div>\n                                </div>\n                                <img class="project__image" data-src="' + src + '"></img>\n                            </a>';
+
+                    // Open image viewer on click
+                    setTimeout(function () {
+                        var el = document.querySelector('.' + uniqueClass);
+                        el.addEventListener('click', function () {
+                            _this3.imageViewer.open(projectData, src);
+                        });
+                    }, 10000);
                 });
 
                 return imageList;

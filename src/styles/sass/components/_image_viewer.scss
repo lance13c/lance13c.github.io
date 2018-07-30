@@ -6,11 +6,26 @@
     background-color: rgba(0, 0, 0, 0.8);
 
     .image-viewer__container {
-        width: 50%;
-        height: 50%;
+        width: 60%;
+        height: 60%;
         margin: auto;
-        top: 25%;
+        top: 15%;
         position: relative;
+
+        .image-viewer__close-button {
+            position: absolute;
+            padding: 5px;
+            //background: linear-gradient(rgba(0,0,0,0), rgba(0, 0, 0, 0.177));
+            box-shadow: none;
+            color: rgb(243, 243, 243);
+            border: none;
+            right: 0;
+
+            &:hover {
+                color: $accent-color-red;
+                transform: none;
+            }
+        }
 
         .image-viewer__arrow--left {
             background-color: $cs-button-blue;

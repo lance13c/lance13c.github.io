@@ -14,7 +14,7 @@ class ProjectWheel {
         this.YOFFSET = 0.3;
         this.cssObjectList = [];
 
-        this.ImageViewer = new ImageViewer();
+        this.imageViewer = new ImageViewer();
     }
 
     spawnRooms() {
@@ -131,9 +131,13 @@ class ProjectWheel {
                     ${(() => {
                         //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
                         let imageList = '';
-                        projectData.thumbnails.forEach((src) => {
+                        projectData.thumbnails.forEach((src, i) => {
+
+                            let rand = Math.round(Math.random() * 10000000);
+                            let uniqueClass = `image-${rand+i}`;
+
                             imageList += `
-                            <a class="project_image-frame">
+                            <a class="project_image-frame ${uniqueClass}">
                                 <div class="image__loader">
                                     <div class="bounce1"></div>
                                     <div class="bounce2"></div>
@@ -141,6 +145,15 @@ class ProjectWheel {
                                 </div>
                                 <img class="project__image" data-src="${src}"></img>
                             </a>`;
+
+                            // Open image viewer on click
+                            setTimeout(() => {
+                                let el = document.querySelector(`.${uniqueClass}`);
+                                el.addEventListener('click', () => {
+                                    this.imageViewer.open( projectData, src);
+                                });
+                            }, 10000);
+                            
                         });
 
                         return imageList;
