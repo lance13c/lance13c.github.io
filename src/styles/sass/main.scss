@@ -1,6 +1,7 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 @import "./base/global";
+@import "./base/utilities";
 @import "./abstracts/keyframes/kf_circles";
 @import "./abstracts/keyframes/kf_pen";
 @import "./abstracts/keyframes/kf_profile";
@@ -28,6 +29,8 @@
 @import "./components/icons/blog";
 
 @import "./components/image_loader";
+
+@import "./components/image_viewer";
 
 // Components Misc
 @import "./components/misc/typewriter";

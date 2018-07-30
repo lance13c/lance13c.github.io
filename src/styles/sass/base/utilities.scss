@@ -1,0 +1,17 @@
+.cs-button {
+    padding: 7px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;                
+    color: $theme-mono-color-1;
+    box-shadow: $theme-mono-color-6 0px 1px 5px 0px;
+    border-radius: 2px;
+    transform: translateY(0);
+    transition-duration: 0.15s;
+
+    &:hover {
+        cursor: pointer;                    
+        transform: translateY(1px);
+        //box-shadow: $theme-mono-color-5 0px 1px 5px 0px;
+    }
+}

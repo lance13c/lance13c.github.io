@@ -46894,6 +46894,55 @@ module.exports = abstracts;
 },{}],8:[function(require,module,exports){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var ImageViewer = function () {
+    function ImageViewer() {
+        _classCallCheck(this, ImageViewer);
+
+        // Setup HTML
+        this.HTML = document.createElement('section');
+        this.HTML.setAttribute("class", "image-viewer__overlay");
+        this.HTML.innerHTML = this.initHTML();
+        document.body.appendChild(this.HTML);
+    }
+
+    /**
+     * @param projectData - All data on a specific project
+     * @param imageSrc {String} - A string of the image source 
+     */
+
+
+    _createClass(ImageViewer, [{
+        key: "open",
+        value: function open(projectData, imageSrc) {
+
+            document.body.appendChild(this.HTML);
+        }
+    }, {
+        key: "close",
+        value: function close() {}
+    }, {
+        key: "initHTML",
+        value: function initHTML() {
+            return "\n            <div class=\"image-viewer__container\">\n                <div class=\"image-viewer__arrow--left cs-button\">\n                    <i class=\"fas fa-arrow-left fa-3x\"></i>\n                </div>\n                <div class=\"image-viewer__arrow--right cs-button\">\n                    <i class=\"fas fa-arrow-right fa-3x\"></i>\n                </div>\n                <img src=\"https://upload.wikimedia.org/wikipedia/commons/3/32/House_sparrow04.jpg\" class=\"image-viewer__image\">\n            </div>\n        ";
+        }
+    }]);
+
+    return ImageViewer;
+}();
+
+exports.default = ImageViewer;
+
+},{}],9:[function(require,module,exports){
+"use strict";
+
 require("./util/nav");
 
 var _resume = require("./pages/resume");
@@ -47002,7 +47051,7 @@ sceneEl.addEventListener('loaded', function () {
     //responsiveVR.update();
 });
 
-},{"./abstracts":7,"./pages/blog":9,"./pages/resume":10,"./pages/welcome":11,"./util/lazyload":12,"./util/nav":13,"./util/projectwheel":14,"three-css3drenderer":5}],9:[function(require,module,exports){
+},{"./abstracts":7,"./pages/blog":10,"./pages/resume":11,"./pages/welcome":12,"./util/lazyload":13,"./util/nav":14,"./util/projectwheel":15,"three-css3drenderer":5}],10:[function(require,module,exports){
 'use strict';
 
 var _blogHtml = require('../../../dist/js/vrViews/blog.html.js');
@@ -47036,7 +47085,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/blog.html.js":2}],10:[function(require,module,exports){
+},{"../../../dist/js/vrViews/blog.html.js":2}],11:[function(require,module,exports){
 'use strict';
 
 var _resumeHtml = require('../../../dist/js/vrViews/resume.html.js');
@@ -47070,7 +47119,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/resume.html.js":3}],11:[function(require,module,exports){
+},{"../../../dist/js/vrViews/resume.html.js":3}],12:[function(require,module,exports){
 'use strict';
 
 var _welcomeHtml = require('../../../dist/js/vrViews/welcome.html.js');
@@ -47107,7 +47156,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/welcome.html.js":4}],12:[function(require,module,exports){
+},{"../../../dist/js/vrViews/welcome.html.js":4}],13:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47189,7 +47238,7 @@ var LazyLoad = function () {
 
 exports.default = LazyLoad;
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 'use strict';
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -47261,7 +47310,7 @@ function setBeforePos(route) {
     }
 }
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47273,6 +47322,10 @@ var _createClass = function () { function defineProperties(target, props) { for 
 var _data = require('../../../assets/data/data.json');
 
 var _data2 = _interopRequireDefault(_data);
+
+var _imageviewer = require('../components/imageviewer');
+
+var _imageviewer2 = _interopRequireDefault(_imageviewer);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -47290,6 +47343,8 @@ var ProjectWheel = function () {
         this.ZOFFSET = 3;
         this.YOFFSET = 0.3;
         this.cssObjectList = [];
+
+        this.ImageViewer = new _imageviewer2.default();
     }
 
     _createClass(ProjectWheel, [{
@@ -47418,14 +47473,6 @@ var ProjectWheel = function () {
                     imageList += '\n                            <a class="project_image-frame">\n                                <div class="image__loader">\n                                    <div class="bounce1"></div>\n                                    <div class="bounce2"></div>\n                                    <div class="bounce3"></div>\n                                </div>\n                                <img class="project__image" data-src="' + src + '"></img>\n                            </a>';
                 });
 
-                // IMAGE LOADER
-                // <a class="project_image-frame">
-                //     <div class="image__loader">
-                //         <div class="bounce1"></div>
-                //         <div class="bounce2"></div>
-                //         <div class="bounce3"></div>
-                //     </div>
-
                 return imageList;
             }() + '\n                </div>\n            </section>\n        ';
 
@@ -47440,6 +47487,6 @@ var ProjectWheel = function () {
 
 exports.default = ProjectWheel;
 
-},{"../../../assets/data/data.json":1}]},{},[8])
+},{"../../../assets/data/data.json":1,"../components/imageviewer":8}]},{},[9])
 
 //# sourceMappingURL=main.js.map

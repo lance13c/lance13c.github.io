@@ -1,0 +1,40 @@
+
+.image-viewer__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    .image-viewer__container {
+        width: 50%;
+        height: 50%;
+        margin: auto;
+        top: 25%;
+        position: relative;
+
+        .image-viewer__arrow--left {
+            background-color: $cs-button-blue;
+            position: absolute;
+            left: -20%;
+
+            &:hover {
+                background-color: darken($cs-button-blue, $amount: 10%);
+            }
+        }
+    
+        .image-viewer__arrow--right {
+            background-color: $cs-button-blue;
+            position: absolute;
+            right: -20%;
+
+            &:hover {
+                background-color: darken($cs-button-blue, $amount: 10%);
+            }
+        }
+    
+        .image-viewer__image {
+            width: 100%;
+            box-shadow: 1px 1px 15px 0px #222222;
+        }
+    }
+}

@@ -1,6 +1,7 @@
 
 
 import data from '../../../assets/data/data.json';
+import ImageViewer from '../components/imageviewer';
 
 class ProjectWheel {
     constructor(sceneEl, cssScene, initPos) {
@@ -12,6 +13,8 @@ class ProjectWheel {
         this.ZOFFSET = 3;
         this.YOFFSET = 0.3;
         this.cssObjectList = [];
+
+        this.ImageViewer = new ImageViewer();
     }
 
     spawnRooms() {
@@ -139,14 +142,6 @@ class ProjectWheel {
                                 <img class="project__image" data-src="${src}"></img>
                             </a>`;
                         });
-
-                        // IMAGE LOADER
-                        // <a class="project_image-frame">
-                        //     <div class="image__loader">
-                        //         <div class="bounce1"></div>
-                        //         <div class="bounce2"></div>
-                        //         <div class="bounce3"></div>
-                        //     </div>
 
                         return imageList;
                     })()}
