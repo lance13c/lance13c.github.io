@@ -10,7 +10,7 @@ class LazyLoad {
         for(let entry of images.values()) {
             try {
                 let loader = entry.parentNode.querySelector('.image__loader');
-                //entry.setAttribute('src', entry.getAttribute('data-src'));
+                entry.setAttribute('src', entry.getAttribute('data-src'));
                 entry.addEventListener('load', () => {
                     loader.parentNode.removeChild(loader);
                 });

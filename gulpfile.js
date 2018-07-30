@@ -16,6 +16,7 @@ const imagemin = require('gulp-imagemin');
 
 const pathsSrc = {
   js: './src/js/**/*.js',
+  data: './data/data.json',
   jsEntry: './src/js/main.js',
   views: './src/views/**/*',
   vrViews: './src/views/vrViews/**/*',
@@ -50,11 +51,11 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(pathsDist.styles));
 });
 
-gulp.task('images', function () {
-  gulp.src(pathsSrc.images)
-    .pipe(imagemin())
-    .pipe(gulp.dest(pathsDist.images));
-});
+// gulp.task('images', function () {
+//   gulp.src(pathsSrc.images)
+//     .pipe(imagemin())
+//     .pipe(gulp.dest(pathsDist.images));
+// });
 
 gulp.task('compileJS', function() {
   const bundler = browserify(pathsSrc.jsEntry, {
@@ -84,8 +85,8 @@ gulp.task('watch', function() {
   gulp.watch(pathsSrc.styles.files, ['sass']);
   gulp.watch(pathsSrc.views, ['views', 'compileJS']);
   gulp.watch(pathsSrc.js, ['compileJS']);
+  gulp.watch(pathsSrc.data, ['compileJS']);
   gulp.watch(pathsSrc.vrViews, ['vrViews', 'compileJS']);
-  gulp.watch(pathsSrc.images, ['images']);
 });
 
 gulp.task('views', function() {
@@ -93,6 +94,6 @@ gulp.task('views', function() {
   .pipe(gulp.dest(pathsDist.views));
 });
 
-gulp.task('dev', ['compileJS', 'sass', 'views', 'images',  'vrViews']);
+gulp.task('dev', ['compileJS', 'sass', 'views', 'vrViews']);
 
 gulp.task('default', gulpsync.sync(["dev", "watch"]));

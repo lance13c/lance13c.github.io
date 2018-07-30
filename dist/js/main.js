@@ -11,6 +11,7 @@ module.exports={
       "cs_url": "/projects/weblegocar",
       "blog": "",
       "images": ["https://raw.githubusercontent.com/lance13c/web-lego-car/master/images/0.jpg"],
+      "thumbnails": ["https://raw.githubusercontent.com/lance13c/web-lego-car/master/images/0.jpg"],
       "videos": ""
     },
     {
@@ -23,9 +24,12 @@ module.exports={
       "demo_url": "",
       "cs_url": "/projects/bluetoothlights",
       "blog": "",
-      "images": ["/assets/images/projects/bluetoothlights/btl2.jpg", "/assets/images/projects/bluetoothlights/btl3.jpg", "/assets/images/projects/bluetoothlights/btl4.jpg","/assets/images/projects/bluetoothlights/btl5.jpg",
-        "/assets/images/projects/bluetoothlights/btl6.jpg", "/assets/images/projects/bluetoothlights/btl7.jpg","/assets/images/projects/bluetoothlights/btl8.jpg", "/assets/images/projects/bluetoothlights/btl9.jpg", "/assets/images/projects/bluetoothlights/btl10.jpg",
-        "/assets/images/projects/bluetoothlights/btl11.jpg", "/assets/images/projects/bluetoothlights/btl12.jpg", "/assets/images/projects/bluetoothlights/btl13.jpg", "/assets/images/projects/bluetoothlights/btl15.jpg"],
+      "images": ["/assets/images/projects/bluetoothlights/regular/btl (2).jpg", "/assets/images/projects/bluetoothlights/regular/btl (3).jpg", "/assets/images/projects/bluetoothlights/regular/btl (4).jpg","/assets/images/projects/bluetoothlights/regular/btl (5).jpg",
+        "/assets/images/projects/bluetoothlights/regular/btl (6).jpg", "/assets/images/projects/bluetoothlights/regular/btl (7).jpg","/assets/images/projects/bluetoothlights/regular/btl (8).jpg", "/assets/images/projects/bluetoothlights/regular/btl (9).jpg", "/assets/images/projects/bluetoothlights/regular/btl (10).jpg",
+        "/assets/images/projects/bluetoothlights/regular/btl (11).jpg", "/assets/images/projects/bluetoothlights/regular/btl (12).jpg", "/assets/images/projects/bluetoothlights/regular/btl (13).jpg", "/assets/images/projects/bluetoothlights/regular/btl (14).jpg"],
+      "thumbnails": ["/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (2)", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (3).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (4).jpg","/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (5).jpg",
+          "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (6).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (7).jpg","/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (8).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (9).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (10).jpg",
+          "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (11).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (12).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (13).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (14).jpg"],
       "videos": "IlwwBhS5HJY"
     },
     {
@@ -38,9 +42,12 @@ module.exports={
       "download_url": "https://www.dropbox.com/s/6winwjc686q0nm1/Hero2.0.exe?dl=0",
       "demo_url": "",
       "blog": "",
-      "images": ["/assets/images/projects/hero/hero0.png", "/assets/images/projects/hero/hero1.png", "/assets/images/projects/hero/hero2.png", "/assets/images/projects/hero/hero3.png", "/assets/images/projects/hero/hero4.png", "/assets/images/projects/hero/hero5.png",
-        "/assets/images/projects/hero/hero7.png", "/assets/images/projects/hero/hero8.png", "/assets/images/projects/hero/hero9.png", "/assets/images/projects/hero/hero10.png", "/assets/images/projects/hero/hero11.png",
-        "/assets/images/projects/hero/hero12.png", "/assets/images/projects/hero/hero13.png"],
+      "images": ["/assets/images/projects/hero/regular/hero (1).png", "/assets/images/projects/hero/regular/hero (2).png", "/assets/images/projects/hero/regular/hero (3).png", "/assets/images/projects/hero/regular/hero (4).png", "/assets/images/projects/hero/regular/hero (5).png",
+        "/assets/images/projects/hero/regular/hero (7).png", "/assets/images/projects/hero/regular/hero (8).png", "/assets/images/projects/hero/regular/hero (9).png", "/assets/images/projects/hero/regular/hero (10).png", "/assets/images/projects/hero/regular/hero (11).png",
+        "/assets/images/projects/hero/regular/hero (12).png", "/assets/images/projects/hero/regular/hero (13).png", "/assets/images/projects/hero/regular/hero (14).png"],
+      "thumbnails": ["/assets/images/projects/hero/thumbnails/hero-thumbnail (1).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (2).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (3).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (4).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (5).jpg",
+          "/assets/images/projects/hero/thumbnails/hero-thumbnail (7).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (8).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (9).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (10).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (11).jpg",
+          "/assets/images/projects/hero/thumbnails/hero-thumbnail (12).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (13).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (14).jpg"],    
       "videos": ""
     },
     {
@@ -53,9 +60,12 @@ module.exports={
       "demo_url": "",
       "cs_url": "/projects/trebuchet",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet4.jpg", "/assets/images/projects/trebuchet/trebuchet5.jpg", "/assets/images/projects/trebuchet/trebuchet3.jpg", "/assets/images/projects/trebuchet/trebuchet1.jpg",
-        "/assets/images/projects/trebuchet/trebuchet2.jpg", "/assets/images/projects/trebuchet/trebuchet6.jpg", "/assets/images/projects/trebuchet/trebuchet7.jpg", "/assets/images/projects/trebuchet/trebuchet8.jpg",
-        "/assets/images/projects/trebuchet/trebuchet9.jpg"],
+      "images": ["/assets/images/projects/trebuchet/regular/trebuchet (4).jpg", "/assets/images/projects/trebuchet/regular/trebuchet (5).jpg", "/assets/images/projects/trebuchet/regular/trebuchet (3).jpg", "/assets/images/projects/trebuchet/regular/trebuchet (1).jpg",
+        "/assets/images/projects/trebuchet/regular/trebuchet (2).jpg", "/assets/images/projects/trebuchet/regular/trebuchet (6).jpg", "/assets/images/projects/trebuchet/regular/trebuchet (7).jpg", "/assets/images/projects/trebuchet/regular/trebuchet (8).jpg"
+        ],
+      "thumbnails": ["/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (4).jpg", "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (5).jpg", "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (3).jpg", "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (1).jpg",
+          "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (2).jpg", "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (6).jpg", "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (7).jpg", "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (8).jpg"
+          ],
       "videos": "M3tX7j7sx44"
     },
     {
@@ -68,9 +78,12 @@ module.exports={
       "demo_url": "",
       "cs_url": "/projects/spacefighter",
       "blog": "",
-      "images": ["/assets/images/projects/spacefighter/sf0.png", "/assets/images/projects/spacefighter/sf1.png", "/assets/images/projects/spacefighter/sf2.png",
-        "/assets/images/projects/spacefighter/sf3.png", "/assets/images/projects/spacefighter/sf4.png", "/assets/images/projects/spacefighter/sf5.png",
-        "/assets/images/projects/spacefighter/sf6.png", "/assets/images/projects/spacefighter/sf7.png"],
+      "images": ["/assets/images/projects/spacefighter/regular/sf (1).png", "/assets/images/projects/spacefighter/regular/sf (2).png",
+        "/assets/images/projects/spacefighter/regular/sf (3).png", "/assets/images/projects/spacefighter/regular/sf (4).png", "/assets/images/projects/spacefighter/regular/sf (5).png",
+        "/assets/images/projects/spacefighter/regular/sf (6).png", "/assets/images/projects/spacefighter/regular/sf (7).png", "/assets/images/projects/spacefighter/regular/sf (8).png"],
+      "thumbnails": ["/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (1).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (2).jpg",
+          "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (3).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (4).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (5).jpg",
+          "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (6).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (7).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (8).jpg"],
       "videos": "",
       "variables": {}
     },
@@ -84,7 +97,8 @@ module.exports={
       "demo_url": "",
       "cs_url": "/projects/hololens-timer",
       "blog": "",
-      "images": ["/assets/images/projects/trebuchet/trebuchet4.jpg"],
+      "images": ["/assets/images/projects/trebuchet/regular/trebuchet (4).jpg"],
+      "thumbnails": ["/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (4).jpg"],
       "videos": "",
       "variables": {
         "time": "00:00"
@@ -100,12 +114,12 @@ module.exports={
         {
           "name" : "CicilioStudio",
           "url": "main.home",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (1).jpg"
         },
         {
           "name" : "Browser Pal",
           "url": "main.projects",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet7.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (7).jpg"
         }
       ]
     },
@@ -117,7 +131,7 @@ module.exports={
         {
           "name" : "CicilioStudio",
           "url": "main.skills",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (1).jpg"
         }
       ]
     },
@@ -129,7 +143,7 @@ module.exports={
         {
           "name" : "CicilioStudio",
           "url": "",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (1).jpg"
         }
       ]
     },
@@ -147,7 +161,7 @@ module.exports={
         {
           "name" : "CicilioStudio",
           "url": "",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (1).jpg"
         }
       ]
     },
@@ -159,7 +173,7 @@ module.exports={
         {
           "name" : "CicilioStudio",
           "url": "main.skills",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (1).jpg"
         }
       ]
     },
@@ -171,7 +185,7 @@ module.exports={
         {
           "name" : "Trebuchet",
           "url": "main.projects",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (1).jpg"
         }
       ]
     },
@@ -183,7 +197,7 @@ module.exports={
         {
           "name" : "CicilioStudio",
           "url": "",
-          "icon_image": "/assets/images/projects/trebuchet/trebuchet1.jpg"
+          "icon_image": "/assets/images/projects/trebuchet/thumbnails/trebuchet-thumbnail (1).jpg"
         }
       ]
     }
@@ -47130,7 +47144,7 @@ var LazyLoad = function () {
                     try {
                         (function () {
                             var loader = entry.parentNode.querySelector('.image__loader');
-                            //entry.setAttribute('src', entry.getAttribute('data-src'));
+                            entry.setAttribute('src', entry.getAttribute('data-src'));
                             entry.addEventListener('load', function () {
                                 loader.parentNode.removeChild(loader);
                             });
@@ -47400,7 +47414,7 @@ var ProjectWheel = function () {
             }() + '\n                    </span>\n                </div>\n                    <div class="project__image-container">\n                    ' + function () {
                 //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
                 var imageList = '';
-                projectData.images.forEach(function (src) {
+                projectData.thumbnails.forEach(function (src) {
                     imageList += '\n                            <a class="project_image-frame">\n                                <img class="project__image" data-src="' + src + '"></img>\n                            </a>';
                 });
 
