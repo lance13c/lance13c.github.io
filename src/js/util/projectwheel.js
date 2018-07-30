@@ -131,6 +131,11 @@ class ProjectWheel {
                         projectData.thumbnails.forEach((src) => {
                             imageList += `
                             <a class="project_image-frame">
+                                <div class="image__loader">
+                                    <div class="bounce1"></div>
+                                    <div class="bounce2"></div>
+                                    <div class="bounce3"></div>
+                                </div>
                                 <img class="project__image" data-src="${src}"></img>
                             </a>`;
                         });

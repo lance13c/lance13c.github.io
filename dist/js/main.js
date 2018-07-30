@@ -27,7 +27,7 @@ module.exports={
       "images": ["/assets/images/projects/bluetoothlights/regular/btl (2).jpg", "/assets/images/projects/bluetoothlights/regular/btl (3).jpg", "/assets/images/projects/bluetoothlights/regular/btl (4).jpg","/assets/images/projects/bluetoothlights/regular/btl (5).jpg",
         "/assets/images/projects/bluetoothlights/regular/btl (6).jpg", "/assets/images/projects/bluetoothlights/regular/btl (7).jpg","/assets/images/projects/bluetoothlights/regular/btl (8).jpg", "/assets/images/projects/bluetoothlights/regular/btl (9).jpg", "/assets/images/projects/bluetoothlights/regular/btl (10).jpg",
         "/assets/images/projects/bluetoothlights/regular/btl (11).jpg", "/assets/images/projects/bluetoothlights/regular/btl (12).jpg", "/assets/images/projects/bluetoothlights/regular/btl (13).jpg", "/assets/images/projects/bluetoothlights/regular/btl (14).jpg"],
-      "thumbnails": ["/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (2)", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (3).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (4).jpg","/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (5).jpg",
+      "thumbnails": ["/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (2).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (3).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (4).jpg","/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (5).jpg",
           "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (6).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (7).jpg","/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (8).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (9).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (10).jpg",
           "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (11).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (12).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (13).jpg", "/assets/images/projects/bluetoothlights/thumbnails/btl-thumbnail (14).jpg"],
       "videos": "IlwwBhS5HJY"
@@ -47415,7 +47415,7 @@ var ProjectWheel = function () {
                 //return `<img class="project__image" src="https://pbs.twimg.com/profile_images/378800000532546226/dbe5f0727b69487016ffd67a6689e75a_400x400.jpeg"></img>`
                 var imageList = '';
                 projectData.thumbnails.forEach(function (src) {
-                    imageList += '\n                            <a class="project_image-frame">\n                                <img class="project__image" data-src="' + src + '"></img>\n                            </a>';
+                    imageList += '\n                            <a class="project_image-frame">\n                                <div class="image__loader">\n                                    <div class="bounce1"></div>\n                                    <div class="bounce2"></div>\n                                    <div class="bounce3"></div>\n                                </div>\n                                <img class="project__image" data-src="' + src + '"></img>\n                            </a>';
                 });
 
                 // IMAGE LOADER
