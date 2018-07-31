@@ -1,3 +1,51 @@
+import { resolve } from "path";
+
+// Helper Class
+class ImageNavigator {
+
+    constructor(projectData, initImage) {
+        this.projectData = projectData;
+        this.initImage = initImage;
+        this.currentImageNumber = this.getImageNumber(this.initImage);
+    }
+
+    /**
+     * Gets the image source
+     * @param {String} imageSrc - The image source url
+     */
+    getImageNumber(imageSrc) {
+        return parseInt((imageSrc.match(/[0-9]?[0-9]/))[0]);
+    }
+
+    nextImage() {
+        
+        // Increment to next image
+        this.currentImageNumber++;
+
+        let nextImageSrc = this.findImage(this.currentImageNumber);
+        if (nextImageSrc == undefined) {
+            nextImageSrc = this.findImage(1);
+            this.currentImageNumber = 1;
+        }
+
+        // Find the image element and replace the src with the new image src.
+        let imageEl = document.querySelector('.image-viewer__image');
+        imageEl.src = nextImageSrc;
+    }
+
+    findPrevious(projectData, currentImage) {}
+
+    /**
+     * Finds the image with the specified number
+     * @param {} number - unique image identifier within a specific project
+     */
+    findImage(number) {
+        return this.projectData.images.find((imageSrc) => {
+            return imageSrc.match(number) !== null;
+        });
+    }
+}
+
 class ImageViewer {
 
     constructor() {
@@ -16,16 +64,18 @@ class ImageViewer {
         this.HTML.innerHTML = this.initHTML(imageSrc);
         document.body.appendChild(this.HTML);
 
+        this.imageNavigator = new ImageNavigator(projectData, imageSrc);
+
         // Give this html enough time to load in the DOM
         setTimeout(() => {
-            let currentImage = imageSrc;
+            this.currentImage = imageSrc;
 
             let closeEl = document.querySelector(".image-viewer__close-button");
             //let overlayEl = document.querySelector(".image-viewer__overlay");
             let rightArrowEl = document.querySelector(".image-viewer__arrow--right");
 
             closeEl.addEventListener('click', this.close);
-            rightArrowEl.addEventListener("click", this.nextImage.bind(this, projectData, currentImage));
+            rightArrowEl.addEventListener("click", this.imageNavigator.nextImage.bind(this.imageNavigator));
             //overlayEl.addEventListener('click', this.close);
         }, 50);
     }
@@ -42,39 +92,7 @@ class ImageViewer {
         return thumbnailSrc.replace(/thumbnails\/(.*)-thumbnail\s(\([0-9]?[0-9]\))/, 'regular/$1 $2');
     }
 
-    nextImage(projectData, currentImageSrc, callback) {
-        // find number using match
-        let currentImageNumber = parseInt((currentImageSrc.match(/[0-9]?[0-9]/))[0]);
-        
-        // Increment to next image
-        currentImageNumber++;
-        let nextImageSrc = this.findImage(projectData, currentImageNumber);
-        if (nextImageSrc === null) {
-            nextImageSrc = this.findImage(projectData, 1);
-        }
-        
-        console.log(currentImageNumber);
-        console.log(nextImageSrc);
-
-        // Find the image element and replace the src with the new image src.
-        let imageEl = document.querySelector('.image-viewer__image');
-        imageEl.src = nextImageSrc;
-
-        return nextImageSrc;
-        // Search regular images for number
-    }
-
-    findPrevious(projectData, currentImage) {}
-
-    /**
-     * Finds the image with the specified number
-     * @param {} number - unique image identifier within a specific project
-     */
-    findImage(projectData, number) {
-        return projectData.images.find((imageSrc) => {
-            return imageSrc.match(number) !== null;
-        });
-    }
+    
 
     /**
      * Initalizes the HTML

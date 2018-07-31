@@ -6,8 +6,9 @@
     background-color: rgba(0, 0, 0, 0.8);
 
     .image-viewer__container {
-        width: 60%;
-        height: 60%;
+        max-width: 60%;
+        display: flex;
+        justify-content: center;
         margin: auto;
         top: 15%;
         position: relative;
@@ -30,7 +31,7 @@
         .image-viewer__arrow--left {
             background-color: $cs-button-blue;
             position: absolute;
-            left: -20%;
+            left: -10%;
 
             &:hover {
                 background-color: darken($cs-button-blue, $amount: 10%);
@@ -40,7 +41,7 @@
         .image-viewer__arrow--right {
             background-color: $cs-button-blue;
             position: absolute;
-            right: -20%;
+            right: -10%;
 
             &:hover {
                 background-color: darken($cs-button-blue, $amount: 10%);
@@ -48,7 +49,11 @@
         }
     
         .image-viewer__image {
-            width: 100%;
+            max-width: 100%;
+            max-height: 680px;
+            width: auto;
+            height: auto;
+            user-select: none;
             box-shadow: 1px 1px 15px 0px #222222;
         }
     }

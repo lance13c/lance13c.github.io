@@ -42,9 +42,9 @@ module.exports={
       "download_url": "https://www.dropbox.com/s/6winwjc686q0nm1/Hero2.0.exe?dl=0",
       "demo_url": "",
       "blog": "",
-      "images": ["/assets/images/projects/hero/regular/hero (1).png", "/assets/images/projects/hero/regular/hero (2).png", "/assets/images/projects/hero/regular/hero (3).png", "/assets/images/projects/hero/regular/hero (4).png", "/assets/images/projects/hero/regular/hero (5).png",
-        "/assets/images/projects/hero/regular/hero (7).png", "/assets/images/projects/hero/regular/hero (8).png", "/assets/images/projects/hero/regular/hero (9).png", "/assets/images/projects/hero/regular/hero (10).png", "/assets/images/projects/hero/regular/hero (11).png",
-        "/assets/images/projects/hero/regular/hero (12).png", "/assets/images/projects/hero/regular/hero (13).png", "/assets/images/projects/hero/regular/hero (14).png"],
+      "images": ["/assets/images/projects/hero/regular/hero (1).jpg", "/assets/images/projects/hero/regular/hero (2).jpg", "/assets/images/projects/hero/regular/hero (3).jpg", "/assets/images/projects/hero/regular/hero (4).jpg", "/assets/images/projects/hero/regular/hero (5).jpg",
+        "/assets/images/projects/hero/regular/hero (7).jpg", "/assets/images/projects/hero/regular/hero (8).jpg", "/assets/images/projects/hero/regular/hero (9).jpg", "/assets/images/projects/hero/regular/hero (10).jpg", "/assets/images/projects/hero/regular/hero (11).jpg",
+        "/assets/images/projects/hero/regular/hero (12).jpg", "/assets/images/projects/hero/regular/hero (13).jpg", "/assets/images/projects/hero/regular/hero (14).jpg"],
       "thumbnails": ["/assets/images/projects/hero/thumbnails/hero-thumbnail (1).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (2).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (3).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (4).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (5).jpg",
           "/assets/images/projects/hero/thumbnails/hero-thumbnail (7).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (8).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (9).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (10).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (11).jpg",
           "/assets/images/projects/hero/thumbnails/hero-thumbnail (12).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (13).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (14).jpg"],    
@@ -78,9 +78,9 @@ module.exports={
       "demo_url": "",
       "cs_url": "/projects/spacefighter",
       "blog": "",
-      "images": ["/assets/images/projects/spacefighter/regular/sf (1).png", "/assets/images/projects/spacefighter/regular/sf (2).png",
-        "/assets/images/projects/spacefighter/regular/sf (3).png", "/assets/images/projects/spacefighter/regular/sf (4).png", "/assets/images/projects/spacefighter/regular/sf (5).png",
-        "/assets/images/projects/spacefighter/regular/sf (6).png", "/assets/images/projects/spacefighter/regular/sf (7).png", "/assets/images/projects/spacefighter/regular/sf (8).png"],
+      "images": ["/assets/images/projects/spacefighter/regular/sf (1).jpg", "/assets/images/projects/spacefighter/regular/sf (2).jpg",
+        "/assets/images/projects/spacefighter/regular/sf (3).jpg", "/assets/images/projects/spacefighter/regular/sf (4).jpg", "/assets/images/projects/spacefighter/regular/sf (5).jpg",
+        "/assets/images/projects/spacefighter/regular/sf (6).jpg", "/assets/images/projects/spacefighter/regular/sf (7).jpg", "/assets/images/projects/spacefighter/regular/sf (8).jpg"],
       "thumbnails": ["/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (1).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (2).jpg",
           "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (3).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (4).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (5).jpg",
           "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (6).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (7).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (8).jpg"],
@@ -212,10 +212,10 @@ module.exports={
     "url": "/resume/resume.pdf"
   },
   "specific_project": {
-    "title_image": "/assets/images/background/hexabump/hexabump.png"
+    "title_image": "/assets/images/background/hexabump/hexabump.jpg"
   },
   "site": {
-    "fav_icon": "/assets/images/projects/ciciliostudio/favicon5.png"
+    "fav_icon": "/assets/images/projects/ciciliostudio/favicon5.jpg"
   },
   "new_knowledge": [
     {
@@ -261,6 +261,421 @@ module.exports = '<div>\n    <h1 class="header">Coming Soon</h1>\n</div>\n';
 module.exports = '<section class="welcome__container">\n    <span><span class="console-writer welcome__title">Cicilio Studio\n        <div class="welcome__title-tag">BETA</div>\n    </span><span class="welcome__title blink welcome__cursor">_</span></span>\n    <div class="welcome__sub__title">Dominic Cicilio 3D Web Developer</div>\n</section>\n';
 
 },{}],5:[function(require,module,exports){
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+},{}],6:[function(require,module,exports){
+(function (process){
+// Copyright Joyent, Inc. and other Node contributors.
+//
+// Permission is hereby granted, free of charge, to any person obtaining a
+// copy of this software and associated documentation files (the
+// "Software"), to deal in the Software without restriction, including
+// without limitation the rights to use, copy, modify, merge, publish,
+// distribute, sublicense, and/or sell copies of the Software, and to permit
+// persons to whom the Software is furnished to do so, subject to the
+// following conditions:
+//
+// The above copyright notice and this permission notice shall be included
+// in all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+// resolves . and .. elements in a path array with directory names there
+// must be no slashes, empty elements, or device names (c:\) in the array
+// (so also no leading and trailing slashes - it does not distinguish
+// relative and absolute paths)
+function normalizeArray(parts, allowAboveRoot) {
+  // if the path tries to go above the root, `up` ends up > 0
+  var up = 0;
+  for (var i = parts.length - 1; i >= 0; i--) {
+    var last = parts[i];
+    if (last === '.') {
+      parts.splice(i, 1);
+    } else if (last === '..') {
+      parts.splice(i, 1);
+      up++;
+    } else if (up) {
+      parts.splice(i, 1);
+      up--;
+    }
+  }
+
+  // if the path is allowed to go above the root, restore leading ..s
+  if (allowAboveRoot) {
+    for (; up--; up) {
+      parts.unshift('..');
+    }
+  }
+
+  return parts;
+}
+
+// Split a filename into [root, dir, basename, ext], unix version
+// 'root' is just a slash, or nothing.
+var splitPathRe =
+    /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
+var splitPath = function(filename) {
+  return splitPathRe.exec(filename).slice(1);
+};
+
+// path.resolve([from ...], to)
+// posix version
+exports.resolve = function() {
+  var resolvedPath = '',
+      resolvedAbsolute = false;
+
+  for (var i = arguments.length - 1; i >= -1 && !resolvedAbsolute; i--) {
+    var path = (i >= 0) ? arguments[i] : process.cwd();
+
+    // Skip empty and invalid entries
+    if (typeof path !== 'string') {
+      throw new TypeError('Arguments to path.resolve must be strings');
+    } else if (!path) {
+      continue;
+    }
+
+    resolvedPath = path + '/' + resolvedPath;
+    resolvedAbsolute = path.charAt(0) === '/';
+  }
+
+  // At this point the path should be resolved to a full absolute path, but
+  // handle relative paths to be safe (might happen when process.cwd() fails)
+
+  // Normalize the path
+  resolvedPath = normalizeArray(filter(resolvedPath.split('/'), function(p) {
+    return !!p;
+  }), !resolvedAbsolute).join('/');
+
+  return ((resolvedAbsolute ? '/' : '') + resolvedPath) || '.';
+};
+
+// path.normalize(path)
+// posix version
+exports.normalize = function(path) {
+  var isAbsolute = exports.isAbsolute(path),
+      trailingSlash = substr(path, -1) === '/';
+
+  // Normalize the path
+  path = normalizeArray(filter(path.split('/'), function(p) {
+    return !!p;
+  }), !isAbsolute).join('/');
+
+  if (!path && !isAbsolute) {
+    path = '.';
+  }
+  if (path && trailingSlash) {
+    path += '/';
+  }
+
+  return (isAbsolute ? '/' : '') + path;
+};
+
+// posix version
+exports.isAbsolute = function(path) {
+  return path.charAt(0) === '/';
+};
+
+// posix version
+exports.join = function() {
+  var paths = Array.prototype.slice.call(arguments, 0);
+  return exports.normalize(filter(paths, function(p, index) {
+    if (typeof p !== 'string') {
+      throw new TypeError('Arguments to path.join must be strings');
+    }
+    return p;
+  }).join('/'));
+};
+
+
+// path.relative(from, to)
+// posix version
+exports.relative = function(from, to) {
+  from = exports.resolve(from).substr(1);
+  to = exports.resolve(to).substr(1);
+
+  function trim(arr) {
+    var start = 0;
+    for (; start < arr.length; start++) {
+      if (arr[start] !== '') break;
+    }
+
+    var end = arr.length - 1;
+    for (; end >= 0; end--) {
+      if (arr[end] !== '') break;
+    }
+
+    if (start > end) return [];
+    return arr.slice(start, end - start + 1);
+  }
+
+  var fromParts = trim(from.split('/'));
+  var toParts = trim(to.split('/'));
+
+  var length = Math.min(fromParts.length, toParts.length);
+  var samePartsLength = length;
+  for (var i = 0; i < length; i++) {
+    if (fromParts[i] !== toParts[i]) {
+      samePartsLength = i;
+      break;
+    }
+  }
+
+  var outputParts = [];
+  for (var i = samePartsLength; i < fromParts.length; i++) {
+    outputParts.push('..');
+  }
+
+  outputParts = outputParts.concat(toParts.slice(samePartsLength));
+
+  return outputParts.join('/');
+};
+
+exports.sep = '/';
+exports.delimiter = ':';
+
+exports.dirname = function(path) {
+  var result = splitPath(path),
+      root = result[0],
+      dir = result[1];
+
+  if (!root && !dir) {
+    // No dirname whatsoever
+    return '.';
+  }
+
+  if (dir) {
+    // It has a dirname, strip trailing slash
+    dir = dir.substr(0, dir.length - 1);
+  }
+
+  return root + dir;
+};
+
+
+exports.basename = function(path, ext) {
+  var f = splitPath(path)[2];
+  // TODO: make this comparison case-insensitive on windows?
+  if (ext && f.substr(-1 * ext.length) === ext) {
+    f = f.substr(0, f.length - ext.length);
+  }
+  return f;
+};
+
+
+exports.extname = function(path) {
+  return splitPath(path)[3];
+};
+
+function filter (xs, f) {
+    if (xs.filter) return xs.filter(f);
+    var res = [];
+    for (var i = 0; i < xs.length; i++) {
+        if (f(xs[i], i, xs)) res.push(xs[i]);
+    }
+    return res;
+}
+
+// String.prototype.substr - negative index don't work in IE8
+var substr = 'ab'.substr(-1) === 'b'
+    ? function (str, start, len) { return str.substr(start, len) }
+    : function (str, start, len) {
+        if (start < 0) start = str.length + start;
+        return str.substr(start, len);
+    }
+;
+
+}).call(this,require('_process'))
+
+},{"_process":5}],7:[function(require,module,exports){
 /**
  * Based on http://www.emagix.net/academic/mscs-project/item/camera-sync-with-css3-and-webgl-threejs
  * @author mrdoob / http://mrdoob.com/
@@ -579,7 +994,7 @@ CSS3DRenderer.prototype = Object.create( THREE.EventDispatcher.prototype );
 CSS3DRenderer.prototype.constructor = CSS3DRenderer;
 module.exports.CSS3DRenderer = CSS3DRenderer;
 
-},{"three":6}],6:[function(require,module,exports){
+},{"three":8}],8:[function(require,module,exports){
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
@@ -46866,7 +47281,7 @@ module.exports.CSS3DRenderer = CSS3DRenderer;
 
 })));
 
-},{}],7:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 "use strict";
 
 var abstracts = {
@@ -46891,8 +47306,8 @@ var abstracts = {
 
 module.exports = abstracts;
 
-},{}],8:[function(require,module,exports){
-"use strict";
+},{}],10:[function(require,module,exports){
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -46900,7 +47315,68 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _path = require('path');
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// Helper Class
+var ImageNavigator = function () {
+    function ImageNavigator(projectData, initImage) {
+        _classCallCheck(this, ImageNavigator);
+
+        this.projectData = projectData;
+        this.initImage = initImage;
+        this.currentImageNumber = this.getImageNumber(this.initImage);
+    }
+
+    /**
+     * Gets the image source
+     * @param {String} imageSrc - The image source url
+     */
+
+
+    _createClass(ImageNavigator, [{
+        key: 'getImageNumber',
+        value: function getImageNumber(imageSrc) {
+            return parseInt(imageSrc.match(/[0-9]?[0-9]/)[0]);
+        }
+    }, {
+        key: 'nextImage',
+        value: function nextImage() {
+
+            // Increment to next image
+            this.currentImageNumber++;
+
+            var nextImageSrc = this.findImage(this.currentImageNumber);
+            if (nextImageSrc == undefined) {
+                nextImageSrc = this.findImage(1);
+                this.currentImageNumber = 1;
+            }
+
+            // Find the image element and replace the src with the new image src.
+            var imageEl = document.querySelector('.image-viewer__image');
+            imageEl.src = nextImageSrc;
+        }
+    }, {
+        key: 'findPrevious',
+        value: function findPrevious(projectData, currentImage) {}
+
+        /**
+         * Finds the image with the specified number
+         * @param {} number - unique image identifier within a specific project
+         */
+
+    }, {
+        key: 'findImage',
+        value: function findImage(number) {
+            return this.projectData.images.find(function (imageSrc) {
+                return imageSrc.match(number) !== null;
+            });
+        }
+    }]);
+
+    return ImageNavigator;
+}();
 
 var ImageViewer = function () {
     function ImageViewer() {
@@ -46918,28 +47394,30 @@ var ImageViewer = function () {
 
 
     _createClass(ImageViewer, [{
-        key: "open",
+        key: 'open',
         value: function open(projectData, imageSrc) {
             var _this = this;
 
             this.HTML.innerHTML = this.initHTML(imageSrc);
             document.body.appendChild(this.HTML);
 
+            this.imageNavigator = new ImageNavigator(projectData, imageSrc);
+
             // Give this html enough time to load in the DOM
             setTimeout(function () {
-                var currentImage = imageSrc;
+                _this.currentImage = imageSrc;
 
                 var closeEl = document.querySelector(".image-viewer__close-button");
                 //let overlayEl = document.querySelector(".image-viewer__overlay");
                 var rightArrowEl = document.querySelector(".image-viewer__arrow--right");
 
                 closeEl.addEventListener('click', _this.close);
-                rightArrowEl.addEventListener("click", _this.nextImage.bind(_this, projectData, currentImage));
+                rightArrowEl.addEventListener("click", _this.imageNavigator.nextImage.bind(_this.imageNavigator));
                 //overlayEl.addEventListener('click', this.close);
             }, 50);
         }
     }, {
-        key: "close",
+        key: 'close',
         value: function close() {
             var overlay = document.querySelector('.image-viewer__overlay');
             overlay.parentElement.removeChild(overlay);
@@ -46950,48 +47428,9 @@ var ImageViewer = function () {
          */
 
     }, {
-        key: "thumbnailToRegular",
+        key: 'thumbnailToRegular',
         value: function thumbnailToRegular(thumbnailSrc) {
             return thumbnailSrc.replace(/thumbnails\/(.*)-thumbnail\s(\([0-9]?[0-9]\))/, 'regular/$1 $2');
-        }
-    }, {
-        key: "nextImage",
-        value: function nextImage(projectData, currentImageSrc, callback) {
-            // find number using match
-            var currentImageNumber = parseInt(currentImageSrc.match(/[0-9]?[0-9]/)[0]);
-
-            // Increment to next image
-            currentImageNumber++;
-            var nextImageSrc = this.findImage(projectData, currentImageNumber);
-            if (nextImageSrc === null) {
-                nextImageSrc = this.findImage(projectData, 1);
-            }
-
-            console.log(currentImageNumber);
-            console.log(nextImageSrc);
-
-            // Find the image element and replace the src with the new image src.
-            var imageEl = document.querySelector('.image-viewer__image');
-            imageEl.src = nextImageSrc;
-
-            return nextImageSrc;
-            // Search regular images for number
-        }
-    }, {
-        key: "findPrevious",
-        value: function findPrevious(projectData, currentImage) {}
-
-        /**
-         * Finds the image with the specified number
-         * @param {} number - unique image identifier within a specific project
-         */
-
-    }, {
-        key: "findImage",
-        value: function findImage(projectData, number) {
-            return projectData.images.find(function (imageSrc) {
-                return imageSrc.match(number) !== null;
-            });
         }
 
         /**
@@ -47000,14 +47439,14 @@ var ImageViewer = function () {
          */
 
     }, {
-        key: "initHTML",
+        key: 'initHTML',
         value: function initHTML(imageSrc) {
 
             // Changes the thubnail image src to the regular image src
             // The regular image source is higher in quality
             imageSrc = this.thumbnailToRegular(imageSrc);
 
-            return "\n            <div class=\"image-viewer__container\">\n                <div class=\"image-viewer__close-button cs-button\">\n                    <i class=\"far fa-times-circle fa-5x\"></i>\n                </div>\n                <div class=\"image-viewer__arrow--left cs-button\">\n                    <i class=\"fas fa-arrow-left fa-3x\"></i>\n                </div>\n                <div class=\"image-viewer__arrow--right cs-button\">\n                    <i class=\"fas fa-arrow-right fa-3x\"></i>\n                </div>\n                <img src=\"" + imageSrc + "\" class=\"image-viewer__image\">\n            </div>\n        ";
+            return '\n            <div class="image-viewer__container">\n                <div class="image-viewer__close-button cs-button">\n                    <i class="far fa-times-circle fa-5x"></i>\n                </div>\n                <div class="image-viewer__arrow--left cs-button">\n                    <i class="fas fa-arrow-left fa-3x"></i>\n                </div>\n                <div class="image-viewer__arrow--right cs-button">\n                    <i class="fas fa-arrow-right fa-3x"></i>\n                </div>\n                <img src="' + imageSrc + '" class="image-viewer__image">\n            </div>\n        ';
         }
     }]);
 
@@ -47016,7 +47455,7 @@ var ImageViewer = function () {
 
 exports.default = ImageViewer;
 
-},{}],9:[function(require,module,exports){
+},{"path":6}],11:[function(require,module,exports){
 "use strict";
 
 require("./util/nav");
@@ -47127,7 +47566,7 @@ sceneEl.addEventListener('loaded', function () {
     //responsiveVR.update();
 });
 
-},{"./abstracts":7,"./pages/blog":10,"./pages/resume":11,"./pages/welcome":12,"./util/lazyload":13,"./util/nav":14,"./util/projectwheel":15,"three-css3drenderer":5}],10:[function(require,module,exports){
+},{"./abstracts":9,"./pages/blog":12,"./pages/resume":13,"./pages/welcome":14,"./util/lazyload":15,"./util/nav":16,"./util/projectwheel":17,"three-css3drenderer":7}],12:[function(require,module,exports){
 'use strict';
 
 var _blogHtml = require('../../../dist/js/vrViews/blog.html.js');
@@ -47161,7 +47600,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/blog.html.js":2}],11:[function(require,module,exports){
+},{"../../../dist/js/vrViews/blog.html.js":2}],13:[function(require,module,exports){
 'use strict';
 
 var _resumeHtml = require('../../../dist/js/vrViews/resume.html.js');
@@ -47195,7 +47634,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/resume.html.js":3}],12:[function(require,module,exports){
+},{"../../../dist/js/vrViews/resume.html.js":3}],14:[function(require,module,exports){
 'use strict';
 
 var _welcomeHtml = require('../../../dist/js/vrViews/welcome.html.js');
@@ -47232,7 +47671,7 @@ module.exports = {
     init: init
 };
 
-},{"../../../dist/js/vrViews/welcome.html.js":4}],13:[function(require,module,exports){
+},{"../../../dist/js/vrViews/welcome.html.js":4}],15:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47314,7 +47753,7 @@ var LazyLoad = function () {
 
 exports.default = LazyLoad;
 
-},{}],14:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 'use strict';
 
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -47386,7 +47825,7 @@ function setBeforePos(route) {
     }
 }
 
-},{}],15:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -47577,6 +48016,6 @@ var ProjectWheel = function () {
 
 exports.default = ProjectWheel;
 
-},{"../../../assets/data/data.json":1,"../components/imageviewer":8}]},{},[9])
+},{"../../../assets/data/data.json":1,"../components/imageviewer":10}]},{},[11])
 
 //# sourceMappingURL=main.js.map
