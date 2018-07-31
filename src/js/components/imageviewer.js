@@ -33,7 +33,21 @@ class ImageNavigator {
         imageEl.src = nextImageSrc;
     }
 
-    findPrevious(projectData, currentImage) {}
+    previousImage() {
+        // Increment to next image
+        this.currentImageNumber--;
+
+        let nextImageSrc = this.findImage(this.currentImageNumber);
+        if (nextImageSrc == undefined) {
+            let maxImages = this.projectData.images.length;
+            nextImageSrc = this.findImage(maxImages);
+            this.currentImageNumber = maxImages;
+        }
+
+        // Find the image element and replace the src with the new image src.
+        let imageEl = document.querySelector('.image-viewer__image');
+        imageEl.src = nextImageSrc;
+    }
 
     /**
      * Finds the image with the specified number
@@ -73,9 +87,11 @@ class ImageViewer {
             let closeEl = document.querySelector(".image-viewer__close-button");
             //let overlayEl = document.querySelector(".image-viewer__overlay");
             let rightArrowEl = document.querySelector(".image-viewer__arrow--right");
+            let leftArrowEl = document.querySelector(".image-viewer__arrow--left");
 
             closeEl.addEventListener('click', this.close);
             rightArrowEl.addEventListener("click", this.imageNavigator.nextImage.bind(this.imageNavigator));
+            leftArrowEl.addEventListener("click", this.imageNavigator.previousImage.bind(this.imageNavigator));
             //overlayEl.addEventListener('click', this.close);
         }, 50);
     }

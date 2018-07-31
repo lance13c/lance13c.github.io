@@ -47358,8 +47358,22 @@ var ImageNavigator = function () {
             imageEl.src = nextImageSrc;
         }
     }, {
-        key: 'findPrevious',
-        value: function findPrevious(projectData, currentImage) {}
+        key: 'previousImage',
+        value: function previousImage() {
+            // Increment to next image
+            this.currentImageNumber--;
+
+            var nextImageSrc = this.findImage(this.currentImageNumber);
+            if (nextImageSrc == undefined) {
+                var maxImages = this.projectData.images.length;
+                nextImageSrc = this.findImage(maxImages);
+                this.currentImageNumber = maxImages;
+            }
+
+            // Find the image element and replace the src with the new image src.
+            var imageEl = document.querySelector('.image-viewer__image');
+            imageEl.src = nextImageSrc;
+        }
 
         /**
          * Finds the image with the specified number
@@ -47410,9 +47424,11 @@ var ImageViewer = function () {
                 var closeEl = document.querySelector(".image-viewer__close-button");
                 //let overlayEl = document.querySelector(".image-viewer__overlay");
                 var rightArrowEl = document.querySelector(".image-viewer__arrow--right");
+                var leftArrowEl = document.querySelector(".image-viewer__arrow--left");
 
                 closeEl.addEventListener('click', _this.close);
                 rightArrowEl.addEventListener("click", _this.imageNavigator.nextImage.bind(_this.imageNavigator));
+                leftArrowEl.addEventListener("click", _this.imageNavigator.previousImage.bind(_this.imageNavigator));
                 //overlayEl.addEventListener('click', this.close);
             }, 50);
         }
