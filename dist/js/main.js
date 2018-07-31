@@ -46958,13 +46958,41 @@ var ImageViewer = function () {
         key: "nextImage",
         value: function nextImage(projectData, currentImageSrc, callback) {
             // find number using match
-            var match = currentImageSrc.match(/[0-9]?[0-9]/);
-            console.log(match);
+            var currentImageNumber = parseInt(currentImageSrc.match(/[0-9]?[0-9]/)[0]);
+
+            // Increment to next image
+            currentImageNumber++;
+            var nextImageSrc = this.findImage(projectData, currentImageNumber);
+            if (nextImageSrc === null) {
+                nextImageSrc = this.findImage(projectData, 1);
+            }
+
+            console.log(currentImageNumber);
+            console.log(nextImageSrc);
+
+            // Find the image element and replace the src with the new image src.
+            var imageEl = document.querySelector('.image-viewer__image');
+            imageEl.src = nextImageSrc;
+
+            return nextImageSrc;
             // Search regular images for number
         }
     }, {
         key: "findPrevious",
         value: function findPrevious(projectData, currentImage) {}
+
+        /**
+         * Finds the image with the specified number
+         * @param {} number - unique image identifier within a specific project
+         */
+
+    }, {
+        key: "findImage",
+        value: function findImage(projectData, number) {
+            return projectData.images.find(function (imageSrc) {
+                return imageSrc.match(number) !== null;
+            });
+        }
 
         /**
          * Initalizes the HTML

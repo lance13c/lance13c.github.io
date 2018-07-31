@@ -41,9 +41,9 @@
       "download_url": "https://www.dropbox.com/s/6winwjc686q0nm1/Hero2.0.exe?dl=0",
       "demo_url": "",
       "blog": "",
-      "images": ["/assets/images/projects/hero/regular/hero (1).png", "/assets/images/projects/hero/regular/hero (2).png", "/assets/images/projects/hero/regular/hero (3).png", "/assets/images/projects/hero/regular/hero (4).png", "/assets/images/projects/hero/regular/hero (5).png",
-        "/assets/images/projects/hero/regular/hero (7).png", "/assets/images/projects/hero/regular/hero (8).png", "/assets/images/projects/hero/regular/hero (9).png", "/assets/images/projects/hero/regular/hero (10).png", "/assets/images/projects/hero/regular/hero (11).png",
-        "/assets/images/projects/hero/regular/hero (12).png", "/assets/images/projects/hero/regular/hero (13).png", "/assets/images/projects/hero/regular/hero (14).png"],
+      "images": ["/assets/images/projects/hero/regular/hero (1).jpg", "/assets/images/projects/hero/regular/hero (2).jpg", "/assets/images/projects/hero/regular/hero (3).jpg", "/assets/images/projects/hero/regular/hero (4).jpg", "/assets/images/projects/hero/regular/hero (5).jpg",
+        "/assets/images/projects/hero/regular/hero (7).jpg", "/assets/images/projects/hero/regular/hero (8).jpg", "/assets/images/projects/hero/regular/hero (9).jpg", "/assets/images/projects/hero/regular/hero (10).jpg", "/assets/images/projects/hero/regular/hero (11).jpg",
+        "/assets/images/projects/hero/regular/hero (12).jpg", "/assets/images/projects/hero/regular/hero (13).jpg", "/assets/images/projects/hero/regular/hero (14).jpg"],
       "thumbnails": ["/assets/images/projects/hero/thumbnails/hero-thumbnail (1).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (2).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (3).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (4).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (5).jpg",
           "/assets/images/projects/hero/thumbnails/hero-thumbnail (7).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (8).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (9).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (10).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (11).jpg",
           "/assets/images/projects/hero/thumbnails/hero-thumbnail (12).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (13).jpg", "/assets/images/projects/hero/thumbnails/hero-thumbnail (14).jpg"],    
@@ -77,9 +77,9 @@
       "demo_url": "",
       "cs_url": "/projects/spacefighter",
       "blog": "",
-      "images": ["/assets/images/projects/spacefighter/regular/sf (1).png", "/assets/images/projects/spacefighter/regular/sf (2).png",
-        "/assets/images/projects/spacefighter/regular/sf (3).png", "/assets/images/projects/spacefighter/regular/sf (4).png", "/assets/images/projects/spacefighter/regular/sf (5).png",
-        "/assets/images/projects/spacefighter/regular/sf (6).png", "/assets/images/projects/spacefighter/regular/sf (7).png", "/assets/images/projects/spacefighter/regular/sf (8).png"],
+      "images": ["/assets/images/projects/spacefighter/regular/sf (1).jpg", "/assets/images/projects/spacefighter/regular/sf (2).jpg",
+        "/assets/images/projects/spacefighter/regular/sf (3).jpg", "/assets/images/projects/spacefighter/regular/sf (4).jpg", "/assets/images/projects/spacefighter/regular/sf (5).jpg",
+        "/assets/images/projects/spacefighter/regular/sf (6).jpg", "/assets/images/projects/spacefighter/regular/sf (7).jpg", "/assets/images/projects/spacefighter/regular/sf (8).jpg"],
       "thumbnails": ["/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (1).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (2).jpg",
           "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (3).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (4).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (5).jpg",
           "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (6).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (7).jpg", "/assets/images/projects/spacefighter/thumbnails/sf-thumbnail (8).jpg"],
@@ -211,10 +211,10 @@
     "url": "/resume/resume.pdf"
   },
   "specific_project": {
-    "title_image": "/assets/images/background/hexabump/hexabump.png"
+    "title_image": "/assets/images/background/hexabump/hexabump.jpg"
   },
   "site": {
-    "fav_icon": "/assets/images/projects/ciciliostudio/favicon5.png"
+    "fav_icon": "/assets/images/projects/ciciliostudio/favicon5.jpg"
   },
   "new_knowledge": [
     {
