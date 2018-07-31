@@ -46927,10 +46927,14 @@ var ImageViewer = function () {
 
             // Give this html enough time to load in the DOM
             setTimeout(function () {
+                var currentImage = imageSrc;
+
                 var closeEl = document.querySelector(".image-viewer__close-button");
                 //let overlayEl = document.querySelector(".image-viewer__overlay");
+                var rightArrowEl = document.querySelector(".image-viewer__arrow--right");
 
                 closeEl.addEventListener('click', _this.close);
+                rightArrowEl.addEventListener("click", _this.nextImage.bind(_this, projectData, currentImage));
                 //overlayEl.addEventListener('click', this.close);
             }, 50);
         }
@@ -46951,11 +46955,16 @@ var ImageViewer = function () {
             return thumbnailSrc.replace(/thumbnails\/(.*)-thumbnail\s(\([0-9]?[0-9]\))/, 'regular/$1 $2');
         }
     }, {
-        key: "findNext",
-        value: function findNext() {}
+        key: "nextImage",
+        value: function nextImage(projectData, currentImageSrc, callback) {
+            // find number using match
+            var match = currentImageSrc.match(/[0-9]?[0-9]/);
+            console.log(match);
+            // Search regular images for number
+        }
     }, {
         key: "findPrevious",
-        value: function findPrevious() {}
+        value: function findPrevious(projectData, currentImage) {}
 
         /**
          * Initalizes the HTML

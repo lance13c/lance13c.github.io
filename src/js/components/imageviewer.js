@@ -18,10 +18,14 @@ class ImageViewer {
 
         // Give this html enough time to load in the DOM
         setTimeout(() => {
+            let currentImage = imageSrc;
+
             let closeEl = document.querySelector(".image-viewer__close-button");
             //let overlayEl = document.querySelector(".image-viewer__overlay");
+            let rightArrowEl = document.querySelector(".image-viewer__arrow--right");
 
             closeEl.addEventListener('click', this.close);
+            rightArrowEl.addEventListener("click", this.nextImage.bind(this, projectData, currentImage));
             //overlayEl.addEventListener('click', this.close);
         }, 50);
     }
@@ -38,9 +42,14 @@ class ImageViewer {
         return thumbnailSrc.replace(/thumbnails\/(.*)-thumbnail\s(\([0-9]?[0-9]\))/, 'regular/$1 $2');
     }
 
-    findNext() {}
+    nextImage(projectData, currentImageSrc, callback) {
+        // find number using match
+        let match = currentImageSrc.match(/[0-9]?[0-9]/);
+        console.log(match);
+        // Search regular images for number
+    }
 
-    findPrevious() {}
+    findPrevious(projectData, currentImage) {}
 
     /**
      * Initalizes the HTML
