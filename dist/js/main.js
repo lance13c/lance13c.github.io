@@ -46920,13 +46920,26 @@ var ImageViewer = function () {
     _createClass(ImageViewer, [{
         key: "open",
         value: function open(projectData, imageSrc) {
+            var _this = this;
 
             this.HTML.innerHTML = this.initHTML(imageSrc);
             document.body.appendChild(this.HTML);
+
+            // Give this html enough time to load in the DOM
+            setTimeout(function () {
+                var closeEl = document.querySelector(".image-viewer__close-button");
+                //let overlayEl = document.querySelector(".image-viewer__overlay");
+
+                closeEl.addEventListener('click', _this.close);
+                //overlayEl.addEventListener('click', this.close);
+            }, 50);
         }
     }, {
         key: "close",
-        value: function close() {}
+        value: function close() {
+            var overlay = document.querySelector('.image-viewer__overlay');
+            overlay.parentElement.removeChild(overlay);
+        }
 
         /**
          * Changes thumbnail src into the regular image source 
@@ -46937,6 +46950,12 @@ var ImageViewer = function () {
         value: function thumbnailToRegular(thumbnailSrc) {
             return thumbnailSrc.replace(/thumbnails\/(.*)-thumbnail\s(\([0-9]?[0-9]\))/, 'regular/$1 $2');
         }
+    }, {
+        key: "findNext",
+        value: function findNext() {}
+    }, {
+        key: "findPrevious",
+        value: function findPrevious() {}
 
         /**
          * Initalizes the HTML
@@ -47504,7 +47523,7 @@ var ProjectWheel = function () {
                         el.addEventListener('click', function () {
                             _this3.imageViewer.open(projectData, src);
                         });
-                    }, 10000);
+                    }, 6000);
                 });
 
                 return imageList;

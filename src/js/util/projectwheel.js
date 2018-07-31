@@ -152,7 +152,7 @@ class ProjectWheel {
                                 el.addEventListener('click', () => {
                                     this.imageViewer.open( projectData, src);
                                 });
-                            }, 10000);
+                            }, 6000);
                             
                         });
 

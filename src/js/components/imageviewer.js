@@ -15,10 +15,20 @@ class ImageViewer {
 
         this.HTML.innerHTML = this.initHTML(imageSrc);
         document.body.appendChild(this.HTML);
+
+        // Give this html enough time to load in the DOM
+        setTimeout(() => {
+            let closeEl = document.querySelector(".image-viewer__close-button");
+            //let overlayEl = document.querySelector(".image-viewer__overlay");
+
+            closeEl.addEventListener('click', this.close);
+            //overlayEl.addEventListener('click', this.close);
+        }, 50);
     }
 
     close() {
-
+        let overlay = document.querySelector('.image-viewer__overlay');
+        overlay.parentElement.removeChild(overlay);
     }
 
     /**
@@ -27,6 +37,10 @@ class ImageViewer {
     thumbnailToRegular(thumbnailSrc) {
         return thumbnailSrc.replace(/thumbnails\/(.*)-thumbnail\s(\([0-9]?[0-9]\))/, 'regular/$1 $2');
     }
+
+    findNext() {}
+
+    findPrevious() {}
 
     /**
      * Initalizes the HTML
