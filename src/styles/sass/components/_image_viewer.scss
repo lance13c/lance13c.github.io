@@ -7,8 +7,6 @@
 
     .image-viewer__container {
         max-width: 60%;
-        display: flex;
-        justify-content: center;
         margin: auto;
         top: 15%;
         position: relative;
@@ -31,7 +29,7 @@
         .image-viewer__arrow--left {
             background-color: $cs-button-blue;
             position: absolute;
-            left: -10%;
+            left: -15%;
 
             &:hover {
                 background-color: darken($cs-button-blue, $amount: 10%);
@@ -41,7 +39,7 @@
         .image-viewer__arrow--right {
             background-color: $cs-button-blue;
             position: absolute;
-            right: -10%;
+            right: -15%;
 
             &:hover {
                 background-color: darken($cs-button-blue, $amount: 10%);
@@ -55,6 +53,21 @@
             height: auto;
             user-select: none;
             box-shadow: 1px 1px 15px 0px #222222;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .image-viewer__overlay {
+        .image-viewer__container {
+            .image-viewer__image {
+                margin-top: 50%;
+            }
+
+            .image-viewer__close-button {
+                margin-top: 50%;
+            }
         }
     }
 }
