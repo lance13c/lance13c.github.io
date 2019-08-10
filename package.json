@@ -132,5 +132,9 @@
     "presets": [
       "react-app"
     ]
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-pro": "^5.10.1",
+    "prop-types": "^15.7.2"
   }
 }
