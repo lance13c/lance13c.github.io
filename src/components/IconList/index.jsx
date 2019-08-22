@@ -15,7 +15,7 @@ class HomePage extends Component {
     return (
      <span>
        {
-         icons.map(icon => {
+         icons.map( icon => {
            return <a href={icon.link} style={`background-color: ${icon.color}`}>
              <i className={icon.name}></i>
             </a>
