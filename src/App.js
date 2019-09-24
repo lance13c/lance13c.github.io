@@ -1,15 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Home from "./pages/home/sections"
-import '@fortawesome/fontawesome-pro/js/all.js'
+import './App.scss';
+import Home from './pages/home/sections';
 
 function App() {
-  return (
-    <div className="App">
-      <Home></Home>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Home />
+		</div>
+	);
 }
 
 export default App;

@@ -1,9 +1,20 @@
 .cs-welcome_wrapper {
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 10vh;
+		font-weight: 700;
+	}
 
 	.cs-welcome_sub-header_wrapper {
 		> * {
 			margin: 0 1rem;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 2rem;
+			color: #1460aa;
+			font-weight: 400;
 		}
 	}
 }
