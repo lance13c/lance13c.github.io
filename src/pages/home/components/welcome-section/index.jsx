@@ -8,28 +8,30 @@ import { faCircle } from '@fortawesome/pro-solid-svg-icons';
 class WelcomeSection extends Component {
 	render() {
 		return (
-			<section className="cs-welcome_wrapper">
-				<h1>Dominic Cicilio</h1>
-				<Grid
-					className="cs-welcome_sub-header_wrapper"
-					container
-					direction="row"
-					justify="center"
-					alignItems="center"
-				>
-					<a href="/#" className="cs-welcome_sub-header">
-						Developer
-					</a>
-					<FontAwesomeIcon size="xs" icon={faCircle} />
-					<a href="/#" className="cs-welcome_sub-header">
-						Creativity
-					</a>
-					<FontAwesomeIcon size="xs" icon={faCircle} />
-					<a href="/#" className="cs-welcome_sub-header">
-						Projects
-					</a>
-				</Grid>
-			</section>
+			<div className="cs-welcome_wrapper">
+				<div className="cs-welcome_text">
+					<h1>Dominic Cicilio</h1>
+					<div className="cs-welcome_sub-header_wrapper">
+						<a href="/#" className="cs-welcome_sub-header">
+							Developer
+						</a>
+						<FontAwesomeIcon size="xs" icon={faCircle} />
+						<a href="/#" className="cs-welcome_sub-header">
+							Creativity
+						</a>
+						<FontAwesomeIcon size="xs" icon={faCircle} />
+						<a href="/#" className="cs-welcome_sub-header">
+							Projects
+						</a>
+					</div>
+				</div>
+				<div className="cs-home_image_wrapper">
+					<img
+						alt="Dominic launching his 8 foot tall trebuchet."
+						src="https://res.cloudinary.com/lance13c/image/upload/q_auto:eco/Trebuchet/trebuchet_0.jpg"
+					/>
+				</div>
+			</div>
 		);
 	}
 }

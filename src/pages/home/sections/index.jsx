@@ -15,14 +15,26 @@ class HomePage extends Component {
 		return (
 			<React.Fragment>
 				<TopNav />
-				<SimpleSideNav>
-					<SidebarItem icon={<FontAwesomeIcon icon={faHome} />} name="Home" label="Home" />
-					<SidebarItem icon={<FontAwesomeIcon icon={faHiking} />} name="Career" label="Carrer" />
-					<SidebarItem icon={<FontAwesomeIcon icon={faTools} />} name="Skills" label="Skills & Tools" />
-					<SidebarItem icon={<FontAwesomeIcon icon={faFlaskPotion} />} name="Projects" label="Projects" />
-				</SimpleSideNav>
-				<Grid className="cs-home_wrapper" container direction="column" justify="center" alignItems="center">
-					<WelcomeSection />
+				<Grid container direction="row" justify="left" alignItems="left">
+					<Grid item xs={1}>
+						<SimpleSideNav>
+							<SidebarItem icon={<FontAwesomeIcon icon={faHome} />} name="Home" label="Home" />
+							<SidebarItem icon={<FontAwesomeIcon icon={faHiking} />} name="Career" label="Carrer" />
+							<SidebarItem
+								icon={<FontAwesomeIcon icon={faTools} />}
+								name="Skills"
+								label="Skills & Tools"
+							/>
+							<SidebarItem
+								icon={<FontAwesomeIcon icon={faFlaskPotion} />}
+								name="Projects"
+								label="Projects"
+							/>
+						</SimpleSideNav>
+					</Grid>
+					<Grid item xs={11}>
+						<WelcomeSection />
+					</Grid>
 				</Grid>
 			</React.Fragment>
 		);

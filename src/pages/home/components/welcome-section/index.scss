@@ -1,4 +1,7 @@
 .cs-welcome_wrapper {
+	height: 100%;
+	margin-top: 50px;
+
 	h1 {
 		font-size: 3rem;
 		margin-bottom: 10vh;
@@ -16,5 +19,11 @@
 			color: #1460aa;
 			font-weight: 400;
 		}
+	}
+
+	.cs-home_image_wrapper {
+		position: absolute;
+		top: -100px;
+		z-index: -1;
 	}
 }
