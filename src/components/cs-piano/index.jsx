@@ -50,10 +50,19 @@ class CSPiano extends Component {
 
 		this.handleOnAttackChange = this.handleOnAttackChange.bind(this);
 
+		const tremolo = new Tone.Tremolo(9, 0.2).toMaster().start();
+		var pingPong = new Tone.PingPongDelay('4n', 0.2).toMaster();
+		var phaser = new Tone.Phaser({
+			frequency: 5,
+			octaves: 1,
+			baseFrequency: 1000
+		}).toMaster();
+
+		const vibrato = new Tone.Vibrato(5, 0.1).toMaster();
 		const reverb = new Tone.Reverb(2).toMaster();
 		var dist = new Tone.Distortion(1).toMaster();
 		this.synth = new Tone.FMSynth({
-			harmonicity: 9,
+			harmonicity: 8,
 			modulationIndex: 1,
 			detune: 0,
 			oscillator: {
@@ -63,7 +72,7 @@ class CSPiano extends Component {
 				attack: 0.0001,
 				decay: 0.001,
 				sustain: 1,
-				release: 6
+				release: 3
 			},
 			modulation: {
 				type: 'sawtooth'
@@ -74,7 +83,13 @@ class CSPiano extends Component {
 				sustain: 0.0001,
 				release: 0.0001
 			}
-		}).toMaster();
+		})
+			// .connect(pingPong)
+			.connect(tremolo)
+			// .connect(reverb)
+			// .connect(phaser)
+			// .connect(vibrato)
+			.toMaster();
 	}
 
 	handleOnAttackChange(e, val) {
