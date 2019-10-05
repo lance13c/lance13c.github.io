@@ -25,12 +25,12 @@ class WelcomeSection extends Component {
 						</a>
 					</div>
 				</div>
-				<div className="cs-home_image_wrapper">
+				{/* <div className="cs-home_image_wrapper">
 					<img
 						alt="Dominic launching his 8 foot tall trebuchet."
 						src="https://res.cloudinary.com/lance13c/image/upload/q_auto:eco/Trebuchet/trebuchet_0.jpg"
 					/>
-				</div>
+				</div> */}
 			</div>
 		);
 	}

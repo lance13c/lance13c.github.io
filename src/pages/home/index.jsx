@@ -4,11 +4,19 @@ import Grid from '@material-ui/core/Grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faHiking, faTools, faFlaskPotion } from '@fortawesome/pro-solid-svg-icons';
 import { SidebarItem } from 'react-rainbow-components/components';
-import SimpleSideNav from '../../../components/simple-sidenav';
+import SimpleSideNav from '../../components/simple-sidenav';
 
-import WelcomeSection from '../components/welcome-section';
-import TopNav from '../../../components/top-nav';
+import WelcomeSection from './components/welcome-section';
+import TopNav from '../../components/top-nav';
+import styles from 'styled-components';
+import SkillsTools from './sections/skills-tools';
+import CSPiano from '../../components/cs-piano';
+
 import './index.scss';
+
+const Spacer = styles.div`
+  height: 80vh;
+`;
 
 class HomePage extends Component {
 	render() {
@@ -33,7 +41,9 @@ class HomePage extends Component {
 						</SimpleSideNav>
 					</Grid>
 					<Grid item xs={11}>
-						<WelcomeSection />
+						{/* <WelcomeSection /> */}
+						<CSPiano />
+						<Spacer />
 					</Grid>
 				</Grid>
 			</React.Fragment>

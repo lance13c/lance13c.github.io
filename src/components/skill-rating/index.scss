@@ -1,0 +1,32 @@
+@import '../../styles/vars';
+
+.cs-skill-rating {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+	.cs-skill-rating_content {
+		display: flex;
+		align-items: center;
+		padding: 3px;
+		margin: 0;
+		border: 1px solid transparent;
+		transition: all $animation-speed-fast;
+
+		&:hover {
+			border: solid 1px e8e8e8;
+			box-shadow: 0px 1px 5px -2px #9e9e9e;
+			margin: 3px 0;
+			cursor: pointer;
+		}
+	}
+
+	p {
+		color: black;
+		padding-right: 5px;
+	}
+
+	&:hover {
+		color: black;
+	}
+}
