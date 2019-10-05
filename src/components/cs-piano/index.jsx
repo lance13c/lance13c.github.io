@@ -50,29 +50,35 @@ class CSPiano extends Component {
 
 		this.handleOnAttackChange = this.handleOnAttackChange.bind(this);
 
+		const sidemid = new Tone.MidSideEffect().toMaster();
 		const tremolo = new Tone.Tremolo(9, 0.2).toMaster().start();
-		var pingPong = new Tone.PingPongDelay('4n', 0.2).toMaster();
-		var phaser = new Tone.Phaser({
+		const pingPong = new Tone.PingPongDelay('10n', 0.4).toMaster();
+		const phaser = new Tone.Phaser({
 			frequency: 5,
-			octaves: 1,
-			baseFrequency: 1000
+			octaves: 5,
+			baseFrequency: 987.77
 		}).toMaster();
 
-		const vibrato = new Tone.Vibrato(5, 0.1).toMaster();
-		const reverb = new Tone.Reverb(2).toMaster();
+		const phaserLow = new Tone.Phaser({
+			frequency: 2,
+			octaves: 1,
+			baseFrequency: 987.77
+		}).toMaster();
+
+		const freeverb = new Tone.Freeverb(0.8, 300).toMaster();
 		var dist = new Tone.Distortion(1).toMaster();
 		this.synth = new Tone.FMSynth({
-			harmonicity: 8,
+			harmonicity: 9,
 			modulationIndex: 1,
 			detune: 0,
 			oscillator: {
 				type: 'sine'
 			},
 			envelope: {
-				attack: 0.0001,
+				attack: 0.001,
 				decay: 0.001,
-				sustain: 1,
-				release: 3
+				sustain: 0.5,
+				release: 8
 			},
 			modulation: {
 				type: 'sawtooth'
@@ -84,11 +90,15 @@ class CSPiano extends Component {
 				release: 0.0001
 			}
 		})
-			// .connect(pingPong)
+			.connect(pingPong)
 			.connect(tremolo)
 			// .connect(reverb)
-			// .connect(phaser)
+			.connect(phaser)
+			// .connect(phaserLow)
 			// .connect(vibrato)
+			// .connect(chorus)
+			// .connect(sidemid)
+			.connect(freeverb)
 			.toMaster();
 	}
 
