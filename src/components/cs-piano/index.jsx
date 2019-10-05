@@ -49,26 +49,30 @@ class CSPiano extends Component {
 		};
 
 		this.handleOnAttackChange = this.handleOnAttackChange.bind(this);
-		this.synth = new Tone.AMSynth({
-			harmonicity: 2.2,
+
+		const reverb = new Tone.Reverb(2).toMaster();
+		var dist = new Tone.Distortion(1).toMaster();
+		this.synth = new Tone.FMSynth({
+			harmonicity: 9,
+			modulationIndex: 1,
 			detune: 0,
 			oscillator: {
 				type: 'sine'
 			},
 			envelope: {
 				attack: 0.0001,
-				decay: 1,
-				sustain: 0.2,
-				release: 0.3
+				decay: 0.001,
+				sustain: 1,
+				release: 6
 			},
 			modulation: {
-				type: 'sine'
+				type: 'sawtooth'
 			},
 			modulationEnvelope: {
-				attack: 0.001,
-				decay: 0,
-				sustain: 1,
-				release: 0.5
+				attack: 0.0001,
+				decay: 0.0001,
+				sustain: 0.0001,
+				release: 0.0001
 			}
 		}).toMaster();
 	}
