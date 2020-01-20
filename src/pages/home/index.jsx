@@ -11,7 +11,6 @@ import TopNav from '../../components/top-nav';
 import styles from 'styled-components';
 import SkillsTools from './sections/skills-tools';
 import CSPiano from '../../components/cs-piano';
-
 import './index.scss';
 
 const Spacer = styles.div`
@@ -23,29 +22,6 @@ class HomePage extends Component {
 		return (
 			<React.Fragment>
 				<TopNav />
-				<Grid container direction="row" justify="left" alignItems="left">
-					<Grid item xs={1}>
-						<SimpleSideNav>
-							<SidebarItem icon={<FontAwesomeIcon icon={faHome} />} name="Home" label="Home" />
-							<SidebarItem icon={<FontAwesomeIcon icon={faHiking} />} name="Career" label="Carrer" />
-							<SidebarItem
-								icon={<FontAwesomeIcon icon={faTools} />}
-								name="Skills"
-								label="Skills & Tools"
-							/>
-							<SidebarItem
-								icon={<FontAwesomeIcon icon={faFlaskPotion} />}
-								name="Projects"
-								label="Projects"
-							/>
-						</SimpleSideNav>
-					</Grid>
-					<Grid item xs={11}>
-						{/* <WelcomeSection /> */}
-						<CSPiano />
-						<Spacer />
-					</Grid>
-				</Grid>
 			</React.Fragment>
 		);
 	}

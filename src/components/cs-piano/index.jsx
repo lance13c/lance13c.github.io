@@ -21,7 +21,7 @@ const midiToKeyMap = new Map([
 	[ '87', 'Eb6' ],
 	[ '86', 'D6' ],
 	[ '85', 'Db6' ],
-	[ '84', 'C6' ],
+	[ '84', 'C5' ],
 	[ '83', 'B5' ],
 	[ '82', 'Bb5' ],
 	[ '81', 'A5' ],
@@ -34,7 +34,18 @@ const midiToKeyMap = new Map([
 	[ '74', 'D5' ],
 	[ '73', 'Db5' ],
 	[ '72', 'C5' ],
-	[ '71', 'B5' ]
+	[ '71', 'B4' ],
+	[ '70', 'Bb4' ],
+	[ '69', 'Ab4' ],
+	[ '68', 'G4' ],
+	[ '67', 'Gb4' ],
+	[ '66', 'F4' ],
+	[ '65', 'E4' ],
+	[ '64', 'Eb4' ],
+	[ '63', 'D4' ],
+	[ '62', 'Db4' ],
+	[ '61', 'C4' ],
+	[ '60', 'B4' ]
 ]);
 
 class CSPiano extends Component {
@@ -50,38 +61,40 @@ class CSPiano extends Component {
 
 		this.handleOnAttackChange = this.handleOnAttackChange.bind(this);
 
+		const chorus = new Tone.Chorus(987.77, 5, 0.1).toMaster();
 		const sidemid = new Tone.MidSideEffect().toMaster();
-		const tremolo = new Tone.Tremolo(15, 3).toMaster().start();
+		const tremolo = new Tone.Tremolo(4, 50).toMaster().start();
+		const tremolo2 = new Tone.Tremolo(4, 50).toMaster().start();
 		const pingPong = new Tone.PingPongDelay('10n', 0.4).toMaster();
 		const phaser = new Tone.Phaser({
-			frequency: 5,
-			octaves: 5,
-			baseFrequency: 987.77
+			frequency: 10,
+			octaves: 30,
+			baseFrequency: 1000
 		}).toMaster();
 
 		const phaserLow = new Tone.Phaser({
-			frequency: 2,
+			frequency: 10,
 			octaves: 1,
-			baseFrequency: 987.77
+			baseFrequency: 200
 		}).toMaster();
 
 		const freeverb = new Tone.Freeverb(0.8, 300).toMaster();
 		var dist = new Tone.Distortion(1).toMaster();
 		this.synth = new Tone.AMSynth({
 			harmonicity: 9,
-			modulationIndex: 1,
+			modulationIndex: 50,
 			detune: 0,
 			oscillator: {
-				type: 'sine'
+				type: 'sawtooth'
 			},
 			envelope: {
 				attack: 0.1,
 				decay: 0.1,
 				sustain: 0.5,
-				release: 8
+				release: 7
 			},
 			modulation: {
-				type: 'sawtooth'
+				type: 'sine'
 			},
 			modulationEnvelope: {
 				attack: 0.1,
@@ -91,9 +104,10 @@ class CSPiano extends Component {
 			}
 		})
 			// .connect(pingPong)
+			.connect(tremolo)
 			// .connect(tremolo)
 			// .connect(reverb)
-			.connect(phaser)
+			// .connect(phaser)
 			// .connect(phaserLow)
 			// .connect(vibrato)
 			// .connect(chorus)
@@ -111,7 +125,7 @@ class CSPiano extends Component {
 	}
 
 	render() {
-		const firstNote = MidiNumbers.fromNote('c5');
+		const firstNote = MidiNumbers.fromNote('c4');
 		const lastNote = MidiNumbers.fromNote('c7');
 		const keyboardShortcuts = KeyboardShortcuts.create({
 			firstNote: firstNote,
