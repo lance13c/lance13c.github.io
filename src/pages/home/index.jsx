@@ -27,4 +27,10 @@ class HomePage extends Component {
 	}
 }
 
-export default HomePage;
+export default {
+    routeProps: {
+        path: '/home',
+        component: HomePage
+    },
+    name: 'Home',
+}

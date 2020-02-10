@@ -103,4 +103,10 @@ class BooksPage extends Component {
 	}
 }
 
-export default BooksPage;
+export default {
+    routeProps: {
+        path: '/books',
+        component: BooksPage
+    },
+    name: 'Books',
+}

@@ -1,0 +1,37 @@
+.card {
+    position: relative;
+    min-height: 200px;
+    max-height: 400px;
+    transform: rotate3d(0, 0, 0);
+    transition: transform .15s;
+
+    &:hover,
+    &:focus {
+        transform: rotate3d(30deg, 0, 0);
+    }
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .image-overlay {
+        background: linear-gradient(45deg, rgba(15,5,15,1) 0%, rgba(15,5,15,1), rgba(255,255,255,0.7973564425770308) 49%, rgba(255,255,255,0.7973564425770308) 53%, rgba(15,5,15,1) 0%, rgba(69,252,190,0) 100%);
+        z-index: 1;
+    }
+
+    .title {
+        font-size: 35px;
+        font-weight: 300;
+        text-transform: uppercase;
+        z-index: 2;
+    }
+
+    .description {
+        font-size: 18px;
+        font-weight: 400;
+        z-index: 2;
+    };
+}
